@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated September 24, 2021. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2021, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -1107,9 +1107,12 @@ namespace Spine {
 		}
 
 		/// <summary>
-		/// Uses <see cref="TrackEntry.TrackTime"/> to compute the <code>AnimationTime</code>, which is between <see cref="TrackEntry.AnimationStart"/>
-		/// and <see cref="TrackEntry.AnimationEnd"/>. When the <code>TrackTime</code> is 0, the <code>AnimationTime</code> is equal to the
-		/// <code>AnimationStart</code> time.
+		/// Uses <see cref="TrackEntry.TrackTime"/> to compute the <code>AnimationTime</code>. When the <code>TrackTime</code> is 0, the
+		/// <code>AnimationTime</code> is equal to the <code>AnimationStart</code> time.
+		/// <para>
+		/// The <code>animationTime</code> is between <see cref="AnimationStart"/> and <see cref="AnimationEnd"/>, except if this
+		/// track entry is non-looping and <see cref="AnimationEnd"/> is >= to the animation <see cref="Animation.Duration"/>, then
+		/// <code>animationTime</code> continues to increase past <see cref="AnimationEnd"/>.</para>
 		/// </summary>
 		public float AnimationTime {
 			get {
@@ -1118,7 +1121,8 @@ namespace Spine {
 					if (duration == 0) return animationStart;
 					return (trackTime % duration) + animationStart;
 				}
-				return Math.Min(trackTime + animationStart, animationEnd);
+				float animationTime = trackTime + animationStart;
+				return animationEnd >= animation.duration ? animationTime : Math.Min(animationTime, animationEnd);
 			}
 		}
 

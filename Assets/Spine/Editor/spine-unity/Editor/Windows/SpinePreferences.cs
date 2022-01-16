@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated January 1, 2020. Replaces all prior versions.
+ * Last updated September 24, 2021. Replaces all prior versions.
  *
- * Copyright (c) 2013-2020, Esoteric Software LLC
+ * Copyright (c) 2013-2021, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -33,6 +33,10 @@
 
 #if UNITY_2018_3_OR_NEWER
 #define NEW_PREFERENCES_SETTINGS_PROVIDER
+#endif
+
+#if UNITY_2020_2_OR_NEWER
+#define HAS_ON_POSTPROCESS_PREFAB
 #endif
 
 using System.Threading;
@@ -77,6 +81,11 @@ namespace Spine.Unity.Editor {
 
 		internal const string DEFAULT_TEXTURE_SETTINGS_REFERENCE = "";
 		public string textureSettingsReference = DEFAULT_TEXTURE_SETTINGS_REFERENCE;
+
+#if HAS_ON_POSTPROCESS_PREFAB
+		internal const bool DEFAULT_FIX_PREFAB_OVERRIDE_VIA_MESH_FILTER = false;
+		public bool fixPrefabOverrideViaMeshFilter = DEFAULT_FIX_PREFAB_OVERRIDE_VIA_MESH_FILTER;
+#endif
 
 		public bool UsesPMAWorkflow {
 			get {
@@ -177,8 +186,7 @@ namespace Spine.Unity.Editor {
 			settings = AssetDatabase.LoadAssetAtPath<SpinePreferences>(SPINE_SETTINGS_ASSET_PATH);
 			if (settings == null)
 				settings = FindSpinePreferences();
-			if (settings == null)
-			{
+			if (settings == null) {
 				settings = ScriptableObject.CreateInstance<SpinePreferences>();
 				SpineEditorUtilities.OldPreferences.CopyOldToNewPreferences(ref settings);
 				// Multiple threads may be calling this method during import, creating the folder
@@ -189,6 +197,10 @@ namespace Spine.Unity.Editor {
 				if (Interlocked.Exchange(ref wasPreferencesAssetCreated, 1) == 0)
 					AssetDatabase.CreateAsset(settings, SPINE_SETTINGS_ASSET_PATH);
 			}
+
+#if HAS_ON_POSTPROCESS_PREFAB
+			SkeletonRenderer.fixPrefabOverrideViaMeshFilterGlobal = settings.fixPrefabOverrideViaMeshFilter;
+#endif
 			return settings;
 		}
 
@@ -279,6 +291,15 @@ namespace Spine.Unity.Editor {
 						SceneView.RepaintAll();
 					}
 				}
+
+#if HAS_ON_POSTPROCESS_PREFAB
+				EditorGUILayout.Space();
+				EditorGUILayout.LabelField("Prefabs", EditorStyles.boldLabel);
+				{
+					EditorGUILayout.PropertyField(settings.FindProperty("fixPrefabOverrideViaMeshFilter"), new GUIContent("Fix Prefab Overr. MeshFilter", "Fixes the prefab always being marked as changed (sets the MeshFilter's hide flags to DontSaveInEditor), but at the cost of references to the MeshFilter by other components being lost. This is a global setting that can be overwritten on each SkeletonRenderer"));
+					SkeletonRenderer.fixPrefabOverrideViaMeshFilterGlobal = settings.FindProperty("fixPrefabOverrideViaMeshFilter").boolValue;
+				}
+#endif
 
 #if SPINE_TK2D_DEFINE
 				bool isTK2DDefineSet = true;
