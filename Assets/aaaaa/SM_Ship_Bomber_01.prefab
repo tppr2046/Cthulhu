@@ -122,7 +122,7 @@ MonoBehaviour:
         x: 50
         y: 100
         width: 100
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -145,17 +145,28 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: hit player
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: fx
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.Translate
         - HutongGames.PlayMaker.Actions.CollisionEvent
+        - HutongGames.PlayMaker.Actions.CollisionEvent
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000a000000
-        actionHashCodes: b0327400beb33100
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000a00000010000000
+        actionHashCodes: b0327400beb33100beb33100
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -164,7 +175,21 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -194,6 +219,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: building
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Player
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -223,6 +254,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -238,12 +275,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - hit building
-        byteData: 010000000101010000000000
+        - hit player
+        byteData: 01000000010101000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000001000000010000000100000014000000070000001200000017000000130000000f000000
+        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000001000000010000000100000014000000070000001200000017000000130000000f00000014000000070000001200000017000000130000000f000000
         paramName:
         - gameObject
         - vector
@@ -261,8 +299,14 @@ MonoBehaviour:
         - sendEvent
         - storeCollider
         - storeForce
-        paramDataPos: 00000000000000000000000001000000020000000000000004000000050000000600000007000000010000000800000000000000000000000000000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000010000000100000001000000000000000400000000000000000000000000000000000000
+        - gameObject
+        - collision
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - storeForce
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000050000000600000007000000010000000800000000000000000000000000000003000000020000000c00000001000000010000000100000004000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000010000000100000001000000000000000400000000000000000000000000000000000000000000000400000000000000000000000000000000000000
     - name: destory self
       description: 
       colorIndex: 0
@@ -597,6 +641,9 @@ MonoBehaviour:
       isSystemEvent: 1
       isGlobal: 0
     - name: hit building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hit player
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
