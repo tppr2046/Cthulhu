@@ -988,6 +988,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7224127279907448162, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
   m_PrefabInstance: {fileID: 1659767954}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &31750016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 219996119}
+    m_Modifications:
+    - target: {fileID: 2113873484526108829, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_Name
+      value: explode
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
 --- !u!1001 &33103849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6662,7 +6719,7 @@ MonoBehaviour:
         - storeGameObject
         paramDataPos: 00000000
         paramByteDataSize: 00000000
-    - name: State 2
+    - name: smoke
       description: 
       colorIndex: 0
       position:
@@ -6910,8 +6967,259 @@ MonoBehaviour:
         - destroyOnFinish
         paramDataPos: 00000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000000000000200000000000000010000000100000002000000030000000000000004000000050000000100000001000000020000000300000004000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000
+    - name: FX EXPLODE
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 367
+        y: 101
+        width: 108
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetEventInfo
+        - HutongGames.PlayMaker.Actions.SetPosition
+        - HutongGames.PlayMaker.Actions.ParticleSystemPlay
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000f00000017000000
+        actionHashCodes: d9ade603f6e5be0373b31903
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: FX/EXPLODE
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 435805628}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: FX/EXPLODE
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 435805628}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
+        fsmVector3Params:
+        - useVariable: 1
+          name: FX.pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: FX.pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        fsmRectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        fsmQuaternionParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        stringParams: []
+        byteData: 000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000001200000011000000100000000f000000250000001c00000012000000130000001e0000002300000020000000210000001900000018000000140000001c0000000f0000000f0000000f0000000700000001000000010000001400000011000000110000001100000011000000
+        paramName:
+        - sentByGameObject
+        - fsmName
+        - getBoolData
+        - getIntData
+        - getFloatData
+        - getVector2Data
+        - getVector3Data
+        - getStringData
+        - getGameObjectData
+        - getRectData
+        - getQuaternionData
+        - getMaterialData
+        - getTextureData
+        - getColorData
+        - getObjectData
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
+        - gameObject
+        - withChildren
+        - cacheChildren
+        - stopOnExit
+        - destroyOnFinish
+        paramDataPos: 00000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000000000000200000000000000010000000100000002000000030000000000000004000000050000000100000001000000020000000300000004000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000
     events:
     - name: FX_SMOKE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: FX_EXPLODE
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -6919,7 +7227,16 @@ MonoBehaviour:
         name: FX_SMOKE
         isSystemEvent: 0
         isGlobal: 0
-      toState: State 2
+      toState: smoke
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: FX_EXPLODE
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: FX EXPLODE
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -6947,6 +7264,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: {fileID: 871627953}
+      - useVariable: 1
+        name: FX/EXPLODE
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: {fileID: 435805628}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -6954,7 +7277,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -7014,6 +7337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 871627956}
+  - {fileID: 435805632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12846,6 +13170,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7224127279907448162, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
   m_PrefabInstance: {fileID: 586184310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &435805628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2113873484526108829, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+  m_PrefabInstance: {fileID: 31750016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &435805632 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2113873484526108832, guid: aea0cbd62eb67ab489f46ef2ac518b7d, type: 3}
+  m_PrefabInstance: {fileID: 31750016}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &436450189
 PrefabInstance:
