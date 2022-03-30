@@ -153,7 +153,7 @@
 				float4  positionCS		: SV_POSITION;
 				float4  color			: COLOR;
 				float2	uv				: TEXCOORD0;
-				float3  normalVS		: TEXCOORD1;
+				float3  normalWS		: TEXCOORD1;
 			};
 
 			TEXTURE2D(_MainTex);
@@ -166,8 +166,7 @@
 				o.positionCS = TransformObjectToHClip(attributes.positionOS);
 				o.uv = attributes.uv;
 				o.color = attributes.color;
-				float3 normalWS = TransformObjectToWorldDir(float3(0, 0, -1));
-				o.normalVS = TransformWorldToViewDir(normalWS);
+				o.normalWS = TransformObjectToWorldDir(float3(0, 0, -1));
 				return o;
 			}
 
@@ -176,11 +175,10 @@
 			float4 NormalsRenderingFragment(Varyings i) : SV_Target
 			{
 				float4 mainTex = i.color * SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
-
-				float4 normalColor;
-				normalColor.rgb = 0.5 * ((i.normalVS)+1);
-				normalColor.a = mainTex.a;
-				return normalColor;
+				half3 normalTS = half3(0, 0, 1);
+				half3 tangentWS = half3(0, 0, 0);
+				half3 bitangentWS = half3(0, 0, 0);
+				return NormalsRenderingShared(mainTex, normalTS, tangentWS, bitangentWS, i.normalWS);
 			}
 			ENDHLSL
 		}
@@ -195,52 +193,12 @@
 			Blend One OneMinusSrcAlpha
 
 			HLSLPROGRAM
+			#pragma shader_feature _ _STRAIGHT_ALPHA_INPUT
 			#pragma prefer_hlslcc gles
 			#pragma vertex UnlitVertex
 			#pragma fragment UnlitFragment
 
-			struct Attributes
-			{
-				float3 positionOS   : POSITION;
-				float4 color		: COLOR;
-				float2 uv			: TEXCOORD0;
-			};
-
-			struct Varyings
-			{
-				float4  positionCS		: SV_POSITION;
-				float4  color			: COLOR;
-				float2	uv				: TEXCOORD0;
-			};
-
-			TEXTURE2D(_MainTex);
-			SAMPLER(sampler_MainTex);
-			float4 _MainTex_ST;
-
-			Varyings UnlitVertex(Attributes attributes)
-			{
-				Varyings o = (Varyings)0;
-
-				o.positionCS = TransformObjectToHClip(attributes.positionOS);
-				o.uv = TRANSFORM_TEX(attributes.uv, _MainTex);
-				o.uv = attributes.uv;
-				o.color = attributes.color;
-				return o;
-			}
-
-			float4 UnlitFragment(Varyings i) : SV_Target
-			{
-				half4 tex = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
-				half4 main;
-				#if defined(_STRAIGHT_ALPHA_INPUT)
-				main.rgb = tex.rgb * i.color.rgb * tex.a;
-				#else
-				main.rgb = tex.rgb * i.color.rgb;
-				#endif
-				main.a = tex.a * i.color.a;
-
-				return main;
-			}
+			#include "Include/Spine-SkeletonLit-UnlitPass-URP-2D.hlsl"
 			ENDHLSL
 		}
 	}
