@@ -7390,6 +7390,7 @@ GameObject:
   - component: {fileID: 4778175622441055311}
   - component: {fileID: 1123776676984534175}
   - component: {fileID: 4028702083039957239}
+  - component: {fileID: 6856206216328013083}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (p1)
   m_TagString: Player
@@ -7622,17 +7623,15 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetButtonDown
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.CallMethod
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000008000000
-        actionHashCodes: 1012c1009c512400ca51e900
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 9c512400ca51e900
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -7662,12 +7661,6 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Jump
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: 
         - useVariable: 0
           name: 
@@ -7682,7 +7675,7 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           typeName: UnityEngine.ParticleSystem
-          value: {fileID: 0}
+          value: {fileID: 4168929996987967538}
         fsmVarParams:
         - variableName: 
           objectType: 
@@ -7712,20 +7705,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - JUMP
         - On Air
         byteData: 020000000000
         arrayParamSizes: 00000000
@@ -7733,11 +7719,8 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001700000011000000140000000700000012000000170000001300000018000000120000000c000000270000000100000001000000
+        paramDataType: 140000000700000012000000170000001300000018000000120000000c000000270000000100000001000000
         paramName:
-        - buttonName
-        - sendEvent
-        - storeResult
         - gameObject
         - trigger
         - collideTag
@@ -7749,8 +7732,8 @@ MonoBehaviour:
         - storeResult
         - everyFrame
         - manualUI
-        paramDataPos: 0000000000000000000000000000000000000000010000000100000000000000000000000200000000000000000000000400000005000000
-        paramByteDataSize: 0000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000100000001000000
+        paramDataPos: 0000000000000000000000000000000000000000000000000100000000000000000000000400000005000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000000000000000000000100000001000000
     - name: Jump
       description: 
       colorIndex: 0
@@ -12620,6 +12603,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 2572456370850976347}
+--- !u!114 &6856206216328013083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7332639215588166937
 GameObject:
   m_ObjectHideFlags: 0
