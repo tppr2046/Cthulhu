@@ -40432,7 +40432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6913561584800923351, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
       propertyPath: fsm.variables.arrayVariables.Array.data[0].objectTypeName
-      value: 
+      value: UnityEngine.Material
       objectReference: {fileID: 0}
     - target: {fileID: 7224127279907448162, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
       propertyPath: m_RootOrder
@@ -54186,25 +54186,25 @@ MonoBehaviour:
         x: 50
         y: 164
         width: 100
-        height: 64
+        height: 96
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: Fire1
+          name: Jump
           isSystemEvent: 0
           isGlobal: 0
-        toState: Fire1
+        toState: Jump
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: Jump
+          name: Fire1
           isSystemEvent: 0
           isGlobal: 0
-        toState: Jump
+        toState: Fire1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -54218,8 +54218,28 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: Fire2+Up
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Fire2+UP
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Fire1+Fire2
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Fire1 + Fire2
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
+        - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
@@ -54227,13 +54247,31 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000070000000e000000
-        actionHashCodes: 0d4efe000d4efe000d4efe00
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000070000000e000000150000001c000000
+        actionHashCodes: 0d4efe000d4efe000d4efe000d4efe000d4efe00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Actor
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Actor
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -54266,6 +54304,20 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: 5300944949005088341, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: 888081908961077493, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
         - useVariable: 0
           name: 
           tooltip: 
@@ -54311,27 +54363,45 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - Fire2+Up
+        - 
+        - 
+        - Fire1+Fire2
+        - 
+        - 
         - Fire1
         - 
         - 
         - Jump
         - 
         - 
+        - 
+        - 
         - Fire2
-        - 
-        - 
-        byteData: 010000000100000001000000
+        byteData: 0100000001000000010000000100000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 110000001700000017000000170000001400000018000000070000001100000017000000170000001700000014000000180000000700000011000000170000001700000017000000140000001800000007000000
+        paramDataType: 1100000017000000170000001700000014000000180000000700000011000000170000001700000017000000140000001800000007000000110000001700000017000000170000001400000018000000070000001100000017000000170000001700000014000000180000000700000011000000170000001700000017000000140000001800000007000000
         paramName:
         - isPressed
         - isPressedEvent
@@ -54354,8 +54424,22 @@ MonoBehaviour:
         - gameObject
         - inputAction
         - updateMode
-        paramDataPos: 000000000000000001000000020000000000000000000000000000000100000003000000040000000500000001000000010000000400000002000000060000000700000008000000020000000200000008000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000004000000
+        - isPressed
+        - isPressedEvent
+        - wasPressedThisFrame
+        - wasReleasedThisFrame
+        - gameObject
+        - inputAction
+        - updateMode
+        - isPressed
+        - isPressedEvent
+        - wasPressedThisFrame
+        - wasReleasedThisFrame
+        - gameObject
+        - inputAction
+        - updateMode
+        paramDataPos: 00000000000000000100000002000000000000000000000000000000010000000300000004000000050000000100000001000000040000000200000006000000070000000800000002000000020000000800000003000000090000000a0000000b00000003000000030000000c000000040000000c0000000d0000000e000000040000000400000010000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000004000000
     - name: Fire1
       description: 
       colorIndex: 0
@@ -54363,15 +54447,15 @@ MonoBehaviour:
         serializedVersion: 2
         x: 260
         y: 126
-        width: 100
+        width: 117.333336
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: actor callback
+          isSystemEvent: 0
           isGlobal: 0
         toState: wait input
         linkStyle: 0
@@ -54381,14 +54465,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 04d1d50188611604
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 04d1d501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -54458,14 +54540,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - RPC/Fire1
-        - FINISHED
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 01000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 2a0000001f0000001700000012000000280000000100000017000000
+        paramDataType: 2a0000001f00000017000000120000002800000001000000
         paramName:
         - rpcTargets
         - eventTarget
@@ -54473,9 +54554,8 @@ MonoBehaviour:
         - stringData
         - header
         - NetworkOperationPending
-        - sendEvent
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000
+        paramDataPos: 000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     - name: init
       description: 
       colorIndex: 0
@@ -54500,17 +54580,25 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetOwner
         - HutongGames.PlayMaker.Actions.GetFsmGameObject
         - HutongGames.PlayMaker.Pun2.Actions.PhotonViewGetOwnerActorNumber
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 5b66cf0005a1e602
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000006000000
+        actionHashCodes: 5c0045055b66cf0005a1e602
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: INPUT_MANAGER
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 1
           name: Actor
           tooltip: 
@@ -54579,8 +54667,9 @@ MonoBehaviour:
         customTypeSizes: 01000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 14000000120000001200000013000000010000001400000010000000170000002800000001000000
+        paramDataType: 1300000014000000120000001200000013000000010000001400000010000000170000002800000001000000
         paramName:
+        - storeGameObject
         - gameObject
         - fsmName
         - variableName
@@ -54591,24 +54680,24 @@ MonoBehaviour:
         - failure
         - header
         - NetworkOperationPending
-        paramDataPos: 00000000000000000100000000000000000000000100000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000100000001000000000000000100000000000000000000000000000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Jump
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 250.03125
-        y: 204.03125
-        width: 100
+        x: 266.03125
+        y: 200.03125
+        width: 117.333336
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: actor callback
+          isSystemEvent: 0
           isGlobal: 0
         toState: wait input
         linkStyle: 0
@@ -54618,14 +54707,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 04d1d50188611604
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 04d1d501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -54695,14 +54782,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - RPC/JUMP
-        - FINISHED
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 01000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 2a0000001f0000001700000012000000280000000100000017000000
+        paramDataType: 2a0000001f00000017000000120000002800000001000000
         paramName:
         - rpcTargets
         - eventTarget
@@ -54710,9 +54796,8 @@ MonoBehaviour:
         - stringData
         - header
         - NetworkOperationPending
-        - sendEvent
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000
+        paramDataPos: 000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     - name: Fire2
       description: 
       colorIndex: 0
@@ -54720,15 +54805,15 @@ MonoBehaviour:
         serializedVersion: 2
         x: 270
         y: 285
-        width: 100
+        width: 117.333336
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: actor callback
+          isSystemEvent: 0
           isGlobal: 0
         toState: wait input
         linkStyle: 0
@@ -54738,14 +54823,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 04d1d50188611604
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 04d1d501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -54815,14 +54898,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - RPC/Fire2
-        - FINISHED
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 01000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 2a0000001f0000001700000012000000280000000100000017000000
+        paramDataType: 2a0000001f00000017000000120000002800000001000000
         paramName:
         - rpcTargets
         - eventTarget
@@ -54830,17 +54912,257 @@ MonoBehaviour:
         - stringData
         - header
         - NetworkOperationPending
-        - sendEvent
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000
+        paramDataPos: 000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: Fire2+UP
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 271
+        y: 359
+        width: 117.333336
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: actor callback
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: wait input
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 04d1d501
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: Actor
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: Photon.Pun.RpcTarget
+          intValue: 5
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - RPC/Fire2+Up
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 01000000
+        customTypeNames:
+        - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
+        paramDataType: 2a0000001f00000017000000120000002800000001000000
+        paramName:
+        - rpcTargets
+        - eventTarget
+        - remoteEvent
+        - stringData
+        - header
+        - NetworkOperationPending
+        paramDataPos: 000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: Fire1 + Fire2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 281
+        y: 434
+        width: 115.333336
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: actor callback
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: wait input
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 04d1d501
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: Actor
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: Photon.Pun.RpcTarget
+          intValue: 5
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - RPC/Fire1+Fire2
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 01000000
+        customTypeNames:
+        - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
+        paramDataType: 2a0000001f00000017000000120000002800000001000000
+        paramName:
+        - rpcTargets
+        - eventTarget
+        - remoteEvent
+        - stringData
+        - header
+        - NetworkOperationPending
+        paramDataPos: 000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: actor callback
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Fire1
       isSystemEvent: 0
       isGlobal: 0
+    - name: Fire1 release
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Fire2
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Fire2+Up
       isSystemEvent: 0
       isGlobal: 0
     - name: hold
@@ -54858,12 +55180,18 @@ MonoBehaviour:
     - name: RPC/Fire2
       isSystemEvent: 0
       isGlobal: 1
+    - name: RPC/Fire2+Up
+      isSystemEvent: 0
+      isGlobal: 1
     - name: RPC/JUMP
       isSystemEvent: 0
       isGlobal: 1
-    - name: Fire1 release
+    - name: Fire1+Fire2
       isSystemEvent: 0
       isGlobal: 0
+    - name: RPC/Fire1+Fire2
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables: []
