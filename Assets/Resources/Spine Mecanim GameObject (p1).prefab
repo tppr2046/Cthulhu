@@ -717,7 +717,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2216696037563981031}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0015062896, w: 0.99999887}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08364066, w: 0.996496}
   m_LocalPosition: {x: 2.224, y: -0.0067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6353,7 +6353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3996878483418003387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9072, y: 1.483, z: 0}
+  m_LocalPosition: {x: -2.3925, y: 3.0801997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3454818775891145179}
@@ -7394,7 +7394,13 @@ GameObject:
   - component: {fileID: 8599687560179704639}
   - component: {fileID: 6257507208305059427}
   - component: {fileID: 5495694996235809111}
+  - component: {fileID: 8669819932347394299}
   - component: {fileID: 2572456370850976347}
+  - component: {fileID: 5475987565612697781}
+  - component: {fileID: 3145175493822959785}
+  - component: {fileID: 5921306532353467237}
+  - component: {fileID: 3981880310682150098}
+  - component: {fileID: 569870140890903948}
   - component: {fileID: 8207097019334012003}
   - component: {fileID: 3494976869996129075}
   - component: {fileID: 7554310396379436298}
@@ -7589,6 +7595,29 @@ MonoBehaviour:
   flipBy180DegreeRotation: 0
   skeletonRenderer: {fileID: 6257507208305059427}
   skeletonGraphic: {fileID: 0}
+--- !u!114 &8669819932347394299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5861836f595f01e44ae3b8be36480a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 2572456370850976347}
+  fsmEvent:
+    eventName: jump start
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
 --- !u!114 &2572456370850976347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9250,7 +9279,7 @@ MonoBehaviour:
       - fsmEvent:
           name: jump start
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: Jump
         linkStyle: 0
         linkConstraint: 0
@@ -9346,7 +9375,7 @@ MonoBehaviour:
       isGlobal: 1
     - name: jump start
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables: []
@@ -9414,7 +9443,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -9431,9 +9460,9 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 1
+    handleTriggerStay: 0
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -9442,7 +9471,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -9451,6 +9480,121 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!114 &5475987565612697781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aad78d7088977f4bafeaf02e74d957c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 8207097019334012003}
+  fsmEvent:
+    eventName: attack end
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
+--- !u!114 &3145175493822959785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76bc78677283c9428df5a8f3952633d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 8207097019334012003}
+  fsmEvent:
+    eventName: hitbox off
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
+--- !u!114 &5921306532353467237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023701560663d274db1735ad011e3a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 8207097019334012003}
+  fsmEvent:
+    eventName: throw out
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
+--- !u!114 &3981880310682150098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a71cb6396167c0468f786c51da91640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 8207097019334012003}
+  fsmEvent:
+    eventName: holded
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
+--- !u!114 &569870140890903948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137461441459708327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3e992deaee7e742b128c99efa91b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventTarget:
+    eventTarget: 3
+    gameObject: {fileID: 7137461441459708327}
+    includeChildren: 0
+    fsmComponent: {fileID: 8207097019334012003}
+  fsmEvent:
+    eventName: head created
+    allowLocalEvents: 0
+    defaultEventName: 
+  debug: 0
+  _: 0
 --- !u!114 &8207097019334012003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9678,7 +9822,7 @@ MonoBehaviour:
       - fsmEvent:
           name: attack end
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: end hitbox and callback
         linkStyle: 0
         linkConstraint: 0
@@ -10511,9 +10655,9 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: hitbox_off
+          name: hitbox off
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: end hitbox and callback
         linkStyle: 0
         linkConstraint: 0
@@ -10602,7 +10746,7 @@ MonoBehaviour:
       - fsmEvent:
           name: holded
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: holded
         linkStyle: 0
         linkConstraint: 0
@@ -10733,9 +10877,9 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: throw_out
+          name: throw out
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: send throw event to object
         linkStyle: 0
         linkConstraint: 0
@@ -10839,9 +10983,9 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: hitbox_off
+          name: hitbox off
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: end hitbox and callback
         linkStyle: 0
         linkConstraint: 0
@@ -10979,7 +11123,7 @@ MonoBehaviour:
       - fsmEvent:
           name: attack end
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: end hitbox and callback
         linkStyle: 0
         linkConstraint: 0
@@ -11640,7 +11784,7 @@ MonoBehaviour:
       - fsmEvent:
           name: head created
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: effect
         linkStyle: 0
         linkConstraint: 0
@@ -11813,49 +11957,13 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000001000000000000000000000002000000
         paramByteDataSize: 0000000000000000000000000100000001000000000000000000000001000000
     events:
-    - name: attack
-      isSystemEvent: 0
-      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: attack
+      isSystemEvent: 0
+      isGlobal: 0
     - name: attack end
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hit
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: RPC/Fire1
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: RPC/Fire2
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: hold
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: not holding
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: is holding
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hold end
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: throw_out
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hitbox_off
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hit building
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: holded
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: RPC/Fire2+Up
       isSystemEvent: 0
       isGlobal: 1
     - name: can cast skill1
@@ -11864,12 +11972,48 @@ MonoBehaviour:
     - name: can not cast skill1
       isSystemEvent: 0
       isGlobal: 0
+    - name: head created
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: hit
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hit building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hitbox off
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: hold
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hold end
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: holded
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: is holding
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: not holding
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: RPC/Fire1
+      isSystemEvent: 0
+      isGlobal: 1
     - name: RPC/Fire1+Fire2
       isSystemEvent: 0
       isGlobal: 1
-    - name: head created
+    - name: RPC/Fire2
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
+    - name: RPC/Fire2+Up
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: throw out
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables:
@@ -11942,7 +12086,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
