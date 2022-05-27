@@ -113,15 +113,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 1
+    startState: init
     states:
-    - name: State 1
+    - name: init
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 100
+        x: 59
+        y: 98
         width: 100
         height: 32
       isBreakpoint: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Get Input
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -185,13 +185,13 @@ MonoBehaviour:
         - storeGameObject
         paramDataPos: 00000000
         paramByteDataSize: 00000000
-    - name: State 2
+    - name: Get Input
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 241
-        y: 94
+        x: 291
+        y: 100
         width: 116
         height: 32
       isBreakpoint: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
           name: GamepadLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 3
+        toState: delay 1frame
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -339,39 +339,28 @@ MonoBehaviour:
         - fixedUpdate
         paramDataPos: 00000000000000000000000001000000000000000000000000000000040000000100000001000000020000000300000004000000080000000c0000000d0000000e0000000f000000
         paramByteDataSize: 040000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000400000001000000010000000100000001000000
-    - name: State 3
-      description: 
-      colorIndex: 0
+    - name: RemovePlayer
+      description: "PlayerInput\u95DC\u9589\u6642\n\u6703\u89F8\u767C\u79FB\u9664\u4F7F\u7528\u8005\n\n\u6CE8\u610F\uFF01\n\u4E0D\u53EF\u4EE5\u5728GetInput\u76F4\u5F8C\n\u5C31\u5617\u8A66\u95DC\u9589PlayInput\n\u67092f\u671F\u9593FSM\u4ECD\u6703\u5617\u8A66\n\u8A2A\u554F\u8A72\u5143\u4EF6\u4E26\u5C0E\u81F4\u932F\u8AA4"
+      colorIndex: 7
       position:
         serializedVersion: 2
-        x: 234
-        y: 208
-        width: 129.33334
-        height: 32
+        x: 280
+        y: 344
+        width: 136.33334
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: GamepadReturn
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: State 2
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.DestroySelf
         customNames:
         - 
-        - 
-        actionEnabled: 0000
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: ca51e900230cc800
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 230cc800
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -381,46 +370,9 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: DeactivateInput
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.InputSystem.PlayerInput
-          value: {fileID: 119153818956077620}
-        fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -450,25 +402,230 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
-        arrayParamSizes: 00000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmVar
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 18000000120000000c0000002700000001000000010000000f0000001100000011000000
+        paramDataType: 0f0000001100000011000000
         paramName:
-        - behaviour
-        - methodName
-        - parameters
-        - storeResult
-        - everyFrame
-        - manualUI
         - delay
         - realTime
         - detachChildren
-        paramDataPos: 000000000000000000000000000000000000000001000000000000000000000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000001000000000000000000000000000000
+        paramDataPos: 000000000000000001000000
+        paramByteDataSize: 000000000000000000000000
+    - name: idle
+      description: "\u7576\u624B\u628A\u6062\u5FA9\u9023\u7D50\u6642\n\u53EF\u4EE5\u5FA9\u539F\u64CD\u4F5C\n\n\u903E\u6642\u5C31\u522A\u9664\u73A9\u5BB6"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 232
+        width: 128
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: GamepadReturn
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Get Input
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: RemovePlayer
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: RemovePlayer
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - RemovePlayer
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: delay 1frame
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 294
+        y: 183
+        width: 109.333336
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: delay frame 2
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 88611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 17000000
+        paramName:
+        - sendEvent
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
+    - name: delay frame 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 292.33594
+        y: 243.16406
+        width: 114
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: RemovePlayer
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 88611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 17000000
+        paramName:
+        - sendEvent
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -477,6 +634,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: GamepadReturn
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: RemovePlayer
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
