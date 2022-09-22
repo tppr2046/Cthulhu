@@ -19455,6 +19455,7 @@ GameObject:
   - component: {fileID: 667163319}
   - component: {fileID: 667163321}
   - component: {fileID: 667163320}
+  - component: {fileID: 667163322}
   m_Layer: 0
   m_Name: Front (4)
   m_TagString: Untagged
@@ -21255,6 +21256,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &667163322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667163318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a21220299d849abaffd33cc04a657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &668906486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26724,6 +26737,7 @@ GameObject:
   - component: {fileID: 867170828}
   - component: {fileID: 867170830}
   - component: {fileID: 867170829}
+  - component: {fileID: 867170831}
   m_Layer: 0
   m_Name: Front (2)
   m_TagString: Untagged
@@ -28524,6 +28538,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &867170831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867170827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a21220299d849abaffd33cc04a657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &868077794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4953652439784952, guid: 45374165b7b045b498462bc2d3987a31, type: 3}
@@ -46546,12 +46572,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunGetRoomProperties
+        - HutongGames.PlayMaker.Pun2.Actions.PunGetRoomProperties
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: dcd27302
+        - 
+        actionEnabled: 0001
+        actionIsOpen: 0001
+        actionStartIndex: 0000000010000000
+        actionHashCodes: dcd27302dcd27302
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -46568,6 +46596,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
+        - useVariable: 1
+          name: roomName
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams:
@@ -46576,7 +46610,20 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
+          type: 4
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 4
           objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
@@ -46587,6 +46634,18 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 1
+          name: playerCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: playerCount
           tooltip: 
@@ -46624,6 +46683,30 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -46634,15 +46717,22 @@ MonoBehaviour:
         - 
         - FINISHED
         - 
-        byteData: 00
-        arrayParamSizes: 0000000000000000
+        - 
+        - 
+        - 
+        - 
+        byteData: 0000
+        arrayParamSizes: 00000000000000000000000000000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 01000000
+        - HutongGames.PlayMaker.FsmString
+        - HutongGames.PlayMaker.FsmVar
+        customTypeSizes: 0100000001000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 11000000120000001000000010000000110000001100000011000000290000000c0000000c000000170000001700000017000000170000002800000001000000
+        - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
+        paramDataType: 11000000120000001000000010000000110000001100000011000000290000000c0000000c00000017000000170000001700000017000000280000000100000011000000120000001000000010000000110000001100000011000000290000000c0000000c000000170000001700000017000000170000002800000001000000
         paramName:
         - isInRoom
         - RoomName
@@ -46660,8 +46750,24 @@ MonoBehaviour:
         - failureEvent
         - header
         - NetworkOperationPending
-        paramDataPos: 00000000000000000000000001000000010000000200000003000000000000000000000001000000000000000100000002000000030000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        - isInRoom
+        - RoomName
+        - playerCount
+        - maxPlayers
+        - open
+        - visible
+        - autoCleanUp
+        - expectedUsers
+        - customPropertyKeys
+        - customPropertiesValues
+        - isInRoomEvent
+        - isNotInRoomEvent
+        - successEvent
+        - failureEvent
+        - header
+        - NetworkOperationPending
+        paramDataPos: 0000000000000000000000000100000001000000020000000300000000000000000000000100000000000000010000000200000003000000000000000000000004000000010000000200000003000000050000000600000007000000010000000200000003000000040000000500000006000000070000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Get Player Info
       description: 
       colorIndex: 7
@@ -47664,7 +47770,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
+          type: 4
           objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
@@ -48534,6 +48640,9 @@ MonoBehaviour:
     - name: not Master
       isSystemEvent: 0
       isGlobal: 0
+    - name: OK
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: PHOTON / ON CONNECTED TO MASTER
@@ -48577,7 +48686,37 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      boolVariables: []
+      - useVariable: 1
+        name: maxPlayers
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      boolVariables:
+      - useVariable: 1
+        name: isInRoom
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: open
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: visible
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: autoCleanUp
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables:
       - useVariable: 1
         name: cloudRegion
@@ -48616,7 +48755,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -62973,6 +63112,7 @@ GameObject:
   - component: {fileID: 1915631918}
   - component: {fileID: 1915631920}
   - component: {fileID: 1915631919}
+  - component: {fileID: 1915631921}
   m_Layer: 0
   m_Name: Front (1)
   m_TagString: Untagged
@@ -64773,6 +64913,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &1915631921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915631917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a21220299d849abaffd33cc04a657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1917363054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4737365782299246, guid: adb55fed5a5012b458c398a0b618390c, type: 3}
@@ -67891,6 +68043,7 @@ GameObject:
   - component: {fileID: 1995022684}
   - component: {fileID: 1995022686}
   - component: {fileID: 1995022685}
+  - component: {fileID: 1995022687}
   m_Layer: 0
   m_Name: Front (3)
   m_TagString: Untagged
@@ -69691,6 +69844,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &1995022687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995022683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a21220299d849abaffd33cc04a657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1995032230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4533943726500818, guid: 2224b63330275e5478ef024b2913f937, type: 3}
@@ -69933,6 +70098,7 @@ GameObject:
   - component: {fileID: 2003682843}
   - component: {fileID: 2003682844}
   - component: {fileID: 2003682845}
+  - component: {fileID: 2003682846}
   m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
@@ -71733,6 +71899,18 @@ MonoBehaviour:
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &2003682846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003682842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a21220299d849abaffd33cc04a657b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2004644333
 PrefabInstance:
   m_ObjectHideFlags: 0
