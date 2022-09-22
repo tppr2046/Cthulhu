@@ -6,7 +6,7 @@ using UnityEngine;
 using HutongGames.PlayMaker.Ecosystem.Utils;
 using HutongGames.PlayMaker;
 
-namespace com.hitboxoff
+namespace com.cthulhu
 {
 	public class HitboxOffProxy : PlayMakerEventProxy {
 

@@ -189,7 +189,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -325,7 +325,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -436,7 +436,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -655,7 +655,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -700,13 +700,13 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: 7230382217862068399}
+    second:
+    - {fileID: 6164454559792132752}
   - first: {fileID: -1817120950846391714}
     second:
     - {fileID: -1645743146822171032}
     - {fileID: -4399203354450248783}
-  - first: {fileID: 7230382217862068399}
-    second:
-    - {fileID: 6164454559792132752}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
@@ -929,7 +929,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -1828,7 +1828,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -1914,7 +1914,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -1942,47 +1942,53 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: throw
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: holding
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hold
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
+  - m_Name: can_land
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: lower
-    m_StateMachine: {fileID: 1273193267939239565}
+    m_Name: upper
+    m_StateMachine: {fileID: -5612017702811329463}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -1993,8 +1999,8 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: upper
-    m_StateMachine: {fileID: -5612017702811329463}
+    m_Name: lower
+    m_StateMachine: {fileID: 1273193267939239565}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -2200,7 +2206,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: can_land
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4547273669660603887}
   m_Solo: 0
@@ -2210,7 +2219,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2803,7 +2812,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -3010,7 +3019,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
