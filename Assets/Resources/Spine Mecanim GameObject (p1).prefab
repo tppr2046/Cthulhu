@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30181892440664957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0.23, z: 0}
+  m_LocalPosition: {x: 1.21, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7349244119391069769}
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 82786459, guid: 9754d4abda502c6458053d5ed8e4fc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetFSMs: []
+  TargetFSMs:
+  - {fileID: 8207097019334012003}
 --- !u!1 &469970796391730367
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,7 +7431,7 @@ Transform:
   m_GameObject: {fileID: 7137461441459708327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 2855749213085555360}
   - {fileID: 4981108391570413629}
@@ -10748,7 +10749,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101
-        actionIsOpen: 000101
+        actionIsOpen: 010101
         actionStartIndex: 000000000500000007000000
         actionHashCodes: b2cf1000d97b72025f913504
         unityObjectParams: []
@@ -11228,18 +11229,28 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: afffe300ba7ea101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 000101
+        actionStartIndex: 000000000500000009000000
+        actionHashCodes: b2cf1000afffe300ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 7349244119390714473}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -11327,22 +11338,39 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 000000
         arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 14000000110000001100000001000000010000000c000000120000000c000000270000001f000000120000000f00000001000000
         paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
         - keys
         - 
         - datas
@@ -11351,8 +11379,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000010000000000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000001000000
     - name: Skill 1
       description: 
       colorIndex: 0
@@ -12425,7 +12453,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -13726,9 +13754,6 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: hold
-  - Type: 4
-    SynchronizeType: 0
-    Name: isHolding
   - Type: 9
     SynchronizeType: 0
     Name: throw
@@ -15095,11 +15120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2083814
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7475276
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15215,6 +15240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
+--- !u!1 &7349244119390714473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
+  m_PrefabInstance: {fileID: 7349244119390682313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7349244119391069769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28627f8fb21b36c429f55f15e3608791, type: 3}
