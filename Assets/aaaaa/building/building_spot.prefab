@@ -477,7 +477,7 @@ MonoBehaviour:
         x: 421
         y: 85
         width: 142.66666
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -495,7 +495,16 @@ MonoBehaviour:
           name: create building
           isSystemEvent: 0
           isGlobal: 0
-        toState: create building
+        toState: create building1
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: create building 2
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: create building2
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -584,7 +593,7 @@ MonoBehaviour:
         stringParams:
         - no building
         - create building
-        - create building
+        - create building 2
         - create building
         byteData: 00
         arrayParamSizes: 0400000004000000
@@ -612,14 +621,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000000000000000000001000000020000000300000004000000010000000000000001000000020000000300000000000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: create building
+    - name: create building1
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 439
         y: 183
-        width: 122
+        width: 128
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -857,6 +866,111 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+    - name: create building2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 459
+        y: 255
+        width: 126
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: callback
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CreateObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 60532301
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 5513603481980187001, guid: ee201b458ebef4d4584e4bddf1cabcc1, type: 3}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 5714335569368646553}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 5714335569368646553}
+        - useVariable: 1
+          name: building_obj_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: -0.3, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000013000000130000001c0000001c00000013000000
+        paramName:
+        - gameObject
+        - parent
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos: 000000000100000002000000000000000100000003000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000
     events:
     - name: SET BUILDING
       isSystemEvent: 0
@@ -877,6 +991,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: DESTROY BUILDING
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: create building 2
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
