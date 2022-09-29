@@ -206,15 +206,17 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.LookAt
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.MoveObject
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000040000000c00000011000000
-        actionHashCodes: afffe300d57998059c512400c1edb801
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000040000000c000000110000001a000000
+        actionHashCodes: afffe300d57998059c512400c1edb80148c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -326,6 +328,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -372,14 +380,15 @@ MonoBehaviour:
         stringParams:
         - hit
         - FINISHED
-        byteData: 00000000000c00000000
+        - FINISHED
+        byteData: 00000000000c0000000101
         arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c0000002700000014000000130000001c0000001c00000011000000110000001900000001000000140000000700000012000000170000001300000014000000130000000f0000000f0000000f00000007000000110000001700000001000000
+        paramDataType: 0c000000120000000c0000002700000014000000130000001c0000001c00000011000000110000001900000001000000140000000700000012000000170000001300000014000000130000000f0000000f0000000f000000070000001100000017000000010000000f0000001700000001000000
         paramName:
         - keys
         - 
@@ -407,8 +416,11 @@ MonoBehaviour:
         - reverse
         - finishEvent
         - realTime
-        paramDataPos: 0000000000000000010000000000000000000000000000000000000001000000000000000100000000000000000000000100000001000000010000000000000001000000020000000200000000000000010000000200000005000000020000000100000009000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000004000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000000000000010000000000000000000000010000000100000001000000000000000100000002000000020000000000000001000000020000000500000002000000010000000900000003000000020000000a000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000004000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000001000000000000000000000001000000
     - name: destroy
       description: 
       colorIndex: 0
@@ -689,7 +701,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -706,7 +718,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -718,7 +730,7 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
-    handleLateUpdate: 1
+    handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
