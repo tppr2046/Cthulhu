@@ -476,8 +476,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 421
         y: 85
-        width: 142.66666
-        height: 64
+        width: 138
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -495,16 +495,7 @@ MonoBehaviour:
           name: create building
           isSystemEvent: 0
           isGlobal: 0
-        toState: create building1
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: create building 2
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: create building2
+        toState: get building model
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -512,14 +503,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.DestroyObject
-        - HutongGames.PlayMaker.Actions.IntSwitch
+        - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000003000000
-        actionHashCodes: 9ff80c02092dca00
+        actionHashCodes: 9ff80c0209faa102
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -560,24 +551,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 3
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -592,43 +565,34 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - no building
-        - create building
-        - create building 2
+        - no building
         - create building
         byteData: 00
-        arrayParamSizes: 0400000004000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmInt
-        - HutongGames.PlayMaker.FsmEvent
+        arrayParamSizes: 
+        arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000000f00000011000000100000000c000000100000001000000010000000100000000c0000001700000017000000170000001700000001000000
+        paramDataType: 130000000f00000011000000100000001000000017000000170000001700000001000000
         paramName:
         - gameObject
         - delay
         - detachChildren
-        - intVariable
-        - compareTo
-        - 
-        - 
-        - 
-        - 
-        - sendEvent
-        - 
-        - 
-        - 
-        - 
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000001000000020000000300000004000000010000000000000001000000020000000300000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: create building1
+        paramDataPos: 000000000000000000000000000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: create building
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 439
-        y: 183
-        width: 128
+        x: 467
+        y: 241
+        width: 122
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -654,12 +618,12 @@ MonoBehaviour:
         actionHashCodes: 60532301
         unityObjectParams: []
         fsmGameObjectParams:
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: loaded_building
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 5513603481980187001, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
+          value: {fileID: 0}
         - useVariable: 0
           name: 
           tooltip: 
@@ -866,14 +830,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
-    - name: create building2
+    - name: get building model
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 459
-        y: 255
-        width: 126
+        x: 469
+        y: 171
+        width: 138.66666
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -883,46 +847,22 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: callback
+        toState: create building
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.ArrayGet
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 60532301
+        actionHashCodes: 6ba59301
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 5513603481980187001, guid: ee201b458ebef4d4584e4bddf1cabcc1, type: 3}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 5714335569368646553}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 5714335569368646553}
-        - useVariable: 1
-          name: building_obj_now
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -932,45 +872,79 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
+        fsmVarParams:
+        - variableName: loaded_building
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: building_model_array
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences:
+          - {fileID: 919132149155446097, guid: a15da3567adfc8f489de411223f68839, type: 3}
+          - {fileID: 919132149155446097, guid: 5e1026bf063d18a478909dd6fbfb4c03, type: 3}
+          - {fileID: 919132149155446097, guid: d64e4521753154c4d9144a4501d0501a, type: 3}
         fsmEnumParams: []
         fsmFloatParams: []
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: new_building_type
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
+        fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
+        stringParams:
+        - 
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000130000001c0000001c00000013000000
+        paramDataType: 2900000010000000270000000100000017000000
         paramName:
-        - gameObject
-        - parent
-        - spawnPoint
-        - position
-        - rotation
-        - storeObject
-        paramDataPos: 000000000100000002000000000000000100000003000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000
+        - array
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
     events:
     - name: SET BUILDING
       isSystemEvent: 0
@@ -1062,14 +1036,37 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: loaded_building
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
-      arrayVariables: []
+      arrayVariables:
+      - useVariable: 1
+        name: building_model_array
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 3
+        objectTypeName: UnityEngine.Object
+        floatValues: []
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences:
+        - {fileID: 0}
+        - {fileID: 5513603481980187001, guid: 6e2485dc5a21cd347b95169c94929904, type: 3}
+        - {fileID: 5513603481980187001, guid: ee201b458ebef4d4584e4bddf1cabcc1, type: 3}
+        - {fileID: 5513603481980187001, guid: 5c212a253e1dc7d4d903a6fe9eb52952, type: 3}
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
