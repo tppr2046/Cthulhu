@@ -56,7 +56,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55
-        y: 111
+        y: 127
         width: 100
         height: 32
       isBreakpoint: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 457
-        y: 250
+        y: 266
         width: 100
         height: 16
       isBreakpoint: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 455
-        y: 112
+        y: 128
         width: 114.666664
         height: 32
       isBreakpoint: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 456.83594
-        y: 176.83594
+        y: 192.83594
         width: 100
         height: 32
       isBreakpoint: 0
@@ -645,7 +645,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 54.632812
-        y: 353.6953
+        y: 369.6953
         width: 100
         height: 16
       isBreakpoint: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 227.89062
-        y: 356.4453
+        y: 372.4453
         width: 106
         height: 16
       isBreakpoint: 0
@@ -891,7 +891,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 196
+        y: 212
         width: 128.66666
         height: 16
       isBreakpoint: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 239
-        y: 118
+        y: 134
         width: 114
         height: 32
       isBreakpoint: 0
@@ -1081,6 +1081,81 @@ MonoBehaviour:
         - updateMode
         paramDataPos: 00000000000000000100000002000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000004000000
+    - name: default rumble
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 710
+        y: 111
+        width: 120
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ControllerRumbler
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 2ee01704
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f0000000f000000
+        paramName:
+        - leftSpeed
+        - rightSpeed
+        - rDuration
+        paramDataPos: 000000000100000002000000
+        paramByteDataSize: 000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1104,6 +1179,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: walk
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: RUMBLE
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -1139,6 +1217,15 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: idle
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: RUMBLE
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: default rumble
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
