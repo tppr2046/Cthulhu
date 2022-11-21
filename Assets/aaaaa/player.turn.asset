@@ -36,7 +36,7 @@ MonoBehaviour:
           name: turn left
           isSystemEvent: 0
           isGlobal: 0
-        toState: "\u72C0\u614B 2"
+        toState: left
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -167,13 +167,15 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.SetRotation
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 979e4104
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 27fbe103979e4104
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -216,7 +218,19 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: face
+          tooltip: false-left, true-right
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -235,13 +249,16 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams: []
-        byteData: 000000000000
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000230000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramDataType: 11000000110000000100000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000
         paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
         - gameObject
         - quaternion
         - vector
@@ -251,9 +268,9 @@ MonoBehaviour:
         - space
         - everyFrame
         - lateUpdate
-        paramDataPos: 000000000000000000000000000000000100000002000000000000000400000005000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000100000001000000
-    - name: "\u72C0\u614B 2"
+        paramDataPos: 000000000100000000000000000000000000000000000000000000000100000002000000010000000500000006000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000000000000040000000100000001000000
+    - name: left
       description: 
       colorIndex: 0
       position:
@@ -268,13 +285,15 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.SetRotation
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 979e4104
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 27fbe103979e4104
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -317,7 +336,19 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: face
+          tooltip: false-left, true-right
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -336,13 +367,16 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams: []
-        byteData: 000000000000
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000230000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramDataType: 11000000110000000100000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000
         paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
         - gameObject
         - quaternion
         - vector
@@ -352,8 +386,8 @@ MonoBehaviour:
         - space
         - everyFrame
         - lateUpdate
-        paramDataPos: 000000000000000000000000000000000100000002000000000000000400000005000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000100000001000000
+        paramDataPos: 000000000100000000000000000000000000000000000000000000000100000002000000010000000500000006000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000000000000040000000100000001000000
     events:
     - name: turn left
       isSystemEvent: 0
@@ -383,7 +417,13 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       intVariables: []
-      boolVariables: []
+      boolVariables:
+      - useVariable: 1
+        name: face
+        tooltip: false-left, true-right
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -398,7 +438,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000
+      variableCategoryIDs: 0000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

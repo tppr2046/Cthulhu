@@ -1128,7 +1128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4998920141981409178
 Transform:
   m_ObjectHideFlags: 0
@@ -2079,8 +2079,66 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 15
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 1
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
     enabled: 1
     curve:
@@ -9767,6 +9825,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.SetEventProperties
@@ -9776,10 +9835,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000050000000b0000000f000000
-        actionHashCodes: 5f91350460532301afffe300ba7ea101
+        - 
+        actionEnabled: 0100010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000002000000070000000d00000011000000
+        actionHashCodes: 9bd6f8015f91350460532301afffe300ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -9807,6 +9867,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -9854,6 +9922,12 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: skill
         - useVariable: 0
           name: 
           tooltip: 
@@ -9923,7 +9997,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
+        - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
@@ -9940,8 +10014,10 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001100000001000000070000001300000013000000130000001c0000001c000000130000000c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 140000001200000014000000120000001100000001000000070000001300000013000000130000001c0000001c000000130000000c000000120000000c000000270000001f000000120000000f00000001000000
         paramName:
+        - gameObject
+        - trigger
         - gameObject
         - parameter
         - Value
@@ -9961,8 +10037,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000010000000000000001000000020000000000000001000000030000000000000001000000010000000000000000000000020000000000000005000000
-        paramByteDataSize: 00000000000000000000000001000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000010000000000000000000000010000000000000001000000020000000000000001000000030000000000000002000000010000000000000000000000030000000000000005000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: effect
       description: 
       colorIndex: 0
