@@ -51,12 +51,12 @@ MonoBehaviour:
     startState: init
     states:
     - name: init
-      description: 
+      description: "\u5C07\u624B\u628A\u767B\u9304\u5230\nGamePads"
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 55
-        y: 127
+        x: 279
+        y: 111
         width: 100
         height: 32
       isBreakpoint: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
         fsmArrayParams:
         - useVariable: 1
           name: INPUT/GamePads
-          tooltip: 
+          tooltip: "\u5DF2\u52A0\u5165\u7684\u624B\u628A\u6E05\u55AE"
           showInInspector: 0
           networkSync: 0
           type: 3
@@ -337,12 +337,12 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000001000000020000000100000000000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Destroy
-      description: "\u5F9E\u624B\u628A\u6E05\u55AE\u8A3B\u92B7\n\u522A\u9664\u63A7\u5236\u5668"
+      description: "\u901A\u77E5\u624B\u628A\u5DF2\u907A\u5931\n"
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 457
-        y: 266
+        x: 681
+        y: 250
         width: 100
         height: 16
       isBreakpoint: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
+        actionEnabled: 010000
         actionIsOpen: 010101
         actionStartIndex: 000000000400000007000000
         actionHashCodes: ba7ea1019f77b305230cc800
@@ -439,7 +439,7 @@ MonoBehaviour:
         fsmArrayParams:
         - useVariable: 1
           name: INPUT/GamePads
-          tooltip: 
+          tooltip: "\u5DF2\u52A0\u5165\u7684\u624B\u628A\u6E05\u55AE"
           showInInspector: 0
           networkSync: 0
           type: 3
@@ -514,9 +514,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 455
-        y: 128
-        width: 114.666664
+        x: 679
+        y: 112
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -579,8 +579,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 456.83594
-        y: 192.83594
+        x: 680.83594
+        y: 176.83594
         width: 100
         height: 32
       isBreakpoint: 0
@@ -644,8 +644,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 54.632812
-        y: 369.6953
+        x: 278.6328
+        y: 353.6953
         width: 100
         height: 16
       isBreakpoint: 0
@@ -767,8 +767,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 227.89062
-        y: 372.4453
+        x: 451.89062
+        y: 356.4453
         width: 106
         height: 16
       isBreakpoint: 0
@@ -890,8 +890,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 212
+        x: 269.59375
+        y: 210.27344
         width: 128.66666
         height: 16
       isBreakpoint: 0
@@ -993,8 +993,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 239
-        y: 134
+        x: 463
+        y: 118
         width: 118
         height: 32
       isBreakpoint: 0
@@ -1087,8 +1087,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 710
-        y: 111
+        x: 253.77344
+        y: 488.39844
         width: 120
         height: 16
       isBreakpoint: 0
@@ -1157,6 +1157,374 @@ MonoBehaviour:
         - rDuration
         paramDataPos: 000000000100000002000000
         paramByteDataSize: 000000000000000000000000
+    - name: Left Seat
+      description: "\u901A\u77E5\u624B\u628A\u96E2\u958B\u5EA7\u4F4D"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 863.4297
+        y: 110.99219
+        width: 120.33333
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: 60 sec
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: INPUT_MANAGER
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Device/Lost
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: ReJoin
+      description: "\u624B\u628A\u56DE\u6B78\u6642\n\u91CD\u65B0\u5617\u8A66\u53D6\u5F97\u73A9\u5BB6\u5EA7\u4F4D"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 53.492188
+        y: 117.546875
+        width: 141.66667
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Add to Manager
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: 60 sec
+      description: "\u572860\u79D2\u9593\n\u7B49\u5F85\u624B\u628A\u56DE\u6B78"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 869.21094
+        y: 205.88281
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: DestroySelf
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 60
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: DestroySelf
+      description: "\u79FB\u9664GamePad\n\u81EA\u5DF1\u6D88\u6EC5"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 862.6094
+        y: 305.8672
+        width: 108
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ArrayRemove
+        - HutongGames.PlayMaker.Actions.DestroySelf
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9f77b305230cc800
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: me
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: INPUT/GamePads
+          tooltip: "\u5DF2\u52A0\u5165\u7684\u624B\u628A\u6E05\u55AE"
+          showInInspector: 0
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 2900000027000000110000000f0000001100000011000000
+        paramName:
+        - array
+        - value
+        - allMatches
+        - delay
+        - realTime
+        - detachChildren
+        paramDataPos: 000000000000000000000000000000000100000002000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1185,16 +1553,10 @@ MonoBehaviour:
     - name: RUMBLE
       isSystemEvent: 0
       isGlobal: 0
+    - name: DEVICE_RESUME
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
-    - fsmEvent:
-        name: DEVICE_LOST
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: delay 1f
-      linkStyle: 0
-      linkConstraint: 0
-      linkTarget: 0
-      colorIndex: 0
     - fsmEvent:
         name: UI_MODE
         isSystemEvent: 0
@@ -1227,6 +1589,24 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: default rumble
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: DEVICE_LOST
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Left Seat
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: DEVICE_RESUME
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: ReJoin
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -1371,7 +1751,19 @@ MonoBehaviour:
         m_CallState: 2
   m_DeviceRegainedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5765339280320844666}
+        m_TargetAssemblyTypeName: PlayMakerFSM, PlayMaker
+        m_MethodName: SendEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DEVICE_RESUME
+          m_BoolArgument: 0
+        m_CallState: 2
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1398,20 +1790,8 @@ MonoBehaviour:
     m_ActionName: Player/ZX[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonEast,/Keyboard/z,/Keyboard/x]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 07c54e3e-8e5a-44a2-b935-4e276702a468
-    m_ActionName: Player/ZXC[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/Keyboard/z,/Keyboard/x,/Keyboard/c]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 5616dbac-f565-4691-a981-aca0db1280ee
     m_ActionName: Player/Fire2+Up[/Keyboard/w,/Keyboard/x,/Keyboard/upArrow,/XInputControllerWindows/dpad/up,/XInputControllerWindows/buttonEast,/XInputControllerWindows/leftStick/up]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 03ed1635-e640-415e-bb75-3396003eed0e
-    m_ActionName: Player/M[/Keyboard/m]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3222baba-5e38-4c43-b3ed-f5d09563fc1b
-    m_ActionName: Player/V[/Keyboard/v,/XInputControllerWindows/buttonNorth]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: ece78b58-3d8c-48d8-a0f9-ac40feb8b940
@@ -1436,6 +1816,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 11186b70-e5ee-4c92-bc0b-26094c0305cb
     m_ActionName: UI/Cancel[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 427f9135-dd78-4f30-bb20-71bcf22e95b8
+    m_ActionName: Player/Fire2+Down[/XInputControllerWindows/leftStick/down,/Keyboard/x,/Keyboard/s,/XInputControllerWindows/buttonEast,/XInputControllerWindows/dpad/down]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard and Gamepad
   m_DefaultActionMap: Player
