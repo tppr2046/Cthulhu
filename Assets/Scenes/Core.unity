@@ -273,7 +273,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: check phase
+    startState: check init load
     states:
     - name: State 1
       description: 
@@ -281,7 +281,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 406
-        y: 140
+        y: 236
         width: 100
         height: 32
       isBreakpoint: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 576
-        y: 147
+        y: 243
         width: 100
         height: 16
       isBreakpoint: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 235
-        y: 101
+        y: 197
         width: 107.333336
         height: 48
       isBreakpoint: 0
@@ -620,7 +620,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 53
-        y: 119
+        y: 215
         width: 100
         height: 16
       isBreakpoint: 0
@@ -666,6 +666,109 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
+    - name: check init load
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 231
+        y: 109
+        width: 118.666664
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: check phase
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: TEST MODE
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Do Nothing
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetSceneCount
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: bae0270009faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: sceneCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: sceneCount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - 
+        - TEST MODE
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1000000001000000100000001000000017000000170000001700000001000000
+        paramName:
+        - sceneCount
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 0000000000000000010000000200000000000000010000000200000001000000
+        paramByteDataSize: 0000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: load ok
       isSystemEvent: 0
@@ -679,7 +782,13 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables: []
-      intVariables: []
+      intVariables:
+      - useVariable: 1
+        name: sceneCount
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -695,7 +804,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 
+      variableCategoryIDs: 00000000
     description: 
     docUrl: 
     showStateLabel: 0
