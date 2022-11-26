@@ -50,13 +50,13 @@ MonoBehaviour:
     startState: check Core
     states:
     - name: Load Core
-      description: "PHASE 9\n\u5834\u666F\u6E2C\u8A66\u6A21\u5F0F"
+      description: "\u5DF2\u6539\u8B8A\u5224\u65B7\u6A5F\u5236\n\u4E0D\u9700\u8B8A\u66F4PHASE"
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 251
         y: 111
-        width: 100
+        width: 106.333336
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -123,12 +123,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: SET_PHASE
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 9
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -455,7 +455,13 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables: []
-      intVariables: []
+      intVariables:
+      - useVariable: 1
+        name: SET_PHASE
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 3
       boolVariables:
       - useVariable: 1
         name: isLoaded
@@ -477,7 +483,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000
+      variableCategoryIDs: 0000000000000000
     description: "\u5C07\u6B64Prefab\u7F6E\u65BC\u5834\u666F\u4E2D\n\u555F\u52D5\u5834\u666F\u6642\u6703\u81EA\u52D5\u5C0E\u5165Core"
     docUrl: 
     showStateLabel: 0
