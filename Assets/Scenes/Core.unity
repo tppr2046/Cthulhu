@@ -363,7 +363,7 @@ MonoBehaviour:
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
-        colorIndex: 0
+        colorIndex: 6
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.RectTransformSetAnchoredPosition
@@ -602,7 +602,7 @@ MonoBehaviour:
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
-        colorIndex: 0
+        colorIndex: 6
       actionData:
         actionNames: []
         customNames: []
@@ -916,8 +916,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 325
-        y: 280
+        x: 524
+        y: 346
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1050,8 +1050,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 509
-        y: 295
+        x: 700
+        y: 350
         width: 113.333336
         height: 32
       isBreakpoint: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
           name: CLICK
           isSystemEvent: 0
           isGlobal: 0
-        toState: Get Stage
+        toState: S1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1097,7 +1097,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: scene.now
+          name: Scene.Last
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1188,8 +1188,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 320
-        y: 180
+        x: 304
+        y: 324
         width: 108.666664
         height: 48
       isBreakpoint: 0
@@ -1281,8 +1281,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64
-        y: 207
+        x: 63.570312
+        y: 340.0078
         width: 100
         height: 16
       isBreakpoint: 0
@@ -1333,8 +1333,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 315
-        y: 99
+        x: 299
+        y: 243
         width: 118.666664
         height: 48
       isBreakpoint: 0
@@ -1431,14 +1431,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000200000000000000010000000200000001000000
         paramByteDataSize: 0000000001000000000000000000000000000000000000000000000001000000
-    - name: Load STAGE
-      description: 
-      colorIndex: 0
+    - name: Load Scene
+      description: "\u901A\u7528\u5E73\u884C\u8F09\u5165\u529F\u80FD\n\u5B8C\u6210\u8F09\u5165\u5F8C\n\u81EA\u52D5\u5378\u8F09\u4E0A\u500B\u5834\u666F\n\u4E26\u66F4\u65B0\u968E\u6BB5\u503C"
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 504
-        y: 490
-        width: 105.333336
+        x: 259.1875
+        y: 764.6406
+        width: 113.33333
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1448,7 +1448,7 @@ MonoBehaviour:
           name: load ok
           isSystemEvent: 0
           isGlobal: 0
-        toState: activate STAGE
+        toState: activate
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1473,7 +1473,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: STAGE
+          name: Scene.ToGo
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1510,7 +1510,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: HashCode
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1565,24 +1565,24 @@ MonoBehaviour:
         - sceneNotFoundEvent
         paramDataPos: 00000000000000000000000000000000000000000100000002000000000000000100000002000000000000000100000002000000
         paramByteDataSize: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: unload TITLE
+    - name: unload last
       description: 
-      colorIndex: 0
+      colorIndex: 4
       position:
         serializedVersion: 2
-        x: 675
-        y: 561
-        width: 108
+        x: 97.05469
+        y: 876.14844
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: OK
+          isSystemEvent: 0
           isGlobal: 0
-        toState: BOARD_SHOW
+        toState: Scene Changed
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1615,7 +1615,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: scene.now
+          name: Scene.Last
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1669,7 +1669,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - OK
         - 
         byteData: 03000000
         arrayParamSizes: 
@@ -1691,39 +1691,37 @@ MonoBehaviour:
         - sceneNotFoundEvent
         paramDataPos: 0000000000000000000000000100000001000000000000000200000000000000000000000000000001000000
         paramByteDataSize: 0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: activate STAGE
+    - name: activate
       description: 
-      colorIndex: 0
+      colorIndex: 4
       position:
         serializedVersion: 2
-        x: 673
-        y: 488
-        width: 126
+        x: 96.11719
+        y: 815.0781
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: OK
+          isSystemEvent: 0
           isGlobal: 0
-        toState: unload TITLE
+        toState: unload last
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.AllowSceneActivation
         - HutongGames.PlayMaker.Actions.SetActiveScene
         customNames:
         - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0001
-        actionStartIndex: 0000000006000000
-        actionHashCodes: ef583b0318a0e903
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 18a0e903
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1743,7 +1741,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: STAGE
+          name: Scene.ToGo
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1758,20 +1756,8 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 1
-          name: HashCode
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1785,18 +1771,6 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 1
           name: 
           tooltip: 
@@ -1815,9 +1789,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
-        - 
-        - FINISHED
+        - OK
         - 
         - 
         byteData: 02000000
@@ -1825,14 +1797,8 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000110000000f0000001100000017000000170000000700000012000000100000001000000012000000140000001100000017000000110000001700000017000000
+        paramDataType: 0700000012000000100000001000000012000000140000001100000017000000110000001700000017000000
         paramName:
-        - aSynchOperationHashCode
-        - allowSceneActivation
-        - progress
-        - isDone
-        - doneEvent
-        - failureEvent
         - sceneReference
         - sceneByName
         - sceneAtBuildIndex
@@ -1844,16 +1810,335 @@ MonoBehaviour:
         - sceneFound
         - sceneNotActivatedEvent
         - sceneNotFoundEvent
-        paramDataPos: 0000000000000000000000000100000000000000010000000000000000000000010000000200000001000000000000000200000002000000030000000300000004000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: BOARD_SHOW
+        paramDataPos: 0000000000000000000000000100000001000000000000000000000000000000010000000100000002000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - name: Check Phase
+      description: "Last=ToGo\nPhase > 3 \u79C0\u9762\u677F"
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 89.05469
+        y: 1004.9453
+        width: 119.333336
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Show Board
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Show Board
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Hide Board
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Hide Board
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetStringValue
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: c030f10309faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: Scene.Last
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: Scene.ToGo
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: GAME_PHASE
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Show Board
+        - Hide Board
+        - Show Board
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001200000001000000100000001000000017000000170000001700000001000000
+        paramName:
+        - stringVariable
+        - stringValue
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000000000000010000000200000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: Get Stage
+      description: "\u9032\u5165\u95DC\u5361\nPhaseToGo=3"
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 501.04688
+        y: 618.9375
+        width: 114.66667
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Load Scene
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ArrayGet
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 6ba59301603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: Scene.ToGo
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 4
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: STAGE_LIST
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          type: 4
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues:
+          - StageDemo
+          - 01TestStage_Multi
+          vector4Values: []
+          objectReferences: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Stage.ID
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Phase.ToGo
+          tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 2900000010000000270000000100000017000000100000001000000001000000
+        paramName:
+        - array
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000000000000010000000200000001000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000001000000
+    - name: S1
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 671
-        y: 650
-        width: 118.666664
+        x: 767.15625
+        y: 598.15625
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get Stage
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Stage.ID
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Show Board
+      description: "\u986F\u793A\u9762\u677F"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 311.5
+        y: 964.66406
+        width: 102
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -1948,13 +2233,115 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Get Stage
+    - name: Hide Board
+      description: "\u96B1\u85CF\u9762\u677F"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 307.33594
+        y: 1047.8594
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: ACTOR_BAR
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 67445103}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BOARD_HIDE
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: GoTo Map
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 509
-        y: 398
+        x: 271.23438
+        y: 617.47656
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1965,20 +2352,298 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Load STAGE
+        toState: Load Scene
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.ArrayGet
+        - HutongGames.PlayMaker.Actions.SetStringValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: c030f103603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: Scene.ToGo
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: MAP_MENU
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Phase.ToGo
+          tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001200000001000000100000001000000001000000
+        paramName:
+        - stringVariable
+        - stringValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 306.7578
+        y: 112.328125
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.LoadScene
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 6ba59301
+        actionHashCodes: 20a9b100
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: UnityEngine.SceneManagement.LoadSceneMode
+          intValue: 0
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - 
+        byteData: 00000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0700000012000000100000002a000000110000001700000017000000
+        paramName:
+        - sceneReference
+        - sceneByName
+        - sceneAtIndex
+        - loadSceneMode
+        - success
+        - successEvent
+        - failureEvent
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000
+        paramByteDataSize: 04000000000000000000000000000000000000000000000000000000
+    - name: GoTo ActorMenu
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 65.38281
+        y: 617.2031
+        width: 133.33334
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Load Scene
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetStringValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: c030f103603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: Scene.ToGo
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: MAP_MENU
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Phase.ToGo
+          tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001200000001000000100000001000000001000000
+        paramName:
+        - stringVariable
+        - stringValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
+    - name: Get StageID
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 510.35156
+        y: 506.96094
+        width: 104
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get Stage
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetEventIntData
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: dcbe4804
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1990,51 +2655,13 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams: []
-        fsmVarParams:
-        - variableName: STAGE
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 4
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams:
-        - useVariable: 1
-          name: STAGE_LIST
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          type: 4
-          objectTypeName: UnityEngine.Object
-          floatValues: []
-          intValues: 
-          boolValues: 
-          stringValues:
-          - 01TestStage_Multi
-          vector4Values: []
-          objectReferences: []
+        fsmVarParams: []
+        fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: sceneCount
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2045,29 +2672,146 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - 
-        byteData: 00
+        stringParams: []
+        byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 2900000010000000270000000100000017000000
+        paramDataType: 10000000
         paramName:
-        - array
-        - index
-        - storeValue
+        - getIntData
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
+    - name: Scene Changed
+      description: 
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 91
+        y: 940
+        width: 125.333336
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check Phase
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 603dd905ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 67445103}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: SCENE_CHANGED
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: GAME_PHASE
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Phase.ToGo
+          tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1000000010000000010000001f000000120000000f00000001000000
+        paramName:
+        - intVariable
+        - intValue
         - everyFrame
-        - indexOutOfRange
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000100000000000000
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000010000000000000000000000000000000000000001000000
+        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000
     events:
-    - name: load ok
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: TEST MODE
-      isSystemEvent: 0
-      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
@@ -2077,18 +2821,105 @@ MonoBehaviour:
     - name: done
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    - name: GO_ACTOR
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GO_MAP
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GO_STAGE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GO_TITLE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Hide Board
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: load ok
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: OK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Show Board
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: TEST MODE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: JUMP_STAGE
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions:
+    - fsmEvent:
+        name: JUMP_STAGE
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Get Stage
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GO_MAP
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: GoTo Map
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GO_TITLE
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: State 1
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GO_ACTOR
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: GoTo ActorMenu
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GO_STAGE
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Get StageID
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: sceneCount
+        name: HashCode
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: HashCode
+        name: Phase.ToGo
+        tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Stage.ID
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 1
+      - useVariable: 1
+        name: sceneCount
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2096,21 +2927,27 @@ MonoBehaviour:
       boolVariables: []
       stringVariables:
       - useVariable: 1
-        name: ACTOR_SELECT
+        name: ACTOR_MENU
         tooltip: 
         showInInspector: 1
         networkSync: 0
         value: 
       - useVariable: 1
-        name: STAGE
+        name: MAP_MENU
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 
+      - useVariable: 1
+        name: Scene.Last
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 
       - useVariable: 1
-        name: STAGE_SELECT
+        name: Scene.ToGo
         tooltip: 
-        showInInspector: 1
+        showInInspector: 0
         networkSync: 0
         value: 
       - useVariable: 1
@@ -2119,12 +2956,6 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: Title
-      - useVariable: 1
-        name: scene.now
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 
       vector2Variables: []
       vector3Variables: []
       colorVariables: []
@@ -2152,6 +2983,7 @@ MonoBehaviour:
         intValues: 
         boolValues: 
         stringValues:
+        - StageDemo
         - 01TestStage_Multi
         vector4Values: []
         objectReferences: []
@@ -2162,8 +2994,12 @@ MonoBehaviour:
       - "02_\u89D2\u8272\u9078\u55AE"
       - "03_\u9078\u64C7\u95DC\u5361"
       - "04_\u95DC\u5361\u6E05\u55AE"
-      variableCategoryIDs: 000000000000000002000000000000000300000001000000000000000000000004000000
-    description: "\n[PHASE]\n0: \u521D\u59CB\u503C\n1: "
+      - "\u6E2C\u8A66\u529F\u80FD"
+      variableCategoryIDs: 0000000000000000050000000000000002000000030000000000000000000000010000000000000004000000
+    description: "\n[PHASE]\n\n0: \u521D\u59CB\u5316: (\u5982\u679C\u6709\u751F\u6210\u89D2\u8272\u5C31\u522A\u9664)\r\n1:
+      \u9078\u55AE\u6A21\u5F0F: INPUT:UI \u9762\u677F\u5F85\u6A5F\n2: \u9078\u89D2\u968E\u6BB5:
+      INPUT:UI \u5141\u8A31\u9078\u89D2\n3: \u95DC\u5361\u6A21\u5F0F: INPUT:PLAY
+      \u5141\u8A31\u751F\u6210\u89D2\u8272"
     docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
@@ -2174,7 +3010,19 @@ MonoBehaviour:
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
-    ExposedEvents: []
+    ExposedEvents:
+    - name: GO_TITLE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GO_MAP
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GO_ACTOR
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: JUMP_STAGE
+      isSystemEvent: 0
+      isGlobal: 0
     OutputEvents: []
     RestartOnEnable: 1
     ResetVariablesOnEnable: 0
