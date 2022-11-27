@@ -5782,8 +5782,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 319.33594
         y: 322.21875
-        width: 112
-        height: 96
+        width: 115.333336
+        height: 112
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -5833,6 +5833,15 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 1
+      - fsmEvent:
+          name: SEAT_CLEAN
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Clean Seat
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
@@ -6597,12 +6606,12 @@ MonoBehaviour:
           - {fileID: 7137461441459708327, guid: 0492b43529733094b859a9eec546d2d3, type: 3}
           - {fileID: 4610454634105900288, guid: 105dfdcc88ff8164d856dc20801bbbfb, type: 3}
           - {fileID: 4610454634105900288, guid: 105dfdcc88ff8164d856dc20801bbbfb, type: 3}
-          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
-          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
           - {fileID: 9076286464477680383, guid: f1827aeda7eff2d44801eefaa9318b88, type: 3}
-          - {fileID: 9076286464477680383, guid: f1827aeda7eff2d44801eefaa9318b88, type: 3}
+          - {fileID: 9076286464477680383, guid: d38116b9d65d97e4295e4c5b87741751, type: 3}
+          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
+          - {fileID: 2773261697292056221, guid: 4fe85f122fe594d4e8c1b2caa13b3a3f, type: 3}
           - {fileID: 2935535775906785535, guid: b988048a41441ab4386a5d87fb166c55, type: 3}
-          - {fileID: 2935535775906785535, guid: b988048a41441ab4386a5d87fb166c55, type: 3}
+          - {fileID: 2935535775906785535, guid: f60a0210ee427f748a7361b3a2392c2d, type: 3}
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
@@ -7169,12 +7178,12 @@ MonoBehaviour:
           - {fileID: 7137461441459708327, guid: 0492b43529733094b859a9eec546d2d3, type: 3}
           - {fileID: 4610454634105900288, guid: 105dfdcc88ff8164d856dc20801bbbfb, type: 3}
           - {fileID: 4610454634105900288, guid: 105dfdcc88ff8164d856dc20801bbbfb, type: 3}
-          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
-          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
           - {fileID: 9076286464477680383, guid: f1827aeda7eff2d44801eefaa9318b88, type: 3}
-          - {fileID: 9076286464477680383, guid: f1827aeda7eff2d44801eefaa9318b88, type: 3}
+          - {fileID: 9076286464477680383, guid: d38116b9d65d97e4295e4c5b87741751, type: 3}
+          - {fileID: 2773261697292056221, guid: 67dc9d2cb442ad54dba4b028815ac356, type: 3}
+          - {fileID: 2773261697292056221, guid: 4fe85f122fe594d4e8c1b2caa13b3a3f, type: 3}
           - {fileID: 2935535775906785535, guid: b988048a41441ab4386a5d87fb166c55, type: 3}
-          - {fileID: 2935535775906785535, guid: b988048a41441ab4386a5d87fb166c55, type: 3}
+          - {fileID: 2935535775906785535, guid: f60a0210ee427f748a7361b3a2392c2d, type: 3}
         - useVariable: 1
           name: Actor/TypeStartIndexList
           tooltip: 
@@ -9330,6 +9339,127 @@ MonoBehaviour:
         - indexOutOfRange
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000100000000000000
+    - name: Clean Seat
+      description: 
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 158.75781
+        y: 596.65625
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait Request
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetEventIntData
+        - HutongGames.PlayMaker.Actions.ArraySet
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: dcbe48046ba59301
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 0
+          type: 1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: Actor/PlayerHolds
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          type: 1
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 00000000000000000000000000000000
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Player
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Player
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000002900000010000000270000000100000017000000
+        paramName:
+        - getIntData
+        - array
+        - index
+        - value
+        - everyFrame
+        - indexOutOfRange
+        paramDataPos: 000000000000000001000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -9365,6 +9495,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: NEW_ENTRY
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SEAT_CLEAN
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
