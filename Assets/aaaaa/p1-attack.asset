@@ -71,6 +71,7 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
@@ -91,10 +92,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101010101010101
-        actionIsOpen: 01010101010001010101
-        actionStartIndex: 0000000003000000080000000d00000012000000170000001c000000200000002400000028000000
-        actionHashCodes: 27fbe1035f9135045f9135045f9135045b66cf00b2cf1000d864fa04d864fa04d864fa04d864fa04
+        - 
+        actionEnabled: 0101010101010101010101
+        actionIsOpen: 0101010101010001010101
+        actionStartIndex: 0000000003000000060000000b00000010000000150000001a0000001f00000023000000270000002b000000
+        actionHashCodes: 27fbe103603dd9055f9135045f9135045f9135045b66cf00b2cf1000d864fa04d864fa04d864fa04d864fa04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -246,7 +248,19 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: fist_count
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams:
         - useVariable: 1
           name: isSkill
@@ -324,15 +338,18 @@ MonoBehaviour:
         - SKILL1
         - ATTACK
         - HOLD
-        byteData: 00000000000000000000000000000000000000
+        byteData: 0000000000000000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1100000011000000010000001400000012000000110000000100000007000000140000001200000011000000010000000700000014000000120000001100000001000000070000001400000012000000120000001300000001000000140000001100000011000000010000000100000017000000110000001400000018000000170000001100000014000000180000001700000011000000140000001800000017000000110000001400000018000000
+        paramDataType: 1100000011000000010000001000000010000000010000001400000012000000110000000100000007000000140000001200000011000000010000000700000014000000120000001100000001000000070000001400000012000000120000001300000001000000140000001100000011000000010000000100000017000000110000001400000018000000170000001100000014000000180000001700000011000000140000001800000017000000110000001400000018000000
         paramName:
         - boolVariable
         - boolValue
+        - everyFrame
+        - intVariable
+        - intValue
         - everyFrame
         - gameObject
         - parameter
@@ -375,8 +392,8 @@ MonoBehaviour:
         - storeValue
         - gameObject
         - inputAction
-        paramDataPos: 000000000100000000000000000000000000000002000000010000000200000001000000010000000300000006000000070000000200000002000000040000000b0000000c00000003000000030000000400000000000000100000000400000005000000060000001100000012000000000000000700000005000000000000000100000008000000060000000100000002000000090000000700000002000000030000000a0000000800000003000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000100000004000000000000000000000000000000010000000400000000000000000000000000000001000000040000000000000000000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 000000000100000000000000000000000100000001000000000000000000000002000000020000000300000001000000010000000300000007000000080000000200000002000000040000000c0000000d00000003000000030000000400000000000000110000000400000005000000060000001200000013000000000000000700000005000000000000000100000008000000060000000100000002000000090000000700000002000000030000000a0000000800000003000000
+        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000100000004000000000000000000000000000000010000000400000000000000000000000000000001000000040000000000000000000000000000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: attack
       description: 
       colorIndex: 0
@@ -2071,9 +2088,9 @@ MonoBehaviour:
           vector4Values: []
           objectReferences:
           - {fileID: 3656724833199043984, guid: 2a421697e7c77cc4f884dbb1e8a6190f, type: 3}
-          - {fileID: 3656724833199043984, guid: 10514da539b185b4a84540db18c4e7c7, type: 3}
+          - {fileID: 3656724833199043984, guid: 25fee70e96b43014e92ebf46368ce3e5, type: 3}
           - {fileID: 3656724833199043984, guid: 2a421697e7c77cc4f884dbb1e8a6190f, type: 3}
-          - {fileID: 3656724833199043984, guid: 10514da539b185b4a84540db18c4e7c7, type: 3}
+          - {fileID: 3656724833199043984, guid: 25fee70e96b43014e92ebf46368ce3e5, type: 3}
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
@@ -2488,19 +2505,19 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: hit building
+          isSystemEvent: 0
           isGlobal: 0
-        toState: waiting
+        toState: hit building
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: hit building
+          name: Fist Attack
           isSystemEvent: 0
-          isGlobal: 0
-        toState: hit building
+          isGlobal: 1
+        toState: add fist count
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2511,17 +2528,15 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.TriggerEvent
-        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101000101
-        actionStartIndex: 0000000005000000080000000d00000012000000
-        actionHashCodes: 5f91350427fbe103b2cf10009c51240048c01101
+        actionEnabled: 01010101
+        actionIsOpen: 01010001
+        actionStartIndex: 0000000005000000080000000d000000
+        actionHashCodes: 5f91350427fbe103b2cf10009c512400
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2578,13 +2593,7 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 3
+        fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -2624,13 +2633,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - hit building
-        - FINISHED
-        byteData: 00000000000000000000000000
+        byteData: 000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000110000000100000007000000110000001100000001000000140000001100000011000000010000000100000014000000070000001200000017000000130000000f0000001700000001000000
+        paramDataType: 140000001200000011000000010000000700000011000000110000000100000014000000110000001100000001000000010000001400000007000000120000001700000013000000
         paramName:
         - gameObject
         - parameter
@@ -2650,11 +2658,8 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 00000000000000000000000000000000010000000100000002000000050000000100000003000000040000000600000007000000020000000800000001000000000000000000000000000000010000000c000000
-        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000100000000000000000000000000000001000000010000000000000004000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000001000000020000000500000001000000030000000400000006000000070000000200000008000000010000000000000000000000
+        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000100000000000000000000000000000001000000010000000000000004000000000000000000000000000000
     - name: normal attack
       description: 
       colorIndex: 0
@@ -3110,6 +3115,177 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000020000000000000001000000030000000000000000000000010000000000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: add fist count
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 385
+        y: 516
+        width: 116
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: check fist count
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntAdd
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: fist_count
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - add
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: check fist count
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 367
+        y: 573
+        width: 150.66666
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: continue fist attack
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: skill 1
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: fist_count
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - continue fist attack
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3171,12 +3347,24 @@ MonoBehaviour:
     - name: SELF CONTROL
       isSystemEvent: 0
       isGlobal: 0
+    - name: Fist Attack
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: continue fist attack
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions: []
     variables:
       floatVariables: []
       intVariables:
       - useVariable: 1
         name: Actor.color
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: fist_count
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3297,7 +3485,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
