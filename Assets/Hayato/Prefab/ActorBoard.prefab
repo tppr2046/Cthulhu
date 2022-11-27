@@ -1318,6 +1318,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.GetFsmGameObject
@@ -1325,10 +1326,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000050000000a000000
-        actionHashCodes: 081bbf05081bbf055b66cf00
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000003000000080000000d000000
+        actionHashCodes: 603dd905081bbf05081bbf055b66cf00
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1412,6 +1414,18 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
+          name: Step
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
           name: Actor.type
           tooltip: 
           showInInspector: 0
@@ -1430,17 +1444,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000100000000100000014000000120000001200000010000000010000001400000012000000120000001300000001000000
+        paramDataType: 100000001000000001000000140000001200000012000000100000000100000014000000120000001200000010000000010000001400000012000000120000001300000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
+        - intVariable
+        - intValue
         - everyFrame
         - gameObject
         - fsmName
@@ -1452,8 +1464,13 @@ MonoBehaviour:
         - variableName
         - storeValue
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000020000000300000001000000010000000200000004000000050000000000000002000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000000000001000000020000000100000001000000020000000300000003000000020000000200000004000000050000000000000003000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: reject Controller
       description: "\u6E05\u7A7A\u4F54\u4F4D\n\u901A\u77E5\u624B\u628A\u96E2\u5834(\u4E0D\u662F\u522A\u9664)\n\u522A\u9664\u8173\u8272(\u5982\u679C\u6709)"
       colorIndex: 7
@@ -2667,6 +2684,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.GameObjectIsNull
         - HutongGames.PlayMaker.Actions.ecosystem.cinemachine.VirtualCameraGetFollowTarget
         - HutongGames.PlayMaker.Actions.GetPosition
@@ -2680,10 +2698,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 000101010101
-        actionStartIndex: 0000000005000000080000000f0000001200000015000000
-        actionHashCodes: 15656205401c72055552ad052ee017042ee0170419219405
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01000101010101
+        actionStartIndex: 0000000003000000080000000b000000120000001500000018000000
+        actionHashCodes: 603dd90515656205401c72055552ad052ee017042ee0170419219405
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2799,7 +2818,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Step
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
         fsmBoolParams:
         - useVariable: 1
           name: 
@@ -2827,14 +2858,17 @@ MonoBehaviour:
         stringParams:
         - Cancel
         - 
-        byteData: 0000000000000000
+        byteData: 000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 00000000
         customTypeNames:
         - CinemachineActionHeader
-        paramDataType: 1300000017000000170000001100000001000000140000001300000028000000140000001c0000000f0000000f0000000f00000007000000010000000f0000000f0000000f0000000f0000000f0000000f0000001c0000000f0000000f0000000f0000000100000001000000
+        paramDataType: 1000000010000000010000001300000017000000170000001100000001000000140000001300000028000000140000001c0000000f0000000f0000000f00000007000000010000000f0000000f0000000f0000000f0000000f0000000f0000001c0000000f0000000f0000000f0000000100000001000000
         paramName:
+        - intVariable
+        - intValue
+        - everyFrame
         - gameObject
         - isNull
         - isNotNull
@@ -2862,8 +2896,8 @@ MonoBehaviour:
         - addZ
         - everyFrame
         - perSecond
-        paramDataPos: 00000000000000000100000000000000000000000000000001000000000000000100000000000000000000000100000002000000010000000500000003000000040000000500000006000000070000000800000001000000090000000a0000000b0000000600000007000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000
+        paramDataPos: 00000000010000000000000000000000000000000100000000000000010000000000000001000000000000000100000000000000000000000100000002000000020000000600000003000000040000000500000006000000070000000800000001000000090000000a0000000b0000000700000008000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000
     - name: count and check
       description: "Time -1\n\u5012\u6578\u986F\u793A\u52300\n\u4F46\u7B49\u5230-1\u624D\u5FA9\u6D3B"
       colorIndex: 0
