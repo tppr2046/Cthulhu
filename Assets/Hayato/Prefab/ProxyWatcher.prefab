@@ -258,8 +258,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 242
-        y: 110
+        x: 252
+        y: 109
         width: 100
         height: 32
       isBreakpoint: 0
@@ -280,20 +280,44 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GameObjectIsActiveInHierarchy
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.SetFsmBool
+        - HutongGames.PlayMaker.Actions.GetFsmGameObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.SetFsmGameObject
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000060000000b000000
-        actionHashCodes: 67c2c904b2cf100068fece05
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010001
+        actionStartIndex: 00000000060000000b000000100000001500000018000000
+        actionHashCodes: 67c2c904b2cf100068fece055b66cf009ff80c025b66cf00
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: A
           tooltip: 
           showInInspector: 1
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Prefab.instance
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Prefab.instance
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
@@ -311,6 +335,22 @@ MonoBehaviour:
             name: ProxyManager
             tooltip: 
             showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: B
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: B
+            tooltip: 
+            showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
         animationCurveParams: []
@@ -332,14 +372,50 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Prefab.instance
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Prefab.instance
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
@@ -371,12 +447,12 @@ MonoBehaviour:
         stringParams:
         - ON
         - 
-        byteData: 0001000000
+        byteData: 00010000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000170000001700000011000000010000000100000014000000110000001100000001000000010000001400000012000000120000001100000001000000
+        paramDataType: 130000001700000017000000110000000100000001000000140000001100000011000000010000000100000014000000120000001200000011000000010000001400000012000000120000001300000001000000130000000f000000110000001400000012000000120000001300000001000000
         paramName:
         - gameObject
         - isActive
@@ -394,8 +470,21 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000100000000000000010000000200000002000000030000000100000000000000010000000300000004000000
-        paramByteDataSize: 00000000000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000000000000000000001000000
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000001000000020000000200000003000000010000000000000001000000030000000400000002000000020000000300000001000000050000000200000000000000040000000300000004000000050000000300000006000000
+        paramByteDataSize: 0000000000000000000000000000000001000000010000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000
     - name: Is Entry
       description: 
       colorIndex: 0
@@ -559,6 +648,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: ActorType
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: active
@@ -597,6 +692,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: Prefab.instance
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables:
       - useVariable: 1
         name: A.obj
@@ -611,7 +712,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
