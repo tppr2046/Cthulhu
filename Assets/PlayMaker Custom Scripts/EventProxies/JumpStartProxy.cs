@@ -6,7 +6,7 @@ using UnityEngine;
 using HutongGames.PlayMaker.Ecosystem.Utils;
 using HutongGames.PlayMaker;
 
-namespace com.jumpstart
+namespace com.spine
 {
 	public class JumpStartProxy : PlayMakerEventProxy {
 

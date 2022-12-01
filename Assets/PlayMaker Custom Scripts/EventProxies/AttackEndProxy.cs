@@ -6,7 +6,7 @@ using UnityEngine;
 using HutongGames.PlayMaker.Ecosystem.Utils;
 using HutongGames.PlayMaker;
 
-namespace com.attackend
+namespace com.spine
 {
 	public class AttackEndProxy : PlayMakerEventProxy {
 

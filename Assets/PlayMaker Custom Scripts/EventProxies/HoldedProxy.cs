@@ -6,7 +6,7 @@ using UnityEngine;
 using HutongGames.PlayMaker.Ecosystem.Utils;
 using HutongGames.PlayMaker;
 
-namespace com.holded
+namespace com.spine
 {
 	public class HoldedProxy : PlayMakerEventProxy {
 

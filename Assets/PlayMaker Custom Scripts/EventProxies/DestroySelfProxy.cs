@@ -6,7 +6,7 @@ using UnityEngine;
 using HutongGames.PlayMaker.Ecosystem.Utils;
 using HutongGames.PlayMaker;
 
-namespace com.destroyself
+namespace com.spine
 {
 	public class DestroySelfProxy : PlayMakerEventProxy {
 

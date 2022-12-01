@@ -8,14 +8,14 @@ using HutongGames.PlayMaker;
 
 namespace com.spine
 {
-	public class SneezeEndProxy : PlayMakerEventProxy {
+	public class DeamonGoProxy : PlayMakerEventProxy {
 
-		[Button("SneezeEnd","Test : SneezeEnd")] public bool _;
-		public void SneezeEnd()
+		[Button("DeamonGo","Test : DeamonGo")] public bool _;
+		public void DeamonGo()
 		{
 			if (debug || !Application.isPlaying)
 			{
-				Debug.Log("SneezeEndProxy : SneezeEnd()");
+				Debug.Log("DeamonGoProxy : DeamonGo()");
 			}
 
             
