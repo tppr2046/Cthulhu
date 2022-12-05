@@ -24,8 +24,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 410
-        y: 179.16406
+        x: 414
+        y: 177.11719
         width: 100
         height: 80
       isBreakpoint: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
           value: 2
         fsmIntParams:
         - useVariable: 1
-          name: Actor.color
+          name: ActorColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: Actor.color
+          name: ActorColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1763,15 +1763,19 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.ArrayGetRandom
+        - HutongGames.PlayMaker.Actions.RandomInt
+        - HutongGames.PlayMaker.Actions.MathExpression
+        - HutongGames.PlayMaker.Actions.ArrayGet
         - HutongGames.PlayMaker.Actions.CreateObject
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 5978870060532301
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000005000000090000000e000000
+        actionHashCodes: 070f30009f6463026ba5930160532301
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1805,7 +1809,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: (ActorColor * 3 ) + SkillBubbleRandom
         fsmObjectParams: []
         fsmVarParams:
         - variableName: bubble_to_create
@@ -1849,11 +1859,44 @@ MonoBehaviour:
           - {fileID: 4732309055635072358, guid: d0d4a370c56c0ac40995ee283b08c4b8, type: 3}
           - {fileID: 7104328071105578892, guid: a985ead1c4f493b428e1108679a08f98, type: 3}
           - {fileID: 7382021401689948141, guid: 37ac793982a3f7743b6d76f8d3498372, type: 3}
+          - {fileID: 4732309055635072358, guid: 8452e551bcdd9054fbd53eba9141ca29, type: 3}
+          - {fileID: 7104328071105578892, guid: e8cde1ad69f3c9a45ac1685159f9d6ac, type: 3}
+          - {fileID: 7382021401689948141, guid: eb06e478b5372484c8a033007dae2c68, type: 3}
         fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
+        fsmFloatParams:
         - useVariable: 1
           name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 1
+          name: SkillBubbleRandom
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: SkillBubbleIndex
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: SkillBubbleIndex
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1882,27 +1925,37 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        byteData: 010000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000270000001000000011000000010000001300000013000000130000001c0000001c00000013000000
+        paramDataType: 1000000010000000100000000100000011000000120000000f000000100000000100000029000000100000002700000001000000170000001300000013000000130000001c0000001c00000013000000
         paramName:
-        - array
-        - storeValue
-        - index
+        - min
+        - max
+        - storeResult
+        - inclusiveMax
         - noRepeat
+        - expression
+        - storeResultAsFloat
+        - storeResultAsInt
         - everyFrame
+        - array
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
         - gameObject
         - parent
         - spawnPoint
         - position
         - rotation
         - storeObject
-        paramDataPos: 0000000000000000000000000000000000000000000000000100000002000000000000000100000003000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000001000000020000000000000000000000000000000000000003000000010000000000000004000000000000000200000000000000000000000100000002000000000000000100000003000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000
     - name: send event to bubble
       description: 
       colorIndex: 0
@@ -2321,12 +2374,12 @@ MonoBehaviour:
           vector4Values: []
           objectReferences:
           - {fileID: 5760374043473939754, guid: 0f331069e59a22742b86766f214e7475, type: 3}
-          - {fileID: 5760374043473939754, guid: 0f331069e59a22742b86766f214e7475, type: 3}
+          - {fileID: 5760374043473939754, guid: 0e3ff798e378fe947a2ebfcd432d3081, type: 3}
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: Actor.color
+          name: ActorColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2619,7 +2672,19 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: Actor.color
+        name: ActorColor
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: SkillBubbleIndex
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: SkillBubbleRandom
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2751,6 +2816,9 @@ MonoBehaviour:
         - {fileID: 4732309055635072358, guid: d0d4a370c56c0ac40995ee283b08c4b8, type: 3}
         - {fileID: 7104328071105578892, guid: a985ead1c4f493b428e1108679a08f98, type: 3}
         - {fileID: 7382021401689948141, guid: 37ac793982a3f7743b6d76f8d3498372, type: 3}
+        - {fileID: 4732309055635072358, guid: 8452e551bcdd9054fbd53eba9141ca29, type: 3}
+        - {fileID: 7104328071105578892, guid: e8cde1ad69f3c9a45ac1685159f9d6ac, type: 3}
+        - {fileID: 7382021401689948141, guid: eb06e478b5372484c8a033007dae2c68, type: 3}
       - useVariable: 1
         name: bubble_bomb_array
         tooltip: 
@@ -2765,11 +2833,11 @@ MonoBehaviour:
         vector4Values: []
         objectReferences:
         - {fileID: 5760374043473939754, guid: 0f331069e59a22742b86766f214e7475, type: 3}
-        - {fileID: 5760374043473939754, guid: 0f331069e59a22742b86766f214e7475, type: 3}
+        - {fileID: 5760374043473939754, guid: 0e3ff798e378fe947a2ebfcd432d3081, type: 3}
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
