@@ -28,10 +28,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1157148769042018354}
-  - {fileID: 3573703148669450342}
-  - {fileID: 183383009934773949}
   - {fileID: 4448553055219645183}
+  - {fileID: 712237905274375531}
+  - {fileID: 5441597204823223642}
+  - {fileID: 1236669133648396163}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -650,11 +650,27 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-      arrayVariables: []
+      arrayVariables:
+      - useVariable: 1
+        name: plane_array
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 3
+        objectTypeName: UnityEngine.Object
+        floatValues: []
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences:
+        - {fileID: 716633125889763925}
+        - {fileID: 5447087590188665444}
+        - {fileID: 1241329490497378493}
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -732,10 +748,10 @@ Transform:
   m_GameObject: {fileID: 9168249786525025645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.009, z: 1.289}
-  m_LocalScale: {x: 3, y: 4, z: 3}
+  m_LocalScale: {x: 6, y: 4, z: 3}
   m_Children: []
   m_Father: {fileID: 8772936043938282079}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3616088153520889153
 MeshFilter:
@@ -923,18 +939,30 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
         - HutongGames.PlayMaker.Actions.SetEventProperties
+        - HutongGames.PlayMaker.Actions.RandomInt
+        - HutongGames.PlayMaker.Actions.GetFsmArrayItem
         - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000400000008000000
-        actionHashCodes: afffe300afffe300ba7ea101
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000004000000080000000d00000016000000
+        actionHashCodes: afffe300afffe300070f300035338f05ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 7323306573753365943}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -950,12 +978,12 @@ MonoBehaviour:
           gameObject:
             ownerOption: 1
             gameObject:
-              useVariable: 0
-              name: 
+              useVariable: 1
+              name: plane
               tooltip: 
               showInInspector: 0
               networkSync: 0
-              value: {fileID: 1160972346423170828}
+              value: {fileID: 0}
           fsmName:
             useVariable: 0
             name: 
@@ -979,13 +1007,25 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: shoot_target
+          value: shoot_target_pos
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: shoot_target
+          value: shoot_target_pos
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: plane_array
         - useVariable: 0
           name: 
           tooltip: 
@@ -994,10 +1034,10 @@ MonoBehaviour:
           value: SHOOT
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: shoot_target
-          objectType: UnityEngine.GameObject
+        - variableName: shoot_target_pos
+          objectType: UnityEngine.Object
           useVariable: 1
-          type: 3
+          type: 6
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1018,7 +1058,31 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: shoot_target
+        - variableName: shoot_target_pos
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 6
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: plane
           objectType: UnityEngine.GameObject
           useVariable: 1
           type: 3
@@ -1051,15 +1115,48 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 1
+          name: plane_index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        - 
+        - 
+        byteData: 010000
         arrayParamSizes: 01000000010000000100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
@@ -1068,7 +1165,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000000c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 0c000000120000000c000000270000000c000000120000000c0000002700000010000000100000001000000001000000110000001400000012000000120000001000000027000000010000001700000017000000170000001f000000120000000f00000001000000
         paramName:
         - keys
         - 
@@ -1078,12 +1175,26 @@ MonoBehaviour:
         - 
         - datas
         - 
+        - min
+        - max
+        - storeResult
+        - inclusiveMax
+        - noRepeat
+        - gameObject
+        - fsmName
+        - variableName
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - fsmNotFound
+        - variableNotFound
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000200000001000000030000000100000000000000020000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000002000000010000000300000001000000000000000100000002000000000000000000000000000000020000000300000003000000020000000100000000000000010000000200000000000000040000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
     - name: get shoot target
       description: 
       colorIndex: 0
@@ -1091,15 +1202,15 @@ MonoBehaviour:
         serializedVersion: 2
         x: 260
         y: 100
-        width: 130.66666
+        width: 124
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: get shoot target
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
         toState: shoot event
         linkStyle: 0
@@ -1108,68 +1219,90 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.SetVector3XYZ
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000070000000c000000
+        actionHashCodes: 5552ad050cdb0405dfd72a04
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: hit_player
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: hit_player
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: GET SHOOT TARGET
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 1
+          name: hit_player_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: hit_player_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: hit_player_z
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: hit_player_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.8
+        - useVariable: 1
+          name: shoot_player_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: hit_player_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: shoot_player_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: hit_player_z
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1177,24 +1310,56 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: shoot_target_pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 0000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000000f0000000f000000070000000f000000010000001c0000001c0000000f0000000f0000000f00000001000000
         paramName:
-        - eventTarget
-        - sendEvent
-        - delay
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - vector3Variable
+        - vector3Value
+        - x
+        - y
+        - z
+        - everyFrame
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000030000000400000005000000050000000900000001000000020000000600000007000000080000000a000000
+        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000000000000000000040000000000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: shoot
       isSystemEvent: 0
@@ -1202,14 +1367,53 @@ MonoBehaviour:
     - name: get shoot target
       isSystemEvent: 0
       isGlobal: 0
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
     globalTransitions: []
     variables:
-      floatVariables: []
-      intVariables: []
+      floatVariables:
+      - useVariable: 1
+        name: hit_player_x
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: hit_player_y
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: hit_player_z
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: shoot_player_y
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables:
+      - useVariable: 1
+        name: plane_index
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables: []
       stringVariables: []
       vector2Variables: []
-      vector3Variables: []
+      vector3Variables:
+      - useVariable: 1
+        name: shoot_target_pos
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -1226,6 +1430,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: plane
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -1233,7 +1443,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1295,7 +1505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 3433812351521674611}
---- !u!1001 &355445929332117190
+--- !u!1001 &416653997554385271
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1304,7 +1514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1348,21 +1558,88 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
       propertyPath: m_Name
+      value: SM_Ship_Bomber_01 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+--- !u!1 &1241329490497378493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+  m_PrefabInstance: {fileID: 416653997554385271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1236669133648396163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+  m_PrefabInstance: {fileID: 416653997554385271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2090699395128767391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8772936043938282079}
+    m_Modifications:
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+      propertyPath: m_Name
       value: SM_Ship_Bomber_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
---- !u!1 &1160972346423170828 stripped
+--- !u!1 &716633125889763925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-  m_PrefabInstance: {fileID: 355445929332117190}
+  m_PrefabInstance: {fileID: 2090699395128767391}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1157148769042018354 stripped
+--- !u!4 &712237905274375531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-  m_PrefabInstance: {fileID: 355445929332117190}
+  m_PrefabInstance: {fileID: 2090699395128767391}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1615184213503750217
+--- !u!1001 &6874084366235702190
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1415,74 +1692,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
       propertyPath: m_Name
-      value: SM_Ship_Bomber_03
+      value: SM_Ship_Bomber_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
---- !u!4 &183383009934773949 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-  m_PrefabInstance: {fileID: 1615184213503750217}
+--- !u!1 &5447087590188665444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
+  m_PrefabInstance: {fileID: 6874084366235702190}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2700348367062926994
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8772936043938282079}
-    m_Modifications:
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509363392453401034, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-      propertyPath: m_Name
-      value: SM_Ship_Bomber_02
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
---- !u!4 &3573703148669450342 stripped
+--- !u!4 &5441597204823223642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1504704323692838644, guid: 7545a85df61d5944cb59976b4a31ccd5, type: 3}
-  m_PrefabInstance: {fileID: 2700348367062926994}
+  m_PrefabInstance: {fileID: 6874084366235702190}
   m_PrefabAsset: {fileID: 0}

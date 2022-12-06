@@ -71,7 +71,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 50
-        y: 116
+        y: 100
         width: 100
         height: 16
       isBreakpoint: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 219
-        y: 116
+        x: 214
+        y: 99
         width: 100
         height: 16
       isBreakpoint: 0
@@ -216,13 +216,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: shoot_target
+          value: shoot_target_pos
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: shoot_target
+          value: shoot_target_pos
         - useVariable: 0
           name: 
           tooltip: 
@@ -231,10 +231,10 @@ MonoBehaviour:
           value: FIND TARGET
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: shoot_target
-          objectType: UnityEngine.GameObject
+        - variableName: shoot_target_pos
+          objectType: UnityEngine.Object
           useVariable: 1
-          type: 3
+          type: 6
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -255,10 +255,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: shoot_target
-          objectType: UnityEngine.GameObject
+        - variableName: shoot_target_pos
+          objectType: UnityEngine.Object
           useVariable: 1
-          type: 3
+          type: 6
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -362,7 +362,13 @@ MonoBehaviour:
       boolVariables: []
       stringVariables: []
       vector2Variables: []
-      vector3Variables: []
+      vector3Variables:
+      - useVariable: 1
+        name: shoot_target_pos
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
@@ -386,7 +392,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
