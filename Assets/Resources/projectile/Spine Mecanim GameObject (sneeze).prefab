@@ -1553,13 +1553,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000002000000
-        actionHashCodes: d97b7202ba7ea101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000006000000
+        actionHashCodes: d97b7202ba7ea101ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1613,9 +1615,47 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           fsmComponent: {fileID: 0}
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: building_hit
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: HIT
         - useVariable: 0
           name: 
           tooltip: 
@@ -1633,6 +1673,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -1641,12 +1687,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000001f000000120000000f00000001000000
+        paramDataType: 14000000130000001f000000120000000f000000010000001f000000120000000f00000001000000
         paramName:
         - gameObject
         - storeResult
@@ -1654,8 +1700,12 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000100000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: SNEEZE START
       isSystemEvent: 0
