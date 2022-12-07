@@ -1048,13 +1048,13 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000000000000000000000100000002000000000000000100000002000000000000000100000002000000
         paramByteDataSize: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: Activate Title
-      description: 
+      description: "\u555F\u52D5\u624B\u628A\n\u6216\u662F\u7B2C\u4E00\u652F\u624B\u628A\u8F38\u5165"
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 440
         y: 250
-        width: 113.333336
+        width: 125.66667
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1073,13 +1073,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetStringValue
         - HutongGames.PlayMaker.Actions.SetActiveScene
+        - HutongGames.PlayMaker.Actions.ArrayGet
+        - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: c030f10318a0e903
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010000
+        actionStartIndex: 00000000030000000e00000013000000
+        actionHashCodes: c030f10318a0e9036ba593010d4efe00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1087,6 +1091,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 0
             name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: INPUT1
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1122,12 +1134,66 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+        fsmVarParams:
+        - variableName: INPUT1
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: INPUT/Players
+          tooltip: "1P-4P\u73A9\u5BB6\u767B\u9304\u7684\u624B\u628A\u6E05\u55AE"
+          showInInspector: 0
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences:
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1153,6 +1219,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1162,12 +1234,16 @@ MonoBehaviour:
         - 
         - 
         - 
-        byteData: 0002000000
+        - 
+        - 
+        - CLICK
+        - 
+        byteData: 00020000000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1200000012000000010000000700000012000000100000001000000012000000140000001100000017000000110000001700000017000000
+        paramDataType: 1200000012000000010000000700000012000000100000001000000012000000140000001100000017000000110000001700000017000000290000001000000027000000010000001700000011000000170000001700000017000000140000001800000007000000
         paramName:
         - stringVariable
         - stringValue
@@ -1183,8 +1259,20 @@ MonoBehaviour:
         - sceneFound
         - sceneNotActivatedEvent
         - sceneNotFoundEvent
-        paramDataPos: 0000000001000000000000000100000002000000000000000100000003000000000000000000000000000000010000000100000002000000
-        paramByteDataSize: 0000000000000000010000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        - array
+        - index
+        - storeValue
+        - everyFrame
+        - indexOutOfRange
+        - isPressed
+        - isPressedEvent
+        - wasPressedThisFrame
+        - wasReleasedThisFrame
+        - gameObject
+        - inputAction
+        - updateMode
+        paramDataPos: 0000000001000000000000000100000002000000000000000100000003000000000000000000000000000000010000000100000002000000000000000200000000000000050000000300000002000000040000000500000006000000010000000000000006000000
+        paramByteDataSize: 0000000000000000010000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000004000000
     - name: find scene
       description: "Core\u4EE5\u5916\n\u6700\u4E0A\u5C64\u7684Scene\n\u4F5C\u70BAScane.Last\n"
       colorIndex: 0
@@ -2909,8 +2997,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 443.84375
-        y: 318.9922
+        x: 442.84375
+        y: 335.9922
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3012,6 +3100,101 @@ MonoBehaviour:
         - finishedEvent
         paramDataPos: 0000000000000000000000000000000001000000000000000000000001000000
         paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000
+    - name: GoTo Map 2
+      description: PhaseToGo=0
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 689.1953
+        y: 779.0156
+        width: 111.333336
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Load Scene
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetStringValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: c030f103603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: Scene.ToGo
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: GAME_OVER
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: GameOver
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Phase.ToGo
+          tooltip: "\u5728\u555F\u52D5\u5834\u666F\u5F8C\u8981\u9032\u5165\u7684\u968E\u6BB5"
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001200000001000000100000001000000001000000
+        paramName:
+        - stringVariable
+        - stringValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3053,6 +3236,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: next
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GAME_OVER
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -3097,6 +3283,15 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: Get StageID
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GAME_OVER
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: GoTo Map 2
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -3172,6 +3367,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 
+      - useVariable: 1
+        name: GAME_OVER
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: GameOver
       vector2Variables: []
       vector3Variables: []
       colorVariables: []
@@ -3184,6 +3385,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 67445103}
+      - useVariable: 1
+        name: INPUT1
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -3210,8 +3417,9 @@ MonoBehaviour:
       - "02_\u89D2\u8272\u9078\u55AE"
       - "03_\u9078\u64C7\u95DC\u5361"
       - "04_\u95DC\u5361\u6E05\u55AE"
+      - "05_\u904A\u6232\u7D50\u675F"
       - "\u6E2C\u8A66\u529F\u80FD"
-      variableCategoryIDs: 00000000000000000500000000000000000000000200000003000000000000000000000001000000000000000000000004000000
+      variableCategoryIDs: 000000000000000006000000000000000000000002000000030000000000000000000000010000000000000005000000000000000000000004000000
     description: "\n[PHASE]\n\n0: \u521D\u59CB\u5316: (\u5982\u679C\u6709\u751F\u6210\u89D2\u8272\u5C31\u522A\u9664)\r\n1:
       \u9078\u55AE\u6A21\u5F0F: INPUT:UI \u9762\u677F\u5F85\u6A5F\n2: \u9078\u89D2\u968E\u6BB5:
       INPUT:UI \u5141\u8A31\u9078\u89D2\n3: \u95DC\u5361\u6A21\u5F0F: INPUT:PLAY
@@ -3936,7 +4144,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3961,8 +4169,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282271312}
-  m_LocalRotation: {x: 0.1564345, y: 0, z: 0, w: 0.98768836}
-  m_LocalPosition: {x: 0, y: 2.35, z: -3.24}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.165, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
