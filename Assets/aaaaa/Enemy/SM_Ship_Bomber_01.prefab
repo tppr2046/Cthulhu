@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1004996676610371665}
   - component: {fileID: 4223663295911383252}
   - component: {fileID: 3108779312940593340}
+  - component: {fileID: 5342584653951498915}
   m_Layer: 0
   m_Name: SM_Ship_Bomber_01
   m_TagString: Untagged
@@ -1467,6 +1468,7 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.GetEventProperties
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.SetEventProperties
@@ -1476,10 +1478,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000040000000a0000000e000000
-        actionHashCodes: afffe30060532301afffe300ba7ea101
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000005000000090000000f00000013000000
+        actionHashCodes: 81294e04afffe30060532301afffe300ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -1506,7 +1509,15 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -1564,7 +1575,14 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: shoot
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.AudioClip
+          value: {fileID: 8300000, guid: 50b694c3ac89d054bad97effbd7b97d3, type: 3}
         fsmVarParams:
         - variableName: shoot_target_pos
           objectType: UnityEngine.Object
@@ -1622,9 +1640,21 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0.5
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1642,7 +1672,8 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - 
         byteData: 00
         arrayParamSizes: 01000000010000000100000001000000
         arrayParamTypes:
@@ -1652,8 +1683,13 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000001300000013000000130000001c0000001c000000130000000c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 140000000f0000001800000011000000170000000c000000120000000c000000270000001300000013000000130000001c0000001c000000130000000c000000120000000c000000270000001f000000120000000f00000001000000
         paramName:
+        - gameObject
+        - volume
+        - oneShotClip
+        - WaitForEndOfClip
+        - finishedEvent
         - keys
         - 
         - datas
@@ -1672,8 +1708,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000020000000000000001000000030000000200000001000000030000000100000000000000020000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000000000000000000000000000000000001000000000000000000000001000000020000000000000001000000030000000200000001000000030000000100000000000000020000000100000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: SHOOT
       isSystemEvent: 0
@@ -1789,3 +1825,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 1004996676610371665}
+--- !u!82 &5342584653951498915
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509363392453401034}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1724116009353804948, guid: 45b6c05985990db46b04b4e63264042e, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
