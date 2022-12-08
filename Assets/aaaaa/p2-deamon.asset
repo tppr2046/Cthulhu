@@ -1298,6 +1298,7 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.Wait
@@ -1306,10 +1307,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000002000000060000000a000000
-        actionHashCodes: d97b7202ba7ea101ba7ea10148c01101
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000002000000060000000a0000000e000000
+        actionHashCodes: d97b7202afffe300ba7ea101ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1403,6 +1405,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: building_damage
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: HIT
         - useVariable: 0
           name: 
@@ -1411,7 +1419,31 @@ MonoBehaviour:
           networkSync: 0
           value: RUMBLE
         fsmObjectParams: []
-        fsmVarParams: []
+        fsmVarParams:
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 0
+          type: 1
+          floatValue: 0
+          intValue: 1
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -1443,14 +1475,20 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 000000
-        arrayParamSizes: 
-        arrayParamTypes: []
+        arrayParamSizes: 0100000001000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmString
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 14000000130000000c000000120000000c000000270000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - storeResult
+        - keys
+        - 
+        - datas
+        - 
         - eventTarget
         - sendEvent
         - delay
@@ -1462,8 +1500,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000100000001000000020000000000000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000000000001000000000000000000000001000000000000000000000001000000020000000100000001000000020000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000
     - name: attack callback
       description: 
       colorIndex: 0
