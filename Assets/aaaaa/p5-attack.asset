@@ -25,8 +25,8 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 414
-        y: 177.11719
-        width: 100
+        y: 225.11719
+        width: 144.66666
         height: 80
       isBreakpoint: 0
       isSequence: 0
@@ -312,17 +312,17 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 618
-        y: 405.16406
-        width: 100
+        y: 453.16406
+        width: 144.66666
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: attack end
+          name: ANIMATION RESET
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: waiting
         linkStyle: 0
         linkConstraint: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 0.3
         fsmIntParams:
         - useVariable: 1
           name: ActorColor
@@ -588,7 +588,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        - attack end
+        - ANIMATION RESET
         byteData: 00000000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
@@ -634,8 +634,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 414.33594
-        y: 112
+        x: 404.33594
+        y: 113
         width: 100
         height: 32
       isBreakpoint: 0
@@ -865,9 +865,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 916.33594
-        y: 98
-        width: 108
+        x: 928.33594
+        y: 85
+        width: 144.66666
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -892,8 +892,8 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: ANIMATION RESET
+          isSystemEvent: 0
           isGlobal: 0
         toState: waiting
         linkStyle: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - hold building
-        - FINISHED
+        - ANIMATION RESET
         byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -1030,7 +1030,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 937.33594
-        y: 258.9922
+        y: 306.9922
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1212,7 +1212,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 985.33594
-        y: 308.9922
+        y: 356.9922
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1318,7 +1318,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 954.33594
-        y: 371.9922
+        y: 419.9922
         width: 204.66667
         height: 32
       isBreakpoint: 0
@@ -1494,9 +1494,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 919.33594
-        y: 187.99219
-        width: 100
+        x: 931.33594
+        y: 174.99219
+        width: 144.66666
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -1506,14 +1506,14 @@ MonoBehaviour:
           name: holded
           isSystemEvent: 0
           isGlobal: 1
-        toState: holding
+        toState: check no building
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: ANIMATION RESET
+          isSystemEvent: 0
           isGlobal: 0
         toState: waiting
         linkStyle: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - ANIMATION RESET
         byteData: 0000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -1649,7 +1649,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 382.33594
-        y: 441.97656
+        y: 489.97656
         width: 104
         height: 32
       isBreakpoint: 0
@@ -1728,7 +1728,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 621
-        y: 339.5
+        y: 387.5
         width: 156.66666
         height: 48
       isBreakpoint: 0
@@ -1828,7 +1828,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 370
-        y: 504.97656
+        y: 552.97656
         width: 122.666664
         height: 32
       isBreakpoint: 0
@@ -2095,7 +2095,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 359
-        y: 570.97656
+        y: 618.97656
         width: 159.33333
         height: 48
       isBreakpoint: 0
@@ -2305,7 +2305,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 69
-        y: 312
+        y: 360
         width: 179.33333
         height: 48
       isBreakpoint: 0
@@ -2405,7 +2405,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 51
-        y: 405
+        y: 453
         width: 153.33334
         height: 32
       isBreakpoint: 0
@@ -2563,7 +2563,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55
-        y: 463.6172
+        y: 511.6172
         width: 170
         height: 32
       isBreakpoint: 0
@@ -2757,7 +2757,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 879.0781
-        y: 497.91406
+        y: 545.91406
         width: 100
         height: 32
       isBreakpoint: 0
@@ -2868,7 +2868,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 883.0781
-        y: 432.91406
+        y: 480.91406
         width: 120.666664
         height: 32
       isBreakpoint: 0
@@ -2941,7 +2941,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 369.91406
-        y: 369.8125
+        y: 417.8125
         width: 114.666664
         height: 32
       isBreakpoint: 0
@@ -3061,7 +3061,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 376.91406
-        y: 287.8125
+        y: 335.8125
         width: 108
         height: 48
       isBreakpoint: 0
@@ -3187,7 +3187,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 89.91406
-        y: 247.86719
+        y: 295.8672
         width: 125.333336
         height: 32
       isBreakpoint: 0
@@ -3307,7 +3307,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 96.91406
-        y: 165.86719
+        y: 213.86719
         width: 118.666664
         height: 48
       isBreakpoint: 0
@@ -3427,6 +3427,97 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000010000000200000001000000
         paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: check no building
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 903.78125
+        y: 235.21094
+        width: 136.66666
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: no building
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: continue hold
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: holding
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 15656205
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: building_holding
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - no building
+        - continue hold
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3485,7 +3576,25 @@ MonoBehaviour:
     - name: can skill
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    - name: ANIMATION RESET
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: continue hold
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions:
+    - fsmEvent:
+        name: ANIMATION RESET
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: waiting
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables:

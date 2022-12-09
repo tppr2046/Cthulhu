@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 88
-        y: 242
+        y: 274
         width: 100
         height: 32
       isBreakpoint: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 81
-        y: 318
+        y: 350
         width: 100
         height: 32
       isBreakpoint: 0
@@ -280,8 +280,8 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64
-        y: 160
-        width: 122
+        y: 192
+        width: 144.66666
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -465,9 +465,9 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 71.33594
-        y: 370.83594
-        width: 100
-        height: 32
+        y: 402.83594
+        width: 144.66666
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -481,15 +481,26 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: ANIMATION RESET
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: on ground
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 9c512400
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 9c51240048c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -524,7 +535,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -534,27 +551,31 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - on ground
-        byteData: 00000000
+        - ANIMATION RESET
+        byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000007000000120000001700000013000000
+        paramDataType: 14000000070000001200000017000000130000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000004000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000000000000000000000000000000000000100000004000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000001000000
     - name: init
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 68
-        y: 109
+        x: 82
+        y: 101
         width: 100
         height: 32
       isBreakpoint: 0
@@ -640,7 +661,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 284
-        y: 165
+        y: 197
         width: 124
         height: 32
       isBreakpoint: 0
@@ -714,7 +735,19 @@ MonoBehaviour:
     - name: SELF CONTROL
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    - name: ANIMATION RESET
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions:
+    - fsmEvent:
+        name: ANIMATION RESET
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: on ground
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables: []

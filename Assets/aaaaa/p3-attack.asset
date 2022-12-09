@@ -25,8 +25,8 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 385.33594
-        y: 325.1875
-        width: 100
+        y: 421.1875
+        width: 144.66666
         height: 80
       isBreakpoint: 0
       isSequence: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 666.33594
-        y: 418.1875
+        y: 514.1875
         width: 100
         height: 48
       isBreakpoint: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 661.6719
-        y: 479.96875
+        y: 575.96875
         width: 100
         height: 48
       isBreakpoint: 0
@@ -736,8 +736,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 389.67188
-        y: 258.02344
+        x: 397.67188
+        y: 312.02344
         width: 100
         height: 32
       isBreakpoint: 0
@@ -925,10 +925,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 814.6719
-        y: 64
-        width: 108
-        height: 48
+        x: 818.6719
+        y: 55.75
+        width: 144.66666
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -951,19 +951,30 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: ANIMATION RESET
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010000
-        actionStartIndex: 000000000200000007000000
-        actionHashCodes: 9bd6f801b2cf10009c512400
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01000001
+        actionStartIndex: 0000000002000000070000000c000000
+        actionHashCodes: 9bd6f801b2cf10009c51240048c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1020,7 +1031,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -1042,12 +1059,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - hold building
-        byteData: 000000000000
+        - ANIMATION RESET
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000014000000110000001100000001000000010000001400000007000000120000001700000013000000
+        paramDataType: 1400000012000000140000001100000011000000010000000100000014000000070000001200000017000000130000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
@@ -1061,15 +1079,18 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 000000000000000001000000000000000100000000000000010000000200000002000000010000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000010000000000000004000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000001000000000000000100000000000000010000000200000002000000010000000000000000000000000000000100000006000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000010000000000000004000000000000000000000000000000000000000000000001000000
     - name: holding
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 835.6719
-        y: 217.96875
+        y: 313.96875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1251,7 +1272,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 883.6719
-        y: 267.96875
+        y: 363.96875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1357,7 +1378,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 852.6719
-        y: 330.96875
+        y: 426.96875
         width: 204.66667
         height: 32
       isBreakpoint: 0
@@ -1521,8 +1542,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 817.6719
-        y: 146.96875
+        x: 821.6719
+        y: 138.71875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1533,7 +1554,7 @@ MonoBehaviour:
           name: holded
           isSystemEvent: 0
           isGlobal: 1
-        toState: holding
+        toState: check no building
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1655,7 +1676,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 337.67188
-        y: 564.02344
+        y: 660.02344
         width: 114.666664
         height: 48
       isBreakpoint: 0
@@ -1838,7 +1859,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 669
-        y: 370.1875
+        y: 466.1875
         width: 133.33334
         height: 32
       isBreakpoint: 0
@@ -1917,7 +1938,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 333
-        y: 629.1875
+        y: 725.1875
         width: 104
         height: 32
       isBreakpoint: 0
@@ -2107,7 +2128,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 527
-        y: 555.1875
+        y: 651.1875
         width: 119.333336
         height: 48
       isBreakpoint: 0
@@ -2290,7 +2311,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 330.39844
-        y: 688.4375
+        y: 784.4375
         width: 128.66666
         height: 32
       isBreakpoint: 0
@@ -2439,7 +2460,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 523
-        y: 632.1875
+        y: 728.1875
         width: 116.666664
         height: 32
       isBreakpoint: 0
@@ -2563,7 +2584,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 510
-        y: 736.1953
+        y: 832.1953
         width: 184.66667
         height: 48
       isBreakpoint: 0
@@ -2790,7 +2811,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64
-        y: 722.1875
+        y: 818.1875
         width: 149.33334
         height: 32
       isBreakpoint: 0
@@ -2901,7 +2922,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 517
-        y: 683.1875
+        y: 779.1875
         width: 110
         height: 32
       isBreakpoint: 0
@@ -3058,7 +3079,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 879.6719
-        y: 482.85938
+        y: 578.8594
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3169,7 +3190,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 883.6719
-        y: 417.85938
+        y: 513.8594
         width: 120.666664
         height: 32
       isBreakpoint: 0
@@ -3242,7 +3263,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 210.00781
-        y: 509.52344
+        y: 605.52344
         width: 114.666664
         height: 32
       isBreakpoint: 0
@@ -3362,7 +3383,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 217.00781
-        y: 427.52344
+        y: 523.52344
         width: 108
         height: 48
       isBreakpoint: 0
@@ -3488,7 +3509,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 452.0078
-        y: 510.52344
+        y: 606.52344
         width: 125.333336
         height: 32
       isBreakpoint: 0
@@ -3608,7 +3629,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 459.0078
-        y: 428.52344
+        y: 524.52344
         width: 118.666664
         height: 48
       isBreakpoint: 0
@@ -3734,7 +3755,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 515
-        y: 820
+        y: 916
         width: 144.66666
         height: 48
       isBreakpoint: 0
@@ -3821,6 +3842,97 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000010000000200000000000000
         paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: check no building
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 784.8047
+        y: 225.47656
+        width: 136.66666
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: no building
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: continue hold
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: holding
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 15656205
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: building_holding
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - no building
+        - continue hold
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: ATTACK
       isSystemEvent: 0
@@ -3891,7 +4003,25 @@ MonoBehaviour:
     - name: continue storm
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    - name: ANIMATION RESET
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: continue hold
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions:
+    - fsmEvent:
+        name: ANIMATION RESET
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: waiting
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables:
