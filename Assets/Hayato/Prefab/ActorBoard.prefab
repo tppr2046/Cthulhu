@@ -1115,9 +1115,9 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 763.1953
-        y: 420.2578
-        width: 145.33334
+        x: 738.1797
+        y: 355.46875
+        width: 141
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -1301,7 +1301,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1048.5
         y: 432.71875
-        width: 200
+        width: 192
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1478,7 +1478,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 768.46094
         y: 192.57812
-        width: 146.33334
+        width: 144.5
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1729,7 +1729,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 354.4453
         y: 106.015625
-        width: 113.333336
+        width: 111
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 359.125
         y: 408.67188
-        width: 102.33333
+        width: 101
         height: 80
       isBreakpoint: 0
       isSequence: 0
@@ -2432,7 +2432,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1065.7188
         y: 633.25
-        width: 124
+        width: 121
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2547,7 +2547,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 503
         y: 648
-        width: 140.66666
+        width: 137
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2658,7 +2658,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 496.59375
         y: 875.1719
-        width: 109.333336
+        width: 106
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -2905,7 +2905,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 713.28125
         y: 1302.1719
-        width: 130.66666
+        width: 126
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3017,7 +3017,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 958.3047
         y: 854.85156
-        width: 109.333336
+        width: 107
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3247,7 +3247,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 482.46875
         y: 1157.6641
-        width: 136.66666
+        width: 133
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3546,7 +3546,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 467.8203
         y: 1311.3906
-        width: 123.33333
+        width: 122
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3755,7 +3755,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 142.91406
         y: 117.53125
-        width: 116.666664
+        width: 115
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3843,7 +3843,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 141.42969
         y: 229.5625
-        width: 101.333336
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4047,7 +4047,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 485.34375
         y: 1062.4766
-        width: 118
+        width: 113
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -4126,7 +4126,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 50.0625
         y: 1034.9922
-        width: 123.33333
+        width: 120.5
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -4377,7 +4377,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1029
         y: 200
-        width: 148.33333
+        width: 147
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -4456,7 +4456,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 544.39844
         y: 227.875
-        width: 140.66666
+        width: 137
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4590,8 +4590,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 828.6875
         y: 643.9531
-        width: 125.33333
-        height: 32
+        width: 123
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -4605,18 +4605,37 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: reselect
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: step back 0
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 09faa102
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000006000000
+        actionHashCodes: 09faa1020d4efe00
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: '[Controller]'
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -4624,7 +4643,14 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: -422256338270391051, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -4642,7 +4668,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 3
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -4652,12 +4684,15 @@ MonoBehaviour:
         - FINISHED
         - 
         - FINISHED
-        byteData: 01
+        - 
+        - reselect
+        - 
+        byteData: 0101000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001000000017000000170000001700000001000000
+        paramDataType: 10000000100000001700000017000000170000000100000011000000170000001700000017000000140000001800000007000000
         paramName:
         - integer1
         - integer2
@@ -4665,8 +4700,15 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        - isPressed
+        - isPressedEvent
+        - wasPressedThisFrame
+        - wasReleasedThisFrame
+        - gameObject
+        - inputAction
+        - updateMode
+        paramDataPos: 00000000010000000000000001000000020000000000000000000000030000000400000005000000000000000000000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000004000000
     - name: Is on Stage ?
       description: "\u5207\u63DB\u95DC\u5361\u6642\n\u82E5\u89D2\u8272\u4E0D\u5728\u5834\u4E0A\n\u91CD\u751F\u89D2\u8272"
       colorIndex: 0
@@ -4674,7 +4716,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 272
         y: 923
-        width: 111.33333
+        width: 109.5
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -4765,7 +4807,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 663
         y: 980
-        width: 102.666664
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -5432,7 +5474,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 738
         y: 1055
-        width: 102
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -5934,11 +5976,104 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000001000000
+    - name: step back 0
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 749.3203
+        y: 498.3828
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Board Select Mode
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 603dd90548c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        fsmIntParams:
+        - useVariable: 1
+          name: Step
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1000000010000000010000000f0000001700000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000100000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
     - name: ACTOR_DEAD
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: BOARD_CANCEL
       isSystemEvent: 0
       isGlobal: 0
     - name: Cancel
@@ -5948,6 +6083,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: counting
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: holding
       isSystemEvent: 0
       isGlobal: 0
     - name: join actor
@@ -5962,22 +6100,19 @@ MonoBehaviour:
     - name: playing
       isSystemEvent: 0
       isGlobal: 0
-    - name: time out
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: BOARD_CANCEL
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: holding
+    - name: reselect
       isSystemEvent: 0
       isGlobal: 0
     - name: SCENE_CHANGED
       isSystemEvent: 0
       isGlobal: 0
-    - name: UPDATE POW
+    - name: time out
       isSystemEvent: 0
       isGlobal: 0
     - name: UPDATE HP
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: UPDATE POW
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -7396,7 +7531,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 974.5469
         y: 262.73438
-        width: 119.333336
+        width: 116
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -7895,7 +8030,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 393.5078
         y: 180.38281
-        width: 131.33334
+        width: 128
         height: 112
       isBreakpoint: 0
       isSequence: 0
@@ -8372,8 +8507,8 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 51.648438
-        y: 264.10938
+        x: 55.179688
+        y: 265.28906
         width: 100
         height: 16
       isBreakpoint: 0
@@ -8583,7 +8718,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 664.0625
         y: 205.40625
-        width: 114.666664
+        width: 110
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -8805,7 +8940,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 674.375
         y: 325.17188
-        width: 115.333336
+        width: 110
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -9027,7 +9162,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 673.35156
         y: 449.3047
-        width: 101.333336
+        width: 100
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -9249,7 +9384,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 670.66406
         y: 575.0703
-        width: 102
+        width: 100
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -9696,7 +9831,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 403.60156
         y: 570.66406
-        width: 118
+        width: 116.5
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -9801,48 +9936,48 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
     events:
-    - name: OK
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: NG
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: test
-      isSystemEvent: 0
-      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
-    - name: INPUT/UP
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: INPUT/DOWN
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: INPUT/RIGHT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: INPUT/LEFT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: debug input
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no more
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: INPUT/CONFIRM
+    - name: CANCEL
       isSystemEvent: 0
       isGlobal: 0
     - name: INPUT/CANCEL
       isSystemEvent: 0
       isGlobal: 0
-    - name: CANCEL
+    - name: INPUT/CONFIRM
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: INPUT/DOWN
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: INPUT/LEFT
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: INPUT/RIGHT
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: INPUT/UP
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NG
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no more
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: OK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: RESUME
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: test
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
     - fsmEvent:
-        name: debug input
+        name: RESUME
         isSystemEvent: 0
         isGlobal: 0
       toState: Get Input
@@ -10019,7 +10154,7 @@ MonoBehaviour:
     - name: test
       isSystemEvent: 0
       isGlobal: 0
-    - name: debug input
+    - name: RESUME
       isSystemEvent: 0
       isGlobal: 0
     OutputEvents: []
