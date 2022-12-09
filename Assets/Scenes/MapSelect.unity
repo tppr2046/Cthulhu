@@ -1121,7 +1121,7 @@ MonoBehaviour:
         x: 428
         y: 411
         width: 100
-        height: 64
+        height: 80
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -1130,7 +1130,7 @@ MonoBehaviour:
           name: Right
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 6
+        toState: index +1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
           name: Left
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 7
+        toState: index -1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1153,8 +1153,18 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: Cancel
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: select 0
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
@@ -1162,13 +1172,22 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000070000000e000000
-        actionHashCodes: 0d4efe000d4efe000d4efe00
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000070000000e00000015000000
+        actionHashCodes: 0d4efe000d4efe000d4efe000d4efe00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: INPUT1
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -1222,12 +1241,25 @@ MonoBehaviour:
           networkSync: 0
           typeName: UnityEngine.InputSystem.InputActionReference
           value: {fileID: 230759901984559673, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.InputSystem.InputActionReference
+          value: {fileID: -422256338270391051, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: 
           tooltip: 
@@ -1261,12 +1293,15 @@ MonoBehaviour:
         - 
         - 
         - Confirm
-        byteData: 010000000100000001000000
+        - 
+        - 
+        - Cancel
+        byteData: 01000000010000000100000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 110000001700000017000000170000001400000018000000070000001100000017000000170000001700000014000000180000000700000011000000170000001700000017000000140000001800000007000000
+        paramDataType: 11000000170000001700000017000000140000001800000007000000110000001700000017000000170000001400000018000000070000001100000017000000170000001700000014000000180000000700000011000000170000001700000017000000140000001800000007000000
         paramName:
         - isPressed
         - isPressedEvent
@@ -1289,8 +1324,15 @@ MonoBehaviour:
         - gameObject
         - inputAction
         - updateMode
-        paramDataPos: 000000000000000001000000020000000000000000000000000000000100000003000000040000000500000001000000010000000400000002000000060000000700000008000000020000000200000008000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000004000000
+        - isPressed
+        - isPressedEvent
+        - wasPressedThisFrame
+        - wasReleasedThisFrame
+        - gameObject
+        - inputAction
+        - updateMode
+        paramDataPos: 00000000000000000100000002000000000000000000000000000000010000000300000004000000050000000100000001000000040000000200000006000000070000000800000002000000020000000800000003000000090000000a0000000b00000003000000030000000c000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000004000000
     - name: State 4
       description: 
       colorIndex: 0
@@ -1577,7 +1619,7 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: State 6
+    - name: index +1
       description: 
       colorIndex: 0
       position:
@@ -1662,7 +1704,7 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: State 7
+    - name: index -1
       description: 
       colorIndex: 0
       position:
@@ -2042,7 +2084,7 @@ MonoBehaviour:
           name: not Stage
           isSystemEvent: 0
           isGlobal: 0
-        toState: delay
+        toState: index +1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2470,6 +2512,84 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000000000000000000001000000020000000000000001000000
         paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: select 0
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 672.5156
+        y: 544.3594
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: State 8
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -2490,6 +2610,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: not Stage
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Cancel
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
