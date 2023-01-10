@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 4249567252276132403}
   - component: {fileID: 5991874708134553377}
   - component: {fileID: 4926353195934044630}
+  - component: {fileID: 1748126552113887378}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (statue)
   m_TagString: building
@@ -1035,7 +1036,7 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &6484963101915703863
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1048,10 +1049,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &6484963101915703862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,7 +3037,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: HIT
       isSystemEvent: 0
@@ -3069,7 +3071,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -3077,7 +3079,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!82 &4249567252276132403
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3203,6 +3205,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.2399, y: 18.8678, z: 4}
   m_Center: {x: -0.9779496, y: 8.172501, z: 0}
+--- !u!114 &1748126552113887378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484963101915703860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -664232604, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 6484963101915703859}
 --- !u!1 &6484963101915872203
 GameObject:
   m_ObjectHideFlags: 0
