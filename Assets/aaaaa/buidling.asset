@@ -45,7 +45,7 @@ MonoBehaviour:
           name: EXPLODE BUILDING
           isSystemEvent: 0
           isGlobal: 0
-        toState: explode
+        toState: create enemy
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1629,7 +1629,7 @@ MonoBehaviour:
           name: explode
           isSystemEvent: 0
           isGlobal: 0
-        toState: explode
+        toState: create enemy
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2220,14 +2220,14 @@ MonoBehaviour:
         - perSecond
         paramDataPos: 00000000010000000000000001000000
         paramByteDataSize: 00000000000000000100000001000000
-    - name: "\u72C0\u614B 1"
+    - name: all explode
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 721
         y: 435
-        width: 115.333336
+        width: 114
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2300,6 +2300,152 @@ MonoBehaviour:
         - realTime
         paramDataPos: 00000000010000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: create enemy
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 488
+        y: 485
+        width: 114
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: explode
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.CreateObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: 5552ad0560532301
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 5503824462573011102, guid: dd7a64c60798e72438a74c24470ca288, type: 3}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: building_pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: building_pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000001300000013000000130000001c0000001c00000013000000
+        paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - gameObject
+        - parent
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000000000000100000002000000010000000200000003000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000
     events:
     - name: HIT
       isSystemEvent: 0
@@ -2348,7 +2494,7 @@ MonoBehaviour:
         name: ALL EXPLODE
         isSystemEvent: 0
         isGlobal: 0
-      toState: "\u72C0\u614B 1"
+      toState: all explode
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -2374,6 +2520,12 @@ MonoBehaviour:
       vector3Variables:
       - useVariable: 1
         name: FX.pox
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: building_pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2425,7 +2577,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
