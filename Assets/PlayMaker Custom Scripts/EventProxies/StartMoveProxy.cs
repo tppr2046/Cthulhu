@@ -8,14 +8,14 @@ using HutongGames.PlayMaker;
 
 namespace com.spine
 {
-	public class EnlargeProxy : PlayMakerEventProxy {
+	public class StartMoveProxy : PlayMakerEventProxy {
 
-		[Button("Enlarge","Test : Enlarge")] public bool _;
-		public void Enlarge()
+		[Button("StartMove","Test : StartMove")] public bool _;
+		public void StartMove()
 		{
 			if (debug || !Application.isPlaying)
 			{
-				Debug.Log("EnlargeProxy : Enlarge()");
+				Debug.Log("StartMoveProxy : StartMove()");
 			}
 
             
