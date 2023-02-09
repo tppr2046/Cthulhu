@@ -3284,8 +3284,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 484.89062
-        y: 1168.6172
+        x: 468.89062
+        y: 1224.6172
         width: 133
         height: 32
       isBreakpoint: 0
@@ -3719,8 +3719,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 467.8203
-        y: 1311.3906
+        x: 451.8203
+        y: 1367.3906
         width: 122
         height: 32
       isBreakpoint: 0
@@ -4232,7 +4232,7 @@ MonoBehaviour:
           name: ACTOR_DEAD
           isSystemEvent: 0
           isGlobal: 0
-        toState: Show CountDown
+        toState: destroy actor
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6274,6 +6274,90 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000000000000000000000000000010000000000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000001000000
+    - name: destroy actor
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 471
+        y: 1162
+        width: 114
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Show CountDown
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 9ff80c02
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Actor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000000f00000011000000
+        paramName:
+        - gameObject
+        - delay
+        - detachChildren
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6622,7 +6706,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: ACTOR_DEAD
       isSystemEvent: 0
