@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 namespace HutongGames.PlayMaker.Actions
 {
-    [ActionCategory(ActionCategory.Input)]
+    [ActionCategory("PlayerInput")]
     [Tooltip("Controller Rumble")]
 
-    public class ControllerRumbler : FsmStateAction
+    public class ControllerRumbler : GamepadActionBase
     {
         [RequiredField]
+
+        [Tooltip("Gamepad index")]
+        public FsmInt gamepadIndex;
+
 
         [Tooltip("Left Motor Power")]
         public FsmFloat leftSpeed;
@@ -29,6 +34,8 @@ namespace HutongGames.PlayMaker.Actions
 
         private FsmFloat rumbleDuration;
         private float rumbleDurration;
+
+
 
 
         public override void OnEnter()
@@ -57,7 +64,7 @@ namespace HutongGames.PlayMaker.Actions
         {
             float leftS = leftSpeed.Value;
             float rightS = rightSpeed.Value;
-            Gamepad.current.SetMotorSpeeds(leftS, rightS);
+            Gamepad.all[gamepadIndex.Value].SetMotorSpeeds(leftS, rightS);
 
 
         }
@@ -67,7 +74,7 @@ namespace HutongGames.PlayMaker.Actions
 
         private void StopRumble()
         {
-            Gamepad.current.SetMotorSpeeds(0, 0);
+            Gamepad.all[gamepadIndex.Value].SetMotorSpeeds(0, 0);
         }
     }
 }
