@@ -64,7 +64,7 @@ namespace HutongGames.PlayMaker.Actions
         {
             float leftS = leftSpeed.Value;
             float rightS = rightSpeed.Value;
-            Gamepad.all[gamepadIndex.Value].SetMotorSpeeds(leftS, rightS);
+            Gamepad.current.SetMotorSpeeds(leftS, rightS);
 
 
         }
@@ -74,7 +74,7 @@ namespace HutongGames.PlayMaker.Actions
 
         private void StopRumble()
         {
-            Gamepad.all[gamepadIndex.Value].SetMotorSpeeds(0, 0);
+            Gamepad.current.SetMotorSpeeds(0, 0);
         }
     }
 }
