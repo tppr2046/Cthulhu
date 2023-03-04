@@ -35,12 +35,16 @@ namespace HutongGames.PlayMaker.Actions
         private FsmFloat rumbleDuration;
         private float rumbleDurration;
 
+        
+        [CheckForComponent(typeof(PlayerInput))]
+        public FsmGameObject InputObject;
 
-
+        private PlayerInput _playerInput;
 
         public override void OnEnter()
         {
             rumbleDurration = Time.time + rDuration.Value;
+            _playerInput = InputObject.Value.GetComponent<PlayerInput>();
         }
 
 
@@ -62,10 +66,13 @@ namespace HutongGames.PlayMaker.Actions
 
         private void RumbleConstant()
         {
+            var gamepad = GetGamepad();
             float leftS = leftSpeed.Value;
             float rightS = rightSpeed.Value;
-            Gamepad.current.SetMotorSpeeds(leftS, rightS);
-
+            if (gamepad != null)
+            {
+                gamepad.SetMotorSpeeds(leftS, rightS);
+            }
 
         }
 
@@ -74,7 +81,18 @@ namespace HutongGames.PlayMaker.Actions
 
         private void StopRumble()
         {
-            Gamepad.current.SetMotorSpeeds(0, 0);
+            var gamepad = GetGamepad();
+            if (gamepad != null)
+            {
+                gamepad.SetMotorSpeeds(0, 0);
+            }
         }
+
+
+        private Gamepad GetGamepad()
+        {
+            return Gamepad.all.FirstOrDefault(g => _playerInput.devices.Any(d => d.deviceId == g.deviceId));
+        }
+
     }
 }
