@@ -108,6 +108,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5032014685360144625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +237,7 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
+        actionStartIndex: 0000000006000000
         actionHashCodes: afffe300a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
@@ -254,12 +255,42 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: face
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: attack_player
         fsmObjectParams: []
         fsmVarParams:
         - variableName: face
           objectType: UnityEngine.Object
           useVariable: 1
           type: 2
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -300,24 +331,26 @@ MonoBehaviour:
         - right
         - left
         byteData: 00
-        arrayParamSizes: 0100000001000000
+        arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c0000002700000011000000170000001700000001000000
+        paramDataType: 0c00000012000000120000000c000000270000002700000011000000170000001700000001000000
         paramName:
         - keys
         - 
+        - 
         - datas
+        - 
         - 
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000000000000100000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000001000000000000000100000000000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: right
       description: 
       colorIndex: 0
@@ -736,7 +769,7 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101
         actionIsOpen: 01010101
-        actionStartIndex: 0000000002000000060000000a000000
+        actionStartIndex: 0000000002000000080000000c000000
         actionHashCodes: d97b7202afffe300ba7ea101ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
@@ -837,6 +870,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: attack_player
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: HIT
         - useVariable: 0
           name: 
@@ -852,6 +891,30 @@ MonoBehaviour:
           type: 1
           floatValue: 0
           intValue: 1
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
           boolValue: 0
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -894,19 +957,21 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000
-        arrayParamSizes: 0100000001000000
+        arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000000c000000120000000c000000270000001f000000120000000f000000010000001f000000120000000f00000001000000
+        paramDataType: 14000000130000000c00000012000000120000000c00000027000000270000001f000000120000000f000000010000001f000000120000000f00000001000000
         paramName:
         - gameObject
         - storeResult
         - keys
         - 
+        - 
         - datas
+        - 
         - 
         - eventTarget
         - sendEvent
@@ -916,8 +981,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 0000000000000000000000000000000001000000000000000000000001000000000000000000000001000000020000000100000001000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000000000000010000000100000000000000010000000000000002000000000000000000000001000000030000000100000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: init
       description: 
       colorIndex: 0
@@ -1118,6 +1183,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: player
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -1125,7 +1196,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1136,7 +1207,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -1153,7 +1224,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -1164,7 +1235,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
