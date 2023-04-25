@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 354
+        x: 370
         y: 658.125
         width: 144.66666
         height: 96
@@ -477,7 +477,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 997.96094
+        x: 1013.96094
         y: 762.4297
         width: 100
         height: 64
@@ -659,7 +659,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 883.91406
+        x: 899.91406
         y: 920.27344
         width: 115.333336
         height: 48
@@ -970,7 +970,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 370.34375
+        x: 386.34375
         y: 539.96875
         width: 100
         height: 32
@@ -1000,6 +1000,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.GetScale
         customNames:
@@ -1016,14 +1017,21 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101010101010101010101
-        actionIsOpen: 01010101010101010101010101
-        actionStartIndex: 0000000005000000060000000a0000000e00000012000000160000001a0000001e00000022000000260000002a00000031000000
-        actionHashCodes: 081bbf055c004505184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b57045552ad055552ad05
+        - 
+        actionEnabled: 0101010101010101010101010101
+        actionIsOpen: 0101010101010101010101010101
+        actionStartIndex: 0000000005000000060000000a0000000e00000012000000160000001a0000001e00000022000000260000002a0000002e00000035000000
+        actionHashCodes: 081bbf055c004505184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b57045552ad055552ad05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: self
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: created_sneeze
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1163,6 +1171,14 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -1198,6 +1214,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Actor.color
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: sneeze
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
         - useVariable: 0
           name: 
           tooltip: 
@@ -1378,7 +1406,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000100000000100000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f0000000700000001000000
+        paramDataType: 14000000120000001200000010000000010000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
         - gameObject
         - fsmName
@@ -1386,6 +1414,10 @@ MonoBehaviour:
         - storeValue
         - everyFrame
         - storeGameObject
+        - gameObject
+        - childName
+        - withTag
+        - storeResult
         - gameObject
         - childName
         - withTag
@@ -1436,14 +1468,14 @@ MonoBehaviour:
         - zScale
         - space
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000000000001000000020000000300000001000000020000000400000005000000020000000300000006000000070000000300000004000000080000000900000004000000050000000a0000000b00000005000000060000000c0000000d00000006000000070000000e0000000f0000000700000008000000100000001100000008000000090000001200000013000000090000000a0000000000000000000000010000000200000001000000050000000b00000001000000030000000400000005000000060000000a000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000400000001000000
+        paramDataPos: 00000000000000000100000000000000000000000000000001000000020000000300000001000000020000000400000005000000020000000300000006000000070000000300000004000000080000000900000004000000050000000a0000000b00000005000000060000000c0000000d00000006000000070000000e0000000f0000000700000008000000100000001100000008000000090000001200000013000000090000000a00000014000000150000000a0000000b0000000000000000000000010000000200000001000000050000000c00000001000000030000000400000005000000060000000a000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000400000001000000
     - name: hold
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1040.7812
+        x: 1056.7812
         y: 61.679688
         width: 144.66666
         height: 64
@@ -1621,7 +1653,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1059.1875
+        x: 1075.1875
         y: 396.9453
         width: 100
         height: 48
@@ -1724,7 +1756,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1052.6016
+        x: 1068.6016
         y: 461.91406
         width: 100
         height: 32
@@ -1830,7 +1862,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1036.25
+        x: 1052.25
         y: 501.71875
         width: 204.66667
         height: 32
@@ -1941,7 +1973,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1271.7969
+        x: 1287.7969
         y: 209.46875
         width: 100
         height: 32
@@ -2162,7 +2194,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 379.1797
+        x: 395.1797
         y: 1460.2891
         width: 100
         height: 32
@@ -2351,7 +2383,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 324.08594
+        x: 340.08594
         y: 955.64844
         width: 158
         height: 48
@@ -2435,7 +2467,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 344.14844
+        x: 360.14844
         y: 1135.2578
         width: 128.66666
         height: 32
@@ -2541,7 +2573,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 374.1797
+        x: 390.1797
         y: 1394.2891
         width: 100
         height: 32
@@ -2614,7 +2646,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 389.96094
+        x: 405.96094
         y: 1521.2891
         width: 173.33333
         height: 32
@@ -2831,7 +2863,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 598.9531
+        x: 614.9531
         y: 939.3203
         width: 147.33334
         height: 48
@@ -2915,7 +2947,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 615.0469
+        x: 631.0469
         y: 1085.5938
         width: 100
         height: 64
@@ -3121,7 +3153,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 885.5547
+        x: 901.5547
         y: 1021.35156
         width: 115.333336
         height: 32
@@ -3211,7 +3243,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1064.4141
+        x: 1080.4141
         y: 614.8125
         width: 100
         height: 32
@@ -3322,7 +3354,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1068.4141
+        x: 1084.4141
         y: 549.8125
         width: 120.666664
         height: 32
@@ -3395,7 +3427,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 348.29688
+        x: 364.29688
         y: 1204.1719
         width: 103.333336
         height: 32
@@ -3540,7 +3572,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 631.8203
+        x: 647.8203
         y: 1180.1094
         width: 116
         height: 32
@@ -3618,7 +3650,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 613.8203
+        x: 629.8203
         y: 1237.1094
         width: 150.66666
         height: 48
@@ -3711,7 +3743,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 61.015625
+        x: 77.015625
         y: 1004.85156
         width: 176.66667
         height: 32
@@ -3790,8 +3822,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 68
-        y: 1069
+        x: 68.015625
+        y: 1070.0156
         width: 159.33333
         height: 32
       isBreakpoint: 0
@@ -3799,17 +3831,21 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: SNEEZE BACK
+          isSystemEvent: 0
           isGlobal: 0
-        toState: waiting
+        toState: Sneeze back
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.SetPosition
+        - HutongGames.PlayMaker.Actions.SetScale
+        - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.GetFsmBool
         - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
@@ -3820,10 +3856,14 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000060000000b0000001100000015000000
-        actionHashCodes: 6053230168fece05afffe300ba7ea10181294e04
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101010101
+        actionIsOpen: 000101010101010101
+        actionStartIndex: 00000000050000000c000000140000001b00000020000000250000002b0000002f000000
+        actionHashCodes: b2cf10005552ad05f6e5be03afff1105a0dd830368fece05afffe300ba7ea10181294e04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -3831,26 +3871,48 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 3844034457172482900, guid: 88b07c99cb3a88d48935d126bb088bb7, type: 3}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: tentacle_1
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: created_sneeze
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: tentacle_1
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -3996,6 +4058,60 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
         - useVariable: 0
           name: 
           tooltip: 
@@ -4010,6 +4126,36 @@ MonoBehaviour:
           value: 1
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: face
           tooltip: 
@@ -4025,12 +4171,18 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: sneeze_start_point
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
-        - useVariable: 0
+        - useVariable: 1
+          name: sneeze_start_point
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
@@ -4041,21 +4193,47 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 0000
+        byteData: 0000000000000001000000000000000000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000130000001c0000001c0000001300000014000000120000001200000011000000010000000c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000000f000000180000001100000017000000
+        paramDataType: 1400000011000000110000000100000001000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f000000070000000100000001000000140000001c0000000f0000000f0000000f0000000100000001000000140000001300000011000000110000001100000014000000120000001200000011000000010000000c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000000f000000180000001100000017000000
         paramName:
         - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - everyFrame
+        - lateUpdate
+        - gameObject
         - parent
-        - spawnPoint
-        - position
-        - rotation
-        - storeObject
+        - worldPositionStays
+        - resetLocalPosition
+        - resetLocalRotation
         - gameObject
         - fsmName
         - variableName
@@ -4076,14 +4254,14 @@ MonoBehaviour:
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
-        paramDataPos: 0000000001000000020000000000000001000000030000000000000000000000010000000000000000000000000000000200000003000000010000000000000001000000000000000400000000000000010000000100000001000000000000000100000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000001000000010000000000000000000000010000000200000002000000060000000200000001000000030000000400000005000000070000000b0000000c00000003000000020000000600000007000000080000000d0000000e0000000400000000000000020000000300000004000000050000000000000001000000050000000f00000000000000020000000300000001000000000000000100000000000000040000000900000010000000060000000a000000000000000600000000000000
+        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000
     - name: check power
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 592
+        x: 608
         y: 865
         width: 134
         height: 48
@@ -4209,7 +4387,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 346.5
+        x: 362.5
         y: 834.21875
         width: 134
         height: 48
@@ -4335,7 +4513,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 104.5
+        x: 120.5
         y: 815.375
         width: 134
         height: 48
@@ -4461,7 +4639,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 617
+        x: 633
         y: 1021
         width: 100
         height: 32
@@ -4674,7 +4852,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 355.5
+        x: 371.5
         y: 1038.0625
         width: 109.333336
         height: 32
@@ -4887,7 +5065,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 80.5
+        x: 96.5
         y: 921.8906
         width: 110
         height: 32
@@ -5100,7 +5278,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1057.8828
+        x: 1073.8828
         y: 252.49219
         width: 136.66666
         height: 48
@@ -5191,7 +5369,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 869.8594
+        x: 885.8594
         y: 451.51562
         width: 105.333336
         height: 32
@@ -5279,7 +5457,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1157.0078
+        x: 1173.0078
         y: 930.0078
         width: 115.333336
         height: 48
@@ -5540,7 +5718,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1176
+        x: 1192
         y: 829
         width: 148.66666
         height: 48
@@ -5624,7 +5802,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 841
+        x: 857
         y: 847
         width: 200.66667
         height: 48
@@ -5708,7 +5886,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1075.0234
+        x: 1091.0234
         y: 153.01562
         width: 108
         height: 48
@@ -5792,7 +5970,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1088.0078
+        x: 1104.0078
         y: 326.0078
         width: 116
         height: 32
@@ -5871,7 +6049,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 401.03125
+        x: 417.03125
         y: 1602.0312
         width: 100
         height: 32
@@ -6081,7 +6259,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 352.01562
+        x: 368.01562
         y: 1299.0156
         width: 106.666664
         height: 32
@@ -6260,6 +6438,133 @@ MonoBehaviour:
         - finishedEvent
         paramDataPos: 00000000000000000100000000000000000000000100000000000000000000000000000001000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000
+    - name: Sneeze back
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 53.046875
+        y: 1133.0469
+        width: 108
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetParent
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: a0dd8303b2cf1000
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: self
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_sneeze
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000130000001100000011000000110000001400000011000000110000000100000001000000
+        paramName:
+        - gameObject
+        - parent
+        - worldPositionStays
+        - resetLocalPosition
+        - resetLocalRotation
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 00000000000000000000000001000000020000000100000003000000040000000000000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6354,6 +6659,9 @@ MonoBehaviour:
     - name: no enemy
       isSystemEvent: 0
       isGlobal: 0
+    - name: SNEEZE BACK
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET
@@ -6433,6 +6741,12 @@ MonoBehaviour:
         value: {x: 0, y: 0, z: 0}
       - useVariable: 1
         name: head_scale
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: sneeze_start_point
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6567,7 +6881,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
