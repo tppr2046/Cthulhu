@@ -61,7 +61,7 @@ MonoBehaviour:
         x: 55
         y: 168
         width: 100
-        height: 80
+        height: 96
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -98,6 +98,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: stop
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: EXPLODE
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: fx
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -379,7 +388,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 552
         y: 207
-        width: 101.333336
+        width: 104.666664
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -934,16 +943,19 @@ MonoBehaviour:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: EXPLODE
+      isSystemEvent: 0
+      isGlobal: 0
     - name: hit building
       isSystemEvent: 0
       isGlobal: 0
     - name: hit player
       isSystemEvent: 0
       isGlobal: 0
-    - name: STOP
+    - name: MOVE
       isSystemEvent: 0
       isGlobal: 0
-    - name: MOVE
+    - name: STOP
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
