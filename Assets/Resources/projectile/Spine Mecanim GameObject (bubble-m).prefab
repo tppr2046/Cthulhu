@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7104328071105578891}
   - component: {fileID: 7104328071105578888}
   - component: {fileID: 7104328071105578889}
-  - component: {fileID: 7104328071105578894}
   - component: {fileID: 7104328071105578895}
   - component: {fileID: 7104328071105578887}
   m_Layer: 0
@@ -108,6 +107,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7104328071105578888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,29 +168,6 @@ MonoBehaviour:
     fsmComponent: {fileID: 0}
   fsmEvent:
     eventName: Explode
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
---- !u!114 &7104328071105578894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104328071105578892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9b9e02e14493240a4d9d8123bfa9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 7104328071105578892}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: DestroySelf
     allowLocalEvents: 0
     defaultEventName: 
   debug: 0
@@ -283,7 +260,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: distance
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -539,10 +516,10 @@ MonoBehaviour:
           value: player
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: face
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 2
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -563,10 +540,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: player
-          objectType: UnityEngine.GameObject
-          useVariable: 1
-          type: 3
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -603,7 +580,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: distance
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -621,7 +598,7 @@ MonoBehaviour:
           networkSync: 0
           value: 2
         - useVariable: 1
-          name: time
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -629,7 +606,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: face
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -777,7 +754,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: distance
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -834,13 +811,13 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: distance
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: time
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -848,7 +825,7 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: face
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -861,7 +838,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: player
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -884,7 +861,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -1896,7 +1873,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
