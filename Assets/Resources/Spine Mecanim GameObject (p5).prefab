@@ -423,6 +423,46 @@ MonoBehaviour:
   zPosition: 1
   overrideAlpha: 1
   hierarchy: {fileID: 8897848863635573887}
+--- !u!1 &2006209461380329044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7715093921914917013}
+  m_Layer: 0
+  m_Name: bubble bounce pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7715093921914917013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006209461380329044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5464935807192481473}
+  - {fileID: 7463137497751846628}
+  - {fileID: 1724706263401413154}
+  - {fileID: 3712199452184196303}
+  - {fileID: 5360568487225549938}
+  - {fileID: 783435094170263892}
+  - {fileID: 8351238225108562444}
+  - {fileID: 1405385357020704497}
+  - {fileID: 4607573788017408527}
+  - {fileID: 734366853061796303}
+  m_Father: {fileID: 4215746315094749438}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2183167524722489959
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +13859,7 @@ Transform:
   - {fileID: 3718791156269572429}
   - {fileID: 8892626251399450805}
   - {fileID: 4437554133080922886}
+  - {fileID: 7715093921914917013}
   m_Father: {fileID: 565111592533648088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13900,7 +13941,7 @@ MonoBehaviour:
         x: 208
         y: 103
         width: 122.666664
-        height: 64
+        height: 80
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -13928,6 +13969,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: bomb bubble
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: bubble_bounce
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: bubble bounce
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -14033,6 +14083,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 2
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -14043,8 +14099,9 @@ MonoBehaviour:
         - attack_bubble
         - skill_bubble
         - bomb_bubble
+        - bubble_bounce
         byteData: 00
-        arrayParamSizes: 01000000010000000300000003000000
+        arrayParamSizes: 01000000010000000400000004000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
@@ -14052,7 +14109,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmEvent
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000130000001200000012000000100000000c0000001000000010000000100000000c00000017000000170000001700000001000000
+        paramDataType: 0c000000120000000c00000027000000130000001200000012000000100000000c000000100000001000000010000000100000000c0000001700000017000000170000001700000001000000
         paramName:
         - keys
         - 
@@ -14066,13 +14123,15 @@ MonoBehaviour:
         - 
         - 
         - 
+        - 
         - sendEvent
         - 
         - 
         - 
+        - 
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000020000000100000002000000030000000300000000000000010000000200000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000000000000100000002000000000000000200000001000000020000000300000004000000030000000000000001000000020000000300000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: attaack bubble
       description: 
       colorIndex: 0
@@ -14427,6 +14486,124 @@ MonoBehaviour:
         - resetLocalRotation
         paramDataPos: 00000000000000000100000000000000010000000100000000000000020000000300000004000000
         paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000000000000000000
+    - name: bubble bounce
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 423
+        y: 248
+        width: 120
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.SetParent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: b2cf1000a0dd8303
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 2006209461380329044}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: bubble_retrive
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: bubble_retrive
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000110000001100000001000000010000001400000013000000110000001100000011000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - parent
+        - worldPositionStays
+        - resetLocalPosition
+        - resetLocalRotation
+        paramDataPos: 00000000000000000100000000000000010000000100000000000000020000000300000004000000
+        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000000000000000000
     events:
     - name: BACK TO POOL
       isSystemEvent: 0
@@ -14438,6 +14615,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: bomb_bubble
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: bubble_bounce
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -15072,6 +15252,154 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5760374043473939751, guid: 0f331069e59a22742b86766f214e7475, type: 3}
   m_PrefabInstance: {fileID: 1076036769440241839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1587067510060492752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &3712199452184196303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 1587067510060492752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1905980542730578192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &4607573788017408527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 1905980542730578192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2067266044313083694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15342,6 +15670,154 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1477458599937515596, guid: 46125c3e4cf75fa4096409f7fc2b44ae, type: 3}
   m_PrefabInstance: {fileID: 3136491142464730649}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3412979574269112907
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &783435094170263892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 3412979574269112907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3437084365606056656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &734366853061796303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 3437084365606056656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3567672510018381377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15423,6 +15899,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5760374043473939751, guid: 0f331069e59a22742b86766f214e7475, type: 3}
   m_PrefabInstance: {fileID: 3567672510018381377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3633674769250920765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &1724706263401413154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 3633674769250920765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3698124836844493664
 PrefabInstance:
@@ -15564,6 +16114,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4732309055635072352, guid: d0d4a370c56c0ac40995ee283b08c4b8, type: 3}
   m_PrefabInstance: {fileID: 3768134230793418795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3891930654915411438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &1405385357020704497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 3891930654915411438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4530027480127866810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15633,6 +16257,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7382021401689948128, guid: 37ac793982a3f7743b6d76f8d3498372, type: 3}
   m_PrefabInstance: {fileID: 4530027480127866810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4760411207335931387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &7463137497751846628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 4760411207335931387}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5156999509198299812
 PrefabInstance:
@@ -15773,6 +16467,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4732309055635072352, guid: d0d4a370c56c0ac40995ee283b08c4b8, type: 3}
   m_PrefabInstance: {fileID: 5383507227029144819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6226096937673482515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &8351238225108562444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 6226096937673482515}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6283150676088495261
 PrefabInstance:
@@ -16215,6 +16983,150 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5760374043473939751, guid: 0f331069e59a22742b86766f214e7475, type: 3}
   m_PrefabInstance: {fileID: 7322826686595854670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7950365100826406366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &5464935807192481473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 7950365100826406366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8063295344539465581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7715093921914917013}
+    m_Modifications:
+    - target: {fileID: 1375086991317418663, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_Name
+      value: Spine Mecanim GameObject (bubble-bounce) (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262432276564526324, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692053204027530908, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+      propertyPath: fsm.ExposedEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+--- !u!4 &5360568487225549938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2702727975655084831, guid: bbe04c443d4a6ed4e8bce6f7eba511d4, type: 3}
+  m_PrefabInstance: {fileID: 8063295344539465581}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8200543254167484311
 PrefabInstance:
