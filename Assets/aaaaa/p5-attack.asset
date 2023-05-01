@@ -381,6 +381,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetFsmBool
@@ -394,10 +395,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010001010101
-        actionStartIndex: 00000000050000000a0000000f000000170000001b000000
-        actionHashCodes: a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010001010101
+        actionStartIndex: 00000000080000000d00000012000000170000001f00000023000000
+        actionHashCodes: f6e5be03a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -407,6 +409,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_bubble
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -594,6 +604,24 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 0.3
         fsmIntParams: []
         fsmBoolParams:
@@ -634,21 +662,35 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - ANIMATION RESET
-        byteData: 0000000000
+        byteData: 0100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
         - gameObject
         - parent
         - worldPositionStays
@@ -679,8 +721,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000010000000200000001000000030000000400000000000000010000000200000000000000010000000500000002000000000000000200000003000000040000000100000000000000010000000200000000000000050000000000000003000000010000000000000004000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000010000000200000000000000040000000500000001000000000000000000000001000000020000000200000003000000040000000600000007000000030000000000000001000000050000000800000000000000020000000300000004000000010000000000000001000000020000000000000005000000030000000900000004000000000000000a000000
+        paramByteDataSize: 0000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: init
       description: 
       colorIndex: 0
@@ -1868,13 +1910,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.ArrayShuffle
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000002000000
-        actionHashCodes: 9bd6f801a26c9201
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000005000000
+        actionHashCodes: 9bd6f801a26c920148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1916,7 +1960,13 @@ MonoBehaviour:
           vector4Values: []
           objectReferences: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams:
         - useVariable: 0
           name: 
@@ -1936,21 +1986,25 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
+        stringParams:
+        - attack start
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000290000001000000010000000
+        paramDataType: 14000000120000002900000010000000100000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
         - array
         - startIndex
         - shufflingRange
-        paramDataPos: 0000000000000000000000000000000001000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000000000000000000001000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
     - name: set attack animation
       description: 
       colorIndex: 0
@@ -2286,6 +2340,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetFsmBool
@@ -2299,10 +2354,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010001010101
-        actionStartIndex: 00000000050000000a0000000f000000170000001b000000
-        actionHashCodes: a0dd8303b2cf100068fece05afffe300ba7ea1010d5f5c01
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010001010101
+        actionStartIndex: 00000000080000000d00000012000000170000001f00000023000000
+        actionHashCodes: f6e5be03a0dd8303b2cf100068fece05afffe300ba7ea1010d5f5c01
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -2312,6 +2368,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_bubble
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -2499,6 +2563,24 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 0.05
         - useVariable: 0
           name: 
@@ -2545,21 +2627,35 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 0000000000
+        byteData: 0100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000000f0000001700000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000000f0000001700000001000000
         paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
         - gameObject
         - parent
         - worldPositionStays
@@ -2591,8 +2687,8 @@ MonoBehaviour:
         - max
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000000000001000000020000000100000003000000040000000000000001000000020000000000000001000000050000000200000000000000020000000300000004000000010000000000000001000000020000000000000005000000000000000300000001000000020000000000000004000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000050000000100000000000000000000000100000002000000020000000300000004000000060000000700000003000000000000000100000005000000080000000000000002000000030000000400000001000000000000000100000002000000000000000500000003000000090000000400000005000000000000000a000000
+        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: set bomb skill animation
       description: 
       colorIndex: 0
@@ -2869,6 +2965,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetFsmBool
@@ -2882,10 +2979,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010001010101
-        actionStartIndex: 00000000050000000a0000000f000000170000001b000000
-        actionHashCodes: a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010001010101
+        actionStartIndex: 00000000080000000d00000012000000170000001f00000023000000
+        actionHashCodes: f6e5be03a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -2895,6 +2993,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_bubble
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -3082,6 +3188,24 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 1
         fsmIntParams: []
         fsmBoolParams:
@@ -3122,21 +3246,35 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - attack end
-        byteData: 0000000000
+        byteData: 0100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
         - gameObject
         - parent
         - worldPositionStays
@@ -3167,8 +3305,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000010000000200000001000000030000000400000000000000010000000200000000000000010000000500000002000000000000000200000003000000040000000100000000000000010000000200000000000000050000000000000003000000010000000000000004000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000010000000200000000000000040000000500000001000000000000000000000001000000020000000200000003000000040000000600000007000000030000000000000001000000050000000800000000000000020000000300000004000000010000000000000001000000020000000000000005000000030000000900000004000000000000000a000000
+        paramByteDataSize: 0000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: rumble
       description: 
       colorIndex: 0
@@ -5841,6 +5979,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetFsmBool
@@ -5854,10 +5993,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010001010101
-        actionStartIndex: 00000000050000000a0000000f000000170000001b000000
-        actionHashCodes: a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010001010101
+        actionStartIndex: 00000000080000000d00000012000000170000001f00000023000000
+        actionHashCodes: f6e5be03a0dd8303b2cf100068fece05afffe300ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -5867,6 +6007,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_bubble
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -6054,6 +6202,24 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 1
         fsmIntParams: []
         fsmBoolParams:
@@ -6094,21 +6260,35 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - attack end
-        byteData: 0000000000
+        byteData: 0100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
         - gameObject
         - parent
         - worldPositionStays
@@ -6139,8 +6319,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000010000000200000001000000030000000400000000000000010000000200000000000000010000000500000002000000000000000200000003000000040000000100000000000000010000000200000000000000050000000000000003000000010000000000000004000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000010000000200000000000000040000000500000001000000000000000000000001000000020000000200000003000000040000000600000007000000030000000000000001000000050000000800000000000000020000000300000004000000010000000000000001000000020000000000000005000000030000000900000004000000000000000a000000
+        paramByteDataSize: 0000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: reset flag 3
       description: 
       colorIndex: 0
@@ -6368,12 +6548,6 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: bomb_created
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {fileID: 0}
-      - useVariable: 1
         name: bubble_bounce_pool
         tooltip: 
         showInInspector: 0
@@ -6504,7 +6678,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
