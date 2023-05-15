@@ -15,6 +15,7 @@
   * `spVertexAttachment->deformAttachment` was renamed to `spVertexAttachment->timelineAttachment`.
   * `spSkeleton_update()` has been removed.
   * `spSkeleton->time` has been removed.
+  * `spVertexEffect` has been removed.
 
 ### SFML
   * Updated example to use SFML 2.5.1.
@@ -26,7 +27,9 @@
   * Support for `shortestRotation` in animation state. See https://github.com/esotericsoftware/spine-runtimes/issues/2027.
   * Added CMake parameter `SPINE_SANITIZE` which will enable sanitizers on macOS and Linux.
     * Added `SPINE_MAJOR_VERSION`, `SPINE_MINOR_VERSION`, and `SPINE_VERSION_STRING`. Parsing skeleton .JSON and .skel files will report an error if the skeleton version does not match the runtime version.
+  * Added `SkeletonBounds::getBoundingBox()`, `SkeletonBounds::getPolygons()`, and `SkeletonBounds::getBoundingBoxes()`.
 * **Breaking changes**
+  * `RegionAttachment` and `MeshAttachment` no longer implement `HasRendererObject`.
   * `RegionAttachment` and `MeshAttachment` now contain a `TextureRegion*` instead of encoding region fields directly.
   * `AttachmentLoader::newRegionAttachment()` and `AttachmentLoader::newMeshAttachment()` now take an additional `Sequence*` parameter.
   * `MeshAttachment::updateUVs()` was renamed to `MeshAttachment::updateRegion()`.
@@ -35,6 +38,7 @@
   * `VertexAttachment::getDeformAttachment()` was renamed to `VertexAttachment::getTimelineAttachment()`.
   * `Skeleton::update()` has been removed.
   * `Skeleton::getTime()` has been removed.
+  * `VertexEffect` has been removed.  
   
 ### Cocos2d-x
 
@@ -66,7 +70,7 @@
 
 ### Unity
 
-* **Officially supported Unity versions are 2017.1-2021.1**.
+* **Officially supported Unity versions are 2017.1-2022.1**.
 
 * **Additions**
   * `SpineAtlasAsset.CreateRuntimeInstance` methods now provide an optional `newCustomTextureLoader` parameter (defaults to `null`) which can be set to e.g. `(a) => new YourCustomTextureLoader(a)` to use your own `TextureLoader` subclass instead of `MaterialsTextureLoader`.
@@ -79,8 +83,27 @@
   * Added example component `SkeletonRenderTexture` to render a `SkeletonRenderer` to a `RenderTexture`, mainly for proper transparency. Added an example scene named `RenderTexture FadeOut Transparency` that demonstrates usage for a fadeout transparency effect.
   * Added another fadeout example component named `SkeletonRenderTextureFadeout` which takes over transparency fadeout when enabled. You can use this component as-is, attach it in disabled state and enable it to start a fadeout effect.
   * Timeline clips now offer an additional `Alpha` parameter for setting a custom constant mix alpha value other than 1.0, just as `TrackEntry.Alpha`. Defaults to 1.0.
-
+  * `GetRemappedClone` copying from `Sprite` now provides additional `pmaCloneTextureFormat` and `pmaCloneMipmaps` parameters to explicitly specify the texture format of a newly created PMA texture.
+  * Spine property Inspector fields (`Animation Name`, `Bone Name`, `Slot` and similar) now display the name in red when the respective animation/bone/etc no longer exists at the skeleton data. This may be helpful when such items have been renamed or deleted.
+  * Added `UnscaledTime` property at `SkeletonAnimation` as well, behaving like `SkeletonGraphic.UnscaledTime`. If enabled, AnimationState uses unscaled game time (`Time.unscaledDeltaTime`), running animations independent of e.g. game pause (`Time.timeScale`).
+  * `SkeletonAnimation`, `SkeletonMecanim` and `SkeletonGraphic` now provide an additional `OnAnimationRebuild` callback delegate which is issued after both the skeleton and the animation state have been initialized.
+  * Timeline `SkeletonAnimation Track` and `SkeletonGraphic Track` now provide an `Unscaled Time` property. Whenever starting a new animation clip of this track, `SkeletonAnimation.UnscaledTime` or `SkeletonGraphic.UnscaledTime` will be set to this value. This allows you to play back Timeline clips either in normal game time or unscaled game time. Note that `PlayableDirector.UpdateMethod` is ignored and replaced by this property, which allows more fine-granular control per Timeline track.
+  * Added `SkeletonRootMotion` callback delegates `ProcessRootMotionOverride` and `PhysicsUpdateRootMotionOverride` to customize how root motion is applied. The new property `disableOnOverride` determines whether the callback will be issued in addition or instead of normally applying root motion. Added property `rootMotionScaleRotation` to allow scaling rotational root-motion to match e.g. a 90 degree rotation to a custom target angle.
+  * Added outline shader parameter `Advanced - Opaque Alpha` which can be used to exclude problematic semi-transparent areas, which may receive an undesired large outline color overlay otherwise.
+  * Added Spine Preferences setting `Prefabs` - `Optimize Preview Meshes`. When enabled, Spine prefab preview meshes will be removed in a pre-build step to reduce build size. This increases build time as all prefabs in the project will be processed. Defaults to false to not slow down builds substantially every time.
+  * Added Spine Preferences setting `Reload SkeletonData after Play`. When enabled, the shared `SkeletonData` of all skeletons in the active scene is reloaded (from the `.json` or `.skel.bytes` file) after exiting play-mode. You can disable this setting to avoid the reloading delay if you can ensure that there are no (accidental) modifications to the shared `SkeletonData` during play-mode (otherwise it would carry over its effect into subsequent plays). Defaults to `true` (the safe setting), which maintains existing behaviour. 
+  * Added `SkeletonAnimationMulti` sample component methods `SetActiveSkeleton(int index)` and getter property `SkeletonAnimations` to more easily apply changes at all SkeletonAnimation instances instead of only the active one.
+  * PMA textures now have `sRGB (Color Texture)` disabled by default, the preset template `PMATexturePreset.preset` has been adjusted accordingly. As PMA textures are only allowed with Gamma color space, `sRGB (Color Texture)` shall be disabled to prevent border artifacts when mipmaps are enabled. In Gamma color space having this setting disabled has no drawbacks, only benefits.
+  * `SkeletonRenderTexture` and `SkeletonGraphicRenderTexture` components now support automatic down-scaling when required size on screen exceeds `Max Render Texture Size`.
+  * Added `Spine/SkeletonGraphic Fill` shader to provide functionality of `Spine/Skeleton Fill` shader for `SkeletonGraphic`.
+  * Lit Spine URP shaders (`Universal Render Pipeline/Spine/Sprite` and `Universal Render Pipeline/Spine/Skeleton Lit`) now support `Forward+` rendering path as introduced by Unity 2022.2 and URP version 14.
+  * `SkeletonGraphic` now supports automatic scaling based on its `RectTransform` bounds. Automatic scaling can be enabled by setting the added `Layout Scale Mode` Inspector property to either `Width Controls Height`, `Height Controls Width`, `FitInParent` or `EnvelopeParent`. It is set to `None` by default to keep previous behaviour and avoid breaking existing projects. To modify the reference layout bounds, hit the additional `Edit Layout Bounds` toggle button to switch into edit mode, adjust the bounds or hit `Match RectTransform with Mesh`, and hit the button again when done adjusting. The skeleton will now be scaled accordingly to fit the reference layout bounds to the object's `RectTransform`.
+  * Added previously missing unlit URP 2D shader variant, available under `Universal Render Pipeline/2D/Spine/Skeleton`.
+  * Added support for light cookies at `Universal Render Pipeline/Spine/Sprite` shader.
+ 
 * **Breaking changes**
+  * Made `SkeletonGraphic.unscaledTime` parameter protected, use the new property `UnscaledTime` instead.
+  * `SkeletonGraphic` `OnRebuild` callback delegate is now issued after the skeleton has been initialized, before the `AnimationState` component is initialized. This makes behaviour consistent with `SkeletonAnimation` and `SkeletonMecanim` component behaviour. Use the new callback `OnAnimationRebuild` if you want to receive a callback after the `SkeletonGraphic` `AnimationState` has been initialized.
 
 * **Changes of default values**
 
@@ -102,6 +125,7 @@
   * `VertexAttachment#setDeformAttachment()` and `VertexAttachment#getDeformAttachment()` have been replaced with `VertexAttachment#setTimelineAttachment()` and `VertexAttachment#getTimelineAttachment()`.
   * `RegionAttachment#updateOffset()` has been renamed to `RegionAttachment#updateRegion()`. The caller must ensure that the attachment's region is not `null`.
   * `RegionAttachment#computeWorldVertices()` takes a `Slot` instead of a `Bone` as the first argument.
+  * `VertexEffect` has been removed.
 
 
 ### libGDX
@@ -121,9 +145,13 @@
   * `RegionAttachment#updateOffset()` has been renamed to `RegionAttachment#updateRegion()`. The caller must ensure that the attachment's region is not `null`.
   * `RegionAttachment#computeWorldVertices()` takes a `Slot` instead of a `Bone` as the first argument.
   * Removed `PlayerEditor`.
+  * `VertexEffect` has been removed.
+  * Removed `RegionAttachment.rendererObject`.
+  * Renamed `TextureRegion.renderObject` to `TextureRegion.texture`.
+  
 
 ### WebGL backend
-  * `PolygonBatcher.start()` now disables culling and restores the previous state on `PolygonBatcher.end()`.
+  * `PolygonBatcher` can now disable culling automatically if the static variable `PolygonBatcher.disableCulling` is set to true.
   * Added `SpineCanvas`, a simpler way to render a scene via spine-webgl. See `spine-ts/spine-webgl/examples/barebones.html` and `spine-ts/spine-webgl/examples/mix-and-match.html`.
 
 ### Canvas backend
@@ -217,7 +245,7 @@
 
 ### Unity
 
-* **Officially supported Unity versions are 2017.1-2021.1**.
+* **Officially supported Unity versions are 2017.1-2022.1**.
 * **Breaking changes**
   * Removed all `Spine.Unity.AttachmentTools.SkinUtilities` Skin extension methods. These have become obsoleted and error-prone since the introduction of the new Skin API in 3.8. To fix any compile errors, replace any usage of `Skin` extension methods with their counterparts, e.g. replace occurrances of `skin.AddAttachments()` with `skin.AddSkin()`. Please see the example scene `Mix and Match Skins` on how to use the new Skin API to combine skins, or the updated old example scenes `Mix and Match` and `Mix and Match Equip` on how you can update an existing project using the old workflow. If you are using `skeletonAnimation.Skeleton.UnshareSkin()` in your code, you can replace it with `Skin customSkin = new Skin("custom skin"); customSkin.AddSkin(skeletonAnimation.Skeleton.Skin);`.
   * `Skin.GetAttachments()` has been replaced by `Skin.Attachments`, returning an `ICollection<SkinEntry>`. This makes access more consistent and intuitive. To fix any compile errors, replace any occurrances of `Skin.GetAttachments()` by `Skin.Attachments`.
@@ -305,6 +333,8 @@
   * Added example component `SkeletonRenderTexture` to render a `SkeletonRenderer` to a `RenderTexture`, mainly for proper transparency. Added an example scene named `RenderTexture FadeOut Transparency` that demonstrates usage for a fadeout transparency effect.
   * Added another fadeout example component named `SkeletonRenderTextureFadeout` which takes over transparency fadeout when enabled. You can use this component as-is, attach it in disabled state and enable it to start a fadeout effect.
   * Timeline clips now offer an additional `Alpha` parameter for setting a custom constant mix alpha value other than 1.0, just as `TrackEntry.Alpha`. Defaults to 1.0.
+  * `SkeletonGraphic` now provides additional render callback delegates `OnInstructionsPrepared`, `AssignMeshOverrideSingleRenderer` and `AssignMeshOverrideMultipleRenderers`. `OnInstructionsPrepared` is raised at the end of LateUpdate after render instructions are done, target renderers are prepared, and the mesh is ready to be generated. The two `AssignMeshOverride` delegates allow separate code to take over mesh and material assignment of a `SkeletonGraphic` component.
+  * Added example component `SkeletonGraphicRenderTexture` to render a `SkeletonGraphic` to a `RenderTexture` (similar as `SkeletonRenderTexture`), mainly for proper transparency. Extended example scene `RenderTexture FadeOut Transparency` accordingly.
 
 * **Changes of default values**
 

@@ -31,6 +31,10 @@
 #define NEW_PREFAB_SYSTEM
 #endif
 
+#if UNITY_2021_2_OR_NEWER
+#define PUBLIC_SET_ICON_FOR_OBJECT
+#endif
+
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
@@ -125,7 +129,7 @@ namespace Spine.Unity.Editor {
 		}
 
 		void SpawnHierarchyContextMenu () {
-			var menu = new GenericMenu();
+			GenericMenu menu = new GenericMenu();
 
 			menu.AddItem(new GUIContent("Follow all bones"), false, SpawnFollowHierarchy);
 			menu.AddItem(new GUIContent("Follow (Root Only)"), false, SpawnFollowHierarchyRootOnly);
@@ -145,17 +149,20 @@ namespace Spine.Unity.Editor {
 					icon = Icons.constraintNib;
 					break;
 				}
-
+#if PUBLIC_SET_ICON_FOR_OBJECT
+			EditorGUIUtility.SetIconForObject(boneComponent.gameObject, icon);
+#else
 			typeof(EditorGUIUtility).InvokeMember("SetIconForObject", BindingFlags.InvokeMethod | BindingFlags.Static | BindingFlags.NonPublic, null, null, new object[2] {
 				boneComponent.gameObject,
 				icon
 			});
+#endif
 		}
 
 		static void AttachIconsToChildren (Transform root) {
 			if (root != null) {
-				var utilityBones = root.GetComponentsInChildren<SkeletonUtilityBone>();
-				foreach (var utilBone in utilityBones)
+				SkeletonUtilityBone[] utilityBones = root.GetComponentsInChildren<SkeletonUtilityBone>();
+				foreach (SkeletonUtilityBone utilBone in utilityBones)
 					AttachIcon(utilBone);
 			}
 		}

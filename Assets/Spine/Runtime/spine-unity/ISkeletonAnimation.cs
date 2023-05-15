@@ -43,6 +43,7 @@ namespace Spine.Unity {
 		InFixedUpdate
 	}
 
+	public delegate void ISkeletonAnimationDelegate (ISkeletonAnimation animated);
 	public delegate void UpdateBonesDelegate (ISkeletonAnimation animated);
 
 	public interface ISpineComponent { }
@@ -55,6 +56,7 @@ namespace Spine.Unity {
 
 	/// <summary>A Spine-Unity Component that animates a Skeleton but not necessarily with a Spine.AnimationState.</summary>
 	public interface ISkeletonAnimation : ISpineComponent {
+		event ISkeletonAnimationDelegate OnAnimationRebuild;
 		event UpdateBonesDelegate UpdateLocal;
 		event UpdateBonesDelegate UpdateWorld;
 		event UpdateBonesDelegate UpdateComplete;
@@ -82,6 +84,11 @@ namespace Spine.Unity {
 	public interface IAnimationStateComponent : ISpineComponent {
 		/// <summary>Gets the Spine.AnimationState of the animated Spine Component. This is equivalent to SkeletonAnimation.state.</summary>
 		AnimationState AnimationState { get; }
+		/// <summary>If enabled, AnimationState time is advanced by Unscaled Game Time
+		/// (<c>Time.unscaledDeltaTime</c> instead of the default Game Time(<c>Time.deltaTime</c>).
+		/// to animate independent of game <c>Time.timeScale</c>.
+		/// Instance SkeletonGraphic.timeScale and SkeletonAnimation.timeScale will still be applied.</summary>
+		bool UnscaledTime { get; set; }
 	}
 
 	/// <summary>A Spine-Unity Component that holds a reference to a SkeletonRenderer.</summary>
