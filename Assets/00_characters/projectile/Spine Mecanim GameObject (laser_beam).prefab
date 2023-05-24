@@ -1379,7 +1379,6 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
@@ -1391,28 +1390,13 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010101010101
-        actionStartIndex: 0000000002000000080000000c0000001000000013000000
-        actionHashCodes: d97b7202afffe300ba7ea101ba7ea101603dd90548c01101
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000060000000a0000000e00000011000000
+        actionHashCodes: afffe300ba7ea101ba7ea101603dd90548c01101
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: hit_building_main
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: hit_building
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -1449,7 +1433,7 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           fsmComponent: {fileID: 0}
-        - target: 2
+        - target: 1
           excludeSelf:
             useVariable: 0
             name: 
@@ -1461,7 +1445,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_building
+              name: hit_building_main
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1472,7 +1456,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: FSM
+            value: 
           sendToChildren:
             useVariable: 0
             name: 
@@ -1607,10 +1591,8 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000000c00000012000000120000000c00000027000000270000001f000000120000000f000000010000001f000000120000000f000000010000001000000010000000010000000f0000001700000001000000
+        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f000000010000001f000000120000000f000000010000001000000010000000010000000f0000001700000001000000
         paramName:
-        - gameObject
-        - storeResult
         - keys
         - 
         - 
@@ -1631,8 +1613,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000000000000000000010000000100000000000000010000000000000002000000000000000000000001000000030000000100000001000000000000000100000002000000020000000000000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000100000000000000010000000000000002000000000000000000000001000000030000000100000001000000000000000100000002000000020000000000000003000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000000000000000000001000000
     - name: check hit time
       description: 
       colorIndex: 0
@@ -2016,7 +1998,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -2033,7 +2015,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -2044,7 +2026,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0

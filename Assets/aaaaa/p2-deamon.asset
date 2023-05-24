@@ -1286,7 +1286,6 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.ParticleSystemPlay
-        - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
@@ -1297,19 +1296,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010101010101
-        actionStartIndex: 0000000005000000070000000d0000001100000015000000
-        actionHashCodes: 73b31903d97b7202afffe300ba7ea101ba7ea10148c01101
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000050000000b0000000f00000013000000
+        actionHashCodes: 73b31903afffe300ba7ea101ba7ea10148c01101
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: hit_building_main
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
@@ -1319,19 +1311,11 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: hit_building
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
-        - target: 2
+        - target: 1
           excludeSelf:
             useVariable: 0
             name: 
@@ -1343,7 +1327,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_building_main
+              name: hit_building
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1354,7 +1338,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: FSM
+            value: 
           sendToChildren:
             useVariable: 0
             name: 
@@ -1533,15 +1517,13 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001100000011000000110000001100000014000000130000000c00000012000000120000000c00000027000000270000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 14000000110000001100000011000000110000000c00000012000000120000000c00000027000000270000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - withChildren
         - cacheChildren
         - stopOnExit
         - destroyOnFinish
-        - gameObject
-        - storeResult
         - keys
         - 
         - 
@@ -1559,8 +1541,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000001000000020000000300000001000000000000000000000000000000010000000100000000000000010000000000000002000000000000000000000001000000030000000100000001000000020000000000000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 00000000000000000100000002000000030000000000000000000000010000000100000000000000010000000000000002000000000000000000000001000000030000000100000001000000020000000000000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000
     - name: attack callback
       description: 
       colorIndex: 0
