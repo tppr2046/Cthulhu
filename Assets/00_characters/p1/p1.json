@@ -1,7 +1,7 @@
 {
 "skeleton": {
-	"hash": "J3MMALvpoA8",
-	"spine": "4.1.19",
+	"hash": "WFNxAkm2vlI",
+	"spine": "4.1.23",
 	"x": -528.94,
 	"y": -15.35,
 	"width": 872,
@@ -490,6 +490,7 @@
 	{ "name": "上翅展翅(左", "bone": "root" },
 	{ "name": "下翅展翅(左", "bone": "root" },
 	{ "name": "左上臂", "bone": "root", "attachment": "左上臂" },
+	{ "name": "hold_mask", "bone": "root" },
 	{ "name": "左下臂", "bone": "root", "attachment": "左下臂" },
 	{ "name": "左手掌", "bone": "root", "attachment": "左手掌" },
 	{ "name": "左手拳", "bone": "root", "attachment": "左手拳" },
@@ -576,6 +577,15 @@
 	{
 		"name": "default",
 		"attachments": {
+			"hold_mask": {
+				"hold_mask": {
+					"type": "clipping",
+					"end": "左手推掌",
+					"vertexCount": 4,
+					"vertices": [ 1, 7, -224.63, -109.28, 1, 1, 7, 51.2, -110.04, 1, 1, 7, 149.9, 174.86, 1, 1, 7, -197.46, 152.15, 1 ],
+					"color": "ce3a3aff"
+				}
+			},
 			"上翅展翅": {
 				"上翅展翅": { "x": -554.88, "y": 875.91, "width": 815, "height": 580 }
 			},
@@ -2850,6 +2860,13 @@
 		}
 	},
 	"holding_upper": {
+		"slots": {
+			"hold_mask": {
+				"attachment": [
+					{ "name": "hold_mask" }
+				]
+			}
+		},
 		"bones": {
 			"body": {
 				"rotate": [
@@ -3107,14 +3124,24 @@
 		"drawOrder": [
 			{
 				"offsets": [
-					{ "slot": "右上臂", "offset": 17 },
-					{ "slot": "右下臂", "offset": 17 },
-					{ "slot": "右手掌", "offset": 17 }
+					{ "slot": "右上臂", "offset": 16 },
+					{ "slot": "右下臂", "offset": 16 },
+					{ "slot": "右手掌", "offset": 16 },
+					{ "slot": "右手推掌", "offset": 16 },
+					{ "slot": "右手拳", "offset": 16 }
 				]
 			}
 		]
 	},
 	"hold_end_upper": {
+		"slots": {
+			"hold_mask": {
+				"attachment": [
+					{ "name": "hold_mask" },
+					{ "time": 0.2333 }
+				]
+			}
+		},
 		"bones": {
 			"left_arm_target": {
 				"translate": [
@@ -3220,10 +3247,17 @@
 			{ "time": 0.3333 }
 		],
 		"events": [
-			{ "time": 0.1667, "name": "HitboxOff" }
+			{ "time": 0.3333, "name": "HitboxOff" }
 		]
 	},
 	"hold_start_upper": {
+		"slots": {
+			"hold_mask": {
+				"attachment": [
+					{ "time": 0.1, "name": "hold_mask" }
+				]
+			}
+		},
 		"bones": {
 			"left_arm_target": {
 				"translate": [
