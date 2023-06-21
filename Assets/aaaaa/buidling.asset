@@ -45,7 +45,7 @@ MonoBehaviour:
           name: EXPLODE BUILDING
           isSystemEvent: 0
           isGlobal: 0
-        toState: send create enemy event
+        toState: explode
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -506,26 +506,17 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 501.5
-        y: 123.99219
-        width: 139.33334
-        height: 48
+        x: 473.66406
+        y: 202.34375
+        width: 102
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: can create enemy
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: send create enemy event2
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: created
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
         toState: set child
         linkStyle: 0
@@ -539,9 +530,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.UseGravity
         - HutongGames.PlayMaker.Actions.SetRigidBodyConstraints
-        - HutongGames.PlayMaker.Actions.BoolTest
         - HutongGames.PlayMaker.Actions.PhysicsIgnoreCollision
-        - HutongGames.PlayMaker.Actions.GetControllerCollisionFlags
         customNames:
         - 
         - 
@@ -549,12 +538,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0101010101010101
-        actionStartIndex: 00000000060000000a00000012000000140000001f0000002300000026000000
-        actionHashCodes: afffe300ba7ea101f6e5be0315264c015050f303a4c8bf00aa34a204c96c5301
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 00000000060000000a00000012000000140000001f000000
+        actionHashCodes: afffe300ba7ea101f6e5be0315264c015050f303aa34a204
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -568,14 +555,6 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: building_model
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -800,48 +779,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: isEnemy_created
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -853,17 +796,15 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - created
-        - can create enemy
-        byteData: 000100000000000000
+        stringParams: []
+        byteData: 0001000000000000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000001c0000000f0000000f0000000f0000000700000001000000010000001400000011000000140000001100000011000000110000001100000011000000110000001100000011000000110000000100000011000000170000001700000001000000140000001300000011000000140000001100000011000000110000001100000011000000
+        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000001c0000000f0000000f0000000f00000007000000010000000100000014000000110000001400000011000000110000001100000011000000110000001100000011000000110000001100000001000000140000001300000011000000
         paramName:
         - keys
         - 
@@ -896,21 +837,11 @@ MonoBehaviour:
         - freezeRotationY
         - freezeRotationZ
         - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
         - collider1
         - collider2
         - ignoreCollision
-        - gameObject
-        - isGrounded
-        - none
-        - sides
-        - above
-        - below
-        paramDataPos: 000000000000000001000000010000000000000001000000000000000200000000000000000000000000000000000000010000000200000003000000010000000500000006000000010000000000000002000000010000000200000003000000040000000500000006000000070000000800000009000000070000000a00000000000000010000000800000003000000000000000b000000040000000c0000000d0000000e0000000f00000010000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000100000000000000010000000000000002000000000000000000000000000000000000000100000002000000030000000100000005000000060000000100000000000000020000000100000002000000030000000400000005000000060000000700000008000000090000000700000003000000000000000a000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000
     - name: throw
       description: "\u63A5\u6536\u89D2\u8272\u6295\u64F2\u529B\u91CFtrhow_x, throw_y"
       colorIndex: 0
@@ -2013,7 +1944,7 @@ MonoBehaviour:
           name: explode
           isSystemEvent: 0
           isGlobal: 0
-        toState: send create enemy event
+        toState: explode
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2821,246 +2752,6 @@ MonoBehaviour:
         - realTime
         paramDataPos: 00000000010000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: send create enemy event
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 52
-        y: 460
-        width: 185.33333
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: explode
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetPosition
-        - HutongGames.PlayMaker.Actions.SetEventProperties
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000070000000b0000000f000000
-        actionHashCodes: 5552ad05afffe300ba7ea101ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: ENEMY_MANAGER
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: building_spot
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: create_position
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: CREATE ENEMY
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: HUMAN RUN
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: building_pos
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 6
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: building_pos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00000000000000
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000000c000000120000000c000000270000001f000000120000000f000000010000001f000000120000000f00000001000000
-        paramName:
-        - gameObject
-        - vector
-        - x
-        - y
-        - z
-        - space
-        - everyFrame
-        - keys
-        - 
-        - datas
-        - 
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000001000000020000000000000004000000000000000000000001000000000000000000000001000000030000000500000001000000020000000400000006000000
-        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: add area point
       description: 
       colorIndex: 0
@@ -3269,213 +2960,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000000000000100000000000000000000000000000001000000020000000100000001000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
-    - name: send create enemy event2
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 471
-        y: 238
-        width: 192.66667
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: set child
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetPosition
-        - HutongGames.PlayMaker.Actions.SetEventProperties
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000070000000b0000000f000000
-        actionHashCodes: 5552ad05afffe300ba7ea10127fbe103
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: ENEMY_MANAGER
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: create_position
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: CREATE ENEMY
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: building_pos
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 6
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: isEnemy_created
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: building_pos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00000000000000
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000000c000000120000000c000000270000001f000000120000000f00000001000000110000001100000001000000
-        paramName:
-        - gameObject
-        - vector
-        - x
-        - y
-        - z
-        - space
-        - everyFrame
-        - keys
-        - 
-        - datas
-        - 
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - boolVariable
-        - boolValue
-        - everyFrame
-        paramDataPos: 000000000000000000000000010000000200000000000000040000000000000000000000010000000000000000000000010000000300000005000000000000000100000006000000
-        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: put
       description: 
       colorIndex: 0
