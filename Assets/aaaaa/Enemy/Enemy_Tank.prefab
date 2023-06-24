@@ -304,7 +304,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!1 &866139561107340551
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +356,8 @@ GameObject:
   - component: {fileID: 7575633804028102100}
   - component: {fileID: 5906574749588798146}
   - component: {fileID: 6114893948991559771}
+  - component: {fileID: 5918860085824508143}
+  - component: {fileID: 2544147177426951036}
   m_Layer: 0
   m_Name: Enemy_Tank
   m_TagString: enemy
@@ -1228,6 +1230,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.UseGravity
         - HutongGames.PlayMaker.Actions.SetRigidBodyConstraints
         - HutongGames.PlayMaker.Actions.SetTag
+        - HutongGames.PlayMaker.Actions.SetVelocity
         - HutongGames.PlayMaker.Actions.AddForce
         - HutongGames.PlayMaker.Actions.CollisionEvent
         customNames:
@@ -1240,10 +1243,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101010101
-        actionIsOpen: 010101010101010101
-        actionStartIndex: 0000000003000000090000000a0000000c0000000e000000190000001b00000024000000
-        actionHashCodes: 46ebaf00afffe3008d4bb5035ac8520415264c015050f3039bd6f801febdb401beb33100
+        - 
+        actionEnabled: 01010101010101010001
+        actionIsOpen: 01010101010101010001
+        actionStartIndex: 0000000003000000090000000a0000000c0000000e000000190000001b000000220000002b000000
+        actionHashCodes: 46ebaf00afffe3008d4bb5035ac8520415264c015050f3039bd6f8015552ad05febdb401beb33100
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1263,6 +1267,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: hold_place
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1554,6 +1566,24 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
+          name: throw_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: throw_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
@@ -1635,19 +1665,25 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - explode
-        byteData: 000001000000010000000000000000
+        byteData: 0000010000000001000000010000000000000000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000012000000120000000c00000012000000120000000c0000002700000027000000140000002400000001000000140000001100000014000000110000001100000011000000110000001100000011000000110000001100000011000000010000001400000012000000140000001c0000001c0000000f0000000f0000000f00000007000000070000000100000014000000070000001200000017000000130000000f000000
+        paramDataType: 1300000012000000120000000c00000012000000120000000c0000002700000027000000140000002400000001000000140000001100000014000000110000001100000011000000110000001100000011000000110000001100000011000000010000001400000012000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000001c0000000f0000000f0000000f00000007000000070000000100000014000000070000001200000017000000130000000f000000
         paramName:
         - sentByGameObject
         - gameObjectName
@@ -1677,6 +1713,13 @@ MonoBehaviour:
         - gameObject
         - tag
         - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - gameObject
         - atPosition
         - vector
         - x
@@ -1691,8 +1734,8 @@ MonoBehaviour:
         - sendEvent
         - storeCollider
         - storeForce
-        paramDataPos: 00000000000000000100000000000000020000000300000001000000000000000100000000000000000000000000000001000000000000000200000001000000020000000300000004000000050000000600000007000000080000000900000001000000030000000400000004000000000000000100000000000000010000000200000002000000060000000a000000050000000b00000005000000000000000100000003000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000040000000400000001000000000000000400000000000000000000000000000000000000
+        paramDataPos: 00000000000000000100000000000000020000000300000001000000000000000100000000000000000000000000000001000000000000000200000001000000020000000300000004000000050000000600000007000000080000000900000001000000030000000400000004000000000000000000000001000000020000000200000006000000050000000100000002000000030000000400000005000000070000000b0000000f000000060000001000000005000000000000000100000006000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000040000000400000001000000000000000400000000000000000000000000000000000000
     - name: explode
       description: 
       colorIndex: 0
@@ -3452,7 +3495,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -3469,10 +3512,10 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 0
+    handleTriggerEnter: 1
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -3480,7 +3523,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -4270,7 +4313,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -4306,7 +4349,35 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
+--- !u!114 &5918860085824508143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866139561107340551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 845409985, guid: 9754d4abda502c6458053d5ed8e4fc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 6047394608297571862}
+--- !u!114 &2544147177426951036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866139561107340551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -664232604, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 6047394608297571862}
 --- !u!1001 &570334949857509771
 PrefabInstance:
   m_ObjectHideFlags: 0
