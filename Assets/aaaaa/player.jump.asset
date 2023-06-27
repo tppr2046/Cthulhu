@@ -24,10 +24,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 354
-        y: 309
+        x: 350
+        y: 345
         width: 100
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -37,15 +37,6 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 1
         toState: jump start
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: on ground
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -111,7 +102,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 5
+          value: 0.5
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -126,7 +117,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - jump start
         byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -151,8 +142,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 347
-        y: 385
+        x: 343
+        y: 421
         width: 100
         height: 32
       isBreakpoint: 0
@@ -362,10 +353,10 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
-        - ownerOption: 0
+        - ownerOption: 1
           gameObject:
-            useVariable: 0
-            name: 
+            useVariable: 1
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -498,15 +489,31 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.TriggerEvent
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 9c5124009c512400
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000a0000000f000000
+        actionHashCodes: 9c5124009c5124009c5124009c512400
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: hit_obj
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: hit_obj
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 1
           name: hit_obj
           tooltip: 
@@ -536,6 +543,22 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GroundTrigger
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GroundTrigger
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -548,13 +571,25 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: ground
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: building
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: ground
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: building
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -570,12 +605,14 @@ MonoBehaviour:
         stringParams:
         - on ground
         - on ground
-        byteData: 0000000001000000
+        - on ground
+        - on ground
+        byteData: 00000000000000000100000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000070000001200000017000000130000001400000007000000120000001700000013000000
+        paramDataType: 1400000007000000120000001700000013000000140000000700000012000000170000001300000014000000070000001200000017000000130000001400000007000000120000001700000013000000
         paramName:
         - gameObject
         - trigger
@@ -587,8 +624,18 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000000000000100000004000000010000000100000001000000
-        paramByteDataSize: 00000000040000000000000000000000000000000000000004000000000000000000000000000000
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        paramDataPos: 000000000000000000000000000000000000000001000000040000000100000001000000010000000200000008000000020000000200000002000000030000000c000000030000000300000003000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000400000000000000000000000000000000000000040000000000000000000000000000000000000004000000000000000000000000000000
     - name: init
       description: 
       colorIndex: 0

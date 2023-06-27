@@ -1776,7 +1776,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 602.4844
         y: 836.4922
-        width: 105.333336
+        width: 124.666664
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -3063,6 +3063,9 @@ MonoBehaviour:
     - name: continue hit
       isSystemEvent: 0
       isGlobal: 0
+    - name: BACK TO POOL
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: IS HOLDING
@@ -3078,6 +3081,15 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: all explode
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: BACK TO POOL
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: back to pool
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -3195,7 +3207,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -3212,10 +3224,10 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -3223,7 +3235,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -3687,7 +3699,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -4687,7 +4699,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
