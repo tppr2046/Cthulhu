@@ -3139,7 +3139,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetPosition
         - HutongGames.PlayMaker.Actions.RandomFloat
         - HutongGames.PlayMaker.Actions.RandomFloat
-        - HutongGames.PlayMaker.Actions.AddForce
+        - HutongGames.PlayMaker.Actions.SetVelocity
         customNames:
         - 
         - 
@@ -3151,7 +3151,7 @@ MonoBehaviour:
         actionEnabled: 01010101010101
         actionIsOpen: 00010101010101
         actionStartIndex: 00000000050000000a0000000f000000170000001a0000001d000000
-        actionHashCodes: b2cf10005b66cf00a0dd8303f6e5be032ee017042ee01704febdb401
+        actionHashCodes: b2cf10005b66cf00a0dd8303f6e5be032ee017042ee017045552ad05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -3225,7 +3225,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: manager
+          value: pool
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3349,22 +3349,16 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000000000000000000000100000000
+        byteData: 0000000000000000000100000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001100000011000000010000000100000014000000120000001200000013000000010000001400000013000000110000001100000011000000140000001c0000000f0000000f0000000f0000000700000001000000010000000f0000000f0000000f0000000f0000000f0000000f000000140000001c0000001c0000000f0000000f0000000f000000070000000700000001000000
+        paramDataType: 140000001100000011000000010000000100000014000000120000001200000013000000010000001400000013000000110000001100000011000000140000001c0000000f0000000f0000000f0000000700000001000000010000000f0000000f0000000f0000000f0000000f0000000f000000140000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
         - gameObject
         - activate
@@ -3396,16 +3390,14 @@ MonoBehaviour:
         - max
         - storeResult
         - gameObject
-        - atPosition
         - vector
         - x
         - y
         - z
         - space
-        - forceMode
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000001000000010000000000000001000000000000000200000002000000010000000200000003000000040000000300000000000000000000000100000002000000030000000700000008000000030000000400000005000000060000000700000008000000040000000100000002000000090000000a0000000b000000090000000d00000011000000
-        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000400000001000000
+        paramDataPos: 00000000000000000100000000000000010000000100000000000000010000000000000002000000020000000100000002000000030000000400000003000000000000000000000001000000020000000300000007000000080000000300000004000000050000000600000007000000080000000400000001000000090000000a0000000b000000090000000d000000
+        paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000
     - name: fall chuchu
       description: 
       colorIndex: 0
@@ -3522,7 +3514,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: manager
+          value: pool
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3551,7 +3543,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: -6
+          value: -3
         - useVariable: 0
           name: 
           tooltip: 
@@ -3823,7 +3815,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -3851,7 +3843,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -8374,13 +8366,12 @@ GameObject:
   - component: {fileID: 4188366047194037048}
   - component: {fileID: 3860143390854996839}
   - component: {fileID: 6701022733950027836}
-  - component: {fileID: 7652238089475533607}
   - component: {fileID: 6764144507210453560}
   - component: {fileID: 7281712305251652241}
   - component: {fileID: 2716147257992423820}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (monster2)
-  m_TagString: building
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8850,18 +8841,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.AudioPlay
-        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0100010101
-        actionStartIndex: 0000000002000000070000000c00000010000000
-        actionHashCodes: 9bd6f801b2cf100081294e04ba7ea10148c01101
+        actionEnabled: 01010101
+        actionIsOpen: 01000101
+        actionStartIndex: 0000000002000000070000000c000000
+        actionHashCodes: 9bd6f801b2cf100081294e0448c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -8892,39 +8881,7 @@ MonoBehaviour:
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: VitualCam1
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -8934,12 +8891,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: reveal
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SET FOLLOW
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -8958,12 +8909,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -8998,12 +8943,12 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         - FINISHED
-        byteData: 00000000
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001400000011000000110000000100000001000000140000000f0000001800000011000000170000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 14000000120000001400000011000000110000000100000001000000140000000f0000001800000011000000170000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
@@ -9017,15 +8962,11 @@ MonoBehaviour:
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000100000000000000010000000000000001000000020000000000000000000000020000000000000000000000010000000100000002000000020000000100000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000001000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000100000000000000010000000200000000000000000000000200000000000000010000000100000002000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000001000000
     - name: attack
       description: 
       colorIndex: 0
@@ -11314,7 +11255,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: cast bubble
       isSystemEvent: 0
@@ -11472,22 +11413,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &7652238089475533607
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4188366047194037190}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &6764144507210453560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11754,7 +11679,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: building_damage
+          value: enemy_damage
         - useVariable: 0
           name: 
           tooltip: 
@@ -11794,7 +11719,7 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 70380ecd86a134f43b05c9d83d84777a, type: 3}
         fsmVarParams:
-        - variableName: building_damage
+        - variableName: enemy_damage
           objectType: UnityEngine.Object
           useVariable: 1
           type: 1
@@ -11889,7 +11814,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: building_damage
+          name: enemy_damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -12422,7 +12347,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: building_damage
+        name: enemy_damage
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -12465,7 +12390,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -13022,7 +12947,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -13865,7 +13790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772047241261196338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.3, y: 37.6, z: 0}
+  m_LocalPosition: {x: -15.9, y: 37.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4188366047194037049}
@@ -16526,7 +16451,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -19080,9 +19005,10 @@ GameObject:
   - component: {fileID: 5979568782710219801}
   - component: {fileID: 4183527696995501557}
   - component: {fileID: 1714839902181803753}
+  - component: {fileID: 4256913898892376667}
   m_Layer: 7
   m_Name: hit collider
-  m_TagString: building
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19094,13 +19020,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8066328158073353260}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0.8, y: 9.78, z: -0.03}
-  m_LocalScale: {x: 10, y: 18, z: 10}
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0.8, y: 15.17, z: -0.03}
+  m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
   m_Father: {fileID: 4188366047194037049}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
 --- !u!33 &5201710660582129015
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19415,6 +19341,22 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!54 &4256913898892376667
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066328158073353260}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8084965638056098874
 GameObject:
   m_ObjectHideFlags: 0
@@ -20660,10 +20602,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (13)
@@ -20732,10 +20670,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -20808,10 +20742,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (1)
@@ -20880,10 +20810,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -20956,10 +20882,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (12)
@@ -21028,10 +20950,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21104,10 +21022,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (9)
@@ -21176,10 +21090,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21252,10 +21162,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (5)
@@ -21324,10 +21230,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21400,10 +21302,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (2)
@@ -21472,10 +21370,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21570,11 +21464,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b1101660bded31468c477ea1bf6cb67, type: 3}
---- !u!4 &2343679199525603869 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2290433046368760787, guid: 4b1101660bded31468c477ea1bf6cb67, type: 3}
-  m_PrefabInstance: {fileID: 4561912677077760462}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2343679199525603862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2290433046368760792, guid: 4b1101660bded31468c477ea1bf6cb67, type: 3}
@@ -21583,6 +21472,11 @@ GameObject:
 --- !u!1 &7974465680522383722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5901357228015134884, guid: 4b1101660bded31468c477ea1bf6cb67, type: 3}
+  m_PrefabInstance: {fileID: 4561912677077760462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2343679199525603869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2290433046368760787, guid: 4b1101660bded31468c477ea1bf6cb67, type: 3}
   m_PrefabInstance: {fileID: 4561912677077760462}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5479349592836254843
@@ -21638,10 +21532,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21712,10 +21602,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -21875,10 +21761,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (14)
@@ -21947,10 +21829,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -22023,10 +21901,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (3)
@@ -22095,10 +21969,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -22254,10 +22124,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_Name
       value: chuchu (6)
@@ -22326,10 +22192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195318, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084004607960195321, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
-      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084004607960195323, guid: 9ad778881efeb42449c0b8531ec38bda, type: 3}
@@ -22499,13 +22361,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291633266257bc24981b7485de950848, type: 3}
---- !u!4 &5835974655979158142 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2658086880711574098, guid: 291633266257bc24981b7485de950848, type: 3}
-  m_PrefabInstance: {fileID: 8367380142076557356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5835974655979158137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2658086880711574101, guid: 291633266257bc24981b7485de950848, type: 3}
+  m_PrefabInstance: {fileID: 8367380142076557356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5835974655979158142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2658086880711574098, guid: 291633266257bc24981b7485de950848, type: 3}
   m_PrefabInstance: {fileID: 8367380142076557356}
   m_PrefabAsset: {fileID: 0}
