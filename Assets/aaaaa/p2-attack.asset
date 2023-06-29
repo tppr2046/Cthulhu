@@ -1980,19 +1980,19 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: DEAMON DIE
+          name: DASH
           isSystemEvent: 0
           isGlobal: 0
-        toState: set skill 2 default
+        toState: dash
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: DASH
+          name: SELF CONTROL
           isSystemEvent: 0
           isGlobal: 0
-        toState: dash
+        toState: set skill 2 default
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2325,7 +2325,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 217.47656
         y: 1214.5781
-        width: 109.333336
+        width: 124
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -2341,7 +2341,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: DEAMON DIE
+          name: SELF CONTROL
           isSystemEvent: 0
           isGlobal: 0
         toState: set skill 2 default
@@ -2433,7 +2433,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - DEAMON DIE
+        - SELF CONTROL
         - 
         byteData: 0000
         arrayParamSizes: 
@@ -2627,14 +2627,14 @@ MonoBehaviour:
         serializedVersion: 2
         x: 50.179688
         y: 1257.9141
-        width: 109.333336
+        width: 125.333336
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: DEAMON DIE
+          name: SELF CONTROL
           isSystemEvent: 0
           isGlobal: 0
         toState: set skill 2 default
@@ -6299,6 +6299,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: DEAMON CREATED
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SELF CONTROL
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
