@@ -5281,8 +5281,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1590.4062
         y: 542.83594
-        width: 100
-        height: 32
+        width: 138
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -5296,17 +5296,28 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: check hold object
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: check no object
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 5f9135049bd6f801
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000500000007000000
+        actionHashCodes: 5f9135049bd6f80148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -5349,7 +5360,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -5363,13 +5380,14 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0000000000
+        stringParams:
+        - check hold object
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001100000001000000070000001400000012000000
+        paramDataType: 140000001200000011000000010000000700000014000000120000000f0000001700000001000000
         paramName:
         - gameObject
         - parameter
@@ -5378,8 +5396,11 @@ MonoBehaviour:
         - everyFrameOption
         - gameObject
         - trigger
-        paramDataPos: 00000000000000000000000000000000010000000100000001000000
-        paramByteDataSize: 00000000000000000000000001000000040000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000000000000000000000000000010000000100000001000000000000000000000005000000
+        paramByteDataSize: 00000000000000000000000001000000040000000000000000000000000000000000000001000000
     - name: send event to throw object
       description: 
       colorIndex: 0
@@ -5578,8 +5599,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1594.3906
-        y: 268.60156
+        x: 1590.2656
+        y: 338.71094
         width: 100
         height: 32
       isBreakpoint: 0
@@ -5590,7 +5611,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: check no object
+        toState: wait holded
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -5868,8 +5889,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1574.4609
-        y: 321.60938
+        x: 1582.7109
+        y: 263.875
         width: 126.666664
         height: 48
       isBreakpoint: 0
@@ -5889,7 +5910,7 @@ MonoBehaviour:
           name: continue hold
           isSystemEvent: 0
           isGlobal: 0
-        toState: wait holded
+        toState: hold start
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6059,7 +6080,7 @@ MonoBehaviour:
           name: hold building
           isSystemEvent: 0
           isGlobal: 0
-        toState: hold start
+        toState: check no object
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6486,7 +6507,7 @@ MonoBehaviour:
           name: hit enemy
           isSystemEvent: 0
           isGlobal: 0
-        toState: hold start
+        toState: check no object
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6558,8 +6579,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1709
-        y: 586.21875
+        x: 1703.8438
+        y: 613.02344
         width: 100
         height: 48
       isBreakpoint: 0
@@ -6943,6 +6964,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: left
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: check hold object
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
