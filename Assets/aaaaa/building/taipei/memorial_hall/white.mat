@@ -121,6 +121,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DitherTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Emission2ndBlendMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -396,6 +400,7 @@ Material:
     - _AudioLink2Main3rd: 0
     - _AudioLink2Vertex: 0
     - _AudioLinkAsLocal: 0
+    - _AudioLinkMask_UVMode: 0
     - _AudioLinkUVMode: 1
     - _AudioLinkVertexUVMode: 1
     - _AutoRenderQueue: 1
@@ -468,6 +473,9 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DissolveNoiseStrength: 0.1
+    - _DistanceFadeMode: 0
+    - _DistanceFadeRimFresnelPower: 5
+    - _DitherMaxValue: 255
     - _DstBlend: 0
     - _DstBlendAlpha: 10
     - _DstBlendAlphaFA: 1
@@ -512,6 +520,23 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _HighColor_Power: 0
+    - _IDMask1: 0
+    - _IDMask2: 0
+    - _IDMask3: 0
+    - _IDMask4: 0
+    - _IDMask5: 0
+    - _IDMask6: 0
+    - _IDMask7: 0
+    - _IDMask8: 0
+    - _IDMaskFrom: 8
+    - _IDMaskIndex1: 0
+    - _IDMaskIndex2: 0
+    - _IDMaskIndex3: 0
+    - _IDMaskIndex4: 0
+    - _IDMaskIndex5: 0
+    - _IDMaskIndex6: 0
+    - _IDMaskIndex7: 0
+    - _IDMaskIndex8: 0
     - _IgnoreEncryption: 0
     - _Inverse_Clipping: 0
     - _Inverse_MatcapMask: 0
@@ -552,6 +577,7 @@ Material:
     - _LightMinLimit: 0.05
     - _Main2ndDissolveNoiseStrength: 0.1
     - _Main2ndEnableLighting: 1
+    - _Main2ndTexAlphaMode: 0
     - _Main2ndTexAngle: 0
     - _Main2ndTexBlendMode: 0
     - _Main2ndTexIsDecal: 0
@@ -565,6 +591,7 @@ Material:
     - _Main2ndTex_UVMode: 0
     - _Main3rdDissolveNoiseStrength: 0.1
     - _Main3rdEnableLighting: 1
+    - _Main3rdTexAlphaMode: 0
     - _Main3rdTexAngle: 0
     - _Main3rdTexBlendMode: 0
     - _Main3rdTexIsDecal: 0
@@ -697,17 +724,17 @@ Material:
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0
-    - _Shadow2ndBlur: 0.1
-    - _Shadow2ndBorder: 0.15
+    - _Shadow2ndBlur: 0.11
+    - _Shadow2ndBorder: 0.304
     - _Shadow2ndNormalStrength: 1
     - _Shadow2ndReceive: 0
     - _Shadow3rdBlur: 0.1
     - _Shadow3rdBorder: 0.25
     - _Shadow3rdNormalStrength: 1
     - _Shadow3rdReceive: 0
-    - _ShadowBlur: 0.1
+    - _ShadowBlur: 0.521
     - _ShadowBlurMaskLOD: 0
-    - _ShadowBorder: 0.678
+    - _ShadowBorder: 0.717
     - _ShadowBorderMaskLOD: 0
     - _ShadowBorderRange: 0.08
     - _ShadowColorType: 0
@@ -718,7 +745,7 @@ Material:
     - _ShadowMaskType: 0
     - _ShadowNormalStrength: 1
     - _ShadowPostAO: 0
-    - _ShadowReceive: 0
+    - _ShadowReceive: 0.113
     - _ShadowStrength: 1
     - _ShadowStrengthMaskLOD: 0
     - _ShiftBackfaceUV: 0
@@ -771,6 +798,7 @@ Material:
     - _UseBump2ndMap: 0
     - _UseBumpMap: 0
     - _UseClippingCanceller: 0
+    - _UseDither: 0
     - _UseEmission: 0
     - _UseEmission2nd: 0
     - _UseGlitter: 0
@@ -812,6 +840,7 @@ Material:
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _AudioLinkDefaultValue: {r: 0, g: 0, b: 2, a: 0.75}
     - _AudioLinkLocalMapParams: {r: 120, g: 1, b: 0, a: 0}
+    - _AudioLinkMask_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
     - _AudioLinkStart: {r: 0, g: 0, b: 0, a: 0}
     - _AudioLinkUVParams: {r: 0.25, g: 0, b: 0, a: 0.125}
     - _AudioLinkVertexStart: {r: 0, g: 0, b: 0, a: 0}
@@ -819,8 +848,8 @@ Material:
     - _AudioLinkVertexUVParams: {r: 0.25, g: 0, b: 0, a: 0.125}
     - _BackfaceColor: {r: 0, g: 0, b: 0, a: 0}
     - _BacklightColor: {r: 0.85, g: 0.8, b: 0.7, a: 1}
-    - _BaseColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
-    - _Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    - _BaseColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _Color2nd: {r: 1, g: 1, b: 1, a: 1}
     - _Color3rd: {r: 1, g: 1, b: 1, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
@@ -830,6 +859,7 @@ Material:
     - _DissolvePos: {r: 0, g: 0, b: 0, a: 0}
     - _DistanceFade: {r: 0.1, g: 0.01, b: 0, a: 0}
     - _DistanceFadeColor: {r: 0, g: 0, b: 0, a: 1}
+    - _DistanceFadeRimColor: {r: 0, g: 0, b: 0, a: 0}
     - _Emission2ndBlendMask_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
     - _Emission2ndBlink: {r: 0, g: 0, b: 3.141593, a: 0}
     - _Emission2ndColor: {r: 1, g: 1, b: 1, a: 1}
@@ -878,12 +908,12 @@ Material:
     - _RimColor: {r: 0.66, g: 0.5, b: 0.48, a: 1}
     - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Shadow2ndColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    - _Shadow2ndColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     - _Shadow3rdColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowAOShift: {r: 1, g: 0, b: 1, a: 0}
     - _ShadowAOShift2: {r: 1, g: 0, b: 1, a: 0}
     - _ShadowBorderColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
-    - _ShadowColor: {r: 0.4811321, g: 0.43422925, b: 0.43422925, a: 1}
+    - _ShadowColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
     - _e2ga0: {r: 1, g: 0, b: 0, a: 0}
