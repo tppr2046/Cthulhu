@@ -212,7 +212,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -5256,7 +5256,7 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000000000001000000
     - name: Creat Actor
       description: 
-      colorIndex: 0
+      colorIndex: 7
       position:
         serializedVersion: 2
         x: 663
@@ -5281,16 +5281,18 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.SetFsmInt
         - HutongGames.PlayMaker.Actions.SetFsmInt
+        - HutongGames.PlayMaker.Actions.SetFsmInt
         - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000060000000b00000010000000
-        actionHashCodes: 60532301081bbf05081bbf05603dd905
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000060000000b0000001000000015000000
+        actionHashCodes: 60532301081bbf05081bbf05081bbf05603dd905
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -5334,6 +5336,14 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Actor
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -5358,6 +5368,18 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: POWER
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: ID
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: FSM
         - useVariable: 0
           name: 
@@ -5371,6 +5393,12 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 1
+          name: BOARD_ID
+          tooltip: "\u5F9E\u9762\u677F\u4E0A\u500B\u5225\u8A2D\u5B9A 0-3"
+          showInInspector: 1
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: BOARD_ID
           tooltip: "\u5F9E\u9762\u677F\u4E0A\u500B\u5225\u8A2D\u5B9A 0-3"
@@ -5414,12 +5442,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000130000001c0000001c0000001300000014000000120000001200000010000000010000001400000012000000120000001000000001000000100000001000000001000000
+        paramDataType: 1300000013000000130000001c0000001c00000013000000140000001200000012000000100000000100000014000000120000001200000010000000010000001400000012000000120000001000000001000000100000001000000001000000
         paramName:
         - gameObject
         - parent
@@ -5437,11 +5465,16 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
         - intVariable
         - intValue
         - everyFrame
-        paramDataPos: 00000000010000000200000000000000010000000300000000000000000000000100000000000000000000000100000002000000030000000100000001000000020000000300000002000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000100000002000000000000000100000003000000000000000000000001000000000000000000000001000000020000000300000001000000010000000200000004000000050000000200000002000000030000000400000003000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000001000000
     - name: Use MCam
       description: 
       colorIndex: 0
@@ -7223,7 +7256,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: ACTOR_DEAD
       isSystemEvent: 0
