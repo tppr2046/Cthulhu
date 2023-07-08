@@ -5296,7 +5296,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 959.53125
         y: 471.66406
-        width: 100
+        width: 126.666664
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -5312,7 +5312,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: IS BOSS
+          name: CAN NOT HOLD
           isSystemEvent: 0
           isGlobal: 0
         toState: set hold end
@@ -5594,7 +5594,7 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 00000000060000000a000000
+        actionStartIndex: 000000000400000008000000
         actionHashCodes: afffe300ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
@@ -5643,13 +5643,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: throw_x
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: throw_y
+          value: face
         - useVariable: 0
           name: 
           tooltip: 
@@ -5658,34 +5652,10 @@ MonoBehaviour:
           value: IS THROWING
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: throw_x_face
+        - variableName: face
           objectType: UnityEngine.Object
           useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: throw_y
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -5731,19 +5701,17 @@ MonoBehaviour:
         stringParams:
         - hitbox off
         byteData: 0000
-        arrayParamSizes: 0200000002000000
+        arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 0c000000120000000c000000270000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
         - keys
         - 
-        - 
         - datas
-        - 
         - 
         - eventTarget
         - sendEvent
@@ -5752,8 +5720,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000100000001000000000000000100000000000000020000000000000000000000010000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: hold start
       description: 
       colorIndex: 0
@@ -6314,8 +6282,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 962.35156
         y: 395.54688
-        width: 100.666664
-        height: 32
+        width: 126
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -6325,6 +6293,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 1
         toState: holding
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CAN NOT HOLD
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: set hold end
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6739,28 +6716,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1028.0859
-        y: 621.96875
+        x: 996.10156
+        y: 654.9844
         width: 100
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: right
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
-        toState: throw right
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: left
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: throw left
+        toState: send event to throw object
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6768,14 +6736,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmBool
-        - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05a4c8bf00
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 68fece05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -6819,314 +6785,106 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - right
-        - left
-        byteData: 0000
+        stringParams: []
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramDataType: 1400000012000000120000001100000001000000
         paramName:
         - gameObject
         - fsmName
         - variableName
         - storeValue
         - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
-    - name: throw left
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 888.08594
-        y: 684.96875
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: send event to throw object
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: throw_x
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: -1
-        - useVariable: 1
-          name: throw_x_face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0200000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
-    - name: throw right
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1186.0859
-        y: 686.96875
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: send event to throw object
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: throw_x
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: throw_x_face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0200000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: ANIMATION RESET
+      isSystemEvent: 0
+      isGlobal: 0
     - name: ATTACK
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: HOLD
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SKILL1
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SKILL2
       isSystemEvent: 0
       isGlobal: 0
     - name: attack end
       isSystemEvent: 0
       isGlobal: 1
-    - name: hit building
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: HIT OK
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: FINISHED
-      isSystemEvent: 1
-      isGlobal: 0
-    - name: hold building
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hitbox off
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: THROW
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: throw out
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: holded
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: LASER START
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: no cast
-      isSystemEvent: 0
-      isGlobal: 0
     - name: attack start
       isSystemEvent: 0
       isGlobal: 1
-    - name: STORM START
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: LASER END
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: STORM END
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: RUMBLE
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no power
+    - name: CAN NOT HOLD
       isSystemEvent: 0
       isGlobal: 0
     - name: can skill
       isSystemEvent: 0
       isGlobal: 0
-    - name: continue storm
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: ANIMATION RESET
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no building
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: continue hold
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: IS BOSS
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hit enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SKILL3
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: normal attack
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: skill3 attack1
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: skill3 attack2
+    - name: check hold object
       isSystemEvent: 0
       isGlobal: 0
     - name: continue get storm
       isSystemEvent: 0
       isGlobal: 0
+    - name: continue hold
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: continue storm
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hit building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hit enemy
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: HIT OK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hitbox off
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: HOLD
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hold building
+      isSystemEvent: 0
+      isGlobal: 0
     - name: hold enemy
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: holded
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: LASER END
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: LASER START
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: left
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no cast
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no enemy
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no power
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: normal attack
       isSystemEvent: 0
       isGlobal: 0
     - name: PUT
@@ -7135,12 +6893,36 @@ MonoBehaviour:
     - name: right
       isSystemEvent: 0
       isGlobal: 0
-    - name: left
+    - name: RUMBLE
       isSystemEvent: 0
       isGlobal: 0
-    - name: check hold object
+    - name: SKILL1
       isSystemEvent: 0
       isGlobal: 0
+    - name: SKILL2
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SKILL3
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: skill3 attack1
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: skill3 attack2
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: STORM END
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: STORM START
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: THROW
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: throw out
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET

@@ -5653,7 +5653,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1315.9141
         y: 445.47656
-        width: 100
+        width: 126.666664
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -5669,7 +5669,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: IS BOSS
+          name: CAN NOT HOLD
           isSystemEvent: 0
           isGlobal: 0
         toState: set hold end
@@ -5896,8 +5896,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1290.9688
-        y: 690.2422
+        x: 1290.9766
+        y: 757.25
         width: 194.66667
         height: 32
       isBreakpoint: 0
@@ -5928,7 +5928,7 @@ MonoBehaviour:
         - 
         actionEnabled: 0101010101
         actionIsOpen: 0101010101
-        actionStartIndex: 0000000005000000070000000d00000011000000
+        actionStartIndex: 0000000005000000070000000b0000000f000000
         actionHashCodes: 5f9135049bd6f801afffe300ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
@@ -6005,13 +6005,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: throw_x
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: throw_y
+          value: face
         - useVariable: 0
           name: 
           tooltip: 
@@ -6020,34 +6014,10 @@ MonoBehaviour:
           value: IS THROWING
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: throw_x_face
+        - variableName: face
           objectType: UnityEngine.Object
           useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: throw_y
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -6099,13 +6069,13 @@ MonoBehaviour:
         stringParams:
         - hitbox off
         byteData: 00000000000000
-        arrayParamSizes: 0200000002000000
+        arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000011000000010000000700000014000000120000000c00000012000000120000000c00000027000000270000001f000000120000000f000000010000000f0000001700000001000000
+        paramDataType: 140000001200000011000000010000000700000014000000120000000c000000120000000c000000270000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - parameter
@@ -6116,9 +6086,7 @@ MonoBehaviour:
         - trigger
         - keys
         - 
-        - 
         - datas
-        - 
         - 
         - eventTarget
         - sendEvent
@@ -6127,8 +6095,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000000000000000000000000000001000000010000000100000000000000020000000300000001000000000000000100000000000000040000000000000005000000010000000000000006000000
-        paramByteDataSize: 0000000000000000000000000100000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000001000000010000000000000002000000010000000000000000000000030000000000000005000000010000000000000006000000
+        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: hold start
       description: 
       colorIndex: 0
@@ -6240,8 +6208,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1319.1328
-        y: 803.33594
+        x: 1319.1406
+        y: 870.34375
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6351,8 +6319,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1323.1328
-        y: 738.33594
+        x: 1323.1406
+        y: 805.34375
         width: 120.666664
         height: 32
       isBreakpoint: 0
@@ -6689,8 +6657,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1317.7344
         y: 388.39844
-        width: 100.666664
-        height: 32
+        width: 126
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -6700,6 +6668,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 1
         toState: holding
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CAN NOT HOLD
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: set hold end
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7114,28 +7091,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1368.9375
-        y: 597.71094
+        x: 1342.9453
+        y: 632.71875
         width: 100
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: right
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
-        toState: throw right
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: left
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: throw left
+        toState: send event to throw object
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7143,14 +7111,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmBool
-        - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05a4c8bf00
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 68fece05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -7194,210 +7160,26 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - right
-        - left
-        byteData: 0000
+        stringParams: []
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramDataType: 1400000012000000120000001100000001000000
         paramName:
         - gameObject
         - fsmName
         - variableName
         - storeValue
         - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
-    - name: throw left
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1227.9219
-        y: 628.6953
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: send event to throw object
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: throw_x
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: -1
-        - useVariable: 1
-          name: throw_x_face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0200000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
-    - name: throw right
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1605.9219
-        y: 631.6953
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: send event to throw object
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: throw_x
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: throw_x_face
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0200000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -7414,13 +7196,28 @@ MonoBehaviour:
     - name: attack start
       isSystemEvent: 0
       isGlobal: 1
+    - name: bubble got
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: CAN NOT HOLD
+      isSystemEvent: 0
+      isGlobal: 0
     - name: can skill
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: check hold object
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: continue get bubble
       isSystemEvent: 0
       isGlobal: 0
     - name: continue hold
       isSystemEvent: 0
       isGlobal: 0
     - name: hit building
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: hit enemy
       isSystemEvent: 0
       isGlobal: 0
     - name: hit finished
@@ -7438,10 +7235,13 @@ MonoBehaviour:
     - name: hold building
       isSystemEvent: 0
       isGlobal: 0
+    - name: hold enemy
+      isSystemEvent: 0
+      isGlobal: 0
     - name: holded
       isSystemEvent: 0
       isGlobal: 1
-    - name: IS BOSS
+    - name: left
       isSystemEvent: 0
       isGlobal: 0
     - name: no action
@@ -7450,7 +7250,16 @@ MonoBehaviour:
     - name: no building
       isSystemEvent: 0
       isGlobal: 0
+    - name: no enemy
+      isSystemEvent: 0
+      isGlobal: 0
     - name: no power
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PUT
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: right
       isSystemEvent: 0
       isGlobal: 0
     - name: RUMBLE
@@ -7462,36 +7271,15 @@ MonoBehaviour:
     - name: SKILL2
       isSystemEvent: 0
       isGlobal: 0
+    - name: SKILL3
+      isSystemEvent: 0
+      isGlobal: 0
     - name: THROW
       isSystemEvent: 0
       isGlobal: 0
     - name: throw out
       isSystemEvent: 0
       isGlobal: 1
-    - name: continue get bubble
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: bubble got
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SKILL3
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hold enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: PUT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: hit enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: check hold object
-      isSystemEvent: 0
-      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET
