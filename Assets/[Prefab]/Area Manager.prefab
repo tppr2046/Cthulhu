@@ -275,8 +275,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 518
-        y: 336
+        x: 517.03125
+        y: 393.64844
         width: 185.33333
         height: 32
       isBreakpoint: 0
@@ -680,8 +680,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 514.8672
-        y: 500.21875
+        x: 515.89844
+        y: 521.8672
         width: 158
         height: 48
       isBreakpoint: 0
@@ -1062,8 +1062,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 791.8672
-        y: 514.21875
+        x: 792.89844
+        y: 535.8672
         width: 102
         height: 32
       isBreakpoint: 0
@@ -1925,7 +1925,7 @@ MonoBehaviour:
           name: CHANGE AREA
           isSystemEvent: 0
           isGlobal: 0
-        toState: get blocker & show arrow
+        toState: check boss area
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3110,8 +3110,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 512.5078
-        y: 393.51562
+        x: 511.53906
+        y: 451.16406
         width: 139.33334
         height: 32
       isBreakpoint: 0
@@ -3254,6 +3254,99 @@ MonoBehaviour:
         - storeGameObject
         paramDataPos: 00000000
         paramByteDataSize: 00000000
+    - name: check boss area
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 553
+        y: 323
+        width: 130.66666
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: BOSS AREA
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: disable area ui
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: get blocker & show arrow
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: area_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: boss_area_number
+          tooltip: "boss\u5728\u54EA\u4E00\u5340\u57DF"
+          showInInspector: 1
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - BOSS AREA
+        - FINISHED
+        - BOSS AREA
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
