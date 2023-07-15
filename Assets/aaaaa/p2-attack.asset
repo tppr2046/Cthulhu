@@ -24,9 +24,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 629.21875
+        x: 693.21875
         y: 223.00781
-        width: 144.66666
+        width: 141.6
         height: 96
       isBreakpoint: 0
       isSequence: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1054
+        x: 1118
         y: 523.21094
         width: 100
         height: 64
@@ -576,7 +576,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 995.78125
+        x: 1059.7812
         y: 762.1328
         width: 100
         height: 32
@@ -846,7 +846,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 613.6172
+        x: 677.6172
         y: 111.39844
         width: 100
         height: 32
@@ -1303,9 +1303,9 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 408.35156
+        x: 472.35156
         y: 515.0469
-        width: 104
+        width: 102
         height: 80
       isBreakpoint: 0
       isSequence: 0
@@ -1503,9 +1503,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 412.35156
+        x: 476.35156
         y: 453.03906
-        width: 104
+        width: 100.4
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -1662,9 +1662,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1004
+        x: 1068
         y: 451.54688
-        width: 156.66666
+        width: 152.4
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -1762,9 +1762,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 228.17969
+        x: 292.1797
         y: 493.91406
-        width: 108
+        width: 104.4
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1850,9 +1850,9 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 217.17969
+        x: 281.1797
         y: 561.91406
-        width: 148
+        width: 143.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2012,9 +2012,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 219.17969
+        x: 283.1797
         y: 684.91406
-        width: 124.666664
+        width: 147.6
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -2039,7 +2039,7 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: SELF CONTROL
+          name: SET SELF CONTROL
           isSystemEvent: 0
           isGlobal: 0
         toState: set skill 2 default
@@ -2235,9 +2235,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 223.17969
+        x: 287.1797
         y: 902.91406
-        width: 136
+        width: 132.4
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2373,28 +2373,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 217.47656
+        x: 281.47656
         y: 782.5781
-        width: 124
-        height: 48
+        width: 100
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: attack end
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: set skill control
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: SELF CONTROL
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
-        toState: set skill 2 default
+        toState: set skill control
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2402,14 +2393,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: ba7ea101a4c8bf00
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2470,46 +2459,34 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: isDead
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - SELF CONTROL
-        - 
-        byteData: 0000
+        stringParams: []
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f0000000100000011000000170000001700000001000000
+        paramDataType: 1f000000120000000f00000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
-        - everyFrame
-        paramDataPos: 0000000000000000000000000000000000000000000000000100000001000000
-        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     - name: send start event
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 217.17969
+        x: 281.1797
         y: 627.91406
-        width: 132
+        width: 128.4
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2675,16 +2652,16 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50.179688
-        y: 825.91406
-        width: 124
+        x: 51.179688
+        y: 828.91406
+        width: 147.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: SELF CONTROL
+          name: SET SELF CONTROL
           isSystemEvent: 0
           isGlobal: 0
         toState: set skill 2 default
@@ -2786,9 +2763,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 420.01562
+        x: 484.01562
         y: 379.0078
-        width: 108
+        width: 106.8
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -2912,9 +2889,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 192.83594
+        x: 256.83594
         y: 421.7422
-        width: 125.333336
+        width: 123.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3032,9 +3009,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 199.83594
+        x: 263.83594
         y: 339.7422
-        width: 118.666664
+        width: 117.2
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3158,9 +3135,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 976.4922
+        x: 1040.4922
         y: 644.6875
-        width: 210
+        width: 206
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3275,9 +3252,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1197.1094
+        x: 1261.1094
         y: 604.0625
-        width: 202
+        width: 198
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3392,7 +3369,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1252.1797
+        x: 1316.1797
         y: 754.0781
         width: 100
         height: 32
@@ -3630,9 +3607,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 653
+        x: 717
         y: 405
-        width: 119.333336
+        width: 118
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3756,9 +3733,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 661.0156
+        x: 725.0156
         y: 486.01562
-        width: 104
+        width: 100.4
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3932,9 +3909,9 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 657.0547
+        x: 721.0547
         y: 554.0547
-        width: 106
+        width: 103.6
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -4084,9 +4061,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 437.5
+        x: 501.5
         y: 900.77344
-        width: 148.66666
+        width: 146.8
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4271,7 +4248,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1057.8359
+        x: 1121.8359
         y: 162.46094
         width: 100
         height: 32
@@ -4438,6 +4415,9 @@ MonoBehaviour:
     - name: hold building
       isSystemEvent: 0
       isGlobal: 0
+    - name: HOLD END
+      isSystemEvent: 0
+      isGlobal: 0
     - name: hold enemy
       isSystemEvent: 0
       isGlobal: 0
@@ -4465,7 +4445,7 @@ MonoBehaviour:
     - name: RUMBLE
       isSystemEvent: 0
       isGlobal: 0
-    - name: SELF CONTROL
+    - name: SET SELF CONTROL
       isSystemEvent: 0
       isGlobal: 0
     - name: SKILL1
@@ -4483,9 +4463,6 @@ MonoBehaviour:
     - name: throw out
       isSystemEvent: 0
       isGlobal: 1
-    - name: HOLD END
-      isSystemEvent: 0
-      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET
