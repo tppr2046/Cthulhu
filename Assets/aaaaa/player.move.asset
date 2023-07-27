@@ -142,8 +142,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 57
         y: 251
-        width: 129.33334
-        height: 80
+        width: 130
+        height: 96
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -180,6 +180,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: stop move
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FALL ATTACK
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: fall attack
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1860,6 +1869,120 @@ MonoBehaviour:
         - ignoreCollision
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
+    - name: fall attack
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 333
+        y: 571
+        width: 142.66666
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FALL ON GROUND
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: move
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.SetVelocity
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 48c011015552ad05
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FALL ON GROUND
+        byteData: 000100000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000140000001c0000000f0000000f0000000f0000000700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000100000002000000030000000100000005000000
+        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000000000000400000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1886,6 +2009,12 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: can move
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: FALL ATTACK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: FALL ON GROUND
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -2007,7 +2136,8 @@ MonoBehaviour:
     description: "\u73A9\u5BB6\u89D2\u8272\u79FB\u52D5\nSKILL CONTROL\uFF1A\u98DB\u51FA\u982D\u8DDF\u60E1\u9B54\u6642\u6539\u70BA\u63A7\u5236\u98DB\u51FA\u7269\u4EF6\nMONSTER
       PUSH\uFF1ABOSS\u653B\u64CA\u6642\u628A\u73A9\u5BB6\u5411\u5F8C\u63A8\nGO NEXT
       AREA\uFF1A\u5207\u63DB\u5340\u57DF\u6642\u628A\u89D2\u8272\u63A8\u5230\u8A72\u5340\uFF0CDEBUG\u5207\u63DB\u4E5F\u662F\u7528\u9019\u500B\nstop
-      move\uFF1A\u66AB\u505C\u79FB\u52D5\uFF1A\u78B0\u5230\u908A\u754C\u6642\u70BA\u4E86\u4E0D\u8B93\u89D2\u8272\u5F80\u4E0A\u79FB\u52D5\u7684\u66AB\u7528\u505A\u6CD5"
+      move\uFF1A\u66AB\u505C\u79FB\u52D5\uFF1A\u78B0\u5230\u908A\u754C\u6642\u70BA\u4E86\u4E0D\u8B93\u89D2\u8272\u5F80\u4E0A\u79FB\u52D5\u7684\u66AB\u7528\u505A\u6CD5\nFALL
+      ATTACK\uFF1A\u843D\u4E0B\u653B\u64CA\uFF0C\u5FFD\u7565\u79FB\u52D5"
     docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
