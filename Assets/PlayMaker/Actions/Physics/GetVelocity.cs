@@ -43,6 +43,11 @@ namespace HutongGames.PlayMaker.Actions
 			space = Space.World;
 			everyFrame = false;
 		}
+		
+		public override void OnPreprocess()
+		{
+			Fsm.HandleFixedUpdate = true;
+		}
 
 		public override void OnEnter()
 		{
@@ -54,9 +59,24 @@ namespace HutongGames.PlayMaker.Actions
 		    }		
 		}
 
+		public override void OnUpdate()
+		{
+			DoGetVelocity();
+	
+		    if (!everyFrame)
+		    {
+		        Finish();
+		    }
+		}
+
 		public override void OnFixedUpdate()
 		{
 			DoGetVelocity();
+
+		    if (!everyFrame)
+		    {
+		        Finish();
+		    }
 		}
 
 		void DoGetVelocity()

@@ -55,6 +55,16 @@ namespace HutongGames.PlayMaker.Actions
 			}		
 		}
 		
+		public override void OnUpdate()
+		{
+			DoSetVelocity();
+
+			if (!everyFrame)
+			{
+				Finish();
+			}
+		}
+		
 		public override void OnFixedUpdate()
 		{
 			DoSetVelocity();
