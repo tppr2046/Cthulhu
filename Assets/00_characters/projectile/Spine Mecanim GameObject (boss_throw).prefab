@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 2290433046368760786}
   - component: {fileID: 2290433046368760785}
   - component: {fileID: 3492818923291713404}
-  - component: {fileID: 1143725347719787554}
+  - component: {fileID: 2279934782670073478}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss_throw)
   m_TagString: Untagged
@@ -1424,7 +1424,7 @@ MonoBehaviour:
           name: throw out
           isSystemEvent: 0
           isGlobal: 1
-        toState: "\u72C0\u614B 1"
+        toState: throw out
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1486,7 +1486,7 @@ MonoBehaviour:
         - storeResult
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000000000000
-    - name: "\u72C0\u614B 1"
+    - name: throw out
       description: 
       colorIndex: 0
       position:
@@ -1628,7 +1628,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -1665,7 +1665,7 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &1143725347719787554
+--- !u!114 &2279934782670073478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1674,20 +1674,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2290433046368760792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023701560663d274db1735ad011e3a12, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e3994f55f118af4dbf131255680cbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 2290433046368760792}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: throw out
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
+  EventName: throw out
 --- !u!1 &2290433046581634309
 GameObject:
   m_ObjectHideFlags: 0

@@ -1958,16 +1958,14 @@ GameObject:
   - component: {fileID: 5004940740008539373}
   - component: {fileID: 5972375502674296870}
   - component: {fileID: 6844888856646123334}
-  - component: {fileID: 8810214018911392645}
   - component: {fileID: 686454122466805570}
-  - component: {fileID: 8411121045319206639}
-  - component: {fileID: -7588834993020619834}
   - component: {fileID: 1685408546904611705}
   - component: {fileID: 2496591610422578402}
   - component: {fileID: 4232971084329330809}
   - component: {fileID: 5449856147318918846}
   - component: {fileID: 139428451148319356}
   - component: {fileID: 3379880967078258574}
+  - component: {fileID: 1571373454008607899}
   m_Layer: 7
   m_Name: Spine Mecanim GameObject (enemy1)
   m_TagString: enemy
@@ -7755,15 +7753,6 @@ MonoBehaviour:
     - name: stop attack
       isSystemEvent: 0
       isGlobal: 0
-    - name: HIT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: stay alive
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: die
-      isSystemEvent: 0
-      isGlobal: 0
     - name: attack again
       isSystemEvent: 0
       isGlobal: 0
@@ -7780,12 +7769,6 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: ALL EXPLODE
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: can create enemy
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: created
       isSystemEvent: 0
       isGlobal: 0
     - name: PUT
@@ -8122,29 +8105,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &8810214018911392645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503824462573011102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb80b0d82cd148646a7c433331f7edfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 5503824462573011102}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: ENEMY READY
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 1
-  _: 0
 --- !u!114 &686454122466805570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8630,52 +8590,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: 5ce2d2131fb16824ea48b9fe3fd56a86, type: 2}
   eventHandlerComponentsAdded: 1
---- !u!114 &8411121045319206639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503824462573011102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f9b2a4667ee334992c06640316fa21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 5503824462573011102}
-    includeChildren: 1
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
---- !u!114 &-7588834993020619834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503824462573011102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aad78d7088977f4bafeaf02e74d957c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 5503824462573011102}
-    includeChildren: 1
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack end
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!82 &1685408546904611705
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10549,6 +10463,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: e2a5a4eed5afba74a93b2c77685acbc7, type: 2}
   eventHandlerComponentsAdded: 1
+--- !u!114 &1571373454008607899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503824462573011102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a95004a12544ea4cbdaa87e38b0ffdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: ENEMY READY
 --- !u!1 &5503824462603629619
 GameObject:
   m_ObjectHideFlags: 0

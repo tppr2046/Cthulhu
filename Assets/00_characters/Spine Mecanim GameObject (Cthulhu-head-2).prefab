@@ -1106,8 +1106,8 @@ GameObject:
   - component: {fileID: 9180510406779887999}
   - component: {fileID: 1180074255089882305}
   - component: {fileID: 6332290152968572952}
-  - component: {fileID: 6376098727442307096}
   - component: {fileID: 7977181171125571716}
+  - component: {fileID: 2508015890053667623}
   m_Layer: 9
   m_Name: Spine Mecanim GameObject (Cthulhu-head-2)
   m_TagString: Untagged
@@ -3056,29 +3056,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &6376098727442307096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3656724833199043984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a47617b4b68e6146ad4d741b40b57a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 3656724833199043984}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: head explode
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &7977181171125571716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3229,6 +3206,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: 2cf37b6ecfea45c4c9f6689917ec1331, type: 2}
   eventHandlerComponentsAdded: 1
+--- !u!114 &2508015890053667623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656724833199043984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2484f93057baa44919be142e293a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: head explode
 --- !u!1 &3656724833212775961
 GameObject:
   m_ObjectHideFlags: 0

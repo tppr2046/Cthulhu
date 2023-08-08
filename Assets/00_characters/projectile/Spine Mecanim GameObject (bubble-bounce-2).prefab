@@ -13,14 +13,14 @@ GameObject:
   - component: {fileID: 7169989982744837613}
   - component: {fileID: 4773951425340374875}
   - component: {fileID: 5069644888584192025}
-  - component: {fileID: 4661876460469152666}
-  - component: {fileID: 8986645804729287288}
   - component: {fileID: 6033627659796851125}
   - component: {fileID: 5909245176518407191}
   - component: {fileID: 8657196179342549182}
   - component: {fileID: 8111157416409394683}
   - component: {fileID: 5118374555677266795}
   - component: {fileID: 9063375900529805893}
+  - component: {fileID: 7308350062406700117}
+  - component: {fileID: 6247767809703550635}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (bubble-bounce-2)
   m_TagString: Untagged
@@ -153,52 +153,6 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
---- !u!114 &4661876460469152666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780334677177328172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9b9e02e14493240a4d9d8123bfa9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 1780334677177328172}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: DestroySelf
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
---- !u!114 &8986645804729287288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780334677177328172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2914e7bd589b0e45ab676531a8a3339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 1780334677177328172}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: Explode
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!54 &6033627659796851125
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -299,7 +253,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: force_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -311,7 +265,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: new_start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -324,7 +278,7 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: bounce_time
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -337,7 +291,7 @@ MonoBehaviour:
           value: 0
         fsmBoolParams:
         - useVariable: 1
-          name: face
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -433,13 +387,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: hit_building
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: hit_enemy
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -506,13 +460,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0.3
         - useVariable: 1
-          name: force_z
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: force_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -524,7 +472,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: force_z
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -669,7 +623,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: bounce_time
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -750,7 +704,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: player
+              name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -787,10 +741,10 @@ MonoBehaviour:
           value: BACK TO POOL
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: bubble_type
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -885,7 +839,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: hit_building
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -897,7 +851,7 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: hit_enemy
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -922,7 +876,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: force_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1051,10 +1005,10 @@ MonoBehaviour:
           value: bubble_type
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: face
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 2
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1075,10 +1029,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: player
-          objectType: UnityEngine.GameObject
-          useVariable: 1
-          type: 3
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1099,10 +1053,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: bubble_type
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1145,7 +1099,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0.12
         - useVariable: 1
-          name: start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1165,7 +1119,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: face
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1279,7 +1233,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_building
+              name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1428,7 +1382,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_enemy
+              name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1573,7 +1527,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: bounce_time
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1671,13 +1625,13 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: hit_enemy
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: hit_building
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1905,13 +1859,13 @@ MonoBehaviour:
           value: {x: 0, y: 0}
         fsmVector3Params:
         - useVariable: 1
-          name: self.pos
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         - useVariable: 1
-          name: self.pos
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2131,7 +2085,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2143,13 +2097,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0.3
         - useVariable: 1
-          name: new_start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: new_start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2259,7 +2213,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2271,13 +2225,13 @@ MonoBehaviour:
           networkSync: 0
           value: -0.3
         - useVariable: 1
-          name: new_start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: new_start_x
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2382,7 +2336,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_building
+              name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -2531,7 +2485,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: hit_enemy
+              name: 
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -2672,45 +2626,45 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: force_x
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: force_z
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: new_start_x
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: start_x
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: bounce_time
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: bubble_type
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: face
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2719,7 +2673,7 @@ MonoBehaviour:
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
-        name: self.pos
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2729,19 +2683,19 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: hit_building
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: hit_enemy
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: player
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3093,3 +3047,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 8657196179342549182}
+--- !u!114 &7308350062406700117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780334677177328172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648663680054870418384ad72f536d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: DestroySelf
+--- !u!114 &6247767809703550635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780334677177328172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547a12ba22b7f504e8f9a96b04a71217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Explode

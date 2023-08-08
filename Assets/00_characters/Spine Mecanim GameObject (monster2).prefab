@@ -8987,9 +8987,9 @@ GameObject:
   - component: {fileID: 4188366047194037048}
   - component: {fileID: 3860143390854996839}
   - component: {fileID: 6701022733950027836}
-  - component: {fileID: 6764144507210453560}
   - component: {fileID: 7281712305251652241}
-  - component: {fileID: 2716147257992423820}
+  - component: {fileID: 5370385596304370235}
+  - component: {fileID: 5062268819600921242}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (monster2)
   m_TagString: Untagged
@@ -10729,7 +10729,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 277
         y: 319
-        width: 105.333336
+        width: 100.666664
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -12151,37 +12151,13 @@ MonoBehaviour:
     - name: BOSS SHOW
       isSystemEvent: 0
       isGlobal: 0
-    - name: can cast
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: cannot cast
-      isSystemEvent: 0
-      isGlobal: 0
     - name: cast bubble
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: continue
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: demo over
       isSystemEvent: 0
       isGlobal: 0
     - name: fall chuchu
       isSystemEvent: 0
       isGlobal: 0
-    - name: HIT
-      isSystemEvent: 0
-      isGlobal: 0
     - name: MINUS BAR
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: minus bar count
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: next bar
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: reveal
       isSystemEvent: 0
       isGlobal: 0
     - name: stage over
@@ -12333,9 +12309,6 @@ MonoBehaviour:
     - name: attack
       isSystemEvent: 0
       isGlobal: 0
-    - name: reveal
-      isSystemEvent: 0
-      isGlobal: 0
     OutputEvents: []
     RestartOnEnable: 1
     ResetVariablesOnEnable: 0
@@ -12483,29 +12456,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6764144507210453560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4188366047194037190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f9b2a4667ee334992c06640316fa21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 4188366047194037190}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &7281712305251652241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13576,7 +13526,7 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &2716147257992423820
+--- !u!114 &5370385596304370235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13585,20 +13535,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4188366047194037190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aad78d7088977f4bafeaf02e74d957c, type: 3}
+  m_Script: {fileID: 11500000, guid: f044cb5f6b64ce7428ebc7499ecdbac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 4188366047194037190}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack end
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
+  EventName: attack start
+--- !u!114 &5062268819600921242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188366047194037190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf519d9a5c3d4a498f46a4a7051e174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: attack end
 --- !u!1 &4188366047426562542
 GameObject:
   m_ObjectHideFlags: 0

@@ -932,6 +932,8 @@ GameObject:
   - component: {fileID: 5951963840851349323}
   - component: {fileID: 200298301364959879}
   - component: {fileID: 5482667782744207687}
+  - component: {fileID: 6687136847121990284}
+  - component: {fileID: 56955343671066826}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (sneeze)
   m_TagString: Untagged
@@ -2821,9 +2823,6 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000000000000000000000200000003000000040000000100000002000000
         paramByteDataSize: 00000000000000000100000000000000000000000000000000000000000000000100000001000000
     events:
-    - name: touch ground
-      isSystemEvent: 0
-      isGlobal: 1
     - name: right
       isSystemEvent: 0
       isGlobal: 0
@@ -2936,6 +2935,32 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!114 &6687136847121990284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844034457172482900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f216fa37f3d6b8c42b99a8e6de505625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: SNEEZE START
+--- !u!114 &56955343671066826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844034457172482900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3883528ecaa558d449372304c4b32223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: SNEEZE END
 --- !u!1 &3844034457514917170
 GameObject:
   m_ObjectHideFlags: 0

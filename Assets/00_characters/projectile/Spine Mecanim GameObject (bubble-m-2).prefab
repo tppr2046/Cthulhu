@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 7104328071105578890}
   - component: {fileID: 7104328071105578891}
   - component: {fileID: 7104328071105578888}
-  - component: {fileID: 7104328071105578889}
   - component: {fileID: 7104328071105578895}
   - component: {fileID: 7104328071105578887}
-  - component: {fileID: 6513744790867535037}
   - component: {fileID: 9176060630882441106}
+  - component: {fileID: 615253026690379804}
+  - component: {fileID: 3918968583186041158}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (bubble-m-2)
   m_TagString: Untagged
@@ -151,29 +151,6 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
---- !u!114 &7104328071105578889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104328071105578892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2914e7bd589b0e45ab676531a8a3339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 7104328071105578892}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: Explode
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &7104328071105578895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2535,29 +2512,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: 7036e3848ff750247b3f98efafa73534, type: 2}
   eventHandlerComponentsAdded: 1
---- !u!114 &6513744790867535037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104328071105578892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9b9e02e14493240a4d9d8123bfa9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 7104328071105578892}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: DestroySelf
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!54 &9176060630882441106
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2574,6 +2528,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &615253026690379804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104328071105578892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648663680054870418384ad72f536d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: DestroySelf
+--- !u!114 &3918968583186041158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104328071105578892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547a12ba22b7f504e8f9a96b04a71217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Explode
 --- !u!1 &8001019531895808886
 GameObject:
   m_ObjectHideFlags: 0

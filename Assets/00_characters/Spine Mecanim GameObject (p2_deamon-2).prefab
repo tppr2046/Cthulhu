@@ -1993,12 +1993,12 @@ GameObject:
   - component: {fileID: 3838998314860449262}
   - component: {fileID: 4821162247098653391}
   - component: {fileID: 3555572254044836514}
-  - component: {fileID: 8418500701331925311}
   - component: {fileID: 2916837629066292035}
   - component: {fileID: 8097805634288845707}
-  - component: {fileID: 5842338533978520224}
   - component: {fileID: 8231928087633443936}
   - component: {fileID: 2467883913396691993}
+  - component: {fileID: 3801178228606458929}
+  - component: {fileID: 7695126903949994039}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (p2_deamon-2)
   m_TagString: Player
@@ -4641,29 +4641,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: c7424ed7f00cd5142abd9ce5bfb28669, type: 2}
   eventHandlerComponentsAdded: 1
---- !u!114 &8418500701331925311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4429228800985182459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aad78d7088977f4bafeaf02e74d957c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 4429228800985182459}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack end
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &2916837629066292035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5491,29 +5468,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &5842338533978520224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4429228800985182459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f9b2a4667ee334992c06640316fa21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 4429228800985182459}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &8231928087633443936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5542,6 +5496,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 3555572254044836514}
+--- !u!114 &3801178228606458929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429228800985182459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f044cb5f6b64ce7428ebc7499ecdbac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: attack start
+--- !u!114 &7695126903949994039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429228800985182459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf519d9a5c3d4a498f46a4a7051e174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: attack end
 --- !u!1 &4913802420222800973
 GameObject:
   m_ObjectHideFlags: 0

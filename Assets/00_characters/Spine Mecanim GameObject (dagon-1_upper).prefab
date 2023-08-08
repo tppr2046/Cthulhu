@@ -77,7 +77,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980442158971096158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5099, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5098991, y: 0.00000015122573, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7980442160870311103}
@@ -1874,7 +1874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980442159578232405}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.811, y: 22.0955, z: 0}
+  m_LocalPosition: {x: 10.811006, y: 22.095505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7980442159012129494}
@@ -2239,7 +2239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980442159777914229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.4392, y: 0, z: 0}
+  m_LocalPosition: {x: 15.439199, y: 0.0000007722071, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7980442159012129494}
@@ -3286,13 +3286,13 @@ GameObject:
   - component: {fileID: 7980442160132576668}
   - component: {fileID: 7980442160132576669}
   - component: {fileID: 7980442160132576642}
-  - component: {fileID: 7980442160132576661}
-  - component: {fileID: 7980442160132576666}
   - component: {fileID: 7980442160132576667}
   - component: {fileID: 7980442160132576664}
   - component: {fileID: 7980442160132576665}
   - component: {fileID: 7980442160132576660}
   - component: {fileID: 7980442160132576663}
+  - component: {fileID: 219350818931434885}
+  - component: {fileID: 3441642314774684644}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (dagon-1_upper)
   m_TagString: enemy
@@ -3436,52 +3436,6 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
---- !u!114 &7980442160132576661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980442160132576643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f9b2a4667ee334992c06640316fa21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 7980442160132576643}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
---- !u!114 &7980442160132576666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980442160132576643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad7a6b8b8f299d44be6e335d48cb03c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 7980442160132576643}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: roar start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &7980442160132576667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4937,9 +4891,6 @@ MonoBehaviour:
     - name: attacl_palm_right
       isSystemEvent: 0
       isGlobal: 0
-    - name: PLAYER ENTER
-      isSystemEvent: 0
-      isGlobal: 0
     - name: show finished
       isSystemEvent: 0
       isGlobal: 0
@@ -5494,6 +5445,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &219350818931434885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980442160132576643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f044cb5f6b64ce7428ebc7499ecdbac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: attack start
+--- !u!114 &3441642314774684644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980442160132576643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed85c6a9ea934a541b5ad2e23661c2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: roar start
 --- !u!1 &7980442160164832775
 GameObject:
   m_ObjectHideFlags: 0
