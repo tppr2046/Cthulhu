@@ -83,7 +83,6 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
         - HutongGames.PlayMaker.Actions.GetFsmGameObject
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.PlayerInputTriggeredEvent
         - HutongGames.PlayMaker.Actions.PlayerInputTriggeredEvent
         - HutongGames.PlayMaker.Actions.PlayerInputTriggeredEvent
@@ -99,11 +98,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 01010101010101010101
-        actionIsOpen: 01010101010101010101
-        actionStartIndex: 00000000070000000c0000001100000015000000180000001c000000200000002400000028000000
-        actionHashCodes: afff11055f9135045b66cf00ba7ea10127fbe103d864fa04d864fa04d864fa04d864fa04d864fa04
+        actionEnabled: 010101010101010101
+        actionIsOpen: 010101010101010101
+        actionStartIndex: 00000000070000000c0000001100000015000000190000001d0000002100000025000000
+        actionHashCodes: afff11055f9135045b66cf00ba7ea101d864fa04d864fa04d864fa04d864fa04d864fa04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -313,18 +311,6 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: bubbleFlag
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
@@ -371,12 +357,12 @@ MonoBehaviour:
         - SKILL3
         - ATTACK
         - HOLD
-        byteData: 00000000000000000000
+        byteData: 000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f0000000100000001000000140000001200000011000000010000000700000014000000120000001200000013000000010000001f000000120000000f000000010000001100000011000000010000001700000011000000140000001800000017000000110000001400000018000000170000001100000014000000180000001700000011000000140000001800000017000000110000001400000018000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000100000001000000140000001200000011000000010000000700000014000000120000001200000013000000010000001f000000120000000f000000010000001700000011000000140000001800000017000000110000001400000018000000170000001100000014000000180000001700000011000000140000001800000017000000110000001400000018000000
         paramName:
         - gameObject
         - vector
@@ -399,9 +385,6 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        - boolVariable
-        - boolValue
-        - everyFrame
         - sendEvent
         - storeValue
         - gameObject
@@ -422,8 +405,8 @@ MonoBehaviour:
         - storeValue
         - gameObject
         - inputAction
-        paramDataPos: 0000000000000000000000000100000002000000000000000100000001000000000000000000000002000000030000000200000001000000020000000000000007000000000000000300000003000000080000000100000002000000090000000000000003000000030000000000000001000000040000000400000001000000020000000500000005000000020000000300000006000000060000000300000004000000070000000700000004000000
-        paramByteDataSize: 0000000000000000000000000000000000000000010000000100000000000000000000000000000001000000040000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000000000000100000002000000000000000100000001000000000000000000000002000000030000000200000001000000020000000000000007000000000000000300000003000000080000000000000001000000030000000000000001000000020000000400000001000000020000000300000005000000020000000300000004000000060000000300000004000000050000000700000004000000
+        paramByteDataSize: 0000000000000000000000000000000000000000010000000100000000000000000000000000000001000000040000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: attack
       description: 
       colorIndex: 0
@@ -431,15 +414,15 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1261.2266
         y: 968.9453
-        width: 144.66666
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: ANIMATION RESET
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
         toState: waiting
         linkStyle: 0
@@ -770,7 +753,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        - ANIMATION RESET
+        - FINISHED
         byteData: 0100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
@@ -1219,12 +1202,12 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000002000000030000000100000000000000000000000000000001000000000000000200000001000000020000000300000001000000020000000400000005000000020000000300000006000000070000000300000004000000080000000900000004000000050000000a0000000b00000005000000060000000c0000000d00000006000000070000000e0000000f0000000700000008000000100000001100000008000000
         paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: skill start
-      description: 
+      description: "\u9023\u7E8C\u6CE1\u6CE1"
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 879.78125
-        y: 908.6719
+        x: 866.5625
+        y: 1018.2422
         width: 104
         height: 32
       isBreakpoint: 0
@@ -1244,15 +1227,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.ArrayShuffle
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000200000005000000
-        actionHashCodes: 9bd6f801a26c920148c01101
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000020000000500000009000000
+        actionHashCodes: 9bd6f801a26c9201ba7ea10148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1267,7 +1252,39 @@ MonoBehaviour:
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: '[Controller]'
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -1277,6 +1294,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: skill1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: RUMBLE
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams:
@@ -1295,6 +1318,12 @@ MonoBehaviour:
           objectReferences: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1322,23 +1351,27 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - attack start
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000002900000010000000100000000f0000001700000001000000
+        paramDataType: 14000000120000002900000010000000100000001f000000120000000f000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
         - array
         - startIndex
         - shufflingRange
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000000000000000000000000000001000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000000000000010000000000000000000000010000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: set attack animation
       description: 
       colorIndex: 0
@@ -1444,91 +1477,42 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 867.4453
-        y: 971.6719
+        x: 861.4453
+        y: 1095.6719
         width: 122.666664
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: bubble got
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
         toState: send event to bubble
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: check can reset
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.ArrayGetNext
-        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.ArrayGet
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000008000000
-        actionHashCodes: 3df26a04ba7ea101
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 6ba59301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: '[Controller]'
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: RUMBLE
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
         - variableName: created_bubble
@@ -1570,77 +1554,45 @@ MonoBehaviour:
           vector4Values: []
           objectReferences: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 9
         - useVariable: 1
-          name: 
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: bubbleFlag
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - bubble got
-        - FINISHED
+        - 
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 29000000100000001000000017000000110000001700000027000000100000001f000000120000000f00000001000000
+        paramDataType: 2900000010000000270000000100000017000000
         paramName:
         - array
-        - startIndex
-        - endIndex
-        - loopEvent
-        - resetFlag
-        - finishedEvent
-        - result
-        - currentIndex
-        - eventTarget
-        - sendEvent
-        - delay
+        - index
+        - storeValue
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000200000000000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        - indexOutOfRange
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
     - name: send event to bubble
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 856.4453
-        y: 1037.6719
-        width: 159.33333
-        height: 64
+        x: 850.4453
+        y: 1161.6719
+        width: 154
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -1649,33 +1601,17 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: create bubbles
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: attack end
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: waiting
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: ANIMATION RESET
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: waiting
+        toState: check bubble index
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.IntAdd
         - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.SetPosition
+        - HutongGames.PlayMaker.Actions.SetRotation
         - HutongGames.PlayMaker.Actions.SetParent
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.GetFsmBool
@@ -1691,10 +1627,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0101010001010101
-        actionStartIndex: 00000000050000000d00000012000000170000001c0000002400000028000000
-        actionHashCodes: 81294e04f6e5be03a0dd8303b2cf100068fece05afffe300ba7ea1010d5f5c01
+        - 
+        - 
+        actionEnabled: 01010101010101010101
+        actionIsOpen: 01010101010001010101
+        actionStartIndex: 00000000030000000800000010000000190000001e00000023000000280000003000000034000000
+        actionHashCodes: 603dd90581294e04f6e5be03979e4104a0dd8303b2cf100068fece05afffe300ba7ea1010d5f5c01
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -1708,6 +1646,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 0
             name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1938,6 +1884,24 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 0.05
         - useVariable: 0
           name: 
@@ -1945,7 +1909,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.2
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: created_bubble_index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -1997,21 +1973,36 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
-        fsmQuaternionParams: []
+        fsmQuaternionParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
         stringParams:
         - 
         - FINISHED
-        byteData: 0100000000000000000000
+        byteData: 000100000000000100000000000000000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000000f000000180000001100000017000000140000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000000f0000001700000001000000
+        paramDataType: 100000001000000001000000140000000f000000180000001100000017000000140000001c0000000f0000000f0000000f00000007000000010000000100000014000000230000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001100000011000000140000001100000011000000010000000100000014000000120000001200000011000000010000000c0000001200000012000000120000000c0000002700000027000000270000001f000000120000000f000000010000000f0000000f0000001700000001000000
         paramName:
+        - intVariable
+        - add
+        - everyFrame
         - gameObject
         - volume
         - oneShotClip
@@ -2022,6 +2013,15 @@ MonoBehaviour:
         - x
         - y
         - z
+        - space
+        - everyFrame
+        - lateUpdate
+        - gameObject
+        - quaternion
+        - vector
+        - xAngle
+        - yAngle
+        - zAngle
         - space
         - everyFrame
         - lateUpdate
@@ -2056,10 +2056,10 @@ MonoBehaviour:
         - max
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000000000000000000001000000000000000100000002000000030000000000000004000000050000000200000000000000010000000200000003000000030000000400000005000000060000000700000004000000000000000100000006000000080000000000000002000000030000000400000001000000000000000100000002000000000000000500000004000000090000000500000006000000010000000a000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000010000000000000000000000000000000000000000000000000000000100000000000000010000000200000003000000010000000500000006000000020000000000000001000000040000000500000006000000070000000b0000000c00000003000000000000000100000002000000030000000400000004000000050000000d0000000e000000050000000000000001000000060000000f00000000000000020000000300000004000000010000000000000001000000020000000000000005000000070000001000000008000000090000000100000011000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: set bomb skill animation
-      description: 
+      description: "\u6CE1\u6CE1\u70B8\u5F48"
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -2308,8 +2308,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 417.8203
         y: 1019.7969
-        width: 170
-        height: 48
+        width: 164.66667
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -2318,15 +2318,6 @@ MonoBehaviour:
           name: attack end
           isSystemEvent: 0
           isGlobal: 1
-        toState: waiting
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: ANIMATION RESET
-          isSystemEvent: 0
-          isGlobal: 0
         toState: waiting
         linkStyle: 0
         linkConstraint: 0
@@ -2728,7 +2719,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: skill start
+        toState: get bubble from array
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2737,13 +2728,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetEventIntData
         - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000001000000
-        actionHashCodes: dcbe4804ba7ea101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000005000000
+        actionHashCodes: dcbe4804ba7ea101603dd905
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2810,6 +2803,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: -55
+        - useVariable: 1
+          name: created_bubble_index
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -2817,20 +2822,23 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001f000000120000000f00000001000000
+        paramDataType: 100000001f000000120000000f00000001000000100000001000000001000000
         paramName:
         - intData
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000000000000010000000200000001000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000001000000
     - name: check power
       description: 
       colorIndex: 0
@@ -4027,114 +4035,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
-    - name: reset flag
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1079.5312
-        y: 1074.8672
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: waiting
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.ArrayShuffle
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 27fbe103a26c9201
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams:
-        - useVariable: 1
-          name: bubble_skill_array
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          type: 3
-          objectTypeName: UnityEngine.Object
-          floatValues: []
-          intValues: 
-          boolValues: 
-          stringValues: []
-          vector4Values: []
-          objectReferences: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 15
-        fsmBoolParams:
-        - useVariable: 1
-          name: bubbleFlag
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 110000001100000001000000290000001000000010000000
-        paramName:
-        - boolVariable
-        - boolValue
-        - everyFrame
-        - array
-        - startIndex
-        - shufflingRange
-        paramDataPos: 000000000100000000000000000000000000000001000000
-        paramByteDataSize: 000000000000000001000000000000000000000000000000
     - name: reset flag2
       description: 
       colorIndex: 0
@@ -4460,7 +4360,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
     - name: set bomb skill animation 3
-      description: 
+      description: "\u53CD\u5F48\u6CE1\u6CE1"
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -4901,8 +4801,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 50.546875
         y: 1060.3594
-        width: 170.66667
-        height: 48
+        width: 164.66667
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -4911,15 +4811,6 @@ MonoBehaviour:
           name: attack end
           isSystemEvent: 0
           isGlobal: 1
-        toState: waiting
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: ANIMATION RESET
-          isSystemEvent: 0
-          isGlobal: 0
         toState: waiting
         linkStyle: 0
         linkConstraint: 0
@@ -5493,24 +5384,135 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: check can reset
+    - name: retrieve bubbles
+      description: "\u56DE\u6536\u6CE1\u6CE1"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1062
+        y: 919
+        width: 131.33334
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: get bubble from array
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: retrieve_bubble
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BUBBLE BACK
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: get bubble from array
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1086
-        y: 1003
-        width: 128
+        x: 840
+        y: 914
+        width: 164.66667
         height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: can reset
+          name: bubble got
           isSystemEvent: 0
           isGlobal: 0
-        toState: reset flag
+        toState: retrieve bubbles
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -5519,35 +5521,166 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: check can reset
+        toState: skill start
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetChildCount
-        - HutongGames.PlayMaker.Actions.IntCompare
-        - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.ArrayGetNext
         customNames:
         - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000009000000
-        actionHashCodes: 76b3ca0509faa10248c01101
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 3df26a04
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: skill_bubble_pool
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: retrieve_bubble
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 0}
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: bubble_skill_array
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: bubbleFlag
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - bubble got
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 2900000010000000100000001700000011000000170000002700000010000000
+        paramName:
+        - array
+        - startIndex
+        - endIndex
+        - loopEvent
+        - resetFlag
+        - finishedEvent
+        - result
+        - currentIndex
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
+    - name: check bubble index
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1096
+        y: 1125
+        width: 152
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: continue get bubble
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: create bubbles
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: bubble get finished
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: waiting
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -5559,22 +5692,10 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.3
+        fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: skill_bubble_count
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: skill_bubble_count
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5584,7 +5705,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 10
+          value: 9
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -5592,31 +5713,24 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - can reset
-        - 
-        - can reset
-        - FINISHED
-        byteData: 000000
+        - bubble get finished
+        - continue get bubble
+        - bubble get finished
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000010000000010000001000000010000000170000001700000017000000010000000f0000001700000001000000
+        paramDataType: 100000001000000017000000170000001700000001000000
         paramName:
-        - gameObject
-        - storeResult
-        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000000000000000000010000000200000000000000010000000200000001000000000000000300000002000000
-        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -5723,6 +5837,9 @@ MonoBehaviour:
     - name: HOLD END
       isSystemEvent: 0
       isGlobal: 0
+    - name: bubble get finished
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET
@@ -5774,6 +5891,12 @@ MonoBehaviour:
         value: 0
       - useVariable: 1
         name: skill_bubble_count
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: created_bubble_index
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -5906,6 +6029,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: retrieve_bubble
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -5965,7 +6094,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: "HIT\u4E8B\u4EF6\uFF1A\u50B3\u9001\u5230\u5EFA\u7BC9\u548C\u6575\u4EBA\nattack
       range\uFF1A\u76EE\u6A19\u5728\u7BC4\u570D\u5167\u624D\u6703\u64AD\u653E\u6293\u63E1\u548C\u653B\u64CA\u52D5\u4F5C"
     docUrl: 
