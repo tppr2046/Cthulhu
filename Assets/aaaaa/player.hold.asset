@@ -2838,7 +2838,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.IntSubtract
         - HutongGames.PlayMaker.Actions.SetFsmInt
         - HutongGames.PlayMaker.Actions.SetFsmInt
-        - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.DOTweenTransformShakeScale
         customNames:
         - 
@@ -2850,19 +2850,11 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101010101
         actionIsOpen: 01010101010101
-        actionStartIndex: 0000000004000000080000000c00000011000000160000001b000000
-        actionHashCodes: afffe300ba7ea10131e5da02081bbf05081bbf05081bbf056bcef100
+        actionStartIndex: 0000000004000000080000000c00000011000000160000001a000000
+        actionHashCodes: afffe300ba7ea10131e5da02081bbf05081bbf05ba7ea1016bcef100
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: object_holding
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -2929,6 +2921,38 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           fsmComponent: {fileID: 0}
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: '[Controller]'
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -2973,13 +2997,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: DAMAGE
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: HP
+          value: RUMBLE
         - useVariable: 0
           name: 
           tooltip: 
@@ -3032,6 +3050,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 90
         - useVariable: 0
           name: 
@@ -3057,13 +3081,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
-        - useVariable: 1
-          name: obj_hp
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 1
           name: obj_hp
           tooltip: 
@@ -3149,7 +3167,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000001f000000120000000f0000000100000010000000100000000100000001000000140000001200000012000000100000000100000014000000120000001200000010000000010000001400000012000000120000001000000001000000140000001c000000100000000f0000000f000000110000000f000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
+        paramDataType: 0c000000120000000c000000270000001f000000120000000f0000000100000010000000100000000100000001000000140000001200000012000000100000000100000014000000120000001200000010000000010000001f000000120000000f00000001000000140000001c000000100000000f0000000f000000110000000f000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
         paramName:
         - keys
         - 
@@ -3173,10 +3191,9 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
+        - eventTarget
+        - sendEvent
+        - delay
         - everyFrame
         - gameObject
         - strength
@@ -3203,8 +3220,8 @@ MonoBehaviour:
         - updateType
         - isIndependentUpdate
         - debugThis
-        paramDataPos: 00000000000000000100000000000000000000000100000000000000000000000000000001000000010000000200000000000000020000000300000002000000030000000100000004000000050000000300000004000000020000000600000007000000040000000500000003000000000000000500000001000000020000000000000003000000000000000100000001000000020000000600000008000000090000000a0000000e000000000000000300000006000000120000000200000003000000160000000400000005000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000010000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000000000000000000010000000100000002000000000000000200000003000000020000000300000001000000040000000500000003000000040000000100000006000000010000000500000002000000000000000400000002000000030000000000000004000000000000000100000001000000020000000600000007000000080000000a0000000e000000000000000300000005000000120000000200000003000000160000000400000005000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1

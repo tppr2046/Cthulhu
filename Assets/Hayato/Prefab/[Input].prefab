@@ -1731,11 +1731,20 @@ MonoBehaviour:
         x: 157
         y: 599
         width: 104
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: reset value
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetProperty
@@ -1743,10 +1752,10 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0100
+        actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000002000000
-        actionHashCodes: 5ac85204db674b02
+        actionHashCodes: 5ac85204ebbefe03
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -1931,13 +1940,14 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - FINISHED
         byteData: 0001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 2400000001000000100000000f0000000f0000000f0000001300000007000000
+        paramDataType: 2400000001000000100000000f0000000f0000000f000000130000001700000007000000
         paramName:
         - targetProperty
         - everyFrame
@@ -1946,9 +1956,10 @@ MonoBehaviour:
         - rightSpeed
         - rDuration
         - InputObject
+        - finishEvent
         - updateMode
-        paramDataPos: 0000000000000000000000000000000001000000020000000000000001000000
-        paramByteDataSize: 0000000001000000000000000000000000000000000000000000000004000000
+        paramDataPos: 000000000000000000000000000000000100000002000000000000000000000001000000
+        paramByteDataSize: 000000000100000000000000000000000000000000000000000000000000000004000000
     - name: default rumble
       description: 
       colorIndex: 0
@@ -1969,10 +1980,10 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0100
+        actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000002000000
-        actionHashCodes: 5ac85204db674b02
+        actionHashCodes: 5ac85204ebbefe03
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -2157,13 +2168,14 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - 
         byteData: 0001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 2400000001000000100000000f0000000f0000000f0000001300000007000000
+        paramDataType: 2400000001000000100000000f0000000f0000000f000000130000001700000007000000
         paramName:
         - targetProperty
         - everyFrame
@@ -2172,9 +2184,10 @@ MonoBehaviour:
         - rightSpeed
         - rDuration
         - InputObject
+        - finishEvent
         - updateMode
-        paramDataPos: 0000000000000000000000000000000001000000020000000000000001000000
-        paramByteDataSize: 0000000001000000000000000000000000000000000000000000000004000000
+        paramDataPos: 000000000000000000000000000000000100000002000000000000000000000001000000
+        paramByteDataSize: 000000000100000000000000000000000000000000000000000000000000000004000000
     - name: Left Seat 2
       description: 
       colorIndex: 0
@@ -2453,7 +2466,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: db674b02
+        actionHashCodes: ebbefe03
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -2506,22 +2519,127 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - 
         byteData: 01000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000000f0000000f0000000f0000001300000007000000
+        paramDataType: 100000000f0000000f0000000f000000130000001700000007000000
         paramName:
         - gamepadIndex
         - leftSpeed
         - rightSpeed
         - rDuration
         - InputObject
+        - finishEvent
         - updateMode
-        paramDataPos: 000000000000000001000000020000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000004000000
+        paramDataPos: 00000000000000000100000002000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000004000000
+    - name: reset value
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 159
+        y: 661
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 9845b3059845b3059845b305
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: L_speed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: R_speed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Duration
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f000000010000000f0000000f000000010000000f0000000f00000001000000
+        paramName:
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - floatVariable
+        - floatValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000300000001000000040000000500000002000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -2721,7 +2839,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: UI_MODE
       isSystemEvent: 0

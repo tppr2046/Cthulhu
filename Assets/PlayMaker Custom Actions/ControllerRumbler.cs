@@ -33,18 +33,29 @@ namespace HutongGames.PlayMaker.Actions
         public FsmFloat rDuration;
 
         private FsmFloat rumbleDuration;
-        private float rumbleDurration;
+        private float rumbleDurationFloat;
 
         
         [CheckForComponent(typeof(PlayerInput))]
         public FsmGameObject InputObject;
 
+        [Tooltip("Event to send after the specified time.")]
+        public FsmEvent finishEvent;
+
         private PlayerInput _playerInput;
+        private bool isRumbling;
 
         public override void OnEnter()
         {
-            rumbleDurration = Time.time + rDuration.Value;
+            if (rumbleDurationFloat <= Time.time + 5)
+            {
+                rumbleDurationFloat = Time.time + rDuration.Value;
+            }else
+            {
+                rumbleDurationFloat = Time.time + 5;
+            }
             _playerInput = InputObject.Value.GetComponent<PlayerInput>();
+            isRumbling = false;
         }
 
 
@@ -52,16 +63,23 @@ namespace HutongGames.PlayMaker.Actions
         {
 
 
-            if (Time.time > rumbleDurration)
+            if (Time.time > rumbleDurationFloat)
             {
                 StopRumble();
                 return;
             }
 
-            RumbleConstant();
+            if (!isRumbling)
+            {
+                RumbleConstant();
+                isRumbling = true;
+            }
 
+        }
 
-
+        private Gamepad GetGamepad()
+        {
+            return Gamepad.all.FirstOrDefault(g => _playerInput.devices.Any(d => d.deviceId == g.deviceId));
         }
 
         private void RumbleConstant()
@@ -86,13 +104,18 @@ namespace HutongGames.PlayMaker.Actions
             {
                 gamepad.SetMotorSpeeds(0, 0);
             }
+            isRumbling = false;
+
+            Finish();
+            if (finishEvent != null)
+            {
+                Fsm.Event(finishEvent);
+            }
+
         }
 
 
-        private Gamepad GetGamepad()
-        {
-            return Gamepad.all.FirstOrDefault(g => _playerInput.devices.Any(d => d.deviceId == g.deviceId));
-        }
+
 
     }
 }
