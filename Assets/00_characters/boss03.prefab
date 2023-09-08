@@ -2586,9 +2586,9 @@ GameObject:
   - component: {fileID: 3254407557181699448}
   - component: {fileID: 3254407557181699449}
   - component: {fileID: 3254407557181699454}
-  - component: {fileID: 1088493678484654587}
   - component: {fileID: 2247658309448798698}
-  - component: {fileID: 4647620241062589609}
+  - component: {fileID: 9066770092639144647}
+  - component: {fileID: 3024895803510891061}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss03)
   m_TagString: Untagged
@@ -2721,29 +2721,6 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
---- !u!114 &1088493678484654587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3254407557181699455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f9b2a4667ee334992c06640316fa21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 3254407557181699455}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: attack start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
 --- !u!114 &2247658309448798698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,7 +3138,7 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &4647620241062589609
+--- !u!114 &9066770092639144647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3170,20 +3147,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3254407557181699455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5861836f595f01e44ae3b8be36480a8d, type: 3}
+  m_Script: {fileID: 11500000, guid: 71287ed12e5e9b74d8e42fd456ac6266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventTarget:
-    eventTarget: 0
-    gameObject: {fileID: 3254407557181699455}
-    includeChildren: 0
-    fsmComponent: {fileID: 0}
-  fsmEvent:
-    eventName: jump start
-    allowLocalEvents: 0
-    defaultEventName: 
-  debug: 0
-  _: 0
+  EventName: jump start
+--- !u!114 &3024895803510891061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254407557181699455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f044cb5f6b64ce7428ebc7499ecdbac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: attack start
 --- !u!1 &3254407557211775752
 GameObject:
   m_ObjectHideFlags: 0

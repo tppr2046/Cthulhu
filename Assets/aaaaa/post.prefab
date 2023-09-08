@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4339525827244936902}
   - component: {fileID: 180617509722910965}
   - component: {fileID: 6020987219273540360}
+  - component: {fileID: 3710583145107334841}
   m_Layer: 0
   m_Name: post
   m_TagString: Untagged
@@ -290,7 +291,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -307,7 +308,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 0
+    handleTriggerEnter: 1
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -326,7 +327,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!65 &6020987219273540360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -340,6 +341,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6148817, y: 0.44394982, z: 0.3747403}
   m_Center: {x: 0.073006004, y: 0.2780251, z: -0.0007491708}
+--- !u!114 &3710583145107334841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125488677593166043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: 9754d4abda502c6458053d5ed8e4fc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 180617509722910965}
 --- !u!1001 &1956832733665458860
 PrefabInstance:
   m_ObjectHideFlags: 0

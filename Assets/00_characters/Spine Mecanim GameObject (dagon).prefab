@@ -9695,11 +9695,20 @@ MonoBehaviour:
         x: 456
         y: 410
         width: 100
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: end
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetProperty
@@ -10302,7 +10311,7 @@ MonoBehaviour:
           Control Methods
         - Setting loops to -1 will make the tween loop infinitely.
         - 
-        - 
+        - FINISHED
         - Set an ID for the tween, which can then be used as a filter with DOTween's
           Control Methods
         - Setting loops to -1 will make the tween loop infinitely.
@@ -10992,6 +11001,58 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: end
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 450
+        y: 471
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -12779,9 +12840,9 @@ GameObject:
   - component: {fileID: 5372586011535457418}
   - component: {fileID: 5372586011535457417}
   - component: {fileID: 4153117221766335052}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: detect area
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13953,9 +14014,9 @@ GameObject:
   - component: {fileID: 5372586011974990571}
   - component: {fileID: 5372586011974990567}
   - component: {fileID: 5372586011974990564}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: attack area
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
