@@ -1225,7 +1225,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: grabbing_point
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1260,9 +1260,9 @@ MonoBehaviour:
           value: Untagged
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: '[Controller]'
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -1306,7 +1306,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1434,7 +1434,6 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetRotation
-        - HutongGames.PlayMaker.Actions.SetScale
         - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.PlayerInputGetVector2
         - HutongGames.PlayMaker.Actions.SetVector2XY
@@ -1455,11 +1454,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101010101010101
-        actionIsOpen: 0101010101010101010101
-        actionStartIndex: 00000000090000001000000013000000190000001e00000021000000270000002c0000003100000038000000
-        actionHashCodes: 979e4104afff1105603dd90540103905f9bc250330525b01f9cb72000cdb04050cdb04055552ad05ba7ea101
+        actionEnabled: 01010101010101010101
+        actionIsOpen: 01010101010101010101
+        actionStartIndex: 00000000090000000c00000012000000170000001a00000020000000250000002a00000031000000
+        actionHashCodes: 979e4104603dd90540103905f9bc250330525b01f9cb72000cdb04050cdb04055552ad05ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1471,18 +1469,10 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1585,43 +1575,37 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.1
-        - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1633,19 +1617,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1657,13 +1629,13 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: translate_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1675,7 +1647,13 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: translate_z
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: translate_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1687,13 +1665,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
+          name: translate_z
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1706,7 +1678,7 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: grab_push_time
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1726,7 +1698,7 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1738,18 +1710,12 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0}
         fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
         - useVariable: 1
           name: 
           tooltip: 
@@ -1772,12 +1738,12 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams: []
-        byteData: 010000000000000000010000000101010000000002000000010200000001010000000101
+        byteData: 01000000000000010000000101010000000002000000010200000001010000000101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000230000001c0000000f0000000f0000000f000000070000000100000001000000140000001c0000000f0000000f0000000f0000000100000001000000100000001000000001000000250000000f0000000f00000014000000180000000700000025000000250000000f0000000f00000001000000250000000f0000000100000014000000120000000f0000000f00000001000000070000000f0000000f000000070000000f000000010000000f0000000f000000070000000f00000001000000140000001c0000000f0000000f0000000f00000007000000010000001f000000120000000f00000001000000
+        paramDataType: 14000000230000001c0000000f0000000f0000000f000000070000000100000001000000100000001000000001000000250000000f0000000f00000014000000180000000700000025000000250000000f0000000f00000001000000250000000f0000000100000014000000120000000f0000000f00000001000000070000000f0000000f000000070000000f000000010000000f0000000f000000070000000f00000001000000140000001c0000000f0000000f0000000f00000007000000010000001f000000120000000f00000001000000
         paramName:
         - gameObject
         - quaternion
@@ -1786,13 +1752,6 @@ MonoBehaviour:
         - yAngle
         - zAngle
         - space
-        - everyFrame
-        - lateUpdate
-        - gameObject
-        - vector
-        - x
-        - y
-        - z
         - everyFrame
         - lateUpdate
         - intVariable
@@ -1839,8 +1798,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000010000000200000000000000040000000500000001000000010000000300000004000000050000000600000007000000000000000100000008000000000000000600000007000000020000000000000009000000010000000200000008000000090000000d000000030000000a0000000e00000003000000000000000b0000000c0000000f000000100000000d0000000e000000140000000f00000018000000100000001100000019000000120000001d00000004000000020000001300000014000000150000001e0000002200000000000000010000001600000023000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000001000000010000000000000000000000010000000000000000000000000000000000000000000000040000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000000000000000100000004000000000000000000000004000000000000000100000000000000000000000400000000000000010000000000000000000000000000000000000000000000040000000100000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000002000000000000000400000005000000000000000100000006000000000000000300000004000000010000000000000007000000010000000200000005000000060000000b00000003000000070000000c000000020000000000000008000000090000000d0000000e0000000a0000000b000000120000000c000000160000000d0000000e000000170000000f0000001b00000003000000010000001000000011000000120000001c0000002000000000000000010000001300000021000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000010000000000000000000000010000000000000000000000000000000000000000000000040000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000000000000000100000004000000000000000000000004000000000000000100000000000000000000000400000000000000010000000000000000000000000000000000000000000000040000000100000000000000000000000000000001000000
     - name: set camera
       description: 
       colorIndex: 0
@@ -2014,7 +1973,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2022,7 +1981,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: skill_object
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2030,7 +1989,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: skill_object
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2051,7 +2010,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: skill_object
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -2101,10 +2060,10 @@ MonoBehaviour:
           typeName: UnityEngine.InputSystem.InputActionReference
           value: {fileID: 71859440128308741, guid: 157b14b5c95b51a47933c9faa9193086, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: skill_object
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -2129,7 +2088,37 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2141,37 +2130,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2183,13 +2142,13 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: translate_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2201,7 +2160,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: translate_z
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2213,7 +2172,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: translate_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2225,7 +2184,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: translate_z
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2240,7 +2199,7 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2252,7 +2211,7 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2368,13 +2327,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: boss
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: boss
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2465,19 +2424,19 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: push_power
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: push_power
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2604,7 +2563,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: ignore_block
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2671,10 +2630,10 @@ MonoBehaviour:
           value: 
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: next_start_point
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -2695,10 +2654,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: ignore_block
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -2723,7 +2682,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: next_start_point
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3092,7 +3051,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: ignore_block
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3371,13 +3330,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hold_player
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hold_place
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3386,7 +3345,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: building_model
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3504,10 +3463,10 @@ MonoBehaviour:
           value: PUT
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: hold_place
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -3528,10 +3487,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: hold_player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -3599,7 +3558,7 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: break_hold_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3704,7 +3663,7 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: model_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3837,7 +3796,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: attack_player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3846,7 +3805,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: hold_place
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3900,10 +3859,10 @@ MonoBehaviour:
           value: be_throw
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -3936,7 +3895,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4049,7 +4008,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hold_player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4082,7 +4041,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -4125,7 +4084,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: holded_push_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4137,7 +4096,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: holded_push_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4155,7 +4114,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: holded_push_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4287,7 +4246,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_object
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4350,7 +4309,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: throw_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4535,7 +4494,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: hold_place
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -4838,7 +4797,7 @@ MonoBehaviour:
           networkSync: 0
           value: 30
         - useVariable: 1
-          name: 
+          name: throw_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4965,7 +4924,7 @@ MonoBehaviour:
           networkSync: 0
           value: -30
         - useVariable: 1
-          name: 
+          name: throw_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5045,6 +5004,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SetTag
         - HutongGames.PlayMaker.Actions.SetRotation
+        - HutongGames.PlayMaker.Actions.SetScale
         - HutongGames.PlayMaker.Actions.PhysicsIgnoreCollision
         - HutongGames.PlayMaker.Actions.SetRigidBodyConstraints
         customNames:
@@ -5054,19 +5014,28 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010101010101
-        actionStartIndex: 00000000060000000a0000000c0000001500000018000000
-        actionHashCodes: afffe300ba7ea1019bd6f801979e4104aa34a2045050f303
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010101010101
+        actionStartIndex: 00000000060000000a0000000c000000150000001c0000001f000000
+        actionHashCodes: afffe300ba7ea1019bd6f801979e4104afff1105aa34a2045050f303
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hold_player
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -5115,7 +5084,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: hit_object
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -5239,6 +5208,24 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -5309,6 +5296,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams:
@@ -5319,14 +5312,14 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams: []
-        byteData: 0001000000000000
+        byteData: 00010000000000000000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000001200000014000000230000001c0000000f0000000f0000000f0000000700000001000000010000001400000013000000110000001400000011000000110000001100000011000000110000001100000011000000110000001100000001000000
+        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000140000001200000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000140000001c0000000f0000000f0000000f00000001000000010000001400000013000000110000001400000011000000110000001100000011000000110000001100000011000000110000001100000001000000
         paramName:
         - keys
         - 
@@ -5349,6 +5342,13 @@ MonoBehaviour:
         - space
         - everyFrame
         - lateUpdate
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - everyFrame
+        - lateUpdate
         - collider1
         - collider2
         - ignoreCollision
@@ -5363,8 +5363,8 @@ MonoBehaviour:
         - freezeRotationY
         - freezeRotationZ
         - everyFrame
-        paramDataPos: 0000000000000000010000000100000000000000010000000000000002000000000000000000000000000000030000000100000000000000000000000100000002000000030000000100000005000000060000000200000000000000000000000300000001000000020000000300000004000000050000000600000007000000080000000900000007000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000010000000000000001000000000000000200000000000000000000000000000003000000010000000000000000000000010000000200000003000000010000000500000006000000020000000100000004000000050000000600000007000000080000000300000000000000000000000400000001000000020000000300000004000000050000000600000007000000080000000900000009000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000040000000100000001000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: put fall
       description: 
       colorIndex: 0
@@ -5573,7 +5573,7 @@ MonoBehaviour:
           value: 0.2
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: break_hold_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5666,7 +5666,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: break_hold_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5752,7 +5752,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: hold_player
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -5861,7 +5861,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: break_hold_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5943,16 +5943,16 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: 
+          name: action_name
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: action_name
           objectType: UnityEngine.Object
-          useVariable: 0
+          useVariable: 1
           type: 4
           floatValue: 0
           intValue: 0
@@ -5976,16 +5976,20 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: animation
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 4
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
-          stringValues: []
+          stringValues:
+          - attack
+          - skill1
+          - skill2
+          - skill3
           vector4Values: []
           objectReferences: []
         fsmEnumParams: []
@@ -6088,7 +6092,7 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: 
+          name: action_name
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6196,7 +6200,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -6221,19 +6225,19 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6251,7 +6255,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6379,7 +6383,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: grabbing_bug
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -6543,7 +6547,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -6628,7 +6632,37 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_speed
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6640,55 +6674,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1.5
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6700,7 +6686,31 @@ MonoBehaviour:
           networkSync: 0
           value: 1.5
         - useVariable: 1
+          name: translate_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: move_y
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
           name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1.5
+        - useVariable: 1
+          name: translate_z
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: translate_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6712,13 +6722,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
+          name: translate_z
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6737,7 +6741,7 @@ MonoBehaviour:
           value: 0.2
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: grab_push_time
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6757,7 +6761,7 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6769,7 +6773,7 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0}
         - useVariable: 1
-          name: 
+          name: move_vec2
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6890,7 +6894,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: grab_push_time
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6974,7 +6978,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: grab_push_time
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -7044,13 +7048,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: grabbing_bug
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: grabbing_point
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -7059,7 +7063,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: grabbing_bug
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -7067,7 +7071,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: grabbing_bug
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -7304,114 +7308,114 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: distance
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: move_speed
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: move_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: move_y
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: next_start_point
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: push_power
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: translate_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: translate_z
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: throw_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: holded_push_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: ID
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: Actor.color
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: break_hold_index
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: grab_push_time
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       stringVariables:
       - useVariable: 1
-        name: 
+        name: action_name
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 
       vector2Variables:
       - useVariable: 1
-        name: 
+        name: move_vec2
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {x: 0, y: 0}
       vector3Variables:
       - useVariable: 1
-        name: 
+        name: model_pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -7421,79 +7425,79 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: p1
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: skill_object
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: boss
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: ignore_block
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: attack_player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_model
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_spot
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hit_object
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hold_place
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hold_player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: grabbing_point
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: grabbing_bug
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -7503,7 +7507,7 @@ MonoBehaviour:
       textureVariables: []
       arrayVariables:
       - useVariable: 1
-        name: 
+        name: animation
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -7512,7 +7516,11 @@ MonoBehaviour:
         floatValues: []
         intValues: 
         boolValues: 
-        stringValues: []
+        stringValues:
+        - attack
+        - skill1
+        - skill2
+        - skill3
         vector4Values: []
         objectReferences: []
       enumVariables: []
@@ -7811,7 +7819,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -7842,7 +7850,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -7850,7 +7858,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -7937,7 +7945,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8066,25 +8074,25 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8101,7 +8109,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8109,7 +8117,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8117,7 +8125,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8125,7 +8133,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8133,7 +8141,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8194,13 +8202,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8329,13 +8337,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: GroundTrigger
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_ground_effect
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8542,49 +8550,49 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8609,7 +8617,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8617,7 +8625,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8625,7 +8633,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8633,7 +8641,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8641,7 +8649,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8649,7 +8657,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8657,7 +8665,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8665,7 +8673,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -8886,7 +8894,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: hit_obj
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -9252,7 +9260,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: hit_ground_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9357,25 +9365,25 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9392,7 +9400,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9400,7 +9408,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9408,7 +9416,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9416,7 +9424,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9562,7 +9570,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: GroundTrigger
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9697,13 +9705,13 @@ MonoBehaviour:
           value: {x: 0, y: 0}
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: FX.pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         - useVariable: 1
-          name: 
+          name: FX.pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9810,7 +9818,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: move_y
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9821,7 +9829,7 @@ MonoBehaviour:
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
-        name: 
+        name: FX.pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9831,25 +9839,25 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: GroundTrigger
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hit_obj
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hit_ground_effect
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10008,13 +10016,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10131,11 +10139,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -10241,11 +10249,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -10306,7 +10314,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: move_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10314,11 +10322,11 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: false-left, true-right
         showInInspector: 0
         networkSync: 0
-        value: 0
+        value: 1
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -10485,7 +10493,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10494,7 +10502,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: hold_collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10518,7 +10526,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10526,7 +10534,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10534,7 +10542,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10542,7 +10550,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10550,7 +10558,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10571,7 +10579,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -10852,7 +10860,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10860,7 +10868,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10868,7 +10876,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10897,7 +10905,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: created_bubble
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -10965,10 +10973,10 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 65a6b2207a7f01743b9ffa31ac7b1ccf, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -10989,10 +10997,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -11115,7 +11123,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11244,55 +11252,55 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: attack_range
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hold_collider
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: shoot_point
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: holding_place
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: bubble_pool
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: skill_bubble_pool
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: bomb_bubble_pool
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: bubble_bounce_pool
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11491,7 +11499,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: throw_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11503,7 +11511,7 @@ MonoBehaviour:
           networkSync: 0
           value: 2
         - useVariable: 1
-          name: 
+          name: throw_y
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11516,7 +11524,7 @@ MonoBehaviour:
           value: -8
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ActorColor
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11645,7 +11653,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: '[Controller]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -11684,12 +11692,12 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_skill_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -11895,9 +11903,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: created_bubble
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -11921,12 +11929,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_skill_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -11937,7 +11945,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -12033,7 +12041,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12041,7 +12049,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12049,7 +12057,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12057,7 +12065,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12086,7 +12094,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: created_bubble
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -12154,10 +12162,10 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 65a6b2207a7f01743b9ffa31ac7b1ccf, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -12178,10 +12186,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -12291,7 +12299,7 @@ MonoBehaviour:
           value: 0.2
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -12340,7 +12348,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -12590,9 +12598,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: created_bubble
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -12616,12 +12624,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_bomb_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -12651,7 +12659,7 @@ MonoBehaviour:
           value: 0
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -12746,7 +12754,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12754,7 +12762,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12762,7 +12770,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -12791,7 +12799,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: created_bubble
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -12859,10 +12867,10 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 65a6b2207a7f01743b9ffa31ac7b1ccf, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -12883,10 +12891,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -13009,7 +13017,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13184,7 +13192,7 @@ MonoBehaviour:
           networkSync: 0
           value: -55
         - useVariable: 1
-          name: 
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13298,13 +13306,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13544,13 +13552,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13634,7 +13642,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: bubble_now
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13643,7 +13651,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: bubble_pool
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -13733,9 +13741,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: bubble_now
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -13759,12 +13767,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -13835,7 +13843,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: bubble_now
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -13844,7 +13852,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: skill_bubble_pool
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -13934,9 +13942,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: bubble_now
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -13960,12 +13968,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_skill_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -14036,7 +14044,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: bubble_now
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14045,7 +14053,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: bomb_bubble_pool
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -14135,9 +14143,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: bubble_now
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -14161,12 +14169,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_bomb_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -14246,9 +14254,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: created_bubble
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -14272,12 +14280,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -14307,7 +14315,7 @@ MonoBehaviour:
           value: 0
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14386,7 +14394,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14464,7 +14472,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14572,13 +14580,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14882,9 +14890,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: created_bubble
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -14908,12 +14916,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_bounce_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -14943,7 +14951,7 @@ MonoBehaviour:
           value: 0
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -15016,7 +15024,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: bubble_now
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -15025,7 +15033,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: bubble_bounce_pool
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -15115,9 +15123,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: bubble_now
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -15141,12 +15149,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_bounce_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -15239,7 +15247,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -15247,7 +15255,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -15255,7 +15263,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: created_bubble
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -15284,7 +15292,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: created_bubble
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -15352,10 +15360,10 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 65a6b2207a7f01743b9ffa31ac7b1ccf, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -15376,10 +15384,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -15502,7 +15510,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -15624,7 +15632,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -15814,7 +15822,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: retrieve_bubble
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -15927,9 +15935,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: retrieve_bubble
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -15953,12 +15961,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: bubble_skill_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -15988,7 +15996,7 @@ MonoBehaviour:
           value: 0
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: bubbleFlag
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -16075,7 +16083,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: created_bubble_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -16233,75 +16241,75 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: throw_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: throw_x_face
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: throw_y
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: throw_y_face
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: ActorColor
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: POWER
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: skill_bubble_count
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: created_bubble_index
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: bubbleFlag
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: inRange_building
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: inRange_enemy
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -16314,103 +16322,103 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: attack_range
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: bomb_bubble_pool
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: bubble_bounce_pool
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: bubble_now
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: bubble_pool
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_hit_main
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_holding
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: created_bubble
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hold_collider
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hold_effect
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: holding_place
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: shoot_point
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: skill_bubble_pool
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: object_holding
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: retrieve_bubble
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -16420,12 +16428,12 @@ MonoBehaviour:
       textureVariables: []
       arrayVariables:
       - useVariable: 1
-        name: 
+        name: bubble_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -16433,12 +16441,12 @@ MonoBehaviour:
         vector4Values: []
         objectReferences: []
       - useVariable: 1
-        name: 
+        name: bubble_skill_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -16446,12 +16454,12 @@ MonoBehaviour:
         vector4Values: []
         objectReferences: []
       - useVariable: 1
-        name: 
+        name: bubble_bomb_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -16459,12 +16467,12 @@ MonoBehaviour:
         vector4Values: []
         objectReferences: []
       - useVariable: 1
-        name: 
+        name: bubble_bounce_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -16598,7 +16606,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -16699,7 +16707,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: '[Controller]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -16786,7 +16794,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -16914,31 +16922,31 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: self
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: shoot_target
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: head
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: deamon
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -17053,9 +17061,9 @@ MonoBehaviour:
           value: Player
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: ActorBoard
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -17098,7 +17106,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: push_force_base
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -17111,17 +17119,17 @@ MonoBehaviour:
           value: 1
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: HP
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 100
         - useVariable: 0
           name: 
           tooltip: 
@@ -17129,7 +17137,7 @@ MonoBehaviour:
           networkSync: 0
           value: 100
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -17235,23 +17243,23 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: HP
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 100
+        - useVariable: 1
+          name: dmg
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: HP
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+          value: 100
         - useVariable: 0
           name: 
           tooltip: 
@@ -17341,7 +17349,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: ActorBoard
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -17383,11 +17391,11 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: HP
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 100
         - useVariable: 0
           name: 
           tooltip: 
@@ -17401,11 +17409,11 @@ MonoBehaviour:
           networkSync: 0
           value: 100
         - useVariable: 1
-          name: 
+          name: HP
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 100
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -17506,7 +17514,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: ActorBoard
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -17776,13 +17784,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: score
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: score
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -17863,13 +17871,13 @@ MonoBehaviour:
           value: {x: 0, y: 0}
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: self_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         - useVariable: 1
-          name: 
+          name: self_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -18093,20 +18101,20 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: hit_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: dmg
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: dmg
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -18290,7 +18298,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: '[Controller]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -18472,19 +18480,19 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: push_force_base
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: dmg_multi
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: push_force
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -18502,7 +18510,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: push_force
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -18730,7 +18738,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: bullet
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -18752,7 +18760,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: bullet
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -18801,10 +18809,10 @@ MonoBehaviour:
           value: get shoot target
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: shoot_target
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -18922,7 +18930,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: head
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -18954,7 +18962,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: deamon
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -18986,7 +18994,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: ActorBoard
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -19264,7 +19272,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: self_now_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19282,13 +19290,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: hit_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: self_now_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19386,7 +19394,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: dmg
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19398,7 +19406,7 @@ MonoBehaviour:
           networkSync: 0
           value: -1
         - useVariable: 1
-          name: 
+          name: dmg_multi
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19472,7 +19480,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: dmg
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19484,7 +19492,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: 
+          name: dmg_multi
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19561,13 +19569,13 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: self
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: diamond_now
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19589,7 +19597,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: diamond_now
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -19631,7 +19639,7 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: diamond_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19740,13 +19748,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: diamond_index
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: score
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -19832,62 +19840,62 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: push_force
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: push_force_base
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: dmg_multi
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: hit_pos_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: self_now_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: dmg
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: HP
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 100
+      - useVariable: 1
+        name: ID
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: score
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: 
+        name: diamond_index
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -19897,7 +19905,7 @@ MonoBehaviour:
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
-        name: 
+        name: self_pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -19907,49 +19915,49 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: ActorBoard
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: bullet
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: shoot_target
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: head
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: deamon
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: self
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: diamond_now
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -20159,7 +20167,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -20176,7 +20184,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20340,7 +20348,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20348,7 +20356,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20356,7 +20364,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20364,7 +20372,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20534,7 +20542,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -20670,7 +20678,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20678,7 +20686,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -20733,11 +20741,11 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: pitch
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -20745,17 +20753,17 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: 
+          name: time
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 0.3
         - useVariable: 1
-          name: 
+          name: time
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 0.3
         - useVariable: 0
           name: 
           tooltip: 
@@ -20763,11 +20771,11 @@ MonoBehaviour:
           networkSync: 0
           value: 0.9
         - useVariable: 1
-          name: 
+          name: time
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 0.3
         - useVariable: 0
           name: 
           tooltip: 
@@ -21053,7 +21061,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21061,7 +21069,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21069,7 +21077,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21077,7 +21085,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21303,7 +21311,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21311,7 +21319,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21319,7 +21327,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21327,7 +21335,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -21498,17 +21506,17 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: pitch
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 0
+        value: 1
       - useVariable: 1
-        name: 
+        name: time
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 0
+        value: 0.3
       intVariables: []
       boolVariables: []
       stringVariables: []
@@ -21519,7 +21527,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -21724,13 +21732,13 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: pow
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: pow
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -21878,7 +21886,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: ActorBoard
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -21920,19 +21928,19 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: pow
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -21950,7 +21958,7 @@ MonoBehaviour:
           networkSync: 0
           value: 100
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -22101,7 +22109,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: POWER
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -22245,7 +22253,7 @@ MonoBehaviour:
           value: 0.5
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: pow
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -22322,9 +22330,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: ActorBoard
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -22368,7 +22376,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -22428,19 +22436,19 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: 
+        name: pow
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: POWER
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: ID
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -22454,7 +22462,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: ActorBoard
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -22583,7 +22591,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -22662,7 +22670,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -22792,7 +22800,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: water_effect
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -22925,7 +22933,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: water_effect
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -23063,7 +23071,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -23210,19 +23218,19 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: object_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: object_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: object_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -23239,7 +23247,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23247,7 +23255,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23255,7 +23263,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23404,7 +23412,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23412,7 +23420,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23420,7 +23428,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23428,7 +23436,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -23743,7 +23751,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -23780,10 +23788,10 @@ MonoBehaviour:
           value: IS THROWING
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -24006,7 +24014,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: '[Controller]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -24183,7 +24191,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: object_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -24296,7 +24304,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -24377,10 +24385,10 @@ MonoBehaviour:
           value: CAN NOT DASH
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: holding_place
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -24401,10 +24409,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -24545,7 +24553,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -24702,7 +24710,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -24813,7 +24821,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -24982,37 +24990,37 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: left_hand_collider
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hold_collider
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: holding_place
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: attack_range
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: '[Controller]'
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25302,13 +25310,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25317,7 +25325,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25325,7 +25333,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25440,7 +25448,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25538,7 +25546,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: object_holding
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -25665,7 +25673,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: object_holding
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25673,7 +25681,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: object_holding
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25716,13 +25724,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25792,7 +25800,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25922,7 +25930,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: object_holding
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25930,7 +25938,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: object_holding
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25938,7 +25946,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: object_holding
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -25965,7 +25973,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: hit_obj
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -25997,7 +26005,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: '[Controller]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -26135,7 +26143,7 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26147,13 +26155,13 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: obj_hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26364,14 +26372,14 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: 
+        name: obj_hp
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -26384,49 +26392,49 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: attack_range
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hold_collider
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: holding_place
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: left_hand_collider
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: object_holding
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hit_obj
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -26567,7 +26575,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -26592,7 +26600,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26604,7 +26612,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26622,7 +26630,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26736,7 +26744,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -26761,7 +26769,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26773,7 +26781,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26877,7 +26885,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -26902,7 +26910,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -26914,7 +26922,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -27204,13 +27212,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: hit_obj
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -27227,7 +27235,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -27235,7 +27243,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -27372,7 +27380,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: hit_obj
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -27537,7 +27545,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: attack_range
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -27572,9 +27580,9 @@ MonoBehaviour:
           value: Untagged
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: '[Controller]'
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -27618,7 +27626,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -27916,7 +27924,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -27941,7 +27949,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -27953,7 +27961,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28057,7 +28065,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: '[Controller]'
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -28082,7 +28090,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28094,7 +28102,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28303,13 +28311,13 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: is_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: is_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28420,13 +28428,13 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: is_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: is_holding
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28681,7 +28689,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -28895,7 +28903,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -29014,7 +29022,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -29238,7 +29246,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: ID
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -29329,27 +29337,27 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: move_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: ID
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: is_holding
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -29362,19 +29370,19 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: '[Controller]'
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: attack_range
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: hit_obj
         tooltip: 
         showInInspector: 0
         networkSync: 0
