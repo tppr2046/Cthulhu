@@ -12594,14 +12594,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.RandomInt
         - HutongGames.PlayMaker.Actions.RandomFloat
         - HutongGames.PlayMaker.Actions.RandomFloat
+        - HutongGames.PlayMaker.Actions.RandomFloat
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000008000000
-        actionHashCodes: 070f30002ee017042ee01704
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000005000000080000000b000000
+        actionHashCodes: 070f30002ee017042ee017042ee01704
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -12617,6 +12619,24 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: -3
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        - useVariable: 1
+          name: distance_x
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -12690,7 +12710,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000001000000001000000110000000f0000000f0000000f0000000f0000000f0000000f000000
+        paramDataType: 10000000100000001000000001000000110000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
         paramName:
         - min
         - max
@@ -12703,8 +12723,11 @@ MonoBehaviour:
         - min
         - max
         - storeResult
-        paramDataPos: 0000000001000000020000000000000000000000000000000100000002000000030000000400000005000000
-        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000
+        - min
+        - max
+        - storeResult
+        paramDataPos: 0000000001000000020000000000000000000000000000000100000002000000030000000400000005000000060000000700000008000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: stop all
       description: 
       colorIndex: 0
@@ -13362,7 +13385,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: WALK
       isSystemEvent: 0
@@ -13400,15 +13423,15 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
-    handleCollisionStay: 1
+    handleCollisionStay: 0
     handleParticleCollision: 0
     handleControllerColliderHit: 0
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
