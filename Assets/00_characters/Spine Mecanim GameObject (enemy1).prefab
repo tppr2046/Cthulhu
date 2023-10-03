@@ -2165,15 +2165,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: "\u72C0\u614B 1"
+    startState: init
     states:
     - name: wait ready
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 226
-        y: 100
+        x: 179
+        y: 107
         width: 118.666664
         height: 32
       isBreakpoint: 0
@@ -2184,7 +2184,7 @@ MonoBehaviour:
           name: ENEMY READY
           isSystemEvent: 0
           isGlobal: 1
-        toState: init
+        toState: ready
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2513,13 +2513,13 @@ MonoBehaviour:
         - debugThis
         paramDataPos: 000000000000000000000000000000000000000000000000000000000100000002000000030000000100000005000000060000000100000001000000040000000500000006000000070000000800000002000000090000000200000000000000000000000700000001000000080000000200000003000000000000000100000004000000020000000d000000010000000200000011000000150000000000000003000000000000001900000005000000060000001d0000000700000008000000
         paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000000000000000000000400000001000000010000000000000000000000000000000000000000000000010000000100000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
-    - name: init
+    - name: ready
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 234
-        y: 163
+        x: 187
+        y: 170
         width: 100
         height: 32
       isBreakpoint: 0
@@ -2530,7 +2530,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: ready
+        toState: idle
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2684,7 +2684,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 383.35938
-        y: 242.03906
+        y: 258.03906
         width: 100
         height: 32
       isBreakpoint: 0
@@ -2819,13 +2819,13 @@ MonoBehaviour:
         - everyFrameOption
         paramDataPos: 000000000100000002000000030000000400000005000000000000000000000006000000070000000000000001000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000004000000
-    - name: ready
+    - name: idle
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 360.34375
-        y: 133.03906
+        y: 149.03906
         width: 121.333336
         height: 64
       isBreakpoint: 0
@@ -3376,7 +3376,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 379.34375
-        y: 304.03906
+        y: 320.03906
         width: 129.33334
         height: 48
       isBreakpoint: 0
@@ -3519,7 +3519,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 358.4922
-        y: 394.6797
+        y: 410.6797
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3605,7 +3605,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 352.4922
-        y: 464.6797
+        y: 480.6797
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3691,7 +3691,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 737.90625
-        y: 379.71875
+        y: 395.71875
         width: 106
         height: 48
       isBreakpoint: 0
@@ -4153,7 +4153,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 684
-        y: 321
+        y: 337
         width: 145.33334
         height: 32
       isBreakpoint: 0
@@ -4407,7 +4407,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 965.0078
-        y: 231.99219
+        y: 247.99219
         width: 106.666664
         height: 48
       isBreakpoint: 0
@@ -4418,7 +4418,7 @@ MonoBehaviour:
           name: stop attack
           isSystemEvent: 0
           isGlobal: 0
-        toState: ready
+        toState: idle
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4814,7 +4814,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1345.0703
-        y: 316.5703
+        y: 332.5703
         width: 102
         height: 32
       isBreakpoint: 0
@@ -5185,7 +5185,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1567.8047
-        y: 401.7422
+        y: 417.7422
         width: 100
         height: 48
       isBreakpoint: 0
@@ -5434,7 +5434,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1330.0703
-        y: 393.57812
+        y: 409.57812
         width: 113.333336
         height: 48
       isBreakpoint: 0
@@ -5545,7 +5545,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000000010000000000
+        byteData: 0000000000010000000100
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -5573,7 +5573,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1546.2734
-        y: 497.8047
+        y: 513.8047
         width: 100
         height: 32
       isBreakpoint: 0
@@ -5728,7 +5728,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1500.5547
-        y: 887.5547
+        y: 903.5547
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6208,7 +6208,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1489.5547
-        y: 952.7578
+        y: 968.7578
         width: 105.333336
         height: 16
       isBreakpoint: 0
@@ -6359,7 +6359,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1490.5547
-        y: 562.5547
+        y: 578.5547
         width: 199.33333
         height: 48
       isBreakpoint: 0
@@ -6612,7 +6612,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1498.5547
-        y: 825.0547
+        y: 841.0547
         width: 114
         height: 32
       isBreakpoint: 0
@@ -6692,7 +6692,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1647.5703
-        y: 146.57812
+        y: 162.57812
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6703,7 +6703,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: ready
+        toState: idle
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6851,13 +6851,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000000000000200000001000000020000000300000004000000050000000600000007000000080000000900000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: "\u72C0\u614B 1"
+    - name: init
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 54
-        y: 105
+        y: 121
         width: 100
         height: 16
       isBreakpoint: 0
@@ -6867,12 +6867,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetOwner
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5c004505
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: 5c004505603dd905
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -6894,7 +6896,19 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: enemy_type
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -6902,23 +6916,26 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000
+        paramDataType: 13000000100000001000000001000000
         paramName:
         - storeGameObject
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     - name: check had target
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 630.0078
-        y: 498.26562
+        y: 514.2656
         width: 134.66666
         height: 48
       isBreakpoint: 0
@@ -6929,7 +6946,7 @@ MonoBehaviour:
           name: random move
           isSystemEvent: 0
           isGlobal: 0
-        toState: ready
+        toState: idle
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7065,7 +7082,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 850
-        y: 514
+        y: 530
         width: 169.33333
         height: 48
       isBreakpoint: 0
@@ -7085,7 +7102,7 @@ MonoBehaviour:
           name: random move
           isSystemEvent: 0
           isGlobal: 0
-        toState: ready
+        toState: idle
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7166,7 +7183,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 992
-        y: 316
+        y: 332
         width: 132.66666
         height: 48
       isBreakpoint: 0
@@ -7267,7 +7284,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1724
-        y: 435
+        y: 451
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7394,7 +7411,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1452.5547
-        y: 458.28125
+        y: 474.28125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7521,7 +7538,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1495.5859
-        y: 700.8203
+        y: 716.8203
         width: 154
         height: 32
       isBreakpoint: 0
@@ -7632,7 +7649,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1508.6016
-        y: 633.34375
+        y: 649.34375
         width: 126
         height: 32
       isBreakpoint: 0
@@ -7916,6 +7933,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: enemy_type
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: 
@@ -8057,7 +8080,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -8068,7 +8091,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -8088,7 +8111,7 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -8096,8 +8119,8 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
-    handleLateUpdate: 1
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
