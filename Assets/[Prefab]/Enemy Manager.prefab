@@ -604,7 +604,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: enemy_type
           objectType: UnityEngine.Object
           useVariable: 1
           type: 1
@@ -2716,7 +2716,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - spawn set 1
-        byteData: 0000000000
+        byteData: 0001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -2948,12 +2948,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: create_wait
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 5
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -3082,7 +3082,13 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions: []
     variables:
-      floatVariables: []
+      floatVariables:
+      - useVariable: 1
+        name: create_wait
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 5
       intVariables:
       - useVariable: 1
         name: create_count
@@ -3129,7 +3135,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

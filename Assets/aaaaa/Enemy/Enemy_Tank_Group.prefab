@@ -1411,7 +1411,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1032.0078
         y: 413.97656
-        width: 124.666664
+        width: 122.666664
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: tank_manager
+              name: enemy_manager
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -2904,14 +2904,14 @@ MonoBehaviour:
         serializedVersion: 2
         x: 71.234375
         y: 99.89844
-        width: 126.666664
+        width: 118
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: START MOVING
+          name: ENEMY START
           isSystemEvent: 0
           isGlobal: 0
         toState: call back
@@ -3014,7 +3014,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: tank_manager
+              name: enemy_manager
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -3295,10 +3295,16 @@ MonoBehaviour:
     - name: BACK
       isSystemEvent: 0
       isGlobal: 0
+    - name: BACK TO POOL
+      isSystemEvent: 0
+      isGlobal: 0
     - name: continue
       isSystemEvent: 0
       isGlobal: 0
     - name: detect player
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: ENEMY START
       isSystemEvent: 0
       isGlobal: 0
     - name: EXPLODE
@@ -3316,6 +3322,9 @@ MonoBehaviour:
     - name: hit player
       isSystemEvent: 0
       isGlobal: 0
+    - name: MOVE
+      isSystemEvent: 0
+      isGlobal: 0
     - name: not hide tank
       isSystemEvent: 0
       isGlobal: 0
@@ -3325,9 +3334,6 @@ MonoBehaviour:
     - name: set pos ok
       isSystemEvent: 0
       isGlobal: 0
-    - name: START MOVING
-      isSystemEvent: 0
-      isGlobal: 0
     - name: STOP
       isSystemEvent: 0
       isGlobal: 0
@@ -3335,12 +3341,6 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: tank got
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: BACK TO POOL
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: MOVE
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -3434,13 +3434,13 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: tank_manager
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: enemy_manager
         tooltip: 
         showInInspector: 0
         networkSync: 0
