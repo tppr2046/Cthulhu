@@ -4932,7 +4932,7 @@ MonoBehaviour:
         x: 54.335938
         y: 351.45312
         width: 142.66666
-        height: 96
+        height: 112
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -4974,10 +4974,19 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: boss area
+          name: area 5
           isSystemEvent: 0
           isGlobal: 0
         toState: area 5
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: area 6
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: area 6
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4990,6 +4999,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetKeyDown
         - HutongGames.PlayMaker.Actions.GetKeyDown
         - HutongGames.PlayMaker.Actions.GetKeyDown
+        - HutongGames.PlayMaker.Actions.GetKeyDown
         customNames:
         - 
         - 
@@ -4997,10 +5007,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101010101
-        actionIsOpen: 010101010101
-        actionStartIndex: 000000000300000006000000090000000c0000000f000000
-        actionHashCodes: c7b4ad04c7b4ad04c7b4ad04c7b4ad04c7b4ad04c7b4ad04
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010101010101
+        actionStartIndex: 000000000300000006000000090000000c0000000f00000012000000
+        actionHashCodes: c7b4ad04c7b4ad04c7b4ad04c7b4ad04c7b4ad04c7b4ad04c7b4ad04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -5054,6 +5065,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -5065,13 +5082,14 @@ MonoBehaviour:
         - area 2
         - area 3
         - area 4
-        - boss area
-        byteData: 35000000370000002a0000002b0000002c0000002d000000
+        - area 5
+        - area 6
+        byteData: 35000000370000002a0000002b0000002c0000002d0000002e000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000
+        paramDataType: 070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000070000001700000011000000
         paramName:
         - key
         - sendEvent
@@ -5091,8 +5109,11 @@ MonoBehaviour:
         - key
         - sendEvent
         - storeResult
-        paramDataPos: 0000000000000000000000000400000001000000010000000800000002000000020000000c0000000300000003000000100000000400000004000000140000000500000005000000
-        paramByteDataSize: 040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000
+        - key
+        - sendEvent
+        - storeResult
+        paramDataPos: 0000000000000000000000000400000001000000010000000800000002000000020000000c0000000300000003000000100000000400000004000000140000000500000005000000180000000600000006000000
+        paramByteDataSize: 040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000040000000000000000000000
     - name: left alt down
       description: 
       colorIndex: 0
@@ -5648,15 +5669,87 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: area 6
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 294.32812
+        y: 582.6719
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: set push point
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: area_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 4
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
-    - name: left ctrl down
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: left alt down
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no key
-      isSystemEvent: 0
+    - name: FINISHED
+      isSystemEvent: 1
       isGlobal: 0
     - name: 2 keys down
       isSystemEvent: 0
@@ -5670,11 +5763,20 @@ MonoBehaviour:
     - name: area 4
       isSystemEvent: 0
       isGlobal: 0
-    - name: boss area
+    - name: area 5
       isSystemEvent: 0
       isGlobal: 0
-    - name: FINISHED
-      isSystemEvent: 1
+    - name: left alt down
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: left ctrl down
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no key
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: area 6
+      isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
     variables:
@@ -5712,7 +5814,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
