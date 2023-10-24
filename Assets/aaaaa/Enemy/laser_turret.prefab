@@ -4176,14 +4176,14 @@ MonoBehaviour:
     name: FSM
     startState: init
     states:
-    - name: init
+    - name: wait to shoot
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 50.335938
-        y: 166.83594
-        width: 100
+        y: 198.83594
+        width: 110
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4316,7 +4316,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 253.33594
-        y: 247.83594
+        y: 279.83594
         width: 100
         height: 48
       isBreakpoint: 0
@@ -4336,7 +4336,7 @@ MonoBehaviour:
           name: stop shoot
           isSystemEvent: 0
           isGlobal: 0
-        toState: init
+        toState: wait to shoot
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4480,7 +4480,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 265.33594
-        y: 92.83594
+        y: 124.83594
         width: 130.66666
         height: 32
       isBreakpoint: 0
@@ -4645,7 +4645,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 515.33594
-        y: 140.83594
+        y: 172.83594
         width: 100
         height: 48
       isBreakpoint: 0
@@ -4665,7 +4665,7 @@ MonoBehaviour:
           name: stop shoot
           isSystemEvent: 0
           isGlobal: 0
-        toState: init
+        toState: wait to shoot
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4816,7 +4816,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 429
-        y: 256
+        y: 288
         width: 142.66666
         height: 48
       isBreakpoint: 0
@@ -4909,7 +4909,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 279
-        y: 350
+        y: 382
         width: 100
         height: 32
       isBreakpoint: 0
@@ -4920,7 +4920,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: init
+        toState: wait to shoot
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4982,7 +4982,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 733
-        y: 102
+        y: 134
         width: 100
         height: 16
       isBreakpoint: 0
@@ -5028,6 +5028,85 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
+    - name: init
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 63
+        y: 109
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: wait to shoot
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetParent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: d97b7202
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: main
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000013000000
+        paramName:
+        - gameObject
+        - storeResult
+        paramDataPos: 0000000000000000
+        paramByteDataSize: 0000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -5052,7 +5131,7 @@ MonoBehaviour:
         name: can shoot
         isSystemEvent: 0
         isGlobal: 0
-      toState: init
+      toState: wait to shoot
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -5125,6 +5204,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: main
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -5132,7 +5217,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
