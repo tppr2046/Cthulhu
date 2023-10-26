@@ -1633,7 +1633,7 @@ MonoBehaviour:
         x: 539
         y: 190.99219
         width: 157.33334
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -1643,6 +1643,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: check key building
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: area points not full
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: show area point
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1926,7 +1935,7 @@ MonoBehaviour:
         stringParams:
         - 
         - area points full
-        - 
+        - area points not full
         - area points full
         byteData: 000000000000
         arrayParamSizes: 0200000002000000
@@ -3698,8 +3707,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 761
-        y: 266
+        x: 777
+        y: 287
         width: 130.66666
         height: 16
       isBreakpoint: 0
@@ -3763,6 +3772,108 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: SHOW KEY BUILDING HINT
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: show area point
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 792
+        y: 209
+        width: 127.333336
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: area_destruction
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: ENABLE AREA UI
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3869,6 +3980,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: push ok
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: area points not full
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -4106,7 +4220,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -4631,7 +4745,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -6195,7 +6309,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
