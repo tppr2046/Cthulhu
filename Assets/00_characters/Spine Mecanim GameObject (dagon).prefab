@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5372586010950243426}
   - component: {fileID: 5372586010950243425}
   - component: {fileID: 6972816495188353139}
+  - component: {fileID: 9195674844926122859}
   m_Layer: 7
   m_Name: right_hand_collider
   m_TagString: Untagged
@@ -386,7 +387,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 0
+    handleTriggerStay: 1
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -414,6 +415,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5372586010950243425}
+--- !u!114 &9195674844926122859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372586010950243428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
@@ -8289,7 +8304,7 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -8432,13 +8447,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8555,11 +8570,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -8673,11 +8688,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -8746,7 +8761,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: move_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -8754,11 +8769,11 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: false-left, true-right
         showInInspector: 0
         networkSync: 0
-        value: 0
+        value: 1
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -11340,7 +11355,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -11419,7 +11434,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -11549,7 +11564,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: water_effect
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11682,7 +11697,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: water_effect
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -13305,6 +13320,7 @@ GameObject:
   - component: {fileID: 5372586011715851202}
   - component: {fileID: 5372586011715851205}
   - component: {fileID: 4865967380845360522}
+  - component: {fileID: 8361930777904369752}
   m_Layer: 7
   m_Name: tail_collider_left
   m_TagString: Untagged
@@ -13677,7 +13693,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 0
+    handleTriggerStay: 1
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -13705,6 +13721,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5372586011715851205}
+--- !u!114 &8361930777904369752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372586011715851207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
@@ -14216,6 +14246,7 @@ GameObject:
   - component: {fileID: 5372586012043693025}
   - component: {fileID: 5372586012043693024}
   - component: {fileID: 303517938013494073}
+  - component: {fileID: 2749445929002906477}
   m_Layer: 7
   m_Name: tail_collider_right
   m_TagString: Untagged
@@ -14588,7 +14619,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 0
+    handleTriggerStay: 1
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -14616,6 +14647,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5372586012043693024}
+--- !u!114 &2749445929002906477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372586012043693026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
@@ -15164,6 +15209,7 @@ GameObject:
   - component: {fileID: 5372586012455077712}
   - component: {fileID: 5372586012455077715}
   - component: {fileID: 1512580649959107496}
+  - component: {fileID: 6945896486160093123}
   m_Layer: 7
   m_Name: mouth_collider
   m_TagString: Untagged
@@ -15536,7 +15582,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 0
+    handleTriggerStay: 1
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -15564,6 +15610,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5372586012455077715}
+--- !u!114 &6945896486160093123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372586012455077717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
@@ -16790,6 +16850,7 @@ GameObject:
   - component: {fileID: 8155598458649885954}
   - component: {fileID: 5457599843929058845}
   - component: {fileID: 5341450033545148078}
+  - component: {fileID: 1878837447509350926}
   m_Layer: 7
   m_Name: left_sting_collider
   m_TagString: Untagged
@@ -17162,7 +17223,7 @@ MonoBehaviour:
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
-    handleTriggerStay: 0
+    handleTriggerStay: 1
     handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
@@ -17190,6 +17251,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5457599843929058845}
+--- !u!114 &1878837447509350926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616794178025722691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
@@ -18185,13 +18260,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d2941553cfe8c4ebec2fbe6792353b, type: 3}
---- !u!1 &5673587047935512233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2488837064849128518, guid: 45d2941553cfe8c4ebec2fbe6792353b, type: 3}
-  m_PrefabInstance: {fileID: 7797561933633975023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5673587047935512236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2488837064849128515, guid: 45d2941553cfe8c4ebec2fbe6792353b, type: 3}
+  m_PrefabInstance: {fileID: 7797561933633975023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5673587047935512233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2488837064849128518, guid: 45d2941553cfe8c4ebec2fbe6792353b, type: 3}
   m_PrefabInstance: {fileID: 7797561933633975023}
   m_PrefabAsset: {fileID: 0}

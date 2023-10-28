@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7130993577946395112}
   - component: {fileID: 7130993577946395113}
   - component: {fileID: 7130993577946395118}
+  - component: {fileID: 9092658117092964022}
   m_Layer: 0
   m_Name: attack area
   m_TagString: Untagged
@@ -95,6 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9092658117092964022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993577946395116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
 --- !u!1 &7130993578408468520
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +130,10 @@ GameObject:
   - component: {fileID: 568873421398246100}
   - component: {fileID: 7115705777245963785}
   - component: {fileID: 387476556515391930}
+  - component: {fileID: 7482666200599490536}
+  - component: {fileID: 5943757309451248148}
+  - component: {fileID: 5574612006523852025}
+  - component: {fileID: 2920780249488477358}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (enemy03)
   m_TagString: enemy
@@ -167,12 +185,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0286d768243c83d429479e899a6601d5, type: 2}
-  - {fileID: 2100000, guid: ed4a82155eb322a41b20ec2030a6299d, type: 2}
-  - {fileID: 2100000, guid: 0286d768243c83d429479e899a6601d5, type: 2}
-  - {fileID: 2100000, guid: ed4a82155eb322a41b20ec2030a6299d, type: 2}
-  - {fileID: 2100000, guid: 0286d768243c83d429479e899a6601d5, type: 2}
-  - {fileID: 2100000, guid: ed4a82155eb322a41b20ec2030a6299d, type: 2}
   - {fileID: 2100000, guid: 0286d768243c83d429479e899a6601d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5136,15 +5148,15 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
-    handleCollisionStay: 0
+    handleCollisionStay: 1
     handleParticleCollision: 0
     handleControllerColliderHit: 0
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -5152,7 +5164,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!114 &7130993578408468519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9182,7 +9194,7 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -9190,15 +9202,15 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
+    handleFixedUpdate: 1
+    handleLateUpdate: 1
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!65 &7130993578408468517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9363,6 +9375,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventName: attack start
+--- !u!114 &7482666200599490536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993578408468520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 845409985, guid: 9754d4abda502c6458053d5ed8e4fc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 7130993578408468516}
+  - {fileID: 7130993578408468519}
+--- !u!114 &5943757309451248148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993578408468520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -401773908, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 7130993578408468516}
+--- !u!114 &5574612006523852025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993578408468520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -664232604, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 7130993578408468516}
+  - {fileID: 7130993578408468519}
+--- !u!114 &2920780249488477358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993578408468520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1079068393, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 7130993578408468519}
 --- !u!1 &7130993579352107573
 GameObject:
   m_ObjectHideFlags: 0
@@ -9376,6 +9446,7 @@ GameObject:
   - component: {fileID: 7130993579352107574}
   - component: {fileID: 7130993579352107575}
   - component: {fileID: 6803329786312698180}
+  - component: {fileID: 5783809001445354953}
   m_Layer: 0
   m_Name: detect area
   m_TagString: Untagged
@@ -9469,6 +9540,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -104615663, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
+--- !u!114 &5783809001445354953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130993579352107573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: 9754d4abda502c6458053d5ed8e4fc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs: []

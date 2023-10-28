@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 1743989700632088937}
   - component: {fileID: 6006032965436309138}
   - component: {fileID: 6170062855366217459}
+  - component: {fileID: 16627583364875583}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss03)
   m_TagString: enemy
@@ -6217,9 +6218,9 @@ MonoBehaviour:
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
-    handleTriggerExit: 0
-    handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleTriggerExit: 1
+    handleTriggerStay: 1
+    handleCollisionEnter: 1
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -6227,7 +6228,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -8079,6 +8080,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &16627583364875583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254407556261315407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5666111371225571749}
 --- !u!1 &3254407557181699455
 GameObject:
   m_ObjectHideFlags: 0
