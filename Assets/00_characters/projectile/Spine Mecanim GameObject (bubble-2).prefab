@@ -336,19 +336,19 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: attack collider
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: building_hit
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: enemy_hit
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -429,10 +429,10 @@ MonoBehaviour:
           value: enemy
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -453,10 +453,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -477,10 +477,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: bubble_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
         stringParams:
         - hit building
         - hit enemy
-        byteData: 0000000000000000
+        byteData: 0100000001000000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
@@ -585,7 +585,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: building_hit
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: player
           objectType: UnityEngine.GameObject
           useVariable: 1
           type: 3
@@ -804,7 +804,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: player
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -841,10 +841,10 @@ MonoBehaviour:
           value: BACK TO POOL
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: bubble_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1000,7 +1000,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: enemy_hit
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: player
           objectType: UnityEngine.GameObject
           useVariable: 1
           type: 3
@@ -1341,14 +1341,14 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: 
+        name: bubble_type
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1361,31 +1361,31 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: attack collider
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_hit
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_hit_main
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: enemy_hit
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1746,10 +1746,10 @@ MonoBehaviour:
           value: bubble_type
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1770,10 +1770,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1794,10 +1794,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: bubble_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1834,7 +1834,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
           networkSync: 0
           value: 2
         - useVariable: 1
-          name: 
+          name: time
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1860,7 +1860,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2010,7 +2010,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2274,27 +2274,27 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: distance
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: time
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: bubble_type
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2307,7 +2307,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: player
         tooltip: 
         showInInspector: 0
         networkSync: 0
