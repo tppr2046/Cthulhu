@@ -401,6 +401,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetEventProperties
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.SetFsmFloat
@@ -408,10 +409,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 000001
-        actionStartIndex: 00000000050000000a000000
-        actionHashCodes: b2cf1000b2cf100087604502
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01000001
+        actionStartIndex: 0000000004000000090000000e000000
+        actionHashCodes: afffe300b2cf1000b2cf100087604502
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -451,20 +453,50 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: next_start_position
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: FSM
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: next_start_point
+          value: next_start_position
         fsmObjectParams: []
-        fsmVarParams: []
+        fsmVarParams:
+        - variableName: next_start_position
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: next_start_point
+          name: next_start_position
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -502,12 +534,18 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
+        arrayParamSizes: 0100000001000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmString
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001100000011000000010000000100000014000000110000001100000001000000010000001400000012000000120000000f00000001000000
+        paramDataType: 0c000000120000000c00000027000000140000001100000011000000010000000100000014000000110000001100000001000000010000001400000012000000120000000f00000001000000
         paramName:
+        - keys
+        - 
+        - datas
+        - 
         - gameObject
         - activate
         - recursive
@@ -523,8 +561,8 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000100000001000000020000000300000002000000030000000200000000000000010000000000000004000000
-        paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000000000000000000001000000000000000100000001000000020000000300000002000000030000000200000001000000020000000000000004000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000000000000000000001000000
     - name: DISABLE
       description: 
       colorIndex: 0
@@ -581,10 +619,10 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: next_start_point
+          value: next_start_position
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: next_start_point
+        - variableName: next_start_position
           objectType: UnityEngine.Object
           useVariable: 1
           type: 0
@@ -668,7 +706,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: next_start_point
+        name: next_start_position
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -712,7 +750,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -732,7 +770,7 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -1046,7 +1084,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: next_start_point
+          value: next_start_position
         - useVariable: 0
           name: 
           tooltip: 
@@ -1061,7 +1099,7 @@ MonoBehaviour:
           value: GO  NEXT AREA
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: next_start_point
+        - variableName: next_start_position
           objectType: UnityEngine.Object
           useVariable: 1
           type: 0
@@ -1158,7 +1196,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: next_start_point
+        name: next_start_position
         tooltip: 
         showInInspector: 0
         networkSync: 0
