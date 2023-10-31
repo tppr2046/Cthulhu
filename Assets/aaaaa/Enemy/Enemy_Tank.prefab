@@ -2659,7 +2659,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 704.2969
         y: 724.97656
-        width: 114
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3995,43 +3995,43 @@ MonoBehaviour:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
-    - name: explode
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: PUT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: IS THROWING
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: IS HOLDING
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: ALL EXPLODE
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SET ID
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: HIT
+    - name: BACK TO POOL
       isSystemEvent: 0
       isGlobal: 0
     - name: continue hit
       isSystemEvent: 0
       isGlobal: 0
+    - name: DIE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: explode
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: HIT
+      isSystemEvent: 0
+      isGlobal: 0
     - name: hit player
       isSystemEvent: 0
       isGlobal: 0
-    - name: BACK TO POOL
+    - name: IS HOLDING
       isSystemEvent: 0
       isGlobal: 0
-    - name: right
+    - name: IS THROWING
       isSystemEvent: 0
       isGlobal: 0
     - name: left
       isSystemEvent: 0
       isGlobal: 0
     - name: POISON
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PUT
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: right
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SET ID
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -4045,7 +4045,7 @@ MonoBehaviour:
       linkTarget: 0
       colorIndex: 0
     - fsmEvent:
-        name: ALL EXPLODE
+        name: DIE
         isSystemEvent: 0
         isGlobal: 0
       toState: all explode
@@ -4264,10 +4264,10 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -4275,7 +4275,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0

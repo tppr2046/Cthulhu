@@ -999,7 +999,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 780.2031
         y: 397.73438
-        width: 114.666664
+        width: 120.666664
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -1794,7 +1794,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 714.4844
         y: 868.4922
-        width: 124.666664
+        width: 122.666664
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -1935,7 +1935,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 726.4844
         y: 566.4844
-        width: 192.66667
+        width: 199.33333
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2341,7 +2341,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 731.4844
         y: 685.9844
-        width: 115.333336
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3013,7 +3013,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 217.26562
         y: 394.72656
-        width: 100
+        width: 102
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -3213,7 +3213,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 57.601562
         y: 293.97656
-        width: 137.33334
+        width: 140.66666
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -3784,46 +3784,46 @@ MonoBehaviour:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: BACK TO POOL
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: continue hit
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DIE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: explode
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: HIT
+      isSystemEvent: 0
+      isGlobal: 0
     - name: hit building
       isSystemEvent: 0
       isGlobal: 0
     - name: hit player
       isSystemEvent: 0
       isGlobal: 0
-    - name: PUT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: IS THROWING
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: explode
-      isSystemEvent: 0
-      isGlobal: 0
     - name: IS HOLDING
       isSystemEvent: 0
       isGlobal: 0
-    - name: ALL EXPLODE
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: SET ID
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: HIT
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: continue hit
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: BACK TO POOL
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: right
+    - name: IS THROWING
       isSystemEvent: 0
       isGlobal: 0
     - name: left
       isSystemEvent: 0
       isGlobal: 0
     - name: POISON
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: PUT
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: right
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SET ID
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -3837,7 +3837,7 @@ MonoBehaviour:
       linkTarget: 0
       colorIndex: 0
     - fsmEvent:
-        name: ALL EXPLODE
+        name: DIE
         isSystemEvent: 0
         isGlobal: 0
       toState: all explode
@@ -4014,10 +4014,10 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 1
+    handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 1
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -4025,7 +4025,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
