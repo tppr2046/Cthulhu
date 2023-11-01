@@ -6185,7 +6185,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: attack electric
       isSystemEvent: 0
@@ -6218,9 +6218,9 @@ MonoBehaviour:
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
     handleTriggerEnter: 0
-    handleTriggerExit: 1
-    handleTriggerStay: 1
-    handleCollisionEnter: 1
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -6228,7 +6228,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -6333,15 +6333,15 @@ MonoBehaviour:
         serializedVersion: 2
         x: 254
         y: 114
-        width: 100
+        width: 118
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: ENEMY START
+          isSystemEvent: 0
           isGlobal: 0
         toState: wait for hit
         linkStyle: 0
@@ -7409,8 +7409,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1035.0156
-        y: 237.16406
+        x: 1045.0156
+        y: 252.16406
         width: 100
         height: 16
       isBreakpoint: 0
@@ -7421,6 +7421,8 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.DestroySelf
@@ -7430,12 +7432,38 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0001010101
-        actionStartIndex: 0000000005000000090000000d00000011000000
-        actionHashCodes: b2cf1000ba7ea101ba7ea101ba7ea101230cc800
+        - 
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 00010101010101
+        actionStartIndex: 0000000005000000090000000f00000013000000170000001b000000
+        actionHashCodes: b2cf1000ba7ea10160532301ba7ea101ba7ea101ba7ea101230cc800
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 7355072717295182099, guid: 0aeccf252f5f4ec489528467e4ed338e, type: 3}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 3254407556261315407}
+        - useVariable: 1
+          name: created_potion
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
@@ -7462,6 +7490,38 @@ MonoBehaviour:
             gameObject:
               useVariable: 1
               name: BOSS_HP
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: created_potion
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -7559,6 +7619,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: DROP POTION
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: SET UNFOLLOW
         - useVariable: 0
           name: 
@@ -7571,6 +7637,12 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -7622,23 +7694,45 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmVector2Params: []
-        fsmVector3Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000000
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000110000001100000001000000010000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001100000011000000
+        paramDataType: 14000000110000001100000001000000010000001f000000120000000f000000010000001300000013000000130000001c0000001c000000130000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f000000010000000f0000001100000011000000
         paramName:
         - gameObject
         - activate
         - recursive
         - resetOnExit
         - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        - gameObject
+        - parent
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
         - eventTarget
         - sendEvent
         - delay
@@ -7654,8 +7748,8 @@ MonoBehaviour:
         - delay
         - realTime
         - detachChildren
-        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000020000000100000001000000010000000300000002000000020000000200000004000000030000000200000003000000
-        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000
+        paramDataPos: 000000000000000001000000000000000100000000000000000000000000000002000000000000000100000002000000000000000100000003000000010000000100000001000000030000000200000002000000020000000400000003000000030000000300000005000000040000000200000003000000
+        paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000
     - name: update hp bar
       description: 
       colorIndex: 0
@@ -7836,6 +7930,9 @@ MonoBehaviour:
     - name: attack end
       isSystemEvent: 0
       isGlobal: 1
+    - name: ENEMY START
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: IS HOLDING
@@ -7929,6 +8026,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: created_potion
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -7936,7 +8039,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -7947,7 +8050,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -8746,7 +8849,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
