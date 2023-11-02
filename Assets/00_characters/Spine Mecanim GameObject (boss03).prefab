@@ -153,6 +153,7 @@ Transform:
   - {fileID: 8667487554588741300}
   - {fileID: 7695241894719447536}
   - {fileID: 2404430821280361764}
+  - {fileID: 1379471104776888442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6448,15 +6449,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
         - HutongGames.PlayMaker.Actions.GetEventSentBy
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.AudioPlay
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000400000007000000
-        actionHashCodes: afffe30046ebaf0081294e04
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010001
+        actionStartIndex: 0000000004000000070000000c000000
+        actionHashCodes: afffe30046ebaf00b2cf100081294e04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -6466,6 +6469,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 1379471104776862810}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -6548,6 +6559,18 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 1
         fsmVector2Params: []
         fsmVector3Params: []
@@ -6556,14 +6579,14 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 
+        byteData: 0000
         arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000130000001200000012000000140000000f000000180000001100000017000000
+        paramDataType: 0c000000120000000c000000270000001300000012000000120000001400000011000000110000000100000001000000140000000f000000180000001100000017000000
         paramName:
         - keys
         - 
@@ -6573,12 +6596,17 @@ MonoBehaviour:
         - gameObjectName
         - fsmName
         - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
         - volume
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
-        paramDataPos: 000000000000000001000000000000000000000001000000020000000000000000000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000000000000100000000000000010000000100000000000000000000000200000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000
     - name: hit damage
       description: 
       colorIndex: 0
@@ -6863,7 +6891,7 @@ MonoBehaviour:
         x: 252
         y: 202
         width: 100
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -6873,6 +6901,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: hit
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: POISON
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: set poison
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7899,6 +7936,94 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+    - name: set poison
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 200
+        y: 298
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: wait for hit
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 00
+        actionStartIndex: 00000000
+        actionHashCodes: b2cf1000
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 1379471104776862810}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000011000000110000000100000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -7931,6 +8056,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 1
     - name: ENEMY START
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: POISON
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -8050,7 +8178,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -10511,14 +10639,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9038375052338256381, guid: ce12f4ba5683e264ca9931fe664aac33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce12f4ba5683e264ca9931fe664aac33, type: 3}
---- !u!1 &4811821474677313519 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5625733165965871918, guid: ce12f4ba5683e264ca9931fe664aac33, type: 3}
-  m_PrefabInstance: {fileID: 924813116124644545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8667487554588741300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8402734641967712885, guid: ce12f4ba5683e264ca9931fe664aac33, type: 3}
+  m_PrefabInstance: {fileID: 924813116124644545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4811821474677313519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5625733165965871918, guid: ce12f4ba5683e264ca9931fe664aac33, type: 3}
   m_PrefabInstance: {fileID: 924813116124644545}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4067875846039738652
@@ -10720,4 +10848,87 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1814315751473787960, guid: e9072b0956b045e4fa99f263edf77de5, type: 3}
   m_PrefabInstance: {fileID: 4067875846039738652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5698892209089950468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3254407556261315406}
+    m_Modifications:
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730668894, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_Name
+      value: Poison Cloud
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643466872730668894, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+--- !u!1 &1379471104776862810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6643466872730668894, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+  m_PrefabInstance: {fileID: 5698892209089950468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1379471104776888442 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6643466872730178430, guid: 999901e241d800d4099d02b3e58e3c7f, type: 3}
+  m_PrefabInstance: {fileID: 5698892209089950468}
   m_PrefabAsset: {fileID: 0}
