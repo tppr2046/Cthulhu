@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 360.35156
+        x: 408.35156
         y: 203.20312
         width: 144.66666
         height: 96
@@ -495,7 +495,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 983.35156
+        x: 1031.3516
         y: 556.2031
         width: 100
         height: 64
@@ -659,7 +659,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 930.7344
+        x: 978.7344
         y: 666.03906
         width: 100
         height: 32
@@ -890,7 +890,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 381.6875
+        x: 429.6875
         y: 108.03906
         width: 100
         height: 32
@@ -1282,7 +1282,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 72.67969
+        x: 120.67969
         y: 486.03125
         width: 114.666664
         height: 48
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 956.0078
+        x: 1004.0078
         y: 497.1953
         width: 133.33334
         height: 32
@@ -1561,7 +1561,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64.00781
+        x: 112.00781
         y: 579.1953
         width: 104
         height: 32
@@ -1570,17 +1570,17 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: send face event
+          name: LASER END
+          isSystemEvent: 0
+          isGlobal: 1
+        toState: hide laser
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.AudioPlay
         customNames:
@@ -1589,19 +1589,11 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000000500000009000000
-        actionHashCodes: b2cf1000ba7ea10181294e04
+        actionStartIndex: 000000000400000008000000
+        actionHashCodes: ba7ea101ba7ea10181294e04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: laser_beam
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -1614,6 +1606,38 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: laser_beam
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         - target: 2
           excludeSelf:
             useVariable: 0
@@ -1654,6 +1678,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: LASER SHOW
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: RUMBLE
         fsmObjectParams:
         - useVariable: 0
@@ -1678,21 +1708,15 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 1
         fsmIntParams: []
         fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1706,17 +1730,16 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 000000
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000110000001100000001000000010000001f000000120000000f00000001000000140000000f000000180000001100000017000000
+        paramDataType: 1f000000120000000f000000010000001f000000120000000f00000001000000140000000f000000180000001100000017000000
         paramName:
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
+        - eventTarget
+        - sendEvent
+        - delay
         - everyFrame
         - eventTarget
         - sendEvent
@@ -1727,14 +1750,14 @@ MonoBehaviour:
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
-        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000020000000100000001000000000000000200000000000000
-        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000010000000000000000000000000000000000000000000000
+        paramDataPos: 00000000000000000000000000000000010000000100000001000000010000000000000002000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000
     - name: skill 2 start
       description: "\u65CB\u98A8"
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 276.8672
+        x: 324.8672
         y: 513.5078
         width: 119.333336
         height: 48
@@ -1986,73 +2009,12 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000001000000000000000000000001000000020000000000000003000000000000000100000002000000040000000500000000000000020000000000000001000000010000000000000001000000010000000200000003000000
         paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000
-    - name: send face event
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 61.40625
-        y: 638.4453
-        width: 128.66666
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: LASER END
-          isSystemEvent: 0
-          isGlobal: 1
-        toState: back to self control
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
     - name: get storm
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 268.8672
+        x: 316.8672
         y: 618.5078
         width: 146.66666
         height: 48
@@ -2195,7 +2157,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 262.9375
+        x: 310.9375
         y: 699.58594
         width: 184.66667
         height: 32
@@ -2626,8 +2588,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 52.890625
-        y: 999.10156
+        x: 107.89844
+        y: 969.1094
         width: 149.33334
         height: 32
       isBreakpoint: 0
@@ -2646,25 +2608,15 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0100
-        actionStartIndex: 0000000004000000
-        actionHashCodes: ba7ea101b2cf1000
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: laser_beam
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2722,49 +2674,32 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f000000010000001400000011000000110000000100000001000000
+        paramDataType: 1f000000120000000f00000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000000000000010000000100000002000000
-        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000100000001000000
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     - name: update power
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 78.015625
+        x: 126.015625
         y: 430.5078
         width: 114.666664
         height: 32
@@ -2884,7 +2819,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 85.015625
+        x: 133.01562
         y: 348.5078
         width: 108
         height: 48
@@ -3010,7 +2945,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 278.35156
+        x: 326.35156
         y: 450.03125
         width: 125.333336
         height: 32
@@ -3130,7 +3065,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 285.35156
+        x: 333.35156
         y: 368.03125
         width: 118.666664
         height: 48
@@ -3256,7 +3191,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1180.0938
+        x: 1228.0938
         y: 648.0625
         width: 100
         height: 32
@@ -3455,7 +3390,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 479.02344
+        x: 527.02344
         y: 376.02344
         width: 119.333336
         height: 48
@@ -3581,7 +3516,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 488.5078
+        x: 536.5078
         y: 457.54688
         width: 126
         height: 32
@@ -3701,7 +3636,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 487.5
+        x: 535.5
         y: 520.53906
         width: 104
         height: 48
@@ -3917,7 +3852,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 502.0078
+        x: 550.0078
         y: 619.0078
         width: 106
         height: 64
@@ -4098,7 +4033,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1053.0781
+        x: 1101.0781
         y: 726.10156
         width: 141.33334
         height: 48
@@ -4200,7 +4135,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1039.1016
+        x: 1087.1016
         y: 814.10156
         width: 103.333336
         height: 32
@@ -4383,7 +4318,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 572.7422
+        x: 620.7422
         y: 700.5
         width: 182.66667
         height: 32
@@ -4566,7 +4501,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 627.3281
+        x: 675.3281
         y: 200.99219
         width: 100
         height: 32
@@ -4640,6 +4575,117 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: HOLD
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: hide laser
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 63.023438
+        y: 655.9844
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: back to self control
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: laser_beam
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: LASER HIDE
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
