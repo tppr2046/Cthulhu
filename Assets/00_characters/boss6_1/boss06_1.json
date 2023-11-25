@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "XDDShD8JFVM", "spine": "4.1.24", "x": -1956.11, "y": -101.13, "width": 3777.79, "height": 2691.13 },
+"skeleton": { "hash": "Yk/WZjwXweY", "spine": "4.1.24", "x": -1956.11, "y": -101.13, "width": 3777.79, "height": 2691.13 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "hip", "parent": "root", "x": 658.84, "y": 951.46 },
@@ -119,11 +119,11 @@
 	{ "name": "right_arm_weapon_chain_control2", "parent": "right_arm_weapon_chain_control1", "length": 725.92, "rotation": 48.77, "x": 720.27, "y": -3.17 },
 	{
 		"name": "right_arm_weapon_tail",
-		"parent": "right_arm_weapon",
+		"parent": "right_arm_weapon_chain16",
 		"length": 415.17,
-		"rotation": -9.48,
-		"x": 1357.37,
-		"y": -116.77,
+		"rotation": -4.88,
+		"x": 112.65,
+		"y": -7.48,
 		"transform": "noScale"
 	},
 	{
@@ -2138,6 +2138,76 @@
 				]
 			},
 			"weapon2-團子蟲頭": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節1": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節2": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節3": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節4": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節5": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節6": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節7": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節8": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節9": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節10": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節11": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節12": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節13": {
+				"attachment": [
+					{}
+				]
+			},
+			"尾節14": {
 				"attachment": [
 					{}
 				]
@@ -6200,7 +6270,8 @@
 		},
 		"events": [
 			{ "time": 0.6667, "name": "AttackStart" },
-			{ "time": 1.4667, "name": "AttackStart" }
+			{ "time": 1.4667, "name": "AttackStart" },
+			{ "time": 1.6667, "name": "AttackEnd" }
 		]
 	},
 	"attack_missile": {
@@ -8648,7 +8719,12 @@
 					{ "time": 0.8333, "value": -46.29 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "name": "AttackStart" },
+			{ "time": 0.5, "name": "AttackStart" },
+			{ "time": 1.3333, "name": "AttackEnd" }
+		]
 	},
 	"idle": {
 		"slots": {
