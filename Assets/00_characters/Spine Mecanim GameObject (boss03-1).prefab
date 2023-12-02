@@ -193,7 +193,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &758710753040319209
 Animator:
@@ -781,7 +781,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &6237263603735614555
 Animator:
@@ -1108,11 +1108,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3010831044685266769}
-  - component: {fileID: 4954776886454541549}
   - component: {fileID: 5502633271541788131}
   - component: {fileID: 1927228317015378170}
   - component: {fileID: 7322578514576703699}
   - component: {fileID: 712499851816807636}
+  - component: {fileID: 3965276416107581859}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss03-1)
   m_TagString: enemy
@@ -1129,7 +1129,7 @@ Transform:
   m_GameObject: {fileID: 5955993797880661903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 3649909207880329172}
   - {fileID: 3000423232189200161}
@@ -1143,20 +1143,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4954776886454541549
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5955993797880661903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4.39
-  m_Height: 23.5
-  m_Direction: 0
-  m_Center: {x: -0.07, y: 5.2, z: 0}
 --- !u!54 &5502633271541788131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7442,7 +7428,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 20
+          value: 15
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -8914,7 +8900,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: UPDATE BOSS HP
+          value: UPDATE 2 BOSS HP 1
         fsmObjectParams: []
         fsmVarParams:
         - variableName: hp
@@ -9256,6 +9242,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!65 &3965276416107581859
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955993797880661903}
+  m_Material: {fileID: 13400000, guid: b2eeac27359641c468b5beef51a02968, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 7.4281187, z: 12}
+  m_Center: {x: -2.1473587, y: 3.724288, z: 0}
 --- !u!1 &7719027494830351484
 GameObject:
   m_ObjectHideFlags: 0

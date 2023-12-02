@@ -4411,7 +4411,7 @@ GameObject:
   - component: {fileID: 5774051783318126617}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss05-1)
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8544,15 +8544,15 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 603dd905d97b7202
+        actionStartIndex: 0000000002000000
+        actionHashCodes: d97b7202603dd905
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -8607,15 +8607,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1000000010000000010000001400000013000000
+        paramDataType: 1400000013000000100000001000000001000000
         paramName:
+        - gameObject
+        - storeResult
         - intVariable
         - intValue
         - everyFrame
-        - gameObject
-        - storeResult
-        paramDataPos: 0000000001000000000000000000000000000000
-        paramByteDataSize: 0000000000000000010000000000000000000000
+        paramDataPos: 0000000000000000000000000100000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     - name: hit
       description: 
       colorIndex: 0
@@ -10137,7 +10137,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: boss_manager
+              name: BOSS_HP
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -10171,7 +10171,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: UPDATE 2 BOSS HP 2
+          value: UPDATE BOSS HP
         fsmObjectParams: []
         fsmVarParams:
         - variableName: hp
