@@ -2396,9 +2396,9 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
+          name: attack end
+          isSystemEvent: 0
+          isGlobal: 1
         toState: waiting
         linkStyle: 0
         linkConstraint: 0
@@ -2445,7 +2445,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.3
+          value: 0.4
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
@@ -2490,7 +2490,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - attack end
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
