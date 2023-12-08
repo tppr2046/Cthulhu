@@ -4416,7 +4416,7 @@ MonoBehaviour:
         x: 614
         y: 130
         width: 100
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -4439,19 +4439,30 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: timeout
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: delay 1f
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntCompare
         - HutongGames.PlayMaker.Actions.PlayerInputButtonEvents
         - HutongGames.PlayMaker.Actions.Blink
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000060000000d000000
-        actionHashCodes: 09faa1020d4efe0034872905
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000060000000d00000013000000
+        actionHashCodes: 09faa1020d4efe003487290548c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -4502,6 +4513,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.5
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmIntParams:
         - useVariable: 1
           name: index
@@ -4540,12 +4557,13 @@ MonoBehaviour:
         - 
         - 
         - click
-        byteData: 00010000000000
+        - timeout
+        byteData: 0001000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000001700000017000000170000000100000011000000170000001700000017000000140000001800000007000000140000000f0000000f000000110000000100000001000000
+        paramDataType: 10000000100000001700000017000000170000000100000011000000170000001700000017000000140000001800000007000000140000000f0000000f0000001100000001000000010000000f0000001700000001000000
         paramName:
         - integer1
         - integer2
@@ -4566,8 +4584,11 @@ MonoBehaviour:
         - startOn
         - rendererOnly
         - realTime
-        paramDataPos: 00000000010000000000000001000000020000000000000000000000030000000400000005000000000000000000000001000000010000000000000001000000010000000500000006000000
-        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000100000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000010000000000000001000000020000000000000000000000030000000400000005000000000000000000000001000000010000000000000001000000010000000500000006000000020000000600000007000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000100000001000000000000000000000001000000
     - name: show full
       description: 
       colorIndex: 0
@@ -4979,6 +5000,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: skip
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: timeout
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
