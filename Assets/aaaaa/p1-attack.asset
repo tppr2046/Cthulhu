@@ -2249,15 +2249,17 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000005000000080000000d000000
-        actionHashCodes: 5f91350427fbe1039c5124009c512400
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000005000000080000000d00000012000000
+        actionHashCodes: 5f91350427fbe1039c5124009c51240048c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2326,7 +2328,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.6
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -2355,12 +2363,13 @@ MonoBehaviour:
         stringParams:
         - hit building
         - hit enemy
-        byteData: 0000000000000000000000000000
+        - Fist Attack
+        byteData: 000000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000011000000010000000700000011000000110000000100000014000000070000001200000017000000130000001400000007000000120000001700000013000000
+        paramDataType: 1400000012000000110000000100000007000000110000001100000001000000140000000700000012000000170000001300000014000000070000001200000017000000130000000f0000001700000001000000
         paramName:
         - gameObject
         - parameter
@@ -2380,8 +2389,11 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000010000000100000002000000050000000100000006000000010000000000000000000000020000000a000000020000000100000001000000
-        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000100000000000000040000000000000000000000000000000000000004000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 00000000000000000000000000000000010000000100000002000000050000000100000006000000010000000000000000000000020000000a00000002000000010000000100000000000000020000000e000000
+        paramByteDataSize: 000000000000000000000000010000000400000000000000000000000100000000000000040000000000000000000000000000000000000004000000000000000000000000000000000000000000000001000000
     - name: normal attack
       description: 
       colorIndex: 0
@@ -2852,12 +2864,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 9bd6f801
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 9bd6f80148c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -2886,7 +2900,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -2894,18 +2914,22 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
+        stringParams:
+        - SNEEZE
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000
+        paramDataType: 14000000120000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
-        paramDataPos: 0000000000000000
-        paramByteDataSize: 0000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     - name: create sneeze object
       description: "\u5674\u568F"
       colorIndex: 3
