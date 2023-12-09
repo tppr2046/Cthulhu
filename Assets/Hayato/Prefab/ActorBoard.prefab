@@ -2707,7 +2707,7 @@ MonoBehaviour:
         - 
         - FINISHED
         - 
-        byteData: 00000000
+        byteData: 00000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -5788,13 +5788,13 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000000000000000000001000000020000000000000001000000010000000300000004000000010000000200000002000000050000000600000002000000030000000000000000000000010000000200000001000000000000000100000004000000
         paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000
     - name: Off Board
-      description: "\u95DC\u9589\u9762\u677F\n\u203B\u53EA\u6709\u5728\u672A\u9078\u5B9A\u89D2\u8272\u6642\u6703\u95DC\u9589\u9762\u677F"
+      description: "\u6E05\u7A7A\u5EA7\u4F4D\n\u95DC\u9589\u9762\u677F\n\u203B\u53EA\u6709\u5728\u672A\u9078\u5B9A\u89D2\u8272\u6642\u6703\u95DC\u9589\u9762\u677F"
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 1029
         y: 200
-        width: 146.8
+        width: 148.33333
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -5802,13 +5802,15 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.ArraySet
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: b2cf1000
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 6ba59301b2cf1000
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -5828,11 +5830,58 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
+        fsmVarParams:
+        - variableName: 
+          objectType: UnityEngine.GameObject
+          useVariable: 0
+          type: 3
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: INPUT/ActorBoards
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 3
+          objectTypeName: UnityEngine.Object
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences:
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
+          - {fileID: 0}
         fsmEnumParams: []
         fsmFloatParams: []
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: BOARD_ID
+          tooltip: "\u5F9E\u9762\u677F\u4E0A\u500B\u5225\u8A2D\u5B9A 0-3"
+          showInInspector: 1
+          networkSync: 0
+          value: 0
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -5851,21 +5900,27 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0000
+        stringParams:
+        - 
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000011000000110000000100000001000000
+        paramDataType: 29000000100000002700000001000000170000001400000011000000110000000100000001000000
         paramName:
+        - array
+        - index
+        - value
+        - everyFrame
+        - indexOutOfRange
         - gameObject
         - activate
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000001000000
-        paramByteDataSize: 0000000000000000000000000100000001000000
+        paramDataPos: 00000000000000000000000000000000000000000000000000000000010000000100000002000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000100000001000000
     - name: PHASE GATE 2
       description: "INPUT:UI\nphase2: \u5141\u8A31\u9078\u89D2"
       colorIndex: 2
@@ -5961,7 +6016,10 @@ MonoBehaviour:
         fsmIntParams:
         - useVariable: 1
           name: GAME_PHASE
-          tooltip: 
+          tooltip: "0: \u521D\u59CB\u5316: (\u5982\u679C\u6709\u751F\u6210\u89D2\u8272\u5C31\u522A\u9664)
+            1: \u9078\u55AE\u6A21\u5F0F: INPUT:UI \u4E0D\u958B\u653E\u9762\u677F
+            2: \u9078\u89D2\u968E\u6BB5: INPUT:UI \u5141\u8A31\u9078\u89D2 3: \u95DC\u5361\u6A21\u5F0F:
+            INPUT:PLAY \u5141\u8A31\u751F\u6210\u89D2\u8272"
           showInInspector: 0
           networkSync: 0
           value: 0
@@ -6075,7 +6133,10 @@ MonoBehaviour:
         fsmIntParams:
         - useVariable: 1
           name: GAME_PHASE
-          tooltip: 
+          tooltip: "0: \u521D\u59CB\u5316: (\u5982\u679C\u6709\u751F\u6210\u89D2\u8272\u5C31\u522A\u9664)
+            1: \u9078\u55AE\u6A21\u5F0F: INPUT:UI \u4E0D\u958B\u653E\u9762\u677F
+            2: \u9078\u89D2\u968E\u6BB5: INPUT:UI \u5141\u8A31\u9078\u89D2 3: \u95DC\u5361\u6A21\u5F0F:
+            INPUT:PLAY \u5141\u8A31\u751F\u6210\u89D2\u8272"
           showInInspector: 0
           networkSync: 0
           value: 0
@@ -11146,7 +11207,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 0.7
         - useVariable: 0
           name: 
           tooltip: 
