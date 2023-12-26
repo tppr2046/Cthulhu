@@ -522,9 +522,9 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
+          name: attack end
+          isSystemEvent: 0
+          isGlobal: 1
         toState: waiting
         linkStyle: 0
         linkConstraint: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
         stringParams:
         - hit building
         - hit enemy
-        - FINISHED
+        - attack end
         byteData: 01000000010000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -1465,8 +1465,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1004.0078
-        y: 497.1953
+        x: 1012.0156
+        y: 488.1953
         width: 133.33334
         height: 32
       isBreakpoint: 0
@@ -1486,13 +1486,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorTrigger
         - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000002000000
-        actionHashCodes: 9bd6f801603dd905
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000005000000
+        actionHashCodes: 9bd6f801603dd90548c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1521,7 +1523,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
         fsmIntParams:
         - useVariable: 1
           name: attack_type
@@ -1541,21 +1549,25 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - attack start
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000100000001000000001000000
+        paramDataType: 14000000120000001000000010000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - trigger
         - intVariable
         - intValue
         - everyFrame
-        paramDataPos: 0000000000000000000000000100000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000000000000100000000000000000000000000000001000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000001000000
     - name: create laser
       description: 
       colorIndex: 0
@@ -4779,6 +4791,9 @@ MonoBehaviour:
     - name: HOLD END
       isSystemEvent: 0
       isGlobal: 0
+    - name: attack end
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: ANIMATION RESET
