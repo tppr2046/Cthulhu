@@ -761,7 +761,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 0
+    handleTriggerEnter: 1
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!114 &6716778064213182325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +793,8 @@ MonoBehaviour:
   m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetFSMs: []
+  TargetFSMs:
+  - {fileID: 2959506383838645188}
 --- !u!114 &6292268909696529555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,6 +1051,7 @@ GameObject:
   - component: {fileID: 2856421693637101840}
   - component: {fileID: 636642066635110583}
   - component: {fileID: 8530668229311589598}
+  - component: {fileID: 3603500531704412747}
   m_Layer: 0
   m_Name: chuchu
   m_TagString: enemy
@@ -6305,16 +6307,16 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
-    handleCollisionStay: 0
+    handleCollisionStay: 1
     handleParticleCollision: 0
     handleControllerColliderHit: 0
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
+    handleFixedUpdate: 1
+    handleLateUpdate: 1
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
@@ -7021,6 +7023,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1079068393, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 9084004607960195321}
+--- !u!114 &3603500531704412747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084004607960195323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -401773908, guid: de72a6d2da64d114d95e3c5a01cfaec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs:
