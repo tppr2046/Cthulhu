@@ -175,7 +175,7 @@ MonoBehaviour:
         x: 57
         y: 251
         width: 129.33334
-        height: 160
+        height: 176
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -257,6 +257,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: set grab
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: BLOCK
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: BLOCK
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6064,6 +6073,67 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000010000000000000001000000020000000100000000000000000000000100000002000000000000000100000000000000020000000300000002000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000
+    - name: BLOCK
+      description: "\u683C\u64CB\u6642\u7121\u6CD5\u79FB\u52D5"
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 380.08594
+        y: 87.96094
+        width: 107.66667
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: BLOCK END
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: move
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6135,6 +6205,12 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: GRAB END
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: BLOCK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: BLOCK END
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
