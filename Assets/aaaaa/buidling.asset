@@ -1439,26 +1439,17 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 672.8672
-        y: 893.5156
-        width: 132
-        height: 48
+        x: 676.91406
+        y: 935.5625
+        width: 113
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: create diamond
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: create diamond
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: no create
-          isSystemEvent: 0
+          name: FINISHED
+          isSystemEvent: 1
           isGlobal: 0
         toState: destroy self
         linkStyle: 0
@@ -1477,7 +1468,6 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.SendRandomEvent
         customNames:
         - 
         - 
@@ -1489,11 +1479,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 0000010101010101010101
-        actionIsOpen: 0000010101010101010101
-        actionStartIndex: 00000000050000000a0000000e0000001200000019000000270000002b0000002f0000003300000037000000
-        actionHashCodes: 081bbf056ba59301afffe300ba7ea1015552ad05dd23d503ba7ea101ba7ea101ba7ea101ba7ea10172e62e01
+        actionEnabled: 00000101010101010101
+        actionIsOpen: 00000101010101010101
+        actionStartIndex: 00000000050000000a0000000e0000001200000019000000270000002b0000002f00000033000000
+        actionHashCodes: 081bbf056ba59301afffe300ba7ea1015552ad05dd23d503ba7ea101ba7ea101ba7ea101ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1885,24 +1874,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.5
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmIntParams:
         - useVariable: 1
           name: player_id
@@ -1977,18 +1948,14 @@ MonoBehaviour:
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams:
         - 
-        - create diamond
-        - no create
         byteData: 00000000000000000000000000
-        arrayParamSizes: 01000000010000000200000002000000
+        arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
-        - HutongGames.PlayMaker.FsmEvent
-        - HutongGames.PlayMaker.FsmFloat
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000100000000100000029000000100000002700000001000000170000000c000000120000000c000000270000001f000000120000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000013000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f000000010000000c00000017000000170000000c0000000f0000000f0000000f000000
+        paramDataType: 140000001200000012000000100000000100000029000000100000002700000001000000170000000c000000120000000c000000270000001f000000120000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000013000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f000000010000001f000000120000000f00000001000000
         paramName:
         - gameObject
         - fsmName
@@ -2045,15 +2012,8 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        - events
-        - 
-        - 
-        - weights
-        - 
-        - 
-        - delay
-        paramDataPos: 000000000000000001000000000000000000000000000000010000000000000001000000000000000000000002000000010000000100000000000000030000000000000002000000010000000000000001000000020000000300000003000000070000000000000002000000040000000400000000000000000000000100000000000000000000000000000000000000010000000200000008000000010000000500000005000000090000000200000006000000060000000a0000000300000007000000070000000b0000000400000008000000080000000c00000002000000010000000200000003000000090000000a0000000b000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 000000000000000001000000000000000000000000000000010000000000000001000000000000000000000002000000010000000100000000000000030000000000000002000000010000000000000001000000020000000300000003000000070000000000000002000000040000000400000000000000000000000100000000000000000000000000000000000000010000000200000008000000010000000500000005000000090000000200000006000000060000000a0000000300000007000000070000000b0000000400000008000000080000000c000000
+        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000
     - name: check hit damage
       description: 
       colorIndex: 0
@@ -2180,6 +2140,7 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.SetEventData
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.DestroySelf
@@ -2187,10 +2148,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000e00000012000000
-        actionHashCodes: dd23d503ba7ea101230cc800
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000070000001500000019000000
+        actionHashCodes: 5552ad05dd23d503ba7ea101230cc800
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2199,7 +2161,15 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: explode_point
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2283,6 +2253,24 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -2335,6 +2323,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: FX.pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         fsmColorParams:
         - useVariable: 1
           name: 
@@ -2362,13 +2356,20 @@ MonoBehaviour:
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams: []
-        byteData: 0000
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f000000010000000f0000001100000011000000
+        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000013000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f000000010000000f0000001100000011000000
         paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
         - setGameObjectData
         - setIntData
         - setFloatData
@@ -2390,11 +2391,11 @@ MonoBehaviour:
         - delay
         - realTime
         - detachChildren
-        paramDataPos: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000020000000000000000000000010000000100000001000000020000000100000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000000000000000000003000000000000000000000000000000010000000000000000000000000000000000000001000000020000000500000000000000010000000400000006000000050000000100000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000
     - name: send explode to hit building
       description: 
-      colorIndex: 0
+      colorIndex: 4
       position:
         serializedVersion: 2
         x: 1079.0859
@@ -2418,7 +2419,7 @@ MonoBehaviour:
           name: not battle
           isSystemEvent: 0
           isGlobal: 0
-        toState: explode
+        toState: check create diamond
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3228,8 +3229,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 958.6328
-        y: 1096.7422
+        x: 967.65625
+        y: 1180.7656
         width: 154
         height: 32
       isBreakpoint: 0
@@ -3240,7 +3241,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: destroy self
+        toState: explode
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3776,8 +3777,8 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 972.77344
-        y: 992.8906
+        x: 981.7969
+        y: 1076.9141
         width: 126
         height: 32
       isBreakpoint: 0
@@ -4776,8 +4777,8 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1104.0469
-        y: 907.0469
+        x: 1132.0703
+        y: 905.0703
         width: 170.66667
         height: 32
       isBreakpoint: 0
@@ -4891,6 +4892,107 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: check create diamond
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 888.28125
+        y: 958.27344
+        width: 166
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: create diamond
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: create diamond
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: no create
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: explode
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendRandomEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 72e62e01
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - create diamond
+        - no create
+        byteData: 
+        arrayParamSizes: 0200000002000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmEvent
+        - HutongGames.PlayMaker.FsmFloat
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0c00000017000000170000000c0000000f0000000f0000000f000000
+        paramName:
+        - events
+        - 
+        - 
+        - weights
+        - 
+        - 
+        - delay
+        paramDataPos: 00000000000000000100000001000000000000000100000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
     events:
     - name: HIT
       isSystemEvent: 0

@@ -1046,7 +1046,6 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.GetScale
-        - HutongGames.PlayMaker.Actions.GetFsmBool
         customNames:
         - 
         - 
@@ -1063,11 +1062,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 01010101010101010101010101010101
-        actionIsOpen: 01010101010101010101010101010101
-        actionStartIndex: 0000000003000000060000000b0000000c0000001000000014000000180000001c0000002000000024000000280000002c00000030000000370000003e000000
-        actionHashCodes: 9845b3059845b305081bbf055c004505184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b57045552ad055552ad0568fece05
+        actionEnabled: 010101010101010101010101010101
+        actionIsOpen: 010101010101010101010101010101
+        actionStartIndex: 0000000003000000060000000b0000000c0000001000000014000000180000001c0000002000000024000000280000002c0000003000000037000000
+        actionHashCodes: 9845b3059845b305081bbf055c004505184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b5704184b57045552ad055552ad05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1227,14 +1225,6 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: AREA_MANAGER
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -1362,18 +1352,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Untagged
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: FSM
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: battle_type
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1446,13 +1424,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: battle_type
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1471,12 +1443,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000100000000010000000000
+        byteData: 00000001000000000100000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000000f000000010000000f0000000f00000001000000140000001200000012000000100000000100000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f00000007000000010000001400000012000000120000001100000001000000
+        paramDataType: 0f0000000f000000010000000f0000000f00000001000000140000001200000012000000100000000100000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
         - floatVariable
         - floatValue
@@ -1540,13 +1512,8 @@ MonoBehaviour:
         - zScale
         - space
         - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
-        paramDataPos: 00000000010000000000000002000000030000000100000000000000000000000100000000000000020000000000000001000000020000000300000001000000020000000400000005000000020000000300000006000000070000000300000004000000080000000900000004000000050000000a0000000b00000005000000060000000c0000000d00000006000000070000000e0000000f0000000700000008000000100000001100000008000000090000001200000013000000090000000a0000000000000004000000050000000600000003000000070000000b00000001000000070000000800000009000000080000000c0000000c0000001400000015000000000000000d000000
-        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000001000000
+        paramDataPos: 00000000010000000000000002000000030000000100000000000000000000000100000000000000020000000000000001000000020000000300000001000000020000000400000005000000020000000300000006000000070000000300000004000000080000000900000004000000050000000a0000000b00000005000000060000000c0000000d00000006000000070000000e0000000f0000000700000008000000100000001100000008000000090000001200000013000000090000000a0000000000000004000000050000000600000003000000070000000b00000001000000070000000800000009000000080000000c000000
+        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000400000001000000
     - name: Skill 2
       description: 
       colorIndex: 0
@@ -5902,23 +5869,45 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: a4c8bf00
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 68fece05a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: AREA_MANAGER
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: battle_type
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -5926,6 +5915,12 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 1
+          name: battle_type
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: battle_type
           tooltip: 
@@ -5940,19 +5935,24 @@ MonoBehaviour:
         stringParams:
         - is battle
         - not battle
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 11000000170000001700000001000000
+        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
     - name: hit player
       description: 
       colorIndex: 0
