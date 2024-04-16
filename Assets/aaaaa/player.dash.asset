@@ -691,8 +691,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 412.0703
         y: 608.1328
-        width: 122.666664
-        height: 48
+        width: 139.66667
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -715,9 +715,19 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: dash hit player
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: check battle type
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
+        - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.Wait
@@ -726,12 +736,19 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000050000000a0000000f000000
-        actionHashCodes: 5f9135049c5124009c51240048c01101
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 00000000050000000a0000000f00000014000000
+        actionHashCodes: 5f9135049c5124009c5124009c51240048c01101
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: hit_obj
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 1
           name: hit_obj
           tooltip: 
@@ -749,6 +766,14 @@ MonoBehaviour:
           gameObject:
             useVariable: 0
             name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -794,6 +819,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: building
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Player
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -821,13 +852,14 @@ MonoBehaviour:
         stringParams:
         - dash hit
         - dash hit
+        - dash hit player
         - FINISHED
-        byteData: 0000000000010000000100000000
+        byteData: 000000000001000000010000000100000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000110000000100000007000000140000000700000012000000170000001300000014000000070000001200000017000000130000000f0000001700000001000000
+        paramDataType: 14000000120000001100000001000000070000001400000007000000120000001700000013000000140000000700000012000000170000001300000014000000070000001200000017000000130000000f0000001700000001000000
         paramName:
         - gameObject
         - parameter
@@ -844,11 +876,16 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000000000000000000010000000100000005000000010000000000000000000000020000000900000002000000010000000100000000000000020000000d000000
-        paramByteDataSize: 000000000000000000000000010000000400000000000000040000000000000000000000000000000000000004000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000001000000050000000100000000000000000000000200000009000000020000000100000001000000030000000d000000030000000200000002000000000000000300000011000000
+        paramByteDataSize: 0000000000000000000000000100000004000000000000000400000000000000000000000000000000000000040000000000000000000000000000000000000004000000000000000000000000000000000000000000000001000000
     - name: dash hit
       description: 
       colorIndex: 0
@@ -874,14 +911,18 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetEventProperties
+        - HutongGames.PlayMaker.Actions.SetEventIntData
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: afffe300ba7ea101
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000006000000070000000b000000
+        actionHashCodes: afffe300dcbe4804ba7ea101ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -889,6 +930,38 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: hit_obj
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         - target: 1
           excludeSelf:
             useVariable: 0
@@ -942,6 +1015,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: HIT
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: DMG
         fsmObjectParams: []
         fsmVarParams:
         - variableName: 
@@ -1001,7 +1080,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -1009,14 +1100,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 0200000002000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c00000012000000120000000c00000027000000270000001f000000120000000f00000001000000
+        paramDataType: 0c00000012000000120000000c0000002700000027000000100000001f000000120000000f000000010000001f000000120000000f00000001000000
         paramName:
         - keys
         - 
@@ -1024,12 +1115,17 @@ MonoBehaviour:
         - datas
         - 
         - 
+        - intData
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000100000001000000000000000100000000000000020000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 000000000000000001000000010000000000000001000000000000000000000002000000000000000000000001000000030000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: init
       description: 
       colorIndex: 0
@@ -2820,6 +2916,123 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: check battle type
+      description: 
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 648
+        y: 621.85156
+        width: 138
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: is battle
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: dash hit
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: not battle
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: back to move control
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 68fece05a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: AREA_MANAGER
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: battle_type
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: battle_type
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: battle_type
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - is battle
+        - not battle
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: dash step 1 right
       isSystemEvent: 0
@@ -2861,6 +3074,15 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: bounce left
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: dash hit player
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: is battle
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: not battle
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -2910,6 +3132,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: battle_type
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -2942,7 +3170,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
     description: "\u885D\u523A\u653B\u64CA\n\u5411\u5DE6\u6216\u53F3\u63A8\u4E00\u6B21\u653E\u958B\u518D\u63A8\u4E00\u6B21\u540C\u65B9\u5411\u5C31\u9032\u5165\u885D\u523A(\u653E\u958B\u53CA\u518D\u63A8\u7684\u6642\u9593\u5DEE\u70BA0.1\u79D2)\n\u50B3\u9001DASH\u548CDASH
       END\u7D66FSM\u79FB\u52D5\u4E26\u53D6\u6D88\u63A7\u5236\uFF0C\u76F4\u5230\u885D\u523A\u7D50\u675F"
     docUrl: 
