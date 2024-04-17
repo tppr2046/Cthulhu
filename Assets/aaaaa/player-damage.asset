@@ -1606,8 +1606,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 682
-        y: 906
+        x: 680
+        y: 840
         width: 136.66666
         height: 32
       isBreakpoint: 0
@@ -2365,8 +2365,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 981
-        y: 820
+        x: 449
+        y: 815
         width: 114.666664
         height: 32
       isBreakpoint: 0
@@ -2489,7 +2489,7 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: self_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2530,8 +2530,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 941
-        y: 746
+        x: 409
+        y: 741
         width: 160.66667
         height: 48
       isBreakpoint: 0
@@ -3430,8 +3430,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 922
-        y: 658
+        x: 927
+        y: 713
         width: 172
         height: 32
       isBreakpoint: 0
@@ -3450,12 +3450,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: ba7ea101ba7ea101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3495,6 +3497,38 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           fsmComponent: {fileID: 0}
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: BATTLE_UI
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -3504,11 +3538,23 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: ADD SCORE
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: KO
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -3523,19 +3569,23 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
+        paramDataType: 1f000000120000000f000000010000001f000000120000000f00000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000001000000010000000100000001000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000001000000
     - name: add score
       description: 
       colorIndex: 0
