@@ -870,7 +870,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -1438,7 +1438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5503824462218500101}
-  m_LocalRotation: {x: 0, y: 0, z: -0.78360635, w: 0.62125766}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8577959, w: 0.5139905}
   m_LocalPosition: {x: 0.86660004, y: 0.0266, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1700,7 +1700,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5503824462430883904}
-  m_LocalRotation: {x: 0, y: 0, z: 0.12540929, w: 0.9921051}
+  m_LocalRotation: {x: 0, y: 0, z: 0.22699127, w: 0.9738968}
   m_LocalPosition: {x: 1.1187, y: 0.020899998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2099,6 +2099,9 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsMovementRelativeTo: {fileID: 0}
   translator:
     autoReset: 1
     useCustomMixMode: 1
@@ -8196,7 +8199,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -8216,7 +8219,7 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
     handleCollisionStay: 0
     handleParticleCollision: 0
@@ -8224,8 +8227,8 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
-    handleLateUpdate: 0
+    handleFixedUpdate: 1
+    handleLateUpdate: 1
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
@@ -8329,13 +8332,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: move_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8452,11 +8455,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -8570,11 +8573,11 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
-          tooltip: 
+          name: face
+          tooltip: false-left, true-right
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -8643,7 +8646,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: move_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -8651,11 +8654,11 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: false-left, true-right
         showInInspector: 0
         networkSync: 0
-        value: 0
+        value: 1
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -8681,7 +8684,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -8868,7 +8871,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: Poison Cloud
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8908,7 +8911,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8999,7 +9002,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: attack_player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9016,7 +9019,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack_player
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9032,7 +9035,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: Poison Cloud
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -9071,10 +9074,10 @@ MonoBehaviour:
           typeName: UnityEngine.AudioClip
           value: {fileID: 8300000, guid: 70380ecd86a134f43b05c9d83d84777a, type: 3}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: damage
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -9099,7 +9102,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: self_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9117,7 +9120,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: player_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9135,19 +9138,19 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: self_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: player_pos_x
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: pos_distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9159,7 +9162,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: 
+          name: pos_distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9338,19 +9341,19 @@ MonoBehaviour:
           value: 1
         fsmIntParams:
         - useVariable: 1
-          name: 
+          name: hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: hp
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9433,7 +9436,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: enemy_manager
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9522,7 +9525,7 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: die_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9727,7 +9730,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: force
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -9934,7 +9937,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: force
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10012,7 +10015,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: force
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10108,7 +10111,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: potion_created
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -10172,7 +10175,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: enemy_manager
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -10260,10 +10263,10 @@ MonoBehaviour:
           typeName: UnityEngine.Object
           value: {fileID: 0}
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: enemy_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -10319,7 +10322,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: enemy_type
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10340,7 +10343,7 @@ MonoBehaviour:
           value: {x: 0, y: 0}
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: die_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10442,13 +10445,13 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.PoolerSpawn
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 60532301
+        actionHashCodes: 0dc4b101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -10456,21 +10459,9 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 7355072717295182099, guid: 0aeccf252f5f4ec489528467e4ed338e, type: 3}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: potion_created
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10482,7 +10473,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Potion
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -10493,7 +10490,7 @@ MonoBehaviour:
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name: 
+          name: die_pos
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10513,16 +10510,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000130000001c0000001c00000013000000
+        paramDataType: 12000000130000001c0000001c00000013000000
         paramName:
-        - gameObject
-        - parent
+        - NameOfThePool
         - spawnPoint
         - position
         - rotation
         - storeObject
-        paramDataPos: 000000000100000002000000000000000100000003000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000000000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000
     - name: random create
       description: 
       colorIndex: 0
@@ -10661,7 +10657,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: Poison Cloud
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -10753,51 +10749,51 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: force
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: self_pos_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: player_pos_x
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: pos_distance
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       intVariables:
       - useVariable: 1
-        name: 
+        name: damage
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: hp
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: enemy_type
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10806,7 +10802,7 @@ MonoBehaviour:
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
-        name: 
+        name: die_pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10816,25 +10812,25 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: attack_player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: enemy_manager
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: potion_created
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: Poison Cloud
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10857,7 +10853,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -10993,7 +10989,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -11072,7 +11068,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: water_effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -11202,7 +11198,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: water_effect
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -11335,7 +11331,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: water_effect
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -11358,7 +11354,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
