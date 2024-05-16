@@ -477,7 +477,7 @@ MonoBehaviour:
         - ATTACK
         - HOLD
         - BLOCK
-        - SKILL3
+        - SKILL1
         byteData: 0000000000000000000000000000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -2449,7 +2449,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: left_hand_collider
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2457,7 +2457,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: left_hand_collider
+            name: attack_range
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2465,7 +2465,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: left_hand_collider
+            name: Attack_Effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2542,7 +2542,7 @@ MonoBehaviour:
         - hit enemy
         - hit player
         - Fist Attack
-        byteData: 00000000000000000000000000000000000000
+        byteData: 00000000000001000000010000000100000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -3395,19 +3395,19 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.15
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.15
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.15
         - useVariable: 0
           name: 
           tooltip: 
@@ -6553,6 +6553,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: Tear_effect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -6577,7 +6583,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: "HIT\u4E8B\u4EF6\uFF1A\u50B3\u9001\u5230\u5EFA\u7BC9\u548C\u6575\u4EBA\nattack
       range\uFF1A\u76EE\u6A19\u5728\u7BC4\u570D\u5167\u624D\u6703\u64AD\u653E\u6293\u63E1\u548C\u653B\u64CA\u52D5\u4F5C\n\u6293AREA
       MANAGER\u7684battle_type\u6C7A\u5B9A\u662F\u5426\u70BA\u5C0D\u6230\u95DC\u5361"
