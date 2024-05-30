@@ -216,7 +216,7 @@ namespace Missiles
                 Instantiate(explosionPrefab, transform.position, transform.rotation);
             }
 
-            Destroy(gameObject);
+ //           Destroy(gameObject);
         }
         public virtual void UseGravity(bool useGravity)
         {
