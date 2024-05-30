@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Missiles
 {
@@ -77,6 +78,7 @@ namespace Missiles
         public AudioSource missileEngineSound;
         [Tooltip("The current selected target.")]
         public GameObject SelectedTarget = null;    //projectile  target
+        public Vector3 SelectedTargetPosition;
 
         internal Vector3 direction;                 //vector direction for the target
         internal bool addTarget = false;            //true if have target, false if not
@@ -116,6 +118,7 @@ namespace Missiles
                     }
                 }
                 SelectedTarget = nearestTarget;                   //catch the nearest enemy
+                SelectedTargetPosition = SelectedTarget.transform.position;
             }
         }
         ////target a random enemy
@@ -142,6 +145,21 @@ namespace Missiles
             }
             transform.Translate(Vector3.forward * currentSpeed * Time.fixedDeltaTime);
         }
+
+
+
+        public virtual void PersuitFixPoint()
+        {
+            if (SelectedTarget != null)
+            {
+                direction = SelectedTargetPosition - transform.position;
+                direction.Normalize();
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
+            }
+            transform.Translate(Vector3.forward * currentSpeed * Time.fixedDeltaTime);
+        }
+
+
         //follow the target in ZX plane if exist,if not go ahead.
         public virtual void PersuitTargetZX()
         {

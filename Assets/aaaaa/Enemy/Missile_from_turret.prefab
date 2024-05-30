@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4822638093497742419}
   - component: {fileID: 3657546113905418449}
   - component: {fileID: 2739525649475175678}
-  - component: {fileID: 3157519978568364274}
+  - component: {fileID: 6700611618446044583}
   - component: {fileID: 7685812091489924450}
   m_Layer: 0
   m_Name: Missile_from_turret
@@ -823,7 +823,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: shoot
       isSystemEvent: 0
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 4852201283867009127}
---- !u!114 &3157519978568364274
+--- !u!114 &6700611618446044583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4852201283867009125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 509ea386170e88545be503a60a90a815, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d1280178dfec764ca635c9dc85d98ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagTargetName: Player
@@ -921,10 +921,10 @@ MonoBehaviour:
   damageOnTrigger: 0
   damageOnCollision: 0
   useGravity: 0
-  distanceToExplode: 0
-  typeOfTarget: 0
+  distanceToExplode: 10
+  typeOfTarget: 1
   minDistance: 0
-  maxDistance: 100
+  maxDistance: 10
   lifeTime: 2
   timeToSetTarget: 2
   startSpeed: 0
@@ -932,10 +932,11 @@ MonoBehaviour:
   accelerationSpeed: 1
   turnSpeed: 10
   currentSpeed: 0
-  missileStability: 0.02
+  missileStability: 0
   explosionPrefab: {fileID: 0}
   missileEngineSound: {fileID: 0}
   SelectedTarget: {fileID: 0}
+  SelectedTargetTransform: {fileID: 0}
   timeInactive: 0
 --- !u!54 &7685812091489924450
 Rigidbody:
