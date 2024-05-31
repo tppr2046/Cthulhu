@@ -118,7 +118,10 @@ namespace Missiles
                     }
                 }
                 SelectedTarget = nearestTarget;                   //catch the nearest enemy
-                SelectedTargetPosition = SelectedTarget.transform.position;
+                if (SelectedTarget != null)
+                {
+                    SelectedTargetPosition = SelectedTarget.transform.position;
+                }
             }
         }
         ////target a random enemy
