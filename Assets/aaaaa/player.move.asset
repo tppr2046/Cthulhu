@@ -755,10 +755,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 354
-        y: 207
+        x: 361.21875
+        y: 195.55469
         width: 137.66667
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -777,6 +777,15 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: back to self control
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: DEAMON DASH
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: wait deamon dash
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6229,6 +6238,79 @@ MonoBehaviour:
         - everyFrameOption
         paramDataPos: 00000000000000000100000000000000000000000100000000000000010000000000000001000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000004000000
+    - name: wait deamon dash
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 654.64844
+        y: 200.92188
+        width: 141.33334
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: move
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6306,6 +6388,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: BLOCK END
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DEAMON DASH
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:

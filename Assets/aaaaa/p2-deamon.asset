@@ -27,7 +27,7 @@ MonoBehaviour:
         x: 506.54688
         y: 266.97656
         width: 100
-        height: 64
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -37,15 +37,6 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: attack
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: DASH
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: dash start
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -62,14 +53,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmFloat
+        - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 87604502a4c8bf00
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000500000008000000
+        actionHashCodes: 8760450248c01101a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -111,6 +104,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
@@ -125,26 +124,30 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - ATTACK
         - time up
         - 
-        byteData: 0100
+        byteData: 010000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000120000000f0000000100000011000000170000001700000001000000
+        paramDataType: 1400000012000000120000000f000000010000000f000000170000000100000011000000170000001700000001000000
         paramName:
         - gameObject
         - fsmName
         - variableName
         - storeValue
         - everyFrame
+        - time
+        - finishEvent
+        - realTime
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000000000000010000000200000002000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000100000000000000000000000000000001000000
     - name: dash
       description: 
       colorIndex: 0
@@ -178,7 +181,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.AddForce
+        - HutongGames.PlayMaker.Actions.SetVelocity
         - HutongGames.PlayMaker.Actions.CollisionEvent
         - HutongGames.PlayMaker.Actions.Wait
         customNames:
@@ -187,8 +190,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 00000000090000000f000000
-        actionHashCodes: febdb401beb3310048c01101
+        actionStartIndex: 00000000070000000d000000
+        actionHashCodes: 5552ad05beb3310048c01101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -272,33 +275,25 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
         - hit building
         - FINISHED
-        byteData: 0100000001000000000000000000
+        byteData: 00000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000001c0000000f0000000f0000000f00000007000000070000000100000014000000070000001200000017000000130000000f0000000f0000001700000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000014000000070000001200000017000000130000000f0000000f0000001700000001000000
         paramName:
         - gameObject
-        - atPosition
         - vector
         - x
         - y
         - z
         - space
-        - forceMode
         - everyFrame
         - gameObject
         - collision
@@ -309,8 +304,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000100000000000000010000000200000000000000040000000800000001000000090000000000000000000000000000000300000004000000010000000d000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000400000001000000000000000400000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000001000000020000000000000004000000010000000500000000000000000000000000000003000000040000000100000009000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000400000000000000000000000000000000000000000000000000000001000000
     - name: send event to building
       description: 
       colorIndex: 0
@@ -1038,8 +1033,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 446
-        y: 705.52344
+        x: 451.15625
+        y: 763.2578
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1949,9 +1944,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 529.5469
+        x: 530.5781
         y: 376.01562
-        width: 104
+        width: 100
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2310,8 +2305,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 428
-        y: 769
+        x: 433.15625
+        y: 826.7344
         width: 100
         height: 16
       isBreakpoint: 0
@@ -3199,6 +3194,15 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: dead
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: DASH
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: dash start
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
