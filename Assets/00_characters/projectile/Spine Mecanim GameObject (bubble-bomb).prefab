@@ -468,7 +468,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -500,10 +500,10 @@ MonoBehaviour:
           value: bubble_type
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -524,10 +524,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: player
+          objectType: UnityEngine.GameObject
+          useVariable: 1
+          type: 3
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -548,10 +548,10 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: bubble_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -624,8 +624,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 614
-        y: 419.66406
+        x: 612.71094
+        y: 481.67188
         width: 100
         height: 32
       isBreakpoint: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: building_hit
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: player
           objectType: UnityEngine.GameObject
           useVariable: 1
           type: 3
@@ -835,7 +835,7 @@ MonoBehaviour:
           name: Explode
           isSystemEvent: 0
           isGlobal: 1
-        toState: get hit building
+        toState: explode effect
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -865,19 +865,19 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: building_hit
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: enemy_hit
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: player_hit
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -886,7 +886,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -894,7 +894,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -902,7 +902,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: attack collider
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -977,8 +977,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 716
-        y: 803.3281
+        x: 710.71875
+        y: 841.34375
         width: 104.666664
         height: 16
       isBreakpoint: 0
@@ -1015,7 +1015,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: player
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1052,10 +1052,10 @@ MonoBehaviour:
           value: BACK TO POOL
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: bubble_type
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -1112,447 +1112,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
-    - name: explode effect
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 667.66406
-        y: 724.66406
-        width: 120
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: destroy self
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.GetPosition
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.DOTweenTransformShakePosition
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000040000000b000000190000001d000000
-        actionHashCodes: ba7ea1015552ad05dd23d503ba7ea101817b6302
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: VitualCam1
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams:
-        - curve:
-            serializedVersion: 2
-            m_Curve: []
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 4
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 1
-          gameObject:
-            ownerOption: 0
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: '[VFX]'
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: FSM
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: RUMBLE
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: FX_EXPLODE
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 10
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.5
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 30
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 100, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
-        stringParams:
-        - 
-        - FINISHED
-        - Set an ID for the tween, which can then be used as a filter with DOTween's
-          Control Methods
-        - Setting loops to -1 will make the tween loop infinitely.
-        byteData: 00000000000000000000000000000000010000000000000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000013000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f00000001000000140000001c000000100000000f000000110000000f000000110000000f000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - gameObject
-        - vector
-        - x
-        - y
-        - z
-        - space
-        - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - everyFrame
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - gameObject
-        - strength
-        - vibrato
-        - randomness
-        - snapping
-        - duration
-        - setSpeedBased
-        - startDelay
-        - startEvent
-        - finishEvent
-        - finishImmediately
-        - tweenIdDescription
-        - tweenIdType
-        - stringAsId
-        - tagAsId
-        - selectedEase
-        - easeType
-        - animationCurve
-        - loopsDescriptionArea
-        - loops
-        - loopType
-        - autoKillOnCompletion
-        - recyclable
-        - updateType
-        - isIndependentUpdate
-        - debugThis
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000020000000300000001000000050000000000000000000000040000000100000000000000000000000100000000000000000000000000000000000000010000000200000006000000010000000200000005000000070000000100000002000000010000000600000001000000070000000200000008000000000000000100000003000000020000000800000003000000040000000c00000010000000000000000300000002000000140000000400000005000000180000000600000007000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
     - name: init
       description: 
       colorIndex: 0
@@ -1589,7 +1148,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: attack collider
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1640,19 +1199,19 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.2
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.2
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.1
+          value: 0.2
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -1692,8 +1251,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 600
-        y: 521
+        x: 598.71094
+        y: 583.0078
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1739,7 +1298,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: enemy_hit
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -1806,7 +1365,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: player
           objectType: UnityEngine.GameObject
           useVariable: 1
           type: 3
@@ -1911,9 +1470,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: building_hit
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -1937,12 +1496,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: building_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -2013,9 +1572,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: enemy_hit
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -2039,12 +1598,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: enemy_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -2077,8 +1636,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 405
-        y: 422
+        x: 403.71094
+        y: 484.0078
         width: 154
         height: 48
       isBreakpoint: 0
@@ -2124,9 +1683,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: building_hit
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -2150,12 +1709,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: building_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -2220,8 +1779,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 381
-        y: 522
+        x: 379.71094
+        y: 584.0078
         width: 154
         height: 48
       isBreakpoint: 0
@@ -2293,12 +1852,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: enemy_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -2363,8 +1922,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 433
-        y: 708
+        x: 431.71094
+        y: 770.0078
         width: 115.333336
         height: 32
       isBreakpoint: 0
@@ -2375,7 +1934,7 @@ MonoBehaviour:
           name: DestroySelf
           isSystemEvent: 0
           isGlobal: 1
-        toState: explode effect
+        toState: destroy self
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2469,7 +2028,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: attack collider
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -2610,13 +2169,13 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: battle_type
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: battle_type
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2690,9 +2249,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: player_hit
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -2716,12 +2275,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: player_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -2754,8 +2313,8 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 386
-        y: 604
+        x: 384.71094
+        y: 666.0078
         width: 148.66666
         height: 48
       isBreakpoint: 0
@@ -2829,13 +2388,13 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: battle_type
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: 
+          name: battle_type
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2871,8 +2430,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 620
-        y: 597
+        x: 618.71094
+        y: 659.0078
         width: 154
         height: 48
       isBreakpoint: 0
@@ -2918,9 +2477,9 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
+        - variableName: player_hit
           objectType: UnityEngine.GameObject
-          useVariable: 0
+          useVariable: 1
           type: 3
           floatValue: 0
           intValue: 0
@@ -2944,12 +2503,12 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: 
+          name: player_hit_array
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          type: -1
-          objectTypeName: 
+          type: 3
+          objectTypeName: UnityEngine.Object
           floatValues: []
           intValues: 
           boolValues: 
@@ -3014,8 +2573,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 900
-        y: 591
+        x: 898.71094
+        y: 653.0078
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3047,7 +2606,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3056,7 +2615,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: player_hit
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3077,7 +2636,7 @@ MonoBehaviour:
             ownerOption: 1
             gameObject:
               useVariable: 1
-              name: 
+              name: player_hit
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -3205,7 +2764,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3214,7 +2773,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: player_hit
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3267,8 +2826,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 882
-        y: 523.9844
+        x: 880.71094
+        y: 585.9922
         width: 120.666664
         height: 48
       isBreakpoint: 0
@@ -3305,7 +2864,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: 
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3314,7 +2873,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: 
+            name: player_hit
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3362,6 +2921,310 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000010000000000000000000000
         paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: explode effect
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 439.6875
+        y: 421.2578
+        width: 120
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: get hit building
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.SetEventData
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000040000000b00000019000000
+        actionHashCodes: ba7ea1015552ad05dd23d503ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 4
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: '[VFX]'
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: FSM
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: RUMBLE
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FX_BOMB
+        fsmObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.Object
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
+        fsmVector3Params:
+        - useVariable: 1
+          name: self.pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: self.pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        fsmRectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        fsmQuaternionParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        stringParams: []
+        byteData: 0000000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000013000000100000000f0000001200000011000000250000001c0000001e0000002300000019000000200000002100000018000000010000001f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - setGameObjectData
+        - setIntData
+        - setFloatData
+        - setStringData
+        - setBoolData
+        - setVector2Data
+        - setVector3Data
+        - setRectData
+        - setQuaternionData
+        - setColorData
+        - setMaterialData
+        - setTextureData
+        - setObjectData
+        - everyFrame
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000000000000000000000100000002000000030000000100000005000000000000000000000004000000010000000000000000000000010000000000000000000000000000000000000001000000020000000600000001000000020000000500000007000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: hit building
       isSystemEvent: 0
@@ -3410,20 +3273,20 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: 
+        name: bubble_type
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: battle_type
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3432,7 +3295,7 @@ MonoBehaviour:
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
-        name: 
+        name: self.pos
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3442,31 +3305,31 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: 
+        name: attack collider
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: building_hit
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: player
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: enemy_hit
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: 
+        name: player_hit
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3476,12 +3339,12 @@ MonoBehaviour:
       textureVariables: []
       arrayVariables:
       - useVariable: 1
-        name: 
+        name: building_hit_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -3489,12 +3352,12 @@ MonoBehaviour:
         vector4Values: []
         objectReferences: []
       - useVariable: 1
-        name: 
+        name: enemy_hit_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -3502,12 +3365,12 @@ MonoBehaviour:
         vector4Values: []
         objectReferences: []
       - useVariable: 1
-        name: 
+        name: player_hit_array
         tooltip: 
         showInInspector: 0
         networkSync: 0
         type: 3
-        objectTypeName: UnityEngine.GameObject
+        objectTypeName: UnityEngine.Object
         floatValues: []
         intValues: 
         boolValues: 
@@ -3638,7 +3501,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3723,7 +3586,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3733,7 +3596,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.2
+          value: 5
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -3814,10 +3677,10 @@ MonoBehaviour:
           value: face
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: 
-          objectType: 
-          useVariable: 0
-          type: -1
+        - variableName: face
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
           floatValue: 0
           intValue: 0
           boolValue: 0
@@ -3844,7 +3707,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: 
+          name: face
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3923,7 +3786,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4001,7 +3864,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: distance
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4163,13 +4026,13 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: 
+        name: distance
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: 
+        name: time
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -4177,7 +4040,7 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: 
+        name: face
         tooltip: 
         showInInspector: 0
         networkSync: 0

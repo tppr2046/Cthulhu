@@ -603,9 +603,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040980701556363254}
-  m_LocalRotation: {x: 0, y: 0, z: -0.035985757, w: 0.99935234}
-  m_LocalPosition: {x: 2.2636495, y: 0.26628667, z: 0}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17622578, w: 0.9843498}
+  m_LocalPosition: {x: 2.2637, y: 0.2663, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345386464322075695}
   m_RootOrder: 2
@@ -655,9 +655,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181127449077743690}
-  m_LocalRotation: {x: 0, y: 0, z: -0.18863763, w: 0.9820468}
-  m_LocalPosition: {x: 7.0702558, y: -0.4280326, z: 0}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.20697264, w: 0.97834677}
+  m_LocalPosition: {x: 7.0702, y: -0.4279, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7598078849498870562}
   m_RootOrder: 7
@@ -1194,6 +1194,9 @@ GameObject:
   - component: {fileID: 1008701737840821553}
   - component: {fileID: 2437727539137740818}
   - component: {fileID: 2493888483149554299}
+  - component: {fileID: 8885397699161778405}
+  - component: {fileID: 7428281097228775477}
+  - component: {fileID: 2156876604385283008}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss06_1)
   m_TagString: enemy
@@ -1425,6 +1428,9 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsMovementRelativeTo: {fileID: 0}
   translator:
     autoReset: 1
     useCustomMixMode: 1
@@ -13989,7 +13995,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: ATTACK CHAIN
       isSystemEvent: 0
@@ -14024,15 +14030,15 @@ MonoBehaviour:
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
-    handleCollisionEnter: 0
+    handleCollisionEnter: 1
     handleCollisionExit: 0
-    handleCollisionStay: 0
+    handleCollisionStay: 1
     handleParticleCollision: 0
     handleControllerColliderHit: 0
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -16302,7 +16308,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -16451,6 +16457,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8885397699161778405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895359535729579308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 845409985, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5066799096107529873}
+--- !u!114 &7428281097228775477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895359535729579308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -401773908, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5066799096107529873}
+--- !u!114 &2156876604385283008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895359535729579308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -664232604, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5066799096107529873}
 --- !u!1 &1924975283574931674
 GameObject:
   m_ObjectHideFlags: 0
@@ -17932,6 +17980,9 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  physicsPositionInheritanceFactor: {x: 1, y: 1}
+  physicsRotationInheritanceFactor: 1
+  physicsMovementRelativeTo: {fileID: 0}
   translator:
     autoReset: 1
     useCustomMixMode: 1
@@ -21237,9 +21288,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4146293732809802194}
-  m_LocalRotation: {x: 0, y: 0, z: 0.07368596, w: 0.9972815}
-  m_LocalPosition: {x: 3.7946308, y: 0.33376017, z: 0}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17622578, w: 0.9843498}
+  m_LocalPosition: {x: 3.7947, y: 0.33380002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345386464322075695}
   m_RootOrder: 4
@@ -22794,6 +22845,7 @@ GameObject:
   - component: {fileID: 4367895158045787160}
   - component: {fileID: 2102289460453330098}
   - component: {fileID: 7646043379091537326}
+  - component: {fileID: 4545225120188685379}
   m_Layer: 0
   m_Name: far attack area
   m_TagString: Untagged
@@ -22877,6 +22929,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4545225120188685379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628335117044184049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -104615663, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
 --- !u!1 &5720248879203896548
 GameObject:
   m_ObjectHideFlags: 0
@@ -24374,6 +24439,7 @@ GameObject:
   - component: {fileID: 7943151492722591225}
   - component: {fileID: 5133101617525751945}
   - component: {fileID: 4567482381713660126}
+  - component: {fileID: 5119409686038715248}
   m_Layer: 0
   m_Name: arrow_collider
   m_TagString: Untagged
@@ -25147,7 +25213,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -25164,7 +25230,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 0
+    handleTriggerEnter: 1
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -25183,7 +25249,21 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
+--- !u!114 &5119409686038715248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222295026784073007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 4567482381713660126}
 --- !u!1 &7326277241823438333
 GameObject:
   m_ObjectHideFlags: 0
@@ -25458,6 +25538,7 @@ GameObject:
   - component: {fileID: 1803293084679393880}
   - component: {fileID: 7288837675687845624}
   - component: {fileID: 5437493098265958790}
+  - component: {fileID: 5821512424201484358}
   m_Layer: 0
   m_Name: stump attack area
   m_TagString: Untagged
@@ -26327,7 +26408,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -26344,7 +26425,7 @@ MonoBehaviour:
     handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
     handleCollisionStay2D: 0
-    handleTriggerEnter: 0
+    handleTriggerEnter: 1
     handleTriggerExit: 0
     handleTriggerStay: 0
     handleCollisionEnter: 0
@@ -26363,7 +26444,21 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
+--- !u!114 &5821512424201484358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495765614826027382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 5437493098265958790}
 --- !u!1 &7534593638230613209
 GameObject:
   m_ObjectHideFlags: 0
@@ -27065,9 +27160,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290328821691398226}
-  m_LocalRotation: {x: 0, y: 0, z: -0.10785581, w: 0.99416655}
-  m_LocalPosition: {x: 5.3896327, y: 0.08509067, z: 0}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.20697264, w: 0.97834677}
+  m_LocalPosition: {x: 5.3896003, y: 0.085200004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7598078849498870562}
   m_RootOrder: 5
@@ -27486,8 +27581,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8843506521537405585}
-  m_LocalRotation: {x: 0, y: 0, z: -0.03807495, w: 0.9992749}
-  m_LocalPosition: {x: 2.5348816, y: -0.23071213, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.041701276, w: 0.99913013}
+  m_LocalPosition: {x: 2.5349, y: -0.23069999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5897029018472657975}
