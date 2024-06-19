@@ -1891,7 +1891,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 839.5078
-        y: 418.5078
+        y: 450.5078
         width: 143.33334
         height: 48
       isBreakpoint: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 625.5078
-        y: 437.5078
+        y: 469.5078
         width: 115.333336
         height: 32
       isBreakpoint: 0
@@ -2121,7 +2121,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 815.5078
-        y: 517.5078
+        y: 549.5078
         width: 100
         height: 16
       isBreakpoint: 0
@@ -2250,7 +2250,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 109.984375
-        y: 240
+        y: 272
         width: 143.33334
         height: 48
       isBreakpoint: 0
@@ -2349,7 +2349,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 674
-        y: 226
+        y: 258
         width: 100
         height: 48
       isBreakpoint: 0
@@ -2552,8 +2552,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 895.6953
-        y: 206.32812
+        x: 889.6953
+        y: 242.32812
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3042,7 +3042,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 307.98438
-        y: 237
+        y: 269
         width: 116
         height: 32
       isBreakpoint: 0
@@ -3144,7 +3144,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 63.984375
-        y: 348
+        y: 380
         width: 133.33334
         height: 16
       isBreakpoint: 0
@@ -3364,7 +3364,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 124.984375
-        y: 157
+        y: 189
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3477,7 +3477,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 683
-        y: 136.99219
+        y: 168.99219
         width: 103.333336
         height: 48
       isBreakpoint: 0
@@ -3798,9 +3798,9 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 897
-        y: 272
+        y: 304
         width: 143.33334
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -3809,7 +3809,16 @@ MonoBehaviour:
           name: continue get piece
           isSystemEvent: 0
           isGlobal: 0
-        toState: find piece
+        toState: get pieces
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: HIT OK
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: wait hit
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -3858,9 +3867,9 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - 
+        - HIT OK
         - continue get piece
-        - 
+        - HIT OK
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
@@ -3882,7 +3891,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 655
-        y: 339
+        y: 371
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3993,27 +4002,38 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 371
-        y: 151
+        x: 454
+        y: 110
         width: 124.666664
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: HP BAR READY
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: wait hit
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetEventProperties
         - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000c00000010000000
-        actionHashCodes: afffe300ba7ea101b2cf1000
+        - 
+        actionEnabled: 01010100
+        actionIsOpen: 01010001
+        actionStartIndex: 000000000c0000001000000015000000
+        actionHashCodes: afffe300ba7ea101b2cf100048c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -4231,6 +4251,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -4250,15 +4276,16 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 000000
+        stringParams:
+        - BOSS BAR READY
+        byteData: 00000000
         arrayParamSizes: 0500000005000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c00000012000000120000001200000012000000120000000c00000027000000270000002700000027000000270000001f000000120000000f000000010000001400000011000000110000000100000001000000
+        paramDataType: 0c00000012000000120000001200000012000000120000000c00000027000000270000002700000027000000270000001f000000120000000f0000000100000014000000110000001100000001000000010000000f0000001700000001000000
         paramName:
         - keys
         - 
@@ -4281,15 +4308,18 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 000000000000000001000000020000000300000004000000010000000000000001000000020000000300000004000000000000000500000000000000000000000000000000000000010000000100000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000001000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000001000000020000000300000004000000010000000000000001000000020000000300000004000000000000000500000000000000000000000000000000000000010000000100000002000000010000000000000003000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000001000000000000000000000001000000
     - name: call back
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 912.02344
-        y: 103
+        y: 135
         width: 102
         height: 16
       isBreakpoint: 0
@@ -4408,9 +4438,73 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000020000000000000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
+    - name: wait hit
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 676
+        y: 89
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: HIT
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: get damage
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
+      isGlobal: 0
+    - name: BOSS SHOW
+      isSystemEvent: 0
       isGlobal: 0
     - name: continue get piece
       isSystemEvent: 0
@@ -4421,28 +4515,22 @@ MonoBehaviour:
     - name: HIT
       isSystemEvent: 0
       isGlobal: 0
-    - name: kill self
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: BOSS SHOW
+    - name: HP BAR READY
       isSystemEvent: 0
       isGlobal: 0
     - name: IS HOLDING
       isSystemEvent: 0
       isGlobal: 0
+    - name: kill self
+      isSystemEvent: 0
+      isGlobal: 0
     - name: POISON
       isSystemEvent: 0
       isGlobal: 0
+    - name: HIT OK
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
-    - fsmEvent:
-        name: HIT
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: get damage
-      linkStyle: 0
-      linkConstraint: 0
-      linkTarget: 0
-      colorIndex: 0
     - fsmEvent:
         name: BOSS SHOW
         isSystemEvent: 0
@@ -4616,7 +4704,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents:
     - name: HIT
       isSystemEvent: 0
@@ -4647,7 +4735,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
