@@ -52,26 +52,24 @@ namespace Spine {
 		public IkConstraint (IkConstraintData data, Skeleton skeleton) {
 			if (data == null) throw new ArgumentNullException("data", "data cannot be null.");
 			this.data = data;
-			mix = data.mix;
-			softness = data.softness;
-			bendDirection = data.bendDirection;
-			compress = data.compress;
-			stretch = data.stretch;
 
 			bones = new ExposedList<Bone>(data.bones.Count);
 			foreach (BoneData boneData in data.bones)
 				bones.Add(skeleton.bones.Items[boneData.index]);
 
 			target = skeleton.bones.Items[data.target.index];
+
+			mix = data.mix;
+			softness = data.softness;
+			bendDirection = data.bendDirection;
+			compress = data.compress;
+			stretch = data.stretch;
 		}
 
 		/// <summary>Copy constructor.</summary>
-		public IkConstraint (IkConstraint constraint) {
-			if (constraint == null) throw new ArgumentNullException("constraint", "constraint cannot be null.");
-			data = constraint.data;
-			bones = new ExposedList<Bone>(constraint.Bones.Count);
-			bones.AddRange(constraint.Bones);
-			target = constraint.target;
+		public IkConstraint (IkConstraint constraint, Skeleton skeleton)
+			: this(constraint.data, skeleton) {
+
 			mix = constraint.mix;
 			softness = constraint.softness;
 			bendDirection = constraint.bendDirection;
@@ -330,8 +328,9 @@ namespace Spine {
 					q = -(c1 + q) * 0.5f;
 					float r0 = q / c2, r1 = c / q;
 					float r = Math.Abs(r0) < Math.Abs(r1) ? r0 : r1;
-					if (r * r <= dd) {
-						y = (float)Math.Sqrt(dd - r * r) * bendDir;
+					r0 = dd - r * r;
+					if (r0 >= 0) {
+						y = (float)Math.Sqrt(r0) * bendDir;
 						a1 = ta - (float)Math.Atan2(y, r);
 						a2 = (float)Math.Atan2(y / psy, (r - l1) / psx);
 						goto break_outer; // break outer;
