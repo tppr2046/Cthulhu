@@ -13296,7 +13296,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -15292,7 +15292,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -19374,6 +19374,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.PhysicsIgnoreCollision
         - HutongGames.PlayMaker.Actions.SetTag
         - HutongGames.PlayMaker.Actions.SetAnimatorBool
+        - HutongGames.PlayMaker.Actions.SendEventByName
         - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.PlayerInputGetVector2
         - HutongGames.PlayMaker.Actions.FloatCompare
@@ -19386,10 +19387,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101010101
-        actionIsOpen: 01010101010101
-        actionStartIndex: 0000000003000000050000000a0000000d000000130000001a000000
-        actionHashCodes: aa34a2049bd6f8015f91350448c01101401039051bcdca041bcdca04
+        - 
+        actionEnabled: 0101010101010101
+        actionIsOpen: 0101010101010101
+        actionStartIndex: 0000000003000000050000000a0000000e00000011000000170000001e000000
+        actionHashCodes: aa34a2049bd6f8015f913504ba7ea10148c01101401039051bcdca041bcdca04
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -19434,7 +19436,39 @@ MonoBehaviour:
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: WATER-SPLASH
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -19450,6 +19484,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: onGround
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: LEAVE WATER
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -19462,6 +19502,12 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -19549,12 +19595,12 @@ MonoBehaviour:
         - holded push
         - holded push
         - 
-        byteData: 000000000000010000000101
+        byteData: 00000000000000010000000101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001300000011000000140000001200000014000000120000001100000001000000070000000f0000001700000001000000250000000f0000000f0000001400000018000000070000000f0000000f0000000f000000170000001700000017000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramDataType: 140000001300000011000000140000001200000014000000120000001100000001000000070000001f000000120000000f000000010000000f0000001700000001000000250000000f0000000f0000001400000018000000070000000f0000000f0000000f000000170000001700000017000000010000000f0000000f0000000f00000017000000170000001700000001000000
         paramName:
         - collider1
         - collider2
@@ -19566,6 +19612,10 @@ MonoBehaviour:
         - Value
         - everyFrame
         - everyFrameOption
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
         - time
         - finishEvent
         - realTime
@@ -19589,8 +19639,8 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000000000002000000010000000100000000000000010000000000000000000000050000000000000001000000020000000300000000000000060000000300000004000000050000000100000002000000030000000a0000000600000007000000080000000400000005000000060000000b000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000040000000000000000000000010000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000001000000000000000200000001000000010000000000000001000000000000000200000000000000050000000100000000000000060000000000000002000000030000000300000000000000070000000400000005000000060000000100000002000000030000000b0000000700000008000000090000000400000005000000060000000c000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000004000000000000000000000000000000010000000000000000000000010000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
     - name: throw out
       description: "\u78B0\u5230\u4EFB\u4E00\u525B\u9AD4\u5C31\u7206\u70B8"
       colorIndex: 0
@@ -23204,7 +23254,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -25745,7 +25795,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -26214,7 +26264,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -30409,7 +30459,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 3
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -32183,7 +32233,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -36775,7 +36825,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -38345,7 +38395,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -39280,7 +39330,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -39751,7 +39801,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -42387,13 +42437,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.SetAnimatorBool
+        - HutongGames.PlayMaker.Actions.ResetAnimatorTrigger
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 081bbf05081bbf05
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000a0000000f000000
+        actionHashCodes: 081bbf05081bbf055f9135049bd6f801
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -42409,6 +42463,22 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: object_holding
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -42444,6 +42514,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: hp
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: holding
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: throw
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -42462,19 +42544,25 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000010000000010000001400000012000000120000001000000001000000
+        paramDataType: 1400000012000000120000001000000001000000140000001200000012000000100000000100000014000000120000001100000001000000070000001400000012000000
         paramName:
         - gameObject
         - fsmName
@@ -42486,8 +42574,15 @@ MonoBehaviour:
         - variableName
         - storeValue
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000100000002000000030000000100000001000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000
+        - gameObject
+        - parameter
+        - Value
+        - everyFrame
+        - everyFrameOption
+        - gameObject
+        - trigger
+        paramDataPos: 0000000000000000010000000000000000000000010000000200000003000000010000000100000002000000040000000000000002000000030000000300000005000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000001000000040000000000000000000000
     - name: swing
       description: "\u63EE\u52D5\u7269\u9AD4"
       colorIndex: 0
@@ -43196,7 +43291,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -46502,7 +46597,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1

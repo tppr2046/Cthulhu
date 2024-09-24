@@ -3944,7 +3944,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -3980,7 +3980,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!82 &7755606149599641789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8933,7 +8933,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: HIDE COUNT DOWN
       isSystemEvent: 0
@@ -9728,7 +9728,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -18948,7 +18948,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55.976562
-        y: 266.9922
+        y: 330.9922
         width: 100
         height: 16
       isBreakpoint: 0
@@ -19009,7 +19009,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 461
-        y: 227.16406
+        y: 291.16406
         width: 138
         height: 48
       isBreakpoint: 0
@@ -19102,7 +19102,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1092.125
-        y: 339.1797
+        y: 403.1797
         width: 124.666664
         height: 16
       isBreakpoint: 0
@@ -19181,7 +19181,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 640.75
-        y: 360.40625
+        y: 424.40625
         width: 119.333336
         height: 32
       isBreakpoint: 0
@@ -19458,7 +19458,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 317.70312
-        y: 293.48438
+        y: 357.48438
         width: 100
         height: 32
       isBreakpoint: 0
@@ -19550,7 +19550,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 635
-        y: 267
+        y: 331
         width: 100
         height: 32
       isBreakpoint: 0
@@ -19642,7 +19642,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 306
-        y: 353
+        y: 417
         width: 202.66667
         height: 32
       isBreakpoint: 0
@@ -20064,67 +20064,178 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1096
-        y: 242
+        x: 1089
+        y: 105.953125
         width: 138.66666
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: check hp 0
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
-        - HutongGames.PlayMaker.Actions.SetEventProperties
-        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.MathExpression
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetProperty
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000400000008000000
-        actionHashCodes: afffe300afffe300ba7ea101
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000004000000080000000b000000
+        actionHashCodes: afffe3009f6463029845b3055ac85204
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 1
-          excludeSelf:
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.Object
+            value: {fileID: 8510035362931897449}
+          TargetTypeName: UnityEngine.UI.Slider
+          PropertyName: value
+          BoolParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 8510035362931897462}
-          fsmName:
+          FloatParameter:
+            useVariable: 1
+            name: bar_length_temp
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 
-          sendToChildren:
+          Vector2Parameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Single
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
@@ -20138,39 +20249,9 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: hp_now
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UPDATE BOSS HP
+          value: bossHPNow / bossHPMax
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: bossHPNow
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
         - variableName: bossHPNow
           objectType: UnityEngine.Object
           useVariable: 1
@@ -20198,13 +20279,31 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
-        - useVariable: 0
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bar_length_temp
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -20212,38 +20311,37 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00
-        arrayParamSizes: 01000000010000000100000001000000
+        byteData: 000000
+        arrayParamSizes: 0100000001000000
         arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000000c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 0c000000120000000c00000027000000120000000f00000010000000010000000f0000000f000000010000002400000001000000
         paramName:
         - keys
         - 
         - datas
         - 
-        - keys
-        - 
-        - datas
-        - 
-        - eventTarget
-        - sendEvent
-        - delay
+        - expression
+        - storeResultAsFloat
+        - storeResultAsInt
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000200000001000000030000000100000000000000020000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - targetProperty
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000010000000000000000000000000000000100000002000000010000000000000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000001000000
     - name: update 2 boss hp
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1293
-        y: 241
+        x: 1306
+        y: 136.96875
         width: 158.66667
         height: 32
       isBreakpoint: 0
@@ -20254,7 +20352,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: update left
+        toState: check hp 1
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -20262,144 +20360,174 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
+        - HutongGames.PlayMaker.Actions.MathExpression
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetProperty
+        - HutongGames.PlayMaker.Actions.DOTweenAnimateFloat
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: afffe300
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010100
+        actionIsOpen: 0101010100
+        actionStartIndex: 0000000004000000080000000b0000000d000000
+        actionHashCodes: afffe3009f6463029845b3055ac85204c064cb04
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: hp_now
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: bossHPNow
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000
-        paramName:
-        - keys
-        - 
-        - datas
-        - 
-        paramDataPos: 00000000000000000100000000000000
-        paramByteDataSize: 00000000000000000000000000000000
-    - name: update left
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1294
-        y: 316
-        width: 100
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetEventProperties
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: afffe300ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
+            value: {fileID: 0}
+        animationCurveParams:
+        - curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 1
-          excludeSelf:
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.Object
+            value: {fileID: 3021364101614328906}
+          TargetTypeName: UnityEngine.UI.Slider
+          PropertyName: value
+          BoolParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 5175624799125491708}
-          fsmName:
+          FloatParameter:
+            useVariable: 1
+            name: bar_length_temp
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 
-          sendToChildren:
+          Vector2Parameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Single
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
@@ -20413,7 +20541,19 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: UPDATE BOSS HP
+          value: bossHPNow / bossHPMax
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams:
         - variableName: bossHPNow
@@ -20443,46 +20583,185 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bar_length_temp
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bar_length_temp
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.2
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        - FINISHED
+        - Set an ID for the tween, which can then be used as a filter with DOTween's
+          Control Methods
+        - Setting loops to -1 will make the tween loop infinitely.
+        byteData: 0000000000000000000000010000000000000000000000
         arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 0c000000120000000c00000027000000120000000f00000010000000010000000f0000000f000000010000002400000001000000140000000f0000000f000000110000000f000000110000000f0000001100000011000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
         paramName:
         - keys
         - 
         - datas
         - 
-        - eventTarget
-        - sendEvent
-        - delay
+        - expression
+        - storeResultAsFloat
+        - storeResultAsInt
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - targetProperty
+        - everyFrame
+        - gameObject
+        - variable
+        - to
+        - setRelative
+        - duration
+        - setSpeedBased
+        - startDelay
+        - playInReverse
+        - setReverseRelative
+        - startEvent
+        - finishEvent
+        - finishImmediately
+        - tweenIdDescription
+        - tweenIdType
+        - stringAsId
+        - tagAsId
+        - selectedEase
+        - easeType
+        - animationCurve
+        - loopsDescriptionArea
+        - loops
+        - loopType
+        - autoKillOnCompletion
+        - recyclable
+        - updateType
+        - isIndependentUpdate
+        - debugThis
+        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000010000000200000001000000000000000200000000000000030000000400000000000000050000000100000006000000020000000300000000000000010000000400000002000000030000000200000003000000070000000b0000000000000003000000010000000f0000000500000006000000130000000700000008000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
     - name: update 2 boss hp 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1528
-        y: 252
+        x: 1547
+        y: 123
         width: 160
         height: 32
       isBreakpoint: 0
@@ -20493,7 +20772,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: update right
+        toState: check hp 2
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -20501,144 +20780,174 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
+        - HutongGames.PlayMaker.Actions.MathExpression
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetProperty
+        - HutongGames.PlayMaker.Actions.DOTweenAnimateFloat
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: afffe300
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010100
+        actionIsOpen: 0101010100
+        actionStartIndex: 0000000004000000080000000b0000000d000000
+        actionHashCodes: afffe3009f6463029845b3055ac85204c064cb04
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: hp_now
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: bossHPNow2
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000
-        paramName:
-        - keys
-        - 
-        - datas
-        - 
-        paramDataPos: 00000000000000000100000000000000
-        paramByteDataSize: 00000000000000000000000000000000
-    - name: update right
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1547.5312
-        y: 317.15625
-        width: 106
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetEventProperties
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: afffe300ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
+            value: {fileID: 0}
+        animationCurveParams:
+        - curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 1
-          excludeSelf:
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.Object
+            value: {fileID: 148166524597296948}
+          TargetTypeName: UnityEngine.UI.Slider
+          PropertyName: value
+          BoolParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 1365848655916897306}
-          fsmName:
+          FloatParameter:
+            useVariable: 1
+            name: bar_length_temp
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
             value: 
-          sendToChildren:
+          Vector2Parameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Single
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
@@ -20652,7 +20961,19 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: UPDATE BOSS HP
+          value: bossHPNow / bossHPMax
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams:
         - variableName: bossHPNow2
@@ -20682,46 +21003,185 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bar_length_temp
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bar_length_temp
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: bar_length_now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.2
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        - FINISHED
+        - Set an ID for the tween, which can then be used as a filter with DOTween's
+          Control Methods
+        - Setting loops to -1 will make the tween loop infinitely.
+        byteData: 0000000000000000000000010000000000000000000000
         arrayParamSizes: 0100000001000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c000000270000001f000000120000000f00000001000000
+        paramDataType: 0c000000120000000c00000027000000120000000f00000010000000010000000f0000000f000000010000002400000001000000140000000f0000000f000000110000000f000000110000000f0000001100000011000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
         paramName:
         - keys
         - 
         - datas
         - 
-        - eventTarget
-        - sendEvent
-        - delay
+        - expression
+        - storeResultAsFloat
+        - storeResultAsInt
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - targetProperty
+        - everyFrame
+        - gameObject
+        - variable
+        - to
+        - setRelative
+        - duration
+        - setSpeedBased
+        - startDelay
+        - playInReverse
+        - setReverseRelative
+        - startEvent
+        - finishEvent
+        - finishImmediately
+        - tweenIdDescription
+        - tweenIdType
+        - stringAsId
+        - tagAsId
+        - selectedEase
+        - easeType
+        - animationCurve
+        - loopsDescriptionArea
+        - loops
+        - loopType
+        - autoKillOnCompletion
+        - recyclable
+        - updateType
+        - isIndependentUpdate
+        - debugThis
+        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000010000000200000001000000000000000200000000000000030000000400000000000000050000000100000006000000020000000300000000000000010000000400000002000000030000000200000003000000070000000b0000000000000003000000010000000f0000000500000006000000130000000700000008000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
     - name: HIDE 2 BOSS BAR 1
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 1768
-        y: 248
+        y: 312
         width: 144.66666
         height: 16
       isBreakpoint: 0
@@ -20800,7 +21260,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1939
-        y: 252
+        y: 316
         width: 146
         height: 16
       isBreakpoint: 0
@@ -20879,7 +21339,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 625
-        y: 454
+        y: 518
         width: 106.666664
         height: 32
       isBreakpoint: 0
@@ -21028,7 +21488,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 346
-        y: 464
+        y: 528
         width: 108
         height: 32
       isBreakpoint: 0
@@ -21209,7 +21669,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 855
-        y: 232
+        y: 296
         width: 158
         height: 32
       isBreakpoint: 0
@@ -21596,7 +22056,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 838
-        y: 327
+        y: 391
         width: 168.66667
         height: 16
       isBreakpoint: 0
@@ -21864,7 +22324,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 511.14062
-        y: 542.4922
+        y: 606.4922
         width: 100
         height: 16
       isBreakpoint: 0
@@ -21966,7 +22426,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 476
-        y: 99
+        y: 163
         width: 115.333336
         height: 48
       isBreakpoint: 0
@@ -22435,7 +22895,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 636
-        y: 154
+        y: 218
         width: 105.333336
         height: 32
       isBreakpoint: 0
@@ -22541,6 +23001,414 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000020000000300000001000000040000000500000002000000
         paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000001000000
+    - name: check hp 0
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1112.8125
+        y: 165.95312
+        width: 114.666664
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: boss bar over
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: bar over
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: bossHPNow
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - boss bar over
+        - boss bar over
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: bar over
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1122.8125
+        y: 217.95312
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: check hp 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1315.8125
+        y: 205.91406
+        width: 114.666664
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: boss bar over
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: bar over 2
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: bossHPNow
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - boss bar over
+        - boss bar over
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: bar over 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1322.8125
+        y: 288.91406
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: check hp 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1548.8125
+        y: 198.78125
+        width: 114.666664
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: boss bar over
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: bar over 3
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: bossHPNow
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - boss bar over
+        - boss bar over
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
+    - name: bar over 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1560.8125
+        y: 268.78125
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -22816,7 +23684,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -26570,21 +27438,12 @@ MonoBehaviour:
         serializedVersion: 2
         x: 207
         y: 609
-        width: 138.66666
-        height: 32
+        width: 112.666664
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: UPDATE BOSS HP
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: update boss hp
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames: []
         customNames: []
@@ -26624,519 +27483,6 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
-    - name: update boss hp
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 166
-        y: 679
-        width: 125.333336
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: check hp 0
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetEventProperties
-        - HutongGames.PlayMaker.Actions.MathExpression
-        - HutongGames.PlayMaker.Actions.SetFloatValue
-        - HutongGames.PlayMaker.Actions.SetProperty
-        - HutongGames.PlayMaker.Actions.DOTweenAnimateFloat
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 0101010100
-        actionIsOpen: 0101010100
-        actionStartIndex: 0000000004000000080000000b0000000d000000
-        actionHashCodes: afffe3009f6463029845b3055ac85204c064cb04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams:
-        - curve:
-            serializedVersion: 2
-            m_Curve: []
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams:
-        - TargetObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: UnityEngine.Object
-            value: {fileID: 8510035362931897449}
-          TargetTypeName: UnityEngine.UI.Slider
-          PropertyName: value
-          BoolParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          FloatParameter:
-            useVariable: 1
-            name: bar_length_temp
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 1
-          IntParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          GameObjectParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-          StringParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          Vector2Parameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0}
-          Vector3Parameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0, z: 0}
-          RectParamater:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-          QuaternionParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0, z: 0, w: 0}
-          ObjectParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: System.Single
-            value: {fileID: 0}
-          MaterialParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: 
-            value: {fileID: 0}
-          TextureParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: 
-            value: {fileID: 0}
-          ColorParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {r: 0, g: 0, b: 0, a: 1}
-          EnumParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            enumName: HutongGames.PlayMaker.None
-            intValue: 0
-          ArrayParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: UnityEngine.Object
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-          setProperty: 1
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: hp_now
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: bossHPNow / bossHPMax
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        fsmObjectParams: []
-        fsmVarParams:
-        - variableName: bossHPNow
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: bar_length_now
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: bar_length_temp
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: bar_length_now
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: bar_length_temp
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 1
-          name: bar_length_now
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.2
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        - FINISHED
-        - Set an ID for the tween, which can then be used as a filter with DOTween's
-          Control Methods
-        - Setting loops to -1 will make the tween loop infinitely.
-        byteData: 0000000000000000000000010000000000000000000000
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmString
-        - HutongGames.PlayMaker.FsmVar
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000120000000f00000010000000010000000f0000000f000000010000002400000001000000140000000f0000000f000000110000000f000000110000000f0000001100000011000000170000001700000011000000030000000700000012000000120000000700000007000000160000000300000010000000070000001100000011000000070000001100000011000000
-        paramName:
-        - keys
-        - 
-        - datas
-        - 
-        - expression
-        - storeResultAsFloat
-        - storeResultAsInt
-        - everyFrame
-        - floatVariable
-        - floatValue
-        - everyFrame
-        - targetProperty
-        - everyFrame
-        - gameObject
-        - variable
-        - to
-        - setRelative
-        - duration
-        - setSpeedBased
-        - startDelay
-        - playInReverse
-        - setReverseRelative
-        - startEvent
-        - finishEvent
-        - finishImmediately
-        - tweenIdDescription
-        - tweenIdType
-        - stringAsId
-        - tagAsId
-        - selectedEase
-        - easeType
-        - animationCurve
-        - loopsDescriptionArea
-        - loops
-        - loopType
-        - autoKillOnCompletion
-        - recyclable
-        - updateType
-        - isIndependentUpdate
-        - debugThis
-        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000010000000200000001000000000000000200000000000000030000000400000000000000050000000100000006000000020000000300000000000000010000000400000002000000030000000200000003000000070000000b0000000000000003000000010000000f0000000500000006000000130000000700000008000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000400000004000000000000000000000000000000040000000000000000000000040000000000000000000000
-    - name: check hp 0
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 415
-        y: 663
-        width: 146.66666
-        height: 48
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: continue check bar
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: wait to update
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: boss bar over
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: bar over
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.IntCompare
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 09faa102
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 1
-          name: bossHPNow
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - boss bar over
-        - boss bar over
-        - continue check bar
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 100000001000000017000000170000001700000001000000
-        paramName:
-        - integer1
-        - integer2
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        paramDataPos: 000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
     - name: boss bar over
       description: 
       colorIndex: 0
@@ -27297,58 +27643,6 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000001000000010000000200000003000000020000000300000002000000040000000500000004000000050000000300000006000000070000000600000007000000
         paramByteDataSize: 0000000000000000000000000100000001000000000000000000000000000000010000000100000000000000000000000000000001000000010000000000000000000000000000000100000001000000
-    - name: bar over
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 393
-        y: 778
-        width: 100
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -33180,7 +33474,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: STAGE OVER
       isSystemEvent: 0
@@ -34301,7 +34595,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -35392,7 +35686,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -37593,7 +37887,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1

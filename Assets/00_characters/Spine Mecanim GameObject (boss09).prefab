@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 2998348894794167397}
   - component: {fileID: 2998348894794167386}
   - component: {fileID: 2998348894794167387}
+  - component: {fileID: 3408315995588924508}
   m_Layer: 0
   m_Name: close_attack_range
   m_TagString: Untagged
@@ -1056,6 +1057,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -104615663, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
+--- !u!114 &3408315995588924508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998348894794167384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFSMs: []
@@ -11697,6 +11711,7 @@ GameObject:
   - component: {fileID: 2998348895941351281}
   - component: {fileID: 2998348895941351286}
   - component: {fileID: 2998348895941351287}
+  - component: {fileID: 1360137788375356748}
   m_Layer: 0
   m_Name: long_attack_range
   m_TagString: Untagged
@@ -11780,6 +11795,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1360137788375356748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998348895941351284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 82786459, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs: []
 --- !u!1 &2998348895968114130
 GameObject:
   m_ObjectHideFlags: 0
@@ -12998,6 +13026,8 @@ GameObject:
   - component: {fileID: 2998348896284905165}
   - component: {fileID: 2998348896284905154}
   - component: {fileID: 2998348896284905166}
+  - component: {fileID: 8945956007391825054}
+  - component: {fileID: 1670926963364683788}
   m_Layer: 0
   m_Name: Spine Mecanim GameObject (boss09)
   m_TagString: enemy
@@ -18348,7 +18378,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: ENEMY START
       isSystemEvent: 0
@@ -18373,13 +18403,13 @@ MonoBehaviour:
     handleTriggerStay: 0
     handleCollisionEnter: 0
     handleCollisionExit: 0
-    handleCollisionStay: 0
+    handleCollisionStay: 1
     handleParticleCollision: 0
     handleControllerColliderHit: 0
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -18387,7 +18417,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!114 &2998348896284905167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18574,8 +18604,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 495.83594
-        y: 97.5
+        x: 531.83594
+        y: 154.5
         width: 100
         height: 32
       isBreakpoint: 0
@@ -18594,24 +18624,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventProperties
-        - HutongGames.PlayMaker.Actions.GetEventSentBy
         - HutongGames.PlayMaker.Actions.AudioPlay
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000400000007000000
-        actionHashCodes: afffe30046ebaf0081294e04
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: afffe30081294e04
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: attack_player
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
@@ -18634,18 +18656,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: enemy_damage
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -18695,7 +18705,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -18710,29 +18720,26 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c000000120000000c00000027000000130000001200000012000000140000000f000000180000001100000017000000
+        paramDataType: 0c000000120000000c00000027000000140000000f000000180000001100000017000000
         paramName:
         - keys
         - 
         - datas
         - 
-        - sentByGameObject
-        - gameObjectName
-        - fsmName
         - gameObject
         - volume
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
-        paramDataPos: 000000000000000001000000000000000000000001000000020000000000000000000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 000000000000000001000000000000000000000000000000000000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000
     - name: hit damage
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 753
-        y: 223.33594
+        x: 761
+        y: 255.33594
         width: 100
         height: 48
       isBreakpoint: 0
@@ -18759,28 +18766,18 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetAnimatorSpeed
         - HutongGames.PlayMaker.Actions.IntSubtract
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000007000000
-        actionHashCodes: 32d5940231e5da0209faa102
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 31e5da0209faa102
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -18792,13 +18789,7 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
+        fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
           name: hp
@@ -18834,16 +18825,13 @@ MonoBehaviour:
         - die
         - die
         - stay alive
-        byteData: 00000000
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000000f0000000100000010000000100000000100000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 10000000100000000100000001000000100000001000000017000000170000001700000001000000
         paramName:
-        - gameObject
-        - speed
-        - everyFrame
         - intVariable
         - subtract
         - everyFrame
@@ -18854,8 +18842,8 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000010000000100000002000000020000000300000000000000010000000200000003000000
-        paramByteDataSize: 00000000000000000100000000000000000000000100000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000010000000000000001000000020000000300000000000000010000000200000002000000
+        paramByteDataSize: 00000000000000000100000001000000000000000000000000000000000000000000000001000000
     - name: die
       description: 
       colorIndex: 0
@@ -19010,8 +18998,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 778.83594
-        y: 148.5
+        x: 779.83594
+        y: 163.5
         width: 100
         height: 32
       isBreakpoint: 0
@@ -19088,7 +19076,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.5
+          value: 0.2
         - useVariable: 0
           name: 
           tooltip: 
@@ -19132,7 +19120,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -19600,8 +19588,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 507.83594
-        y: 248.5
+        x: 511.83594
+        y: 272.5
         width: 116
         height: 32
       isBreakpoint: 0
@@ -20540,7 +20528,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -20576,7 +20564,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!114 &2998348896284905164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20616,7 +20604,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2998348896284905273}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b2eeac27359641c468b5beef51a02968, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -20718,6 +20706,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8945956007391825054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998348896284905273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -401773908, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 2998348896284905155}
+--- !u!114 &1670926963364683788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998348896284905273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -664232604, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 2998348896284905155}
 --- !u!1 &2998348896290618754
 GameObject:
   m_ObjectHideFlags: 0
@@ -22469,14 +22485,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6839585b82c3ba40b056288e837db0c, type: 3}
---- !u!4 &1894000358303475648 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1561027195475099116, guid: f6839585b82c3ba40b056288e837db0c, type: 3}
-  m_PrefabInstance: {fileID: 1144255962184440364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5308869595203343124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5065936571968506168, guid: f6839585b82c3ba40b056288e837db0c, type: 3}
+  m_PrefabInstance: {fileID: 1144255962184440364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1894000358303475648 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1561027195475099116, guid: f6839585b82c3ba40b056288e837db0c, type: 3}
   m_PrefabInstance: {fileID: 1144255962184440364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1437098121168076535
@@ -22611,14 +22627,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15bc9850657d3cd428188256d2ef919a, type: 3}
---- !u!4 &9205968743631010318 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6294508013172393185, guid: 15bc9850657d3cd428188256d2ef919a, type: 3}
-  m_PrefabInstance: {fileID: 2925297398727327471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9205968743631010307 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6294508013172393196, guid: 15bc9850657d3cd428188256d2ef919a, type: 3}
+  m_PrefabInstance: {fileID: 2925297398727327471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9205968743631010318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6294508013172393185, guid: 15bc9850657d3cd428188256d2ef919a, type: 3}
   m_PrefabInstance: {fileID: 2925297398727327471}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2998348896280865679
@@ -22678,6 +22694,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 79013119075037805, guid: fdb28330477571b4ab6fd0e84f85aeb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998348896280865672, guid: fdb28330477571b4ab6fd0e84f85aeb4, type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998348896280865674, guid: fdb28330477571b4ab6fd0e84f85aeb4, type: 3}
+      propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22843,14 +22867,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4aed13c04e85a84e85e869d4b594798, type: 3}
---- !u!4 &3802493306573561002 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 49635415996702502, guid: b4aed13c04e85a84e85e869d4b594798, type: 3}
-  m_PrefabInstance: {fileID: 3780064496767009676}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3802493306573561007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 49635415996702499, guid: b4aed13c04e85a84e85e869d4b594798, type: 3}
+  m_PrefabInstance: {fileID: 3780064496767009676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3802493306573561002 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 49635415996702502, guid: b4aed13c04e85a84e85e869d4b594798, type: 3}
   m_PrefabInstance: {fileID: 3780064496767009676}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3995394967399891858
@@ -22993,14 +23017,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d2c36d2324fb3448909552733986126, type: 3}
---- !u!4 &3957378736142861754 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7754801610553395404, guid: 2d2c36d2324fb3448909552733986126, type: 3}
-  m_PrefabInstance: {fileID: 6734561514769042806}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6016368544389914459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1012068930788954669, guid: 2d2c36d2324fb3448909552733986126, type: 3}
+  m_PrefabInstance: {fileID: 6734561514769042806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3957378736142861754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7754801610553395404, guid: 2d2c36d2324fb3448909552733986126, type: 3}
   m_PrefabInstance: {fileID: 6734561514769042806}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7782058865718577726
